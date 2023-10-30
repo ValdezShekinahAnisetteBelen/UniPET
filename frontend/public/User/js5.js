@@ -1,0 +1,1 @@
+window.bt_bb_preview = false

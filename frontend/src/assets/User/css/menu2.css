@@ -1,0 +1,20 @@
+/* Hide submenus by default */
+ul.sub-menu {
+    display: none;
+    position: absolute;
+    top: 100%; /* Position the submenu below its parent */
+    left: 0;
+    z-index: 1; /* Ensure the submenu is above other content */
+}
+
+/* Display submenus on hover */
+ul.menu li:hover > ul.sub-menu {
+    display: block;
+}
+
+/* Add styles to sub-menu items (optional) */
+ul.sub-menu li {
+    padding: 10px;
+    background-color: #fff; /* Customize as needed */
+    border: 1px solid #ccc; /* Customize as needed */
+}

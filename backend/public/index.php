@@ -63,7 +63,6 @@ if (! defined('ENVIRONMENT')) {
  * the pieces all working together.
  */
 
-$app = Config\Services::codeigniter();
 header('Access-Control-Allow-Origin: *');
 header("Access-Control-Allow-Headers: X-API-KEY, Origin, X-Requested-With, 
 Content-Type, Accept, Access-Control-Request-Method");
@@ -72,6 +71,7 @@ $method = $_SERVER['REQUEST_METHOD'];
 if($method == "OPTIONS") {
 die();
 }
+$app = Config\Services::codeigniter();
 $app->initialize();
 $context = is_cli() ? 'php-cli' : 'web';
 $app->setContext($context);
