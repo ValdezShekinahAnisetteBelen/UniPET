@@ -1,7 +1,8 @@
-<template>
+<template id="myTemplate">
   <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name='robots' content='max-image-preview:large' />
@@ -187,6 +188,131 @@
 	<div class="bt_bb_column col-xxl-6 col-xl-6 bt_bb_vertical_align_middle bt_bb_align_left bt_bb_padding_double bt_bb_animation_fade_in bt_bb_animation_move_left animate bt_bb_shape_inherit animated" data-width="6" data-bt-override-class="{}"><div class="bt_bb_column_content"><div class="bt_bb_column_content_inner"><div class="bt_bb_separator bt_bb_border_style_none bt_bb_bottom_spacing_large" data-bt-override-class="null"></div><header class="bt_bb_headline bt_bb_font_weight_bold bt_bb_dash_none bt_bb_size_huge bt_bb_align_inherit" data-bt-override-class="{}"><h1 class="bt_bb_headline_tag"><span class="bt_bb_headline_content"><span><strong>Hi,</strong> We are the UniPET</span></span></h1></header><header class="bt_bb_headline bt_bb_font_weight_normal bt_bb_dash_none bt_bb_subheadline bt_bb_size_extrasmall bt_bb_align_inherit btNoHeadline" data-bt-override-class="{}"><div class="bt_bb_headline_subheadline">PREMIUM AIR-DRIED, LOCALY PRODUCED<br>
 TASTY &amp; FRESH PET FOOD</div></header><div class="bt_bb_separator bt_bb_border_style_none bt_bb_bottom_spacing_medium" data-bt-override-class="null"></div><div class="bt_bb_button bt_bb_color_scheme_6 bt_bb_icon_position_left bt_bb_style_filled bt_bb_size_small bt_bb_width_inline bt_bb_shape_drop bt_bb_target_self bt_bb_align_inherit" style="; --primary-color:#EDCCCD; --secondary-color:#f47932;" data-bt-override-class="{}"><a href="../../contact/index.html" target="_self" class="bt_bb_link" title="FOR DOGS"><span class="bt_bb_button_text">FOR DOGS</span></a></div><div class="bt_bb_button bt_bb_color_scheme_6 bt_bb_icon_position_left bt_bb_style_outline bt_bb_size_small bt_bb_width_inline bt_bb_shape_drop bt_bb_target_self bt_bb_align_inherit" style="; --primary-color:#ffffff; --secondary-color:#f47932;" data-bt-override-class="{}"><a href="../../contact/index.html" target="_self" class="bt_bb_link" title="FOR CATS"><span class="bt_bb_button_text">FOR CATS</span></a></div><div class="bt_bb_separator bt_bb_border_style_none bt_bb_top_spacing_large" data-bt-override-class="null"></div></div></div></div></div></div></div></div></div><div class="bt_bb_section_bottom_section_coverage_image"><img src="User/wp-content/uploads/sites/2/2019/08/white_bottom_wave_02.png" alt="bt_bb_section_bottom_section_coverage_image"></div></section>
       </div>
+<div class="about-us">
+  <section id="bt_bb_section653ddcfb437dd" class="bt_bb_section bt_bb_layout_boxed_1200 bt_bb_vertical_align_top bt_bb_bottom_spacing_medium" data-bt-override-class="null">
+    <div class="bt_bb_port">
+      <div class="bt_bb_cell">
+        <div class="bt_bb_cell_inner">
+          <div class="bt_bb_row_wrapper">
+            <div class="bt_bb_row" data-bt-override-class="{}" data-structure="3-6-3">
+              <div class="bt_bb_column col-xxl-3 col-xl-3 bt_bb_vertical_align_top bt_bb_align_left bt_bb_padding_normal" data-width="3" data-bt-override-class="{}">
+                <div class="bt_bb_column_content">
+                  <div class="bt_bb_column_content_inner"></div>
+                </div>
+              </div>
+              <div class="bt_bb_column col-xxl-6 col-xl-6 bt_bb_vertical_align_top bt_bb_align_center bt_bb_padding_normal bt_bb_animation_fade_in animate bt_bb_shape_inherit animated" data-width="6" data-bt-override-class="{}">
+                <div class="bt_bb_column_content">
+                  <div class="bt_bb_column_content_inner">
+                    <header class="bt_bb_headline bt_bb_dash_none bt_bb_size_large bt_bb_align_inherit" data-bt-override-class="{}">
+                      <h2 class="bt_bb_headline_tag">
+                        <span class="bt_bb_headline_content"><span>About us</span></span>
+                      </h2>
+                    </header>
+                    <div class="bt_bb_separator bt_bb_border_style_none bt_bb_bottom_spacing_small" data-bt-override-class="null"></div>
+                    <div class="bt_bb_text">
+                      <p>At NVP Clinic, we are committed to providing exceptional veterinary services with a focus on care, compassion, and expertise. Our mission is to ensure the well-being of your beloved pets through a range of dedicated services.</p>
+                    </div>
+                    <div class="bt_bb_separator bt_bb_border_style_none bt_bb_bottom_spacing_medium" data-bt-override-class="null"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="bt_bb_column col-xxl-3 col-xl-3 bt_bb_vertical_align_top bt_bb_align_left bt_bb_padding_normal" data-width="3" data-bt-override-class="{}">
+                <div class="bt_bb_column_content">
+                  <div class="item__meta">
+                    <div class="item__meta_inner">
+                      <div class="item__icon">
+                        <div class="bt_bb_icon_holder">
+                         
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div> <!-- Close the .about-us div here -->
+<div class="container">
+	<div class="row">
+            <div class="col-md-3">
+                <div class="bt_bb_card bt_bb_colored_icon_color_scheme_9" style="--card-colored-icon-primary-color:#191919; --card-colored-icon-secondary-color:#4dc27e; background-color: #b9f2ff; height: 100%;">
+                    <div class="bt_bb_card_icon">
+                        <span class="bt_bb_icon_holder">
+                            <img src="User/gallery/pet-syringe.png" alt="Veterinary Icon" style="width: 2cm; height: 2cm;">
+                        </span>
+                    </div>
+                    <h3 class="bt_bb_card_title">Veterinary Services</h3>
+                    <div class="bt_bb_card_text">We provide a wide range of veterinary services to prioritize your pet's health and happiness, offering routine check-ups, vaccinations, deworming, and lab tests for their well-being.</div>
+                    <div class="bt_bb_card_inner_content">
+                        <div class="bt_bb_button bt_bb_color_scheme_3 bt_bb_icon_position_right bt_bb_style_clean bt_bb_size_small bt_bb_width_inline bt_bb_shape_inherit bt_bb_target_self bt_bb_align_inherit" style="--primary-color:#ffffff; --secondary-color:#191919;" data-bt-override-class="{}">
+                            <a href="../../services/index.html" target="_self" class="bt_bb_link" title="VIEW MORE">
+                                <span class="bt_bb_button_text">VIEW MORE</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="bt_bb_card bt_bb_colored_icon_color_scheme_9" style="--card-colored-icon-primary-color:#191919; --card-colored-icon-secondary-color:#4dc27e; background-color: #b9f2ff; height: 100%;">
+                    <div class="bt_bb_card_icon">
+                        <span class="bt_bb_icon_holder">
+                            <img src="User/gallery/pet-groom.png" alt="Veterinary Icon" style="width: 2cm; height: 2cm;">
+                        </span>
+                    </div>
+                    <h3 class="bt_bb_card_title">Grooming Services</h3>
+                    <div class="bt_bb_card_text">Our grooming services are tailored to keep your furry friends looking and feeling their best, with options like stylish cuts, trims, and grooming by our skilled professionals.</div>
+                    <div class="bt_bb_card_inner_content">
+                        <div class="bt_bb_button bt_bb_color_scheme_3 bt_bb_icon_position_right bt_bb_style_clean bt_bb_size_small bt_bb_width_inline bt_bb_shape_inherit bt_bb_target_self bt_bb_align_inherit" style="--primary-color:#ffffff; --secondary-color:#191919;" data-bt-override-class="{}">
+                            <a href="../../services/index.html" target="_self" class="bt_bb_link" title="VIEW MORE">
+                                <span class="bt_bb_button_text">VIEW MORE</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="bt_bb_card bt_bb_colored_icon_color_scheme_9" style="--card-colored-icon-primary-color:#191919; --card-colored-icon-secondary-color:#4dc27e; background-color: #b9f2ff; height: 100%;">
+                    <div class="bt_bb_card_icon">
+                        <span class="bt_bb_icon_holder">
+                            <img src="User/gallery/pet-bath.png" alt="Veterinary Icon" style="width: 2cm; height: 2cm;">
+                        </span>
+                    </div>
+                    <h3 class="bt_bb_card_title">Bathing Services</h3>
+                    <div class="bt_bb_card_text">Maintain your pet's hygiene and well-being through our bathing services, including regular, medicated, and anti-mange baths, addressing specific needs to keep them fresh and clean.</div>
+                    <div class="bt_bb_card_inner_content">
+                        <div class="bt_bb_button bt_bb_color_scheme_3 bt_bb_icon_position_right bt_bb_style_clean bt_bb_size_small bt_bb_width_inline bt_bb_shape_inherit bt_bb_target_self bt_bb_align_inherit" style="--primary-color:#ffffff; --secondary-color:#191919;" data-bt-override-class="{}">
+                            <a href="../../services/index.html" target="_self" class="bt_bb_link" title="VIEW MORE">
+                                <span class="bt_bb_button_text">VIEW MORE</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="bt_bb_card bt_bb_colored_icon_color_scheme_9" style="--card-colored-icon-primary-color:#191919; --card-colored-icon-secondary-color:#4dc27e; background-color: #b9f2ff; height: 100%;">
+                    <div class="bt_bb_card_icon">
+                        <span class="bt_bb_icon_holder">
+                            <img src="User/gallery/pet-appoint.png" alt="Veterinary Icon" style="width: 2cm; height: 2cm;">
+                        </span>
+                    </div>
+                    <h3 class="bt_bb_card_title">Request an Appointment</h3>
+                    <div class="bt_bb_card_text">For your convenience, you can easily schedule appointments for check-ups, vaccinations, deworming, and lab tests, making your pet's health our top priority.</div>
+                    <div class="bt_bb_card_inner_content">
+                        <div class="bt_bb_button bt_bb_color_scheme_3 bt_bb_icon_position_right bt_bb_style_clean bt_bb_size_small bt_bb_width_inline bt_bb_shape_inherit bt_bb_target_self bt_bb_align_inherit" style="--primary-color:#ffffff; --secondary-color:#191919;" data-bt-override-class="{}">
+                            <a href="../../services/index.html" target="_self" class="bt_bb_link" title="VIEW MORE">
+                                <span class="bt_bb_button_text">VIEW MORE</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
 <div class="btSiteFooter">
 
@@ -195,9 +321,10 @@ TASTY &amp; FRESH PET FOOD</div></header><div class="bt_bb_separator bt_bb_borde
   <div class="bt_bb_cell"><div class="bt_bb_cell_inner"><div class="bt_bb_row_wrapper"><div class="bt_bb_row" data-bt-override-class="{}" data-structure="3-3-3-3"><div class="bt_bb_column col-xxl-3 col-xl-3 bt_bb_vertical_align_top bt_bb_align_left bt_bb_padding_normal bt_bb_animation_fade_in animate bt_bb_shape_inherit animated" data-width="3" data-bt-override-class="{}">
     <div class="bt_bb_column_content"><div class="bt_bb_column_content_inner"><div class="bt_bb_image bt_bb_shape_square bt_bb_align_inherit bt_bb_hover_style_simple bt_bb_content_display_always bt_bb_content_align_middle" data-bt-override-class="null"><span><img src="User/wp-content/uploads/sites/2/2019/11/logo_black.svg" alt="Buddy" class="btLazyLoadImage btLazyLoaded"></span></div><div class="bt_bb_separator bt_bb_border_style_none bt_bb_bottom_spacing_normal" data-bt-override-class="null"></div><div class="bt_bb_icon bt_bb_color_scheme_6 bt_bb_style_filled bt_bb_shape_circle bt_bb_size_small bt_bb_align_inherit" style="; --icon-primary-color:#ffffff; --icon-secondary-color:#0CC0DF;" data-bt-override-class="null"><a href="https://twitter.com/bold_themes" target="_blank" data-ico-fontawesome="" class="bt_bb_icon_holder"></a></div><div class="bt_bb_icon bt_bb_color_scheme_6 bt_bb_style_filled bt_bb_shape_circle bt_bb_size_small bt_bb_align_inherit" style="; --icon-primary-color:#ffffff; --icon-secondary-color:#0CC0DF;" data-bt-override-class="null"><a href="https://www.instagram.com/bold_themes/" target="_blank" data-ico-fontawesome="" class="bt_bb_icon_holder"></a></div><div class="bt_bb_icon bt_bb_color_scheme_6 bt_bb_style_filled bt_bb_shape_circle bt_bb_size_small bt_bb_align_inherit" style="; --icon-primary-color:#ffffff; --icon-secondary-color:#0CC0DF;" data-bt-override-class="null"><a href="https://www.facebook.com/boldthemes/" target="_blank" data-ico-fontawesome="" class="bt_bb_icon_holder"></a></div><div class="bt_bb_separator bt_bb_border_style_none bt_bb_bottom_spacing_medium" data-bt-override-class="null"></div></div></div></div><div class="bt_bb_column col-xxl-3 col-xl-3 bt_bb_vertical_align_top bt_bb_align_left bt_bb_padding_normal bt_bb_animation_fade_in animate bt_bb_shape_inherit animated" data-width="3" data-bt-override-class="{}"><div class="bt_bb_column_content"><div class="bt_bb_column_content_inner"><header class="bt_bb_headline bt_bb_color_scheme_3 bt_bb_dash_none bt_bb_size_extrasmall bt_bb_align_inherit" style="; --primary-color:#0CC0DF; --secondary-color:#EDCCCD;" data-bt-override-class="{}"><h5 class="bt_bb_headline_tag"><span class="bt_bb_headline_content"><span>About</span></span></h5></header><div class="bt_bb_separator bt_bb_border_style_none bt_bb_bottom_spacing_small" data-bt-override-class="null"></div><div class="bt_bb_icon bt_bb_style_borderless bt_bb_shape_circle bt_bb_size_xsmall bt_bb_align_left" data-bt-override-class="null"><span data-ico-dripicons="" class="bt_bb_icon_holder">
       <span>Main: J.P Rizal St. Tawiran, Calapan City</span></span></div><div class="bt_bb_separator bt_bb_border_style_none bt_bb_bottom_spacing_small" data-bt-override-class="null"></div>
-  <div class="bt_bb_icon bt_bb_style_borderless bt_bb_shape_circle bt_bb_size_xsmall bt_bb_align_left" data-bt-override-class="null"><span data-ico-dripicons="" class="bt_bb_icon_holder"><span>+63 915 1933 833</span></span></div><div class="bt_bb_separator bt_bb_border_style_none bt_bb_bottom_spacing_small" data-bt-override-class="null"></div><div class="bt_bb_icon bt_bb_style_borderless bt_bb_shape_circle bt_bb_size_xsmall bt_bb_align_left" data-bt-override-class="null"><span data-ico-dripicons="" class="bt_bb_icon_holder"><span>Thursday - Friday - Sunday: <br><br> 9:00 AM TO 11:00 AM <br><br> 2:00 PM TO 4:00 PM</span></span></div><div class="bt_bb_separator bt_bb_border_style_none bt_bb_bottom_spacing_medium" data-bt-override-class="null"></div></div></div></div><div class="bt_bb_column col-xxl-3 col-xl-3 bt_bb_vertical_align_top bt_bb_align_left bt_bb_padding_normal bt_bb_animation_fade_in animate bt_bb_shape_inherit animated" data-width="3" data-bt-override-class="{}"><div class="bt_bb_column_content"><div class="bt_bb_column_content_inner"><header class="bt_bb_headline bt_bb_color_scheme_3 bt_bb_dash_none bt_bb_size_extrasmall bt_bb_align_inherit" style="; --primary-color:#0CC0DF; --secondary-color:#EDCCCD;" data-bt-override-class="{}"><h5 class="bt_bb_headline_tag"><span class="bt_bb_headline_content"><span>Quick Links</span></span></h5></header><div class="bt_bb_separator bt_bb_border_style_none bt_bb_bottom_spacing_small" data-bt-override-class="null"></div><div class="bt_bb_custom_menu bt_bb_direction_vertical"><div class="menu-quick-links-container"><ul id="menu-quick-links" class="menu"><li id="menu-item-2555" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2555"><a href="#">Dog Boarding Services</a></li>
-<li id="menu-item-2556" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2556"><a href="#">Cat Boarding Services</a></li>
-<li id="menu-item-2557" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2557"><a href="#">Spa and Grooming Services</a></li>
+  <div class="bt_bb_icon bt_bb_style_borderless bt_bb_shape_circle bt_bb_size_xsmall bt_bb_align_left" data-bt-override-class="null"><span data-ico-dripicons="" class="bt_bb_icon_holder"><span>+63 915 1933 833</span></span></div><div class="bt_bb_separator bt_bb_border_style_none bt_bb_bottom_spacing_small" data-bt-override-class="null"></div><div class="bt_bb_icon bt_bb_style_borderless bt_bb_shape_circle bt_bb_size_xsmall bt_bb_align_left" data-bt-override-class="null"><span data-ico-dripicons="" class="bt_bb_icon_holder"><span>Thursday - Friday - Sunday: <br><br> 9:00 AM TO 11:00 AM <br><br> 2:00 PM TO 4:00 PM</span></span></div><div class="bt_bb_separator bt_bb_border_style_none bt_bb_bottom_spacing_medium" data-bt-override-class="null"></div></div></div></div><div class="bt_bb_column col-xxl-3 col-xl-3 bt_bb_vertical_align_top bt_bb_align_left bt_bb_padding_normal bt_bb_animation_fade_in animate bt_bb_shape_inherit animated" data-width="3" data-bt-override-class="{}"><div class="bt_bb_column_content"><div class="bt_bb_column_content_inner"><header class="bt_bb_headline bt_bb_color_scheme_3 bt_bb_dash_none bt_bb_size_extrasmall bt_bb_align_inherit" style="; --primary-color:#0CC0DF; --secondary-color:#EDCCCD;" data-bt-override-class="{}"><h5 class="bt_bb_headline_tag"><span class="bt_bb_headline_content"><span>Quick Links</span></span></h5></header><div class="bt_bb_separator bt_bb_border_style_none bt_bb_bottom_spacing_small" data-bt-override-class="null"></div><div class="bt_bb_custom_menu bt_bb_direction_vertical"><div class="menu-quick-links-container"><ul id="menu-quick-links" class="menu"><li id="menu-item-2555" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2555"><a href="#">Veterinary Services</a></li>
+<li id="menu-item-2556" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2556"><a href="#">Grooming Services</a></li>
+<li id="menu-item-2557" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2557"><a href="#">Bathing Services</a></li>
+<li id="menu-item-2558" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2558"><a href="#">Request an Appointment</a></li>
 </ul></div></div><div class="bt_bb_separator bt_bb_border_style_none bt_bb_bottom_spacing_medium" data-bt-override-class="null"></div></div></div></div>
 <div class="bt_bb_column col-xxl-3 col-xl-3 bt_bb_vertical_align_top bt_bb_align_left bt_bb_padding_normal bt_bb_animation_fade_in animate bt_bb_shape_inherit animated" data-width="3" data-bt-override-class="{}"><div class="bt_bb_column_content"><div class="bt_bb_column_content_inner"><header class="bt_bb_headline bt_bb_color_scheme_3 bt_bb_dash_none bt_bb_size_extrasmall bt_bb_align_inherit" style="; --primary-color:#0CC0DF; --secondary-color:#EDCCCD;" data-bt-override-class="{}"><h5 class="bt_bb_headline_tag"><span class="bt_bb_headline_content"><span>Newsletter</span></span></h5></header><div class="bt_bb_separator bt_bb_border_style_none bt_bb_bottom_spacing_small" data-bt-override-class="null"></div><div class="bt_bb_contact_form_7">
 <div class="wpcf7 js" id="wpcf7-f1539-p2767-o1" lang="en-US" dir="ltr">
@@ -287,9 +414,18 @@ export default {
           '../../../../frontend/public/User/wp-includes/js/jquery/ui/mouse.min3f14.js',
           '../../../../frontend/public/User/wp-includes/js/jquery/ui/slider.min3f14.js',
           '../../../../frontend/public/User/wp-content/plugins/bt_cost_calculator/jquery.ui.touch-punch.mine35d.js',
+		  'https://code.jquery.com/jquery-3.5.1.slim.min.js',
+    	'https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js',
+    	'https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js',
 		
 ];         
-  
+		// Clone the template content
+		const template = document.querySelector('#myTemplate');
+		const clone = document.importNode(template.content, true);
+
+		// Append the cloned content to a target element in your document
+		const targetElement = document.querySelector('#yourTargetElement');
+		targetElement.appendChild(clone);
         const head = document.getElementsByTagName('head')[0];
   
         scriptUrls.forEach((scriptUrl) => {
