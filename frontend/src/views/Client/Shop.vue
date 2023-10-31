@@ -6,6 +6,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name='robots' content='max-image-preview:large' />
 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <link rel='dns-prefetch' href='http://fonts.googleapis.com/' />
 <link rel="alternate" type="application/rss+xml" title="Buddy &raquo; Feed" href="feed/index.html" />
 <link rel="alternate" type="application/rss+xml" title="Buddy &raquo; Comments Feed" href="comments/feed/index.html" />
@@ -170,7 +171,46 @@
 			</div><!-- /menuHolder / btBelowLogoArea -->
 		</div><!-- / inner header for scrolling -->
     </header><!-- /.mainHeader -->
-	
+		 <!-- Add a div to display the animal picture -->
+		 <div class="animal-picture">
+		<section id="bt_bb_section653e182cbf96f" data-parallax="0.7" data-parallax-offset="0" class="bt_bb_section bt_bb_color_scheme_1 bt_bb_layout_boxed_1200 bt_bb_vertical_align_top bt_bb_parallax bt_bb_background_image bt_bb_top_spacing_large bt_bb_bottom_spacing_large bt_bb_section_with_bottom_coverage_image" style="background-color: #96E6F7; background-image: url(&quot;https_/pawsitive.bold-themes.com/buddy/wp-content/uploads/sites/2/2019/08/background_05.html&quot;); --section-primary-color: #ffffff; --section-secondary-color: #EDCCCD; background-position-y: 0px;" data-bt-override-class="null"><div class="bt_bb_port"><div class="bt_bb_cell"><div class="bt_bb_cell_inner"><div class="bt_bb_row_wrapper"><div class="bt_bb_row" data-bt-override-class="{}" data-structure="6-6">
+			<div class="bt_bb_column col-xxl-6 col-xl-6 bt_bb_vertical_align_top bt_bb_align_left bt_bb_padding_normal bt_bb_shape_inherit" data-width="6" data-bt-override-class="{}">
+    <div class="bt_bb_column_content">
+        <div class="bt_bb_column_content_inner">
+            <img src="User/wp-content/uploads/sites/2/2019/11/Pet_Store.svg" alt="Animal Picture">
+        </div>
+    </div>
+</div>
+	<div class="bt_bb_column col-xxl-6 col-xl-6 bt_bb_vertical_align_middle bt_bb_align_left bt_bb_padding_double bt_bb_animation_fade_in bt_bb_animation_move_left animate bt_bb_shape_inherit animated" data-width="6" data-bt-override-class="{}"><div class="bt_bb_column_content"><div class="bt_bb_column_content_inner"><div class="bt_bb_separator bt_bb_border_style_none bt_bb_bottom_spacing_large" data-bt-override-class="null"></div><header class="bt_bb_headline bt_bb_font_weight_bold bt_bb_dash_none bt_bb_size_huge bt_bb_align_inherit" data-bt-override-class="{}"><h1 class="bt_bb_headline_tag"><span class="bt_bb_headline_content"><span><strong>Hi,</strong> We are the UniPET</span></span></h1></header><header class="bt_bb_headline bt_bb_font_weight_normal bt_bb_dash_none bt_bb_subheadline bt_bb_size_extrasmall bt_bb_align_inherit btNoHeadline" data-bt-override-class="{}"><div class="bt_bb_headline_subheadline">PREMIUM AIR-DRIED, LOCALY PRODUCED<br>
+TASTY &amp; FRESH PET FOOD</div></header><div class="bt_bb_separator bt_bb_border_style_none bt_bb_bottom_spacing_medium" data-bt-override-class="null"></div><div class="bt_bb_button bt_bb_color_scheme_6 bt_bb_icon_position_left bt_bb_style_filled bt_bb_size_small bt_bb_width_inline bt_bb_shape_drop bt_bb_target_self bt_bb_align_inherit" style="; --primary-color:#EDCCCD; --secondary-color:#f47932;" data-bt-override-class="{}"><a href="../../contact/index.html" target="_self" class="bt_bb_link" title="FOR DOGS"><span class="bt_bb_button_text">FOR DOGS</span></a></div><div class="bt_bb_button bt_bb_color_scheme_6 bt_bb_icon_position_left bt_bb_style_outline bt_bb_size_small bt_bb_width_inline bt_bb_shape_drop bt_bb_target_self bt_bb_align_inherit" style="; --primary-color:#ffffff; --secondary-color:#f47932;" data-bt-override-class="{}"><a href="../../contact/index.html" target="_self" class="bt_bb_link" title="FOR CATS"><span class="bt_bb_button_text">FOR CATS</span></a></div><div class="bt_bb_separator bt_bb_border_style_none bt_bb_top_spacing_large" data-bt-override-class="null"></div></div></div></div></div></div></div></div></div><div class="bt_bb_section_bottom_section_coverage_image"><img src="User/wp-content/uploads/sites/2/2019/08/white_bottom_wave_02.png" alt="bt_bb_section_bottom_section_coverage_image"></div></section>
+      </div>
+<!-- Close the .about-us div here -->
+
+<div class="container">
+    <h2>Product Table</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Stock</th>
+                <th>Image</th>
+                <th>Product Group</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr v-for="info in info">
+                <td>{{ info.name }}</td>
+                <td>{{ info.description }}</td>
+                <td>{{ info.price }}</td>
+                <td>{{ info.stock }}</td>
+                <td>{{ info.image }}</td>
+                <td>{{ info.productgroup }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 
 	<!-- <svg class="item__svg" viewBox="0 0 500 500">
 <clipPath id="bt_bb_organic_animation_653e32838bc93">
@@ -304,14 +344,31 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </script> -->
 
     <script>
-        import App from '../../App.vue';
+        import App from '../../App.vue'
+		import axios from 'axios'
 
 export default {
     name: "Shop",
     mounted() {
       this.loadScripts();
     },
+	data (){
+		return {
+			info:[],
+		}
+	},
+	created(){
+		this.getInfo();
+	},
     methods: {
+		async getInfo() {
+			try {
+				const inf = await axios.get('getData');
+				this.info = inf.data;
+				} catch (error) {
+					console.log(error);
+			}
+		},
       loadScripts() {
         const scriptUrls = [
         '../../../../frontend/public/User/js5.js',
