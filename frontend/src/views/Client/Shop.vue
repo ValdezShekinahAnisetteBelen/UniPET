@@ -185,7 +185,53 @@
 TASTY &amp; FRESH PET FOOD</div></header><div class="bt_bb_separator bt_bb_border_style_none bt_bb_bottom_spacing_medium" data-bt-override-class="null"></div><div class="bt_bb_button bt_bb_color_scheme_6 bt_bb_icon_position_left bt_bb_style_filled bt_bb_size_small bt_bb_width_inline bt_bb_shape_drop bt_bb_target_self bt_bb_align_inherit" style="; --primary-color:#EDCCCD; --secondary-color:#f47932;" data-bt-override-class="{}"><a href="../../contact/index.html" target="_self" class="bt_bb_link" title="FOR DOGS"><span class="bt_bb_button_text">FOR DOGS</span></a></div><div class="bt_bb_button bt_bb_color_scheme_6 bt_bb_icon_position_left bt_bb_style_outline bt_bb_size_small bt_bb_width_inline bt_bb_shape_drop bt_bb_target_self bt_bb_align_inherit" style="; --primary-color:#ffffff; --secondary-color:#f47932;" data-bt-override-class="{}"><a href="../../contact/index.html" target="_self" class="bt_bb_link" title="FOR CATS"><span class="bt_bb_button_text">FOR CATS</span></a></div><div class="bt_bb_separator bt_bb_border_style_none bt_bb_top_spacing_large" data-bt-override-class="null"></div></div></div></div></div></div></div></div></div><div class="bt_bb_section_bottom_section_coverage_image"><img src="User/wp-content/uploads/sites/2/2019/08/white_bottom_wave_02.png" alt="bt_bb_section_bottom_section_coverage_image"></div></section>
       </div>
 <!-- Close the .about-us div here -->
+<div class = "Products">
+	<div class="container">
+    <h2>Product List</h2>
+    <div class="row">
+        <div class="col-md-4 mb-4" v-for="product in info">
+            <div class="btWooShopLoopItemInner" style="min-height: 624.188px;">
+                <div class="bt_bb_image" data-bt-override-class="null">
+                    <a :href="'https://pawsitive.bold-themes.com/buddy/product/' + product.slug" target="_self" :title="product.name">
+                        <img :src="product.image" :title="product.name" :alt="product.name">
+                    </a>
+                </div>
+                <header class="bt_bb_headline bt_bb_superheadline bt_bb_superheadline_outside bt_bb_subheadline bt_bb_size_extrasmall" data-bt-override-class="{}">
+                    <div class="bt_bb_headline_superheadline_outside">
+                        <span class="bt_bb_headline_superheadline">
+                            <span class="btArticleCategories">
+                                <a :href="'https://pawsitive.bold-themes.com/buddy/product-category/' + product.category" class="btArticleCategory">{{ product.category }}</a>
+                            </span>
+                        </span>
+                    </div>
+                    <h2 class="bt_bb_headline_tag">
+                        <span class="bt_bb_headline_content">
+                            <span>
+                                <a :href="'https://pawsitive.bold-themes.com/buddy/product/' + product.slug" target="_self" :title="product.name">{{ product.name }}</a>
+                            </span>
+                        </span>
+                    </h2>
+                    <div class="bt_bb_headline_subheadline">
+                        <div class="star-rating">
+                            <span :style="'width:' + (product.rating * 20) + '%'">Rated <strong class="rating">{{ product.rating }}</strong> out of 5</span>
+                        </div>
+                    </div>
+                </header>
+                <span class="price">
+                    <span class="woocommerce-Price-amount amount">
+                        <bdi>
+                            <span class="woocommerce-Price-currencySymbol">$</span>{{ product.price }}
+                        </bdi>
+                    </span>
+                </span>
+                <a :href="'?add-to-cart=' + product.id" data-quantity="1" class="button product_type_simple add_to_cart_button ajax_add_to_cart" :data-product_id="product.id" data-product_sku="" :aria-label="'Add “' + product.name + '” to your cart'" aria-describedby="" rel="nofollow">Add to cart</a>
+            </div>
+        </div>
+    </div>
+</div>
 
+
+</div>
 <div class="container">
     <h2>Product Table</h2>
     <table class="table table-striped">
