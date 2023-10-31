@@ -192,23 +192,38 @@
 			
 			
 			
-				<div class="woocommerce-notices-wrapper"></div><p class="woocommerce-result-count">
-	Showing 1–12 of 15 results</p>
-<form class="woocommerce-ordering" method="get">
-	<select name="orderby" class="orderby" aria-label="Shop order">
-					<option value="menu_order" selected="selected">Default sorting</option>
-					<option value="popularity">Sort by popularity</option>
-					<option value="rating">Sort by average rating</option>
-					<option value="date">Sort by latest</option>
-					<option value="price">Sort by price: low to high</option>
-					<option value="price-desc">Sort by price: high to low</option>
-			</select>
-	<input type="hidden" name="paged" value="1">
-	</form>
+				<div class="woocommerce-notices-wrapper"></div>
 <!------------------products------------>
 <div class="container">
+	<aside class="btSidebar" style="width: 80%; margin: 0 auto; text-align: center;">
+  <div class="btBox widget_search">
+    <div class="btSearch"> 
+      <div class="bt_bb_icon" data-bt-override-class="null">
+        <a href="#" target="_self" title="Search" data-ico-fa="" class="bt_bb_icon_holder"></a>
+      </div>
+    </div>
+  </div>
+  <div class="btBox woocommerce widget_shopping_cart" style="border: 1px solid #0CC0DF; border-radius: 4px; padding: 10px;">
+    <h4><span>Cart</span></h4>
+    <div class="widget_shopping_cart_content"></div>
+  </div>
+  <div class="btBox woocommerce widget_product_categories" style="border: 1px solid #0CC0DF; border-radius: 4px; padding: 10px;">
+    <h4><span>Product categories</span></h4>
+    <ul class="product-categories">
+      <li class="cat-item cat-item-31"><a href="/">PET FOOD</a></li>
+      <li class="cat-item cat-item-33"><a href="/">PET SUPPLIES</a></li>
+      <li class="cat-item cat-item-34"><a href="/">TOYS AND ENRICHMENT</a></li>
+      <li class="cat-item cat-item-38"><a href="/">HEALTH AND WELLNESS</a></li>
+	  <li class="cat-item cat-item-38"><a href="/">PET BEDDING</a></li>
+	  <li class="cat-item cat-item-38"><a href="/">PET APPAREL</a></li>
+	  <li class="cat-item cat-item-38"><a href="/">FEEDING AND WATERING</a></li>
+    </ul>
+  </div>
+</aside>
+
+
   <div class="row">
-    <div class="col-md-6 mb-6" v-for="product in info">
+    <div class="col-md-4 mb-4" v-for="product in info">
       <div class="product type-product post-1860 status-publish first outofstock product_cat-beef has-post-thumbnail sale shipping-taxable purchasable product-type-simple">
         <div class="btWooShopLoopItemInner" style="border: 1px solid #0CC0DF; padding: 15px; margin: 10px; border-radius: 10px;">
           <span class="onsale">Sale!</span>
@@ -261,12 +276,6 @@
   </div>
 </div>
 				</div></div></article>		</div><!-- /boldthemes_content -->
-<aside class="btSidebar"><div class="btBox widget_search"><div class="btSearch"><div class="bt_bb_icon" data-bt-override-class="null"><a href="#" target="_self" title="Search" data-ico-fa="" class="bt_bb_icon_holder"></a></div>
-		</div></div><div class="btBox woocommerce widget_shopping_cart"><h4><span>Cart</span></h4><div class="widget_shopping_cart_content"></div></div><div class="btBox woocommerce widget_product_categories"><h4><span>Product categories</span></h4><ul class="product-categories"><li class="cat-item cat-item-31"><a href="../product-category/beef/index.html">Beef</a></li>
-<li class="cat-item cat-item-33"><a href="../product-category/fish/index.html">Fish</a></li>
-<li class="cat-item cat-item-34"><a href="../product-category/food/index.html">Food</a></li>
-<li class="cat-item cat-item-38"><a href="../product-category/rewards/index.html">Rewards</a></li>
-</ul></div></aside> 
 	</div>
 
 <div class="btSiteFooter">
