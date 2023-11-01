@@ -204,12 +204,12 @@
       </div>
     </div>
   </div>
+  <div class="row">
   <div class="btBox woocommerce widget_shopping_cart" style="border: 1px solid #0CC0DF; border-radius: 4px; padding: 10px;">
     <h4><span>Cart</span></h4>
     <div class="widget_shopping_cart_content"></div>
   </div>
 
-  <div class="row">
 	<div class="btBox woocommerce widget_product_categories" style="border: 1px solid #0CC0DF; border-radius: 4px; padding: 10px;">
       <h4><span>Product categories</span></h4>
       <select v-model="selectedCategory" @change="filterProducts">
@@ -272,12 +272,22 @@
             </bdi>
           </span>
         </div>
-        <div class="text-center">
-          <a :href="'?add-to-cart=' + product.id" data-quantity="1" class="btn btn-outline-info" :data-product_id="product.id" data-product_sku=""
-            :aria-label="'Add “' + product.name + '” to your cart'" aria-describedby="" rel="nofollow">
-            Add to cart
-          </a>
-        </div>
+		<div class="text-center">
+			<div class="text-center">
+  <a :href="'?add-to-cart=' + product.id" data-quantity="1" class="btn btn-outline-info" :data-product_id="product.id" data-product_sku=""
+    :aria-label="'Add “' + product.name + '” to your cart'" aria-describedby="" rel="nofollow"
+    v-if="product.productgroup === 'services'">
+    Book Now
+  </a>
+  <a :href="'?add-to-cart=' + product.id" data-quantity="1" class="btn btn-outline-info" :data-product_id="product.id" data-product_sku=""
+    :aria-label="'Add “' + product.name + '” to your cart'" aria-describedby="" rel="nofollow"
+    v-else>
+    Add to cart
+  </a>
+</div>
+
+</div>
+
       </div>
     </div>
   </div>
