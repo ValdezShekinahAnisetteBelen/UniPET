@@ -57,6 +57,7 @@
 						<div class="topBarInMenuCell">
 							<div class="btButtonWidget btOutline btWithLink"><a href="#" target="_self" class="btButtonWidgetLink"><div class="btIconWidgetIcon"><span data-ico-fontawesome="" class="bt_bb_icon_holder"></span></div><div class="btIconWidgetText"><span class="btButtonWidgetText">+63 998 868 3908</span></div></a></div>						</div><!-- /topBarInMenu -->
 					</div><!-- /topBarInMenuCell -->
+
           <nav>
     <ul id="menu-primary-menu" class="menu">
         <li id="menu-item-1685" class="btMenuWideDropdown menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-2767 current_page_item current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-1685 btMenuWideDropdownCols-3">

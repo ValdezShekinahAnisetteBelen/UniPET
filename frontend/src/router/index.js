@@ -22,6 +22,16 @@ name: 'ProductDetails',
 // this generates a separate chunk (about.[hash].js) for this route
 // which is lazy-loaded when the route is visited.
 component: () => import(/* webpackChunkName: "about" */ '../views/Client/ProductDetails.vue')
+},
+{
+  path: '/SignUp',
+  name: 'SignUp',
+  component: () => import(/* webpackChunkName: "signup" */ '../components/SignUp')
+},
+{
+  path: '/Contact',
+  name: 'Contact',
+  component: () => import(/* webpackChunkName: "signup" */ '../views/Client/Contact')
 }
 ]
 
