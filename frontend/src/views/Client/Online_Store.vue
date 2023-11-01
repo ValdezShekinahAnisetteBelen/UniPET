@@ -99,7 +99,7 @@
 	<li id="menu-item-2800" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2800"><a href="coming-soon/index.html">Coming Soon</a></li>
 </ul>
 </li>
-<li id="menu-item-40" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-40"><div class="subToggler"></div><a href="blog/index.html">Blog</a>
+<li id="menu-item-40" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-40"><div class="subToggler"></div><a href="/Contact">Contact Us</a>
 <ul class="sub-menu">
 	<li id="menu-item-1197" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1197"><a href="blog/index.html">Standard View</a></li>
 	<li id="menu-item-1198" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1198"><a href="blog/index31ab.html?blog_list_view=columns">Columns View</a></li>
