@@ -57,118 +57,32 @@
 						<div class="topBarInMenuCell">
 							<div class="btButtonWidget btOutline btWithLink"><a href="#" target="_self" class="btButtonWidgetLink"><div class="btIconWidgetIcon"><span data-ico-fontawesome="" class="bt_bb_icon_holder"></span></div><div class="btIconWidgetText"><span class="btButtonWidgetText">+63 998 868 3908</span></div></a></div>						</div><!-- /topBarInMenu -->
 					</div><!-- /topBarInMenuCell -->
-										<nav>
-											<ul id="menu-primary-menu" class="menu" style="background-color: #96E6F7;">
-    <li id="menu-item-1685" class="btMenuWideDropdown menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-2767 current_page_item current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-1685 btMenuWideDropdownCols-3">
-        <div class="subToggler"></div>
-        <a href="/" aria-current="page" style="color: #FFFFFF;">Home</a>
-<ul class="sub-menu">
-	<li id="menu-item-2838" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-2767 current_page_item current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-2838"><div class="subToggler"></div><a href="index.html" aria-current="page">Buddy</a>
-	<ul class="sub-menu">
-		<li id="menu-item-1904" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-2767 current_page_item menu-item-1904"><a href="index.html" aria-current="page">Home 01</a></li>
-		<li id="menu-item-1903" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1903"><a href="home/home-02/index.html">Home 02</a></li>
-		<li id="menu-item-2154" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2154"><a href="home/home-03/index.html">Home 03</a></li>
-	</ul>
-</li>
-	<li id="menu-item-1686" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1686"><div class="subToggler"></div><a href="https://pawsitive.bold-themes.com/coco/">Coco</a>
-	<ul class="sub-menu">
-		<li id="menu-item-2155" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2155"><a href="https://pawsitive.bold-themes.com/coco/">Home 01</a></li>
-		<li id="menu-item-2156" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2156"><a href="https://pawsitive.bold-themes.com/coco/home/home-02/">Home 02</a></li>
-		<li id="menu-item-2157" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2157"><a href="https://pawsitive.bold-themes.com/coco/home/home-03/">Home 03</a></li>
-	</ul>
-</li>
-	<li id="menu-item-1898" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1898"><div class="subToggler"></div><a href="https://pawsitive.bold-themes.com/bella/">Bella</a>
-	<ul class="sub-menu">
-		<li id="menu-item-2158" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2158"><a href="https://pawsitive.bold-themes.com/bella/">Home 01</a></li>
-		<li id="menu-item-2159" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2159"><a href="https://pawsitive.bold-themes.com/bella/home/home-02/">Home 02</a></li>
-		<li id="menu-item-2160" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2160"><a href="https://pawsitive.bold-themes.com/bella/home/home-03/">Home 03</a></li>
-	</ul>
-</li>
-</ul>
-</li>
-<li id="menu-item-2608" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2608"><div class="subToggler"></div><a href="#">Pages</a>
-<ul class="sub-menu">
-	<li id="menu-item-43" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-43"><a href="about-us/index.html">About Us</a></li>
-	<li id="menu-item-1715" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1715"><a href="team/index.html">Team</a></li>
-	<li id="menu-item-1729" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1729"><a href="our-process/index.html">Our Process</a></li>
-	<li id="menu-item-2870" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2870"><a href="about-us/timeline/index.html">Timeline</a></li>
-	<li id="menu-item-1731" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1731"><a href="services/index.html">Services</a></li>
-	<li id="menu-item-1730" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1730"><a href="single-service/index.html">Single Service</a></li>
-	<li id="menu-item-1728" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1728"><a href="prices/index.html">Prices</a></li>
-	<li id="menu-item-1716" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1716"><a href="contact/index.html">Contact</a></li>
-	<li id="menu-item-2800" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2800"><a href="coming-soon/index.html">Coming Soon</a></li>
-</ul>
-</li>
-<li id="menu-item-40" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-40"><div class="subToggler"></div><a href="/Contact">Contact Us</a>
-<ul class="sub-menu">
-	<li id="menu-item-1197" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1197"><a href="blog/index.html">Standard View</a></li>
-	<li id="menu-item-1198" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1198"><a href="blog/index31ab.html?blog_list_view=columns">Columns View</a></li>
-	<li id="menu-item-1199" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1199"><a href="blog/index21d3.html?blog_list_view=simple">Simple View</a></li>
-	<li id="menu-item-1205" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1205"><a href="blog/blog-grid/index.html">Grid View</a></li>
-	<li id="menu-item-1734" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-has-children menu-item-1734"><div class="subToggler"></div><a href="2018/01/10/tips-and-tricks-puppys-first-grooming/index.html">Single Post</a>
-	<ul class="sub-menu">
-		<li id="menu-item-1732" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-1732"><a href="2018/01/10/tips-and-tricks-puppys-first-grooming/index.html">Standard Post</a></li>
-		<li id="menu-item-1209" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-1209"><a href="2018/01/09/14-foods-you-can-share-with-your-dog/index.html">Carousel Gallery</a></li>
-		<li id="menu-item-1214" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-1214"><a href="2017/04/01/keeping-an-eye-on-your-cats-eyes/index.html">Grid Gallery</a></li>
-		<li id="menu-item-1212" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-1212"><a href="2017/07/20/keep-pets-parasite-free-for-their-health/index.html">Quote Post</a></li>
-		<li id="menu-item-1213" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-1213"><a href="2017/05/08/keeping-your-pet-active-year-round/index.html">Link Post</a></li>
-		<li id="menu-item-1211" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-1211"><a href="2018/01/09/top-10-trendiest-pet-names-for-2019/index.html">Audio Post</a></li>
-		<li id="menu-item-1210" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-1210"><a href="2018/01/09/best-summer-dog-activities-for-dog-owners/index.html">Video Post</a></li>
-	</ul>
-</li>
-	<li id="menu-item-59" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-59"><div class="subToggler"></div><a href="gallery/index.html">Gallery</a>
-	<ul class="sub-menu">
-		<li id="menu-item-1219" class="menu-item menu-item-type-post_type menu-item-object-portfolio menu-item-1219"><a href="gallery/dog-walk-together/index.html">Standard</a></li>
-		<li id="menu-item-1215" class="menu-item menu-item-type-post_type menu-item-object-portfolio menu-item-1215"><a href="gallery/adoption-paw-ty/index.html">Carousel</a></li>
-		<li id="menu-item-1216" class="menu-item menu-item-type-post_type menu-item-object-portfolio menu-item-1216"><a href="gallery/yappy-hour/index.html">Grid Gallery</a></li>
-		<li id="menu-item-1217" class="menu-item menu-item-type-post_type menu-item-object-portfolio menu-item-1217"><a href="gallery/bark-mitzvah/index.html">Video</a></li>
-		<li id="menu-item-1218" class="menu-item menu-item-type-post_type menu-item-object-portfolio menu-item-1218"><a href="gallery/howl-o-ween-party/index.html">Audio</a></li>
-	</ul>
-</li>
-</ul>
-</li>
-<li id="menu-item-41" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-41"><div class="subToggler"></div><a href="/shop">Shop</a>
-<ul class="sub-menu">
-	<li id="menu-item-152" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-152"><a href="shop/index.html">Products</a></li>
-	<li id="menu-item-47" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-47"><a href="shop/cart/index.html">Cart</a></li>
-	<li id="menu-item-46" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-46"><a href="shop/checkout/index.html">Checkout</a></li>
-	<li id="menu-item-45" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-45"><a href="shop/my-account/index.html">My Account</a></li>
-</ul>
-</li>
-<li id="menu-item-1821" class="btMenuWideDropdown menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1821 btMenuWideDropdownCols-3"><div class="subToggler"></div><a href="#">Elements</a>
-<ul class="sub-menu">
-	<li id="menu-item-1296" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1296"><div class="subToggler"></div><a href="#">Base</a>
-	<ul class="sub-menu">
-		<li id="menu-item-1298" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1298"><a href="elements/headlines/index.html">Headlines</a></li>
-		<li id="menu-item-1297" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1297"><a href="elements/buttons-icons/index.html">Buttons &amp; Icons</a></li>
-		<li id="menu-item-1300" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1300"><a href="elements/images/index.html">Images</a></li>
-		<li id="menu-item-1301" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1301"><a href="elements/inner-row-column/index.html">Inner Row &amp; Column</a></li>
-		<li id="menu-item-1310" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1310"><a href="elements/countdown-counter/index.html">Countdown &amp; Counter</a></li>
-		<li id="menu-item-2370" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2370"><a href="elements/card/index.html">Card</a></li>
-	</ul>
-</li>
-	<li id="menu-item-1343" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1343"><div class="subToggler"></div><a href="#">Common</a>
-	<ul class="sub-menu">
-		<li id="menu-item-1344" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1344"><a href="elements/progress-bar-advanced-bar/index.html">Progress &amp; Advanced Bar</a></li>
-		<li id="menu-item-1351" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1351"><a href="elements/price-list-single-product/index.html">Price List &amp; Single Product</a></li>
-		<li id="menu-item-1368" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1368"><a href="elements/google-openstreet-maps/index.html">Google &amp; OpenStreet Maps</a></li>
-		<li id="menu-item-1373" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1373"><a href="elements/service-element/index.html">Service</a></li>
-		<li id="menu-item-1378" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1378"><a href="elements/accordions-tabs/index.html">Accordions &amp; Tabs</a></li>
-		<li id="menu-item-2352" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2352"><a href="elements/organic-animation/index.html">Organic Animation</a></li>
-	</ul>
-</li>
-	<li id="menu-item-1419" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1419"><div class="subToggler"></div><a href="#">Presentational</a>
-	<ul class="sub-menu">
-		<li id="menu-item-1420" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1420"><a href="elements/team/index.html">Team</a></li>
-		<li id="menu-item-1336" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1336"><a href="elements/slider/index.html">Slider</a></li>
-		<li id="menu-item-1421" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1421"><a href="elements/testimonials/index.html">Testimonials</a></li>
-		<li id="menu-item-1357" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1357"><a href="elements/cost-calculator/index.html">Cost Calculator</a></li>
-		<li id="menu-item-1320" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1320"><a href="elements/blog-layouts/index.html">Blog Layouts</a></li>
-	<li class="btEmptyParentElement"><a class="btEmptyElement">&nbsp;</a></li></ul>
-</li>
-</ul>
-</li>
-</ul>						</nav>
+
+          <nav>
+    <ul id="menu-primary-menu" class="menu">
+        <li id="menu-item-1685" class="btMenuWideDropdown menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-2767 current_page_item current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-1685 btMenuWideDropdownCols-3">
+            <div class="subToggler"></div>
+            <a href="/" aria-current="page">Home</a>
+        </li>
+        <li id="menu-item-2608" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2608">
+            <div class="subToggler"></div>
+            <a href="#">Pages</a>
+        </li>
+        <li id="menu-item-40" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-40">
+            <div class="subToggler"></div>
+            <a href="blog/index.html">Blog</a>
+        </li>
+        <li id="menu-item-41" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-41">
+            <div class="subToggler"></div>
+            <a href="/shop">Shop</a>
+        </li>
+        <li id="menu-item-1821" class="btMenuWideDropdown menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1821 btMenuWideDropdownCols-3">
+            <div class="subToggler"></div>
+            <a href="#">Elements</a>
+        </li>
+    </ul>
+</nav>
+
 					</div><!-- .menuPort -->
 				</div><!-- /port -->
 			</div><!-- /menuHolder / btBelowLogoArea -->
