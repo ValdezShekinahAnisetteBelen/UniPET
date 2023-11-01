@@ -223,8 +223,9 @@
     <option value="dog food">Dog Food</option>
     <option value="accessories">Accessories</option>
     <option value="treats">Treats</option>
-    <option value="dog/cat (wet, canned, dry) foods">Dog/Cat (Wet, Canned, Dry) Foods</option>
-    <option value="bed/cage/pet house/bags">Bed/Cage/Pet House/Bags</option>
+    <option value="dog / cat  (wet, canned, dry) foods">Dog/Cat (Wet, Canned, Dry) Foods</option>
+    <option value="bed/ cage / pet house/bags">Bed/Cage/Pet House/Bags</option>
+	<option value="colars">Collars</option>
     <option value="combs/brush">Combs/Brush</option>
     <option value="dress/clothes">Dress/Clothes</option>
   </select>
