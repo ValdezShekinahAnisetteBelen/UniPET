@@ -70,7 +70,7 @@
         </li>
         <li id="menu-item-40" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-40">
             <div class="subToggler"></div>
-            <a href="blog/index.html">Blog</a>
+            <a href="/Contact">Contact Us</a>
         </li>
         <li id="menu-item-41" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-41">
             <div class="subToggler"></div>
