@@ -32,6 +32,11 @@ component: () => import(/* webpackChunkName: "about" */ '../views/Client/Product
   path: '/Contact',
   name: 'Contact',
   component: () => import(/* webpackChunkName: "signup" */ '../views/Client/Contact')
+},
+{
+  path: '/Checkout',
+  name: 'Checkout',
+  component: () => import(/* webpackChunkName: "signup" */ '../views/Client/Checkout')
 }
 ]
 

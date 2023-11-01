@@ -137,16 +137,23 @@
           <i class="fa fa-plus" aria-hidden="true"></i>
         </button>
       </div>
+      
       <div style="text-align: center;">
-        {{ cartItem.name }}<br>
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+          {{ cartItem.name }}<br>
         ${{ cartItem.price }}
+      </label>
       </div>
       <div style="display: flex; align-items: center;">
-        <button type="button" class="btn btn-info btn-sm m-1" onclick="window.location.href='/ProductDetails'">View Details</button>
+      <router-link :to="'/ProductDetails/'">
+        {{ product.name }} View Details
+      </router-link>
         <button type="button" class="btn btn-danger btn-sm m-1">REMOVE</button>
         </div>
     </li>
   </ul>
+  <button type="button" class="btn btn-success btn-sm m-1"><a href="/Checkout">CHECK OUT</a></button>
 </div>
 
 
@@ -182,7 +189,7 @@
         <div class="btWooShopLoopItemInner" style="border: 1px solid #0CC0DF; padding: 15px; margin: 10px; border-radius: 10px;">
           <span class="onsale">Sale!</span>
           <div class="bt_bb_image" data-bt-override-class="null">
-            <a :href="'https://pawsitive.bold-themes.com/buddy/product/' + product.slug" target="_self" :title="product.name">
+            <a :href="'/ProductDetails' + product.slug" target="_self" :title="product.name">
               <img :src="product.image" :title="product.name" :alt="product.name">
             </a>
           </div>
@@ -190,14 +197,14 @@
             <div class="bt_bb_headline_superheadline_outside">
               <span class="bt_bb_headline_superheadline">
                 <span class="btArticleCategories">
-                  <a :href="'https://pawsitive.bold-themes.com/buddy/product-category/' + product.productgroup" class="btArticleCategory">{{ product.productgroup }}</a>
+                  <a :href="'/Shop' + product.productgroup" class="btArticleCategory">{{ product.productgroup }}</a>
                 </span>
               </span>
             </div>
             <h2 class="bt_bb_headline_tag">
               <span class="bt_bb_headline_content">
                 <span>
-                  <a :href="'https://pawsitive.bold-themes.com/buddy/product/' + product.slug" target="_self" :title="product.name">
+                  <a :href="'/ProductDetails' + product.slug" target="_self" :title="product.name">
                     {{ product.name }}
                   </a>
                 </span>
@@ -282,11 +289,11 @@
     </template>
 
 <script>
-
 import axios from 'axios';
 export default {
   data() {
     return {
+      product: {},
       info: [], // All products
 	  cart: [],
       selectedCategory: '', // Selected category
@@ -352,7 +359,18 @@ export default {
         console.error('Error:', error);
       }
     },
+    viewProductDetails(cartItem) {
+    // Check if cartItem has a productId
+    if (cartItem && cartItem.productId) {
+      // Navigate to the ProductDetails route with the 'id' parameter
+      this.$router.push({ name: 'ProductDetails', params: { id: cartItem.productId } });
+    } else {
+      console.error('Missing product ID in cartItem.');
+    }
+  }
+
 },
+
     // ... other methods
     loadScripts() {
       const scriptUrls = [
@@ -405,7 +423,8 @@ export default {
         head.appendChild(script);
       });
   },
-};
+  
+}
 </script>
 
 

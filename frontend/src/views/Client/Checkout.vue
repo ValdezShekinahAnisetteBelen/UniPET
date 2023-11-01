@@ -91,137 +91,87 @@
              <!-- Add a div to display the animal picture -->
            
     <!-- Close the .about-us div here -->
-    <section class="py-5">
-            <div class="container px-4 px-lg-5 my-5">
-                <div class="row gx-4 gx-lg-5 align-items-center">
-                    <div class="col-md-6">
-                      <img class="card-img-top mb-5 mb-md-0" src="User/images/3.png" />
-                    </div>
-                    <div class="col-md-6">
-                        <div class="small mb-1">SKU: BST-498</div>
-                        <h1 class="display-5 fw-bolder">Shop item</h1>
-                        <div class="fs-5 mb-5">
-                            <span>₱100.00</span>
-                        </div>
-                        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium at dolorem quidem modi. Nam sequi consequatur obcaecati excepturi alias magni, accusamus eius blanditiis delectus ipsam minima ea iste laborum vero?</p>
-                        <div class="d-flex">
-                            <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 5rem" />
-                            <button class="btn btn-outline-info" type="button">
-                                <i class="bi-cart-fill me-1"></i>
-                                Add to cart
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <div class="spaces">
+    <div class="row mt-3 mx-3" style="margin-top:25px ;">
+  <div class="col-md-3">
+    <div style="margin-top: 50px; margin-left: 10px;" class="text-center">
+      <i id="animationDemo" data-mdb-animation="slide-right" data-mdb-toggle="animation"
+        data-mdb-animation-reset="true" data-mdb-animation-start="onScroll"
+        data-mdb-animation-on-scroll="repeat" class="fas fa-3x fa-shipping-fast text-white"></i>
+      <h3 class="mt-3 text-white">Welcome</h3>
+      <p class="white-text">You are 30 seconds away from compleating your order!</p>
+    </div>
+    <div class="text-center">
+      <button type="submit" class="btn btn-white btn-rounded back-button">Go back</button>
+    </div>
 
-         <!-- Related items section-->
-         <section class="py-5 bg-light">
-            <div class="container px-4 px-lg-5 mt-5">
-                <h2 class="fw-bolder mb-4">Related products</h2>
-                <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                            <!-- Product image-->
-                            <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
-                            <!-- Product details-->
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <!-- Product name-->
-                                    <h5 class="fw-bolder">Fancy Product</h5>
-                                    <!-- Product price-->
-                                    ₱40.00 - ₱80.00
-                                </div>
-                            </div>
-                            <!-- Product actions-->
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-info" href="#">View options</a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                            <!-- Sale badge-->
-                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
-                            <!-- Product image-->
-                            <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
-                            <!-- Product details-->
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <!-- Product name-->
-                                    <h5 class="fw-bolder">Special Item</h5>
-                                    <!-- Product reviews-->
-                                    <div class="d-flex justify-content-center small text-info mb-2">
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                    </div>
-                                    <!-- Product price-->
-                                    <span class="text-muted text-decoration-line-through">₱20.00</span>
-                                    ₱18.00
-                                </div>
-                            </div>
-                            <!-- Product actions-->
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-info" href="#">Add to cart</a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                            <!-- Sale badge-->
-                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
-                            <!-- Product image-->
-                            <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
-                            <!-- Product details-->
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <!-- Product name-->
-                                    <h5 class="fw-bolder">Sale Item</h5>
-                                    <!-- Product price-->
-                                    <span class="text-muted text-decoration-line-through">₱50.00</span>
-                                    ₱25.00
-                                </div>
-                            </div>
-                            <!-- Product actions-->
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-info" href="#">Add to cart</a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                            <!-- Product image-->
-                            <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
-                            <!-- Product details-->
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <!-- Product name-->
-                                    <h5 class="fw-bolder">Popular Item</h5>
-                                    <!-- Product reviews-->
-                                    <div class="d-flex justify-content-center small text-info mb-2">
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                    </div>
-                                    <!-- Product price-->
-                                    ₱40.00
-                                </div>
-                            </div>
-                            <!-- Product actions-->
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-info" href="#">Add to cart</a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
+  </div>
+  <div class="col-md-9 justify-content-center">
+    <div class="card card-custom pb-4">
+      <div class="card-body mt-0 mx-5">
+        <div class="text-center mb-3 pb-2 mt-3">
+          <h4 style="color: #495057 ;">Delivery Details</h4>
+        </div>
+
+        <form class="mb-0">
+
+          <div class="row mb-4">
+            <div class="col">
+              <div class="form-outline">
+                <input type="text" id="form9Example1" class="form-control input-custom" />
+                <label class="form-label" for="form9Example1">First name</label>
+              </div>
             </div>
-        </section>
+            <div class="col">
+              <div class="form-outline">
+                <input type="text" id="form9Example2" class="form-control input-custom" />
+                <label class="form-label" for="form9Example2">Last name</label>
+              </div>
+            </div>
+          </div>
+          <div class="row mb-4">
+            <div class="col">
+              <div class="form-outline">
+                <input type="text" id="form9Example3" class="form-control input-custom" />
+                <label class="form-label" for="form9Example3">City</label>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-outline">
+                <input type="text" id="form9Example4" class="form-control input-custom" />
+                <label class="form-label" for="form9Example4">Zip</label>
+              </div>
+            </div>
+          </div>
+          <div class="row mb-4">
+            <div class="col">
+              <div class="form-outline">
+                <input type="text" id="form9Example6" class="form-control input-custom" />
+                <label class="form-label" for="form9Example6">Address</label>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-outline">
+                <input type="email" id="typeEmail" class="form-control input-custom" />
+                <label class="form-label" for="typeEmail">Email</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="float-end ">
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-primary btn-rounded"
+              style="background-color: #0062CC ;">Place order</button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+   
 
     
     <div class="btSiteFooter">
@@ -274,74 +224,7 @@
     
     import axios from 'axios';
     export default {
-      data() {
-        return {
-          info: [], // All products
-          cart: [],
-          selectedCategory: '', // Selected category
-        };
-      },
-      computed: {
-        filteredProducts() {
-          if (!this.selectedCategory) {
-            return this.info; // Return all products if no category is selected
-          }
-          // Filter products based on the selected category
-          return this.info.filter(product => product.productgroup === this.selectedCategory);
-        },
-      },
-      created() {
-        this.getInfo();
-      },
-      methods: {
-        async getInfo() {
-          try {
-            const response = await axios.get('getData');
-            this.info = response.data;
-          } catch (error) {
-            console.error(error);
-          }
-        },
-        getFilterValue(productgroup) {
-          if (!this.selectedCategory || productgroup === this.selectedCategory) {
-            return '';
-          }
-          return 'd-none';
-        },
-        filterProducts() {
-          // Filter products based on the selected category
-          // This will be automatically handled by computed property filteredProducts
-        },
-        async addToCart(product) {
-          try {
-            // Make a POST request to the server to add the item to the "cart" table
-            const response = await axios.post('http://unipet.test/public/api/add-to-cart', {
-              name: product.name,
-              price: product.price,
-              image: product.image,
-              productgroup: product.productgroup,
-            });
-    
-            if (response.status === 200) {
-              // Item added to cart successfully
-              this.cart.push({
-                name: product.name,
-                price: product.price,
-                image: product.image,
-                productgroup: product.productgroup,
-              });
-    
-              // You can also show a success message or update the UI
-              console.log('Product added to cart:', product.name);
-            } else {
-              // Handle the error, e.g., display an error message
-              console.error('Failed to add the product to the cart');
-            }
-          } catch (error) {
-            console.error('Error:', error);
-          }
-        },
-    },
+
         // ... other methods
         loadScripts() {
           const scriptUrls = [
@@ -400,7 +283,7 @@
     
     
         <style>
-        
+        @import '../../../src/assets/User/css/delivery.css';
     @import 'https://cdn.datatables.net/1.11.6/css/jquery.dataTables.min.css';
     @import '../../../src/assets/User/css/style2.css';
     @import '../../../src/assets/User/css/style4.css';
