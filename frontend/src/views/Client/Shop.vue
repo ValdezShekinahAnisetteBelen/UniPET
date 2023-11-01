@@ -6,6 +6,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name='robots' content='max-image-preview:large' />
 
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <link rel='dns-prefetch' href='http://fonts.googleapis.com/' />
 <link rel="alternate" type="application/rss+xml" title="Buddy &raquo; Feed" href="feed/index.html" />
@@ -207,73 +208,81 @@
     <h4><span>Cart</span></h4>
     <div class="widget_shopping_cart_content"></div>
   </div>
-  <div class="btBox woocommerce widget_product_categories" style="border: 1px solid #0CC0DF; border-radius: 4px; padding: 10px;">
-    <h4><span>Product categories</span></h4>
-    <ul class="product-categories">
-      <li class="cat-item cat-item-31"><a href="/">PET FOOD</a></li>
-      <li class="cat-item cat-item-33"><a href="/">PET SUPPLIES</a></li>
-      <li class="cat-item cat-item-34"><a href="/">TOYS AND ENRICHMENT</a></li>
-      <li class="cat-item cat-item-38"><a href="/">HEALTH AND WELLNESS</a></li>
-	  <li class="cat-item cat-item-38"><a href="/">PET BEDDING</a></li>
-	  <li class="cat-item cat-item-38"><a href="/">PET APPAREL</a></li>
-	  <li class="cat-item cat-item-38"><a href="/">FEEDING AND WATERING</a></li>
-    </ul>
-  </div>
-</aside>
-
 
   <div class="row">
-    <div class="col-md-4 mb-4" v-for="product in info">
-      <div class="product type-product post-1860 status-publish first outofstock product_cat-beef has-post-thumbnail sale shipping-taxable purchasable product-type-simple">
-        <div class="btWooShopLoopItemInner" style="border: 1px solid #0CC0DF; padding: 15px; margin: 10px; border-radius: 10px;">
-          <span class="onsale">Sale!</span>
-          <div class="bt_bb_image" data-bt-override-class="null">
-            <a :href="'https://pawsitive.bold-themes.com/buddy/product/' + product.slug" target="_self" :title="product.name">
-              <img :src="product.image" :title="product.name" :alt="product.name">
-            </a>
-          </div>
-          <header class="bt_bb_headline bt_bb_superheadline bt_bb_superheadline_outside bt_bb_subheadline bt_bb_size_extrasmall" data-bt-override-class="{}">
-            <div class="bt_bb_headline_superheadline_outside">
-              <span class="bt_bb_headline_superheadline">
-                <span class="btArticleCategories">
-                  <a :href="'https://pawsitive.bold-themes.com/buddy/product-category/' + product.productgroup" class="btArticleCategory">{{ product.productgroup }}</a>
-                </span>
+	<div class="btBox woocommerce widget_product_categories" style="border: 1px solid #0CC0DF; border-radius: 4px; padding: 10px;">
+      <h4><span>Product categories</span></h4>
+      <select v-model="selectedCategory" @change="filterProducts">
+        <option value="">All Categories</option>
+        <option value="soap">Soap</option>
+        <option value="vaccines">Vaccines</option>
+    <option value="shampoo1">Shampoo1</option>
+    <option value="services">Services</option>
+    <option value="vitamins1">Vitamins1</option>
+    <option value="accessories/bowl/ecollar">Accessories/Bowl/Ecollar</option>
+    <option value="dog food">Dog Food</option>
+    <option value="accessories">Accessories</option>
+    <option value="treats">Treats</option>
+    <option value="dog/cat (wet, canned, dry) foods">Dog/Cat (Wet, Canned, Dry) Foods</option>
+    <option value="bed/cage/pet house/bags">Bed/Cage/Pet House/Bags</option>
+    <option value="combs/brush">Combs/Brush</option>
+    <option value="dress/clothes">Dress/Clothes</option>
+  </select>
+</div>
+
+      <div class="col-md-4 mb-4" v-for="product in filteredProducts" :key="product.id" :class="getFilterValue(product.productgroup)">
+    <div class="product type-product post-1860 status-publish first outofstock product_cat-beef has-post-thumbnail sale shipping-taxable purchasable product-type-simple">
+      <div class="btWooShopLoopItemInner" style="border: 1px solid #0CC0DF; padding: 15px; margin: 10px; border-radius: 10px;">
+        <span class="onsale">Sale!</span>
+        <div class="bt_bb_image" data-bt-override-class="null">
+          <a :href="'https://pawsitive.bold-themes.com/buddy/product/' + product.slug" target="_self" :title="product.name">
+            <img :src="product.image" :title="product.name" :alt="product.name">
+          </a>
+        </div>
+        <header class="bt_bb_headline bt_bb_superheadline bt_bb_superheadline_outside bt_bb_subheadline bt_bb_size_extrasmall" data-bt-override-class="{}">
+          <div class="bt_bb_headline_superheadline_outside">
+            <span class="bt_bb_headline_superheadline">
+              <span class="btArticleCategories">
+                <a :href="'https://pawsitive.bold-themes.com/buddy/product-category/' + product.productgroup" class="btArticleCategory">{{ product.productgroup }}</a>
               </span>
-            </div>
-            <h2 class="bt_bb_headline_tag">
-              <span class="bt_bb_headline_content">
-                <span>
-                  <a :href="'https://pawsitive.bold-themes.com/buddy/product/' + product.slug" target="_self" :title="product.name">
-                    {{ product.name }}
-                  </a>
-                </span>
-              </span>
-            </h2>
-            <div class="bt_bb_headline_subheadline">
-              <div class="star-rating">
-                <span :style="'width:' + (product.rating * 20) + '%'">
-                  Rated <strong class="rating">{{ product.rating }}</strong> out of 5
-                </span>
-              </div>
-            </div>
-          </header>
-          <div class="price">
-            <span class="woocommerce-Price-amount amount">
-              <bdi>
-                <span class="woocommerce-Price-currencySymbol">₱</span>{{ product.price }}
-              </bdi>
             </span>
           </div>
-          <div class="text-center">
-            <a :href="'?add-to-cart=' + product.id" data-quantity="1" class="btn btn-outline-info" :data-product_id="product.id" data-product_sku=""
-              :aria-label="'Add “' + product.name + '” to your cart'" aria-describedby="" rel="nofollow">
-              Add to cart
-            </a>
+          <h2 class="bt_bb_headline_tag">
+            <span class="bt_bb_headline_content">
+              <span>
+                <a :href="'https://pawsitive.bold-themes.com/buddy/product/' + product.slug" target="_self" :title="product.name">
+                  {{ product.name }}
+                </a>
+              </span>
+            </span>
+          </h2>
+          <div class="bt_bb_headline_subheadline">
+            <div class="star-rating">
+              <span :style="'width:' + (product.rating * 20) + '%'">
+                Rated <strong class="rating">{{ product.rating }}</strong> out of 5
+              </span>
+            </div>
           </div>
+        </header>
+        <div class="price">
+          <span class="woocommerce-Price-amount amount">
+            <bdi>
+              <span class="woocommerce-Price-currencySymbol">₱</span>{{ product.price }}
+            </bdi>
+          </span>
+        </div>
+        <div class="text-center">
+          <a :href="'?add-to-cart=' + product.id" data-quantity="1" class="btn btn-outline-info" :data-product_id="product.id" data-product_sku=""
+            :aria-label="'Add “' + product.name + '” to your cart'" aria-describedby="" rel="nofollow">
+            Add to cart
+          </a>
         </div>
       </div>
     </div>
   </div>
+</div>
+  
+</aside>
 </div>
 				</div></div></article>		</div><!-- /boldthemes_content -->
 	</div>
@@ -367,35 +376,51 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script>window.bt_bb_preview = false
 
 </script> -->
-
-    <script>
-        import App from '../../App.vue'
-		import axios from 'axios'
+<script>
+import axios from 'axios';
 
 export default {
-    name: "Shop",
-    mounted() {
-      this.loadScripts();
+  data() {
+    return {
+      info: [], // All products
+      selectedCategory: '', // Selected category
+    };
+  },
+  computed: {
+    filteredProducts() {
+      if (!this.selectedCategory) {
+        return this.info; // Return all products if no category is selected
+      }
+      // Filter products based on the selected category
+      return this.info.filter(product => product.productgroup === this.selectedCategory);
     },
-	data (){
-		return {
-			info:[],
-		}
-	},
-	created(){
-		this.getInfo();
-	},
-    methods: {
-		async getInfo() {
-			try {
-				const inf = await axios.get('getData');
-				this.info = inf.data;
-				} catch (error) {
-					console.log(error);
-			}
-		},
-      loadScripts() {
-        const scriptUrls = [
+  },
+  created() {
+    this.getInfo();
+  },
+  methods: {
+    async getInfo() {
+      try {
+        const response = await axios.get('getData');
+        this.info = response.data;
+      }
+	  catch (error) {
+        console.error(error);
+      }
+    },
+    getFilterValue(productgroup) {
+      if (!this.selectedCategory || productgroup === this.selectedCategory) {
+        return '';
+      }
+      return 'd-none';
+    },
+    filterProducts() {
+      // Filter products based on the selected category
+      // This will be automatically handled by computed property filteredProducts
+    },
+},
+    loadScripts() {
+      const scriptUrls = [
         '../../../../frontend/public/User/js5.js',
         '../../../../frontend/public/User/js6.js',
         '../../../../frontend/public/User/js16.js',
@@ -407,7 +432,8 @@ export default {
         '../../../../frontend/public/User/js22.js',
         '../../../../frontend/public/User/js12.js',
         '../../../../frontend/public/User/js14.js',
-		'../../../../frontend/public/User/js243.js',
+        '../../../../frontend/public/User/js243.js',
+        '../../../../frontend/public/User/scripts.js',
         '../../../../frontend/public/User/wp-content/themes/pawsitive/framework/js/fancySelecte35d.js',
         '../../../../frontend/public/User/wp-content/plugins/duracelltomi-google-tag-manager/js/gtm4wp-form-move-tracker7100.js',
         '../../../../frontend/public/User/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min2632.js',
@@ -415,41 +441,38 @@ export default {
         '../../../../frontend/public/User/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min2632.js',
         '../../../../frontend/public/User/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.minf0ea.js',
         '../../../../frontend/public/User/wp-content/plugins/contact-form-7/includes/swv/js/indexf658.js',
-          '../../../../frontend/public/User/wp-content/plugins/contact-form-7/includes/js/indexf658.js',
+        '../../../../frontend/public/User/wp-content/plugins/contact-form-7/includes/js/indexf658.js',
         '../../../../frontend/public/User/wp-includes/js/jquery/ui/core.min3f14.js',
-          '../../../../frontend/public/User/wp-includes/js/jquery/ui/datepicker.min3f14.js',
-          '../../../../frontend/public/User/wp-includes/js/jquery/ui/mouse.min3f14.js',
-          '../../../../frontend/public/User/wp-includes/js/jquery/ui/slider.min3f14.js',
-          '../../../../frontend/public/User/wp-content/plugins/bt_cost_calculator/jquery.ui.touch-punch.mine35d.js',
-          '../../../../frontend/public/User/wp-content/themes/pawsitive/framework/js/header.misce35d.js',
-          '../../../../frontend/public/User/wp-content/themes/pawsitive/framework/js/misce35d.js',
-          '../../../../frontend/public/User/wp-content/plugins/bold-page-builder/content_elements/bt_bb_section/bt_bb_elementse35d.js',
-          '../../../../frontend/public/User/wp-content/themes/pawsitive/bold-page-builder/content_elements/bt_bb_floating_image/bt_bb_floating_imagee35d.js',
-          '../../../../frontend/public/User/wp-content/themes/pawsitive/bold-page-builder/content_elements/bt_bb_organic_animation/anime.mine35d.js',
-          '../../../../frontend/public/User/wp-includes/js/jquery/jquery.min3088.js',
-         '../../../../frontend/public/User/wp-includes/js/jquery/jquery-migrate.min5589.js',
-         '../../../../frontend/public/User/wp-content/plugins/bold-page-builder/slick/slick.min1849.js',
-         '../../../../frontend/public/User/wp-content/plugins/bold-page-builder/content_elements_misc/js/jquery.magnific-popup.min1849.js',
-         '../../../../frontend/public/User/wp-content/plugins/bold-page-builder/content_elements_misc/js/content_elements1849.js',
-          '../../../../frontend/public/User/wp-content/plugins/bt_cost_calculator/jquery.dde35d.js',
-          '../../../../frontend/public/User/wp-content/plugins/bt_cost_calculator/cc.maine35d.js',
-          '../../../../frontend/public/User/bt_cc_main-js-after.js',
-		  'https://code.jquery.com/jquery-3.6.0.min.js',
-		  'https://cdn.datatables.net/1.11.6/js/jquery.dataTables.min.js',
+        '../../../../frontend/public/User/wp-includes/js/jquery/ui/datepicker.min3f14.js',
+        '../../../../frontend/public/User/wp-includes/js/jquery/ui/mouse.min3f14.js',
+        '../../../../frontend/public/User/wp-includes/js/jquery/ui/slider.min3f14.js',
+        '../../../../frontend/public/User/wp-content/plugins/bt_cost_calculator/jquery.ui.touch-punch.mine35d.js',
+        '../../../../frontend/public/User/wp-content/themes/pawsitive/framework/js/header.misce35d.js',
+        '../../../../frontend/public/User/wp-content/themes/pawsitive/framework/js/misce35d.js',
+        '../../../../frontend/public/User/wp-content/plugins/bold-page-builder/content_elements/bt_bb_section/bt_bb_elementse35d.js',
+        '../../../../frontend/public/User/wp-content/themes/pawsitive/bold-page-builder/content_elements/bt_bb_floating_image/bt_bb_floating_imagee35d.js',
+        '../../../../frontend/public/User/wp-content/themes/pawsitive/bold-page-builder/content_elements/bt_bb_organic_animation/anime.mine35d.js',
+        '../../../../frontend/public/User/wp-includes/js/jquery/jquery.min3088.js',
+        '../../../../frontend/public/User/wp-includes/js/jquery/jquery-migrate.min5589.js',
+        '../../../../frontend/public/User/wp-content/plugins/bold-page-builder/slick/slick.min1849.js',
+        '../../../../frontend/public/User/wp-content/plugins/bold-page-builder/content_elements_misc/js/jquery.magnific-popup.min1849.js',
+        '../../../../frontend/public/User/wp-content/plugins/bold-page-builder/content_elements_misc/js/content_elements1849.js',
+        '../../../../frontend/public/User/wp-content/plugins/bt_cost_calculator/jquery.dde35d.js',
+        '../../../../frontend/public/User/wp-content/plugins/bt_cost_calculator/cc.maine35d.js',
+        '../../../../frontend/public/User/bt_cc_main-js-after.js',
+        'https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js',
+      ];
+      const head = document.getElementsByTagName('head')[0];
+      scriptUrls.forEach((scriptUrl) => {
+        const script = document.createElement('script');
+        script.src = scriptUrl;
+        script.async = true;
+        head.appendChild(script);
+      });
+  },
+};
+</script>
 
-];         
-        const head = document.getElementsByTagName('head')[0];
-  
-        scriptUrls.forEach((scriptUrl) => {
-          const script = document.createElement('script');
-          script.src = scriptUrl;
-          script.async = true;
-          head.appendChild(script);
-        });
-      },
-    },
-  };
-    </script>
 
     <style>
 @import 'https://cdn.datatables.net/1.11.6/css/jquery.dataTables.min.css';
@@ -463,7 +486,7 @@ export default {
 @import '../../../src/assets/User/css/style10.css';
 @import '../../../src/assets/User/css/style13.css';
 @import '../../../src/assets/User/css/style14.css';
-@import '../../../src/assets/User/css/ex.css';
+@import '../../../src/assets/User/css/styles.css';
 @import '../../../../frontend/public/User/wp-content/themes/pawsitive/stylee35d.css';
 @import '../../../../frontend/public/User/wp-content/plugins/bold-page-builder/slick/slick1849.css';
 @import '../../../../frontend/public/User/wp-content/plugins/bt_cost_calculator/style.mine35d.css';
