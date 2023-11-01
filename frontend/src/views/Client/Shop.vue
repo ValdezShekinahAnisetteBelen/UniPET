@@ -205,13 +205,26 @@
     </div>
   </div>
   <div class="row">
-  <div class="btBox woocommerce widget_shopping_cart" style="border: 1px solid #0CC0DF; border-radius: 4px; padding: 10px;">
-    <h4><span>Cart</span></h4>
-    <div class="widget_shopping_cart_content"></div>
-  </div>
+  
+	<!--------------start of Shopping Cart----------->
+  <div class="cart" style="border: 1px solid #0CC0DF; border-radius: 4px; padding: 10px;">
+	<img src="User/gallery/shopping-cart.png" alt="Veterinary Icon" style="width: 2cm; height: 2cm;">
+      <h2>Shopping Cart</h2>
+      <ul>
+        <li v-for="(cartItem, index) in cart" :key="index">
+          {{ cartItem.name }} - ${{ cartItem.price }}
+        </li>
+      </ul>
+    </div>
+
+	<div class="spaces">
+		<br>
+	</div>
+
+	<!-------------end------Shopping cart ----------->
 
 	<div class="btBox woocommerce widget_product_categories" style="border: 1px solid #0CC0DF; border-radius: 4px; padding: 10px;">
-      <h4><span>Product categories</span></h4>
+		<h2>Product Categories</h2>
       <select v-model="selectedCategory" @change="filterProducts">
         <option value="">All Categories</option>
         <option value="soap">Soap</option>
@@ -231,66 +244,57 @@
   </select>
 </div>
 
-      <div class="col-md-4 mb-4" v-for="product in filteredProducts" :key="product.id" :class="getFilterValue(product.productgroup)">
-    <div class="product type-product post-1860 status-publish first outofstock product_cat-beef has-post-thumbnail sale shipping-taxable purchasable product-type-simple">
-      <div class="btWooShopLoopItemInner" style="border: 1px solid #0CC0DF; padding: 15px; margin: 10px; border-radius: 10px;">
-        <span class="onsale">Sale!</span>
-        <div class="bt_bb_image" data-bt-override-class="null">
-          <a :href="'https://pawsitive.bold-themes.com/buddy/product/' + product.slug" target="_self" :title="product.name">
-            <img :src="product.image" :title="product.name" :alt="product.name">
-          </a>
-        </div>
-        <header class="bt_bb_headline bt_bb_superheadline bt_bb_superheadline_outside bt_bb_subheadline bt_bb_size_extrasmall" data-bt-override-class="{}">
-          <div class="bt_bb_headline_superheadline_outside">
-            <span class="bt_bb_headline_superheadline">
-              <span class="btArticleCategories">
-                <a :href="'https://pawsitive.bold-themes.com/buddy/product-category/' + product.productgroup" class="btArticleCategory">{{ product.productgroup }}</a>
-              </span>
-            </span>
+<div class="col-md-4 mb-4" v-for="product in filteredProducts" :key="product.id" :class="getFilterValue(product.productgroup)">
+      <div class="product type-product post-1860 status-publish first outofstock product_cat-beef has-post-thumbnail sale shipping-taxable purchasable product-type-simple">
+        <div class="btWooShopLoopItemInner" style="border: 1px solid #0CC0DF; padding: 15px; margin: 10px; border-radius: 10px;">
+          <span class="onsale">Sale!</span>
+          <div class="bt_bb_image" data-bt-override-class="null">
+            <a :href="'https://pawsitive.bold-themes.com/buddy/product/' + product.slug" target="_self" :title="product.name">
+              <img :src="product.image" :title="product.name" :alt="product.name">
+            </a>
           </div>
-          <h2 class="bt_bb_headline_tag">
-            <span class="bt_bb_headline_content">
-              <span>
-                <a :href="'https://pawsitive.bold-themes.com/buddy/product/' + product.slug" target="_self" :title="product.name">
-                  {{ product.name }}
-                </a>
-              </span>
-            </span>
-          </h2>
-          <div class="bt_bb_headline_subheadline">
-            <div class="star-rating">
-              <span :style="'width:' + (product.rating * 20) + '%'">
-                Rated <strong class="rating">{{ product.rating }}</strong> out of 5
+          <header class="bt_bb_headline bt_bb_superheadline bt_bb_superheadline_outside bt_bb_subheadline bt_bb_size_extrasmall" data-bt-override-class="{}">
+            <div class="bt_bb_headline_superheadline_outside">
+              <span class="bt_bb_headline_superheadline">
+                <span class="btArticleCategories">
+                  <a :href="'https://pawsitive.bold-themes.com/buddy/product-category/' + product.productgroup" class="btArticleCategory">{{ product.productgroup }}</a>
+                </span>
               </span>
             </div>
+            <h2 class="bt_bb_headline_tag">
+              <span class="bt_bb_headline_content">
+                <span>
+                  <a :href="'https://pawsitive.bold-themes.com/buddy/product/' + product.slug" target="_self" :title="product.name">
+                    {{ product.name }}
+                  </a>
+                </span>
+              </span>
+            </h2>
+            <div class="bt_bb_headline_subheadline">
+              <div class="star-rating">
+                <span :style="'width:' + (product.rating * 20) + '%'">
+                  Rated <strong class="rating">{{ product.rating }}</strong> out of 5
+                </span>
+              </div>
+            </div>
+          </header>
+          <div class="price">
+            <span class="woocommerce-Price-amount amount">
+              <bdi>
+                <span class="woocommerce-Price-currencySymbol">₱</span>{{ product.price }}
+              </bdi>
+            </span>
           </div>
-        </header>
-        <div class="price">
-          <span class="woocommerce-Price-amount amount">
-            <bdi>
-              <span class="woocommerce-Price-currencySymbol">₱</span>{{ product.price }}
-            </bdi>
-          </span>
+          <div class="text-center">
+            <a @click="addToCart(product)" class="btn btn-outline-info">
+              {{ product.productgroup === 'services' ? 'Book Now' : 'Add to Cart' }}
+            </a>
+          </div>
         </div>
-		<div class="text-center">
-			<div class="text-center">
-  <a :href="'?add-to-cart=' + product.id" data-quantity="1" class="btn btn-outline-info" :data-product_id="product.id" data-product_sku=""
-    :aria-label="'Add “' + product.name + '” to your cart'" aria-describedby="" rel="nofollow"
-    v-if="product.productgroup === 'services'">
-    Book Now
-  </a>
-  <a :href="'?add-to-cart=' + product.id" data-quantity="1" class="btn btn-outline-info" :data-product_id="product.id" data-product_sku=""
-    :aria-label="'Add “' + product.name + '” to your cart'" aria-describedby="" rel="nofollow"
-    v-else>
-    Add to cart
-  </a>
-</div>
-
-</div>
-
       </div>
-    </div>
-  </div>
+</div>
+
+
 </div>
   
 </aside>
@@ -344,49 +348,6 @@
 
     </template>
 
-<!-- <script type="text/javascript" src="  '../../../../frontend/public/User/js14.js',">
-</script>
-
-
-<script data-cfasync="false" data-pagespeed-no-defer>
-var gtm4wp_datalayer_name = "dataLayer";
-var dataLayer = dataLayer || [];
-</script>
-
-<script type='text/javascript' id='wc-add-to-cart-js-extra'>
-/* <![CDATA[ */
-var wc_add_to_cart_params = {"ajax_url":"\/buddy\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/buddy\/?wc-ajax=%%endpoint%%","i18n_view_cart":"View cart","cart_url":"https:\/\/pawsitive.bold-themes.com\/buddy\/shop\/cart\/","is_cart":"","cart_redirect_after_add":"no"};
-/* ]]> */
-</script>
-
-<script type='text/javascript' id='woocommerce-js-extra'>
-/* <![CDATA[ */
-var woocommerce_params = {"ajax_url":"\/buddy\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/buddy\/?wc-ajax=%%endpoint%%"};
-/* ]]> */
-</script>
-<script id="pawsitive-header-misc-js-before" type="text/javascript">
-window.BoldThemesURI = "https://pawsitive.bold-themes.com/wp-content/themes/pawsitive/"; window.BoldThemesAJAXURL = "wp-admin/admin-ajax.html";window.boldthemes_text = [];window.boldthemes_text.previous = 'previous';window.boldthemes_text.next = 'next';
-</script>
-<script id="bt_cc_main-js-after" type="text/javascript">
-
-window.bt_cc_translate = [];window.bt_cc_translate['prev'] = 'Prev';window.bt_cc_translate['next'] = 'Next';window.bt_cc_translate['su'] = 'Su';window.bt_cc_translate['mo'] = 'Mo';window.bt_cc_translate['tu'] = 'Tu';window.bt_cc_translate['we'] = 'We';window.bt_cc_translate['th'] = 'Th';window.bt_cc_translate['fr'] = 'Fr';window.bt_cc_translate['sa'] = 'Sa';window.bt_cc_translate['january'] = 'January';window.bt_cc_translate['february'] = 'February';window.bt_cc_translate['march'] = 'March';window.bt_cc_translate['april'] = 'April';window.bt_cc_translate['may'] = 'May';window.bt_cc_translate['june'] = 'June';window.bt_cc_translate['july'] = 'July';window.bt_cc_translate['august'] = 'August';window.bt_cc_translate['september'] = 'September';window.bt_cc_translate['october'] = 'October';window.bt_cc_translate['november'] = 'November';window.bt_cc_translate['december'] = 'December';
-</script>
-
-<script data-cfasync="false" data-pagespeed-no-defer type="text/javascript">
-	var dataLayer_content = {"pagePostType":"frontpage","pagePostType2":"single-page","pagePostAuthor":"BoldThemes"};
-	dataLayer.push( dataLayer_content );
-</script>
-<script data-cfasync="false">
-(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'../../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-MHZKTQL');
-</script>
-
-<script>window.bt_bb_preview = false
-
-</script> -->
 <script>
 import axios from 'axios';
 
@@ -394,6 +355,7 @@ export default {
   data() {
     return {
       info: [], // All products
+	  cart: [],
       selectedCategory: '', // Selected category
     };
   },
@@ -414,8 +376,7 @@ export default {
       try {
         const response = await axios.get('getData');
         this.info = response.data;
-      }
-	  catch (error) {
+      } catch (error) {
         console.error(error);
       }
     },
@@ -429,7 +390,37 @@ export default {
       // Filter products based on the selected category
       // This will be automatically handled by computed property filteredProducts
     },
+	async addToCart(product) {
+      try {
+        // Make a POST request to the server to add the item to the "cart" table
+		const response = await axios.post('http://unipet.test/public/api/add-to-cart', {
+          name: product.name,
+          price: product.price,
+          image: product.image,
+          productgroup: product.productgroup,
+        });
+
+        if (response.status === 200) {
+          // Item added to cart successfully
+          this.cart.push({
+            name: product.name,
+            price: product.price,
+            image: product.image,
+            productgroup: product.productgroup,
+          });
+
+          // You can also show a success message or update the UI
+          console.log('Product added to cart:', product.name);
+        } else {
+          // Handle the error, e.g., display an error message
+          console.error('Failed to add the product to the cart');
+        }
+      } catch (error) {
+        console.error('Error:', error);
+      }
+    },
 },
+    // ... other methods
     loadScripts() {
       const scriptUrls = [
         '../../../../frontend/public/User/js5.js',
