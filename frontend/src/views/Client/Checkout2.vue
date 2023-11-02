@@ -98,8 +98,8 @@
             <div id="form-total" role="application" class="wizard clearfix">
                 <div class="steps clearfix">
                     <ul role="tablist">
-                        <li role="tab" class="first current error" aria-disabled="false" aria-selected="true">
-                            <a id="form-total-t-0" href="#form-total-h-0" aria-controls="form-total-p-0">
+                        <li role="tab" class="disabled" aria-disabled="false">
+                            <a id="form-total-t-1" href="#form-total-h-1" aria-controls="form-total-p-0">
                                 <span class="current-info audible"> </span>
                                 <div class="title">
                                     <span class="step-icon"><i class="bi bi-person"></i></span> <!-- Change to Bootstrap person icon -->
@@ -108,8 +108,8 @@
                                 </div>
                             </a>
                         </li>
-                        <li role="tab" class="disabled" aria-disabled="true">
-                            <a id="form-total-t-1" href="#form-total-h-1" aria-controls="form-total-p-1">
+                        <li role="tab" class="first current error" aria-disabled="true" aria-selected="true">
+                            <a id="form-total-t-0" href="#form-total-h-0" aria-controls="form-total-p-1">
                                 <div class="title">
                                     <span class="step-icon"><i class="bi bi-credit-card"></i></span> <!-- Change to Bootstrap credit card icon -->
                                     <span class="step-number">Step 2</span>
@@ -130,106 +130,34 @@
                 </div>
                 <div class="content clearfix">
 
-
 <h2 id="form-total-h-0" tabindex="-1" class="title current">
-<span class="step-icon"><i class="zmdi zmdi-account"></i></span>
-<span class="step-number">Step 1</span>
-<span class="step-text">Delivery Address</span>
-</h2>
-<section id="form-total-p-0" role="tabpanel" aria-labelledby="form-total-h-0" class="body current" aria-hidden="false">
-<div class="inner">
-<div class="form-row">
-<div class="form-holder form-holder-2">
-<label for="username">Delivering to</label>
-<input type="text" placeholder="Your Name & Address" class="form-control error" id="username" name="username" required="" aria-required="true"><label id="username-error" class="error" for="username"></label>
-</div>
-</div>
-<div class="form-row">
-<div class="form-holder form-holder-2">
-<label for="email">Additional Details</label>
-<input type="email" placeholder="e.g Floor, unit number, street, village/barangay" class="form-control error" id="email" name="email" required="" pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}" aria-required="true"><label id="email-error" class="error" for="email"></label>
-</div>
-</div>
-<div class="form-row">
-<div class="form-holder">
-<label for="instruct">Driver Instructions</label>
-<input type="text" placeholder="Optional*" class="form-control error" id="instruct" name="instruct" required="" aria-required="true"><label id="instruct-error" class="error" for="instruct"></label>
-</div>
-<div class="form-holder">
-<label for="MobileNum">Mobile Contact Number</label>
-<input type="tel" placeholder="Your Mobile Number" class="form-control error" id="MobileNum" name="MobileNum" required="" aria-required="true"><label id="MobileNum-error" class="error" for="MobileNum"></label>
-</div>
-</div>
-</div>
-</section>
-
-<h2 id="form-total-h-1" tabindex="-1" class="title">
 <span class="step-icon"><i class="zmdi zmdi-card"></i></span>
 <span class="step-number">Step 2</span>
 <span class="step-text">Payment Infomation</span>
 </h2>
-<section id="form-total-p-1" role="tabpanel" aria-labelledby="form-total-h-1" class="body" aria-hidden="true" style="display: none;">
-<div class="inner">
-<div class="form-row">
-<div class="form-holder form-holder-2">
-<label for="card-type">Card Type</label>
-<select name="card-type" id="card-type" class="form-control">
-<option value="" disabled="" selected="">Select Credit Card Type</option>
-<option value="Business Credit Cards">Business Credit Cards</option>
-<option value="Limited Purpose Cards">Limited Purpose Cards</option>
-<option value="Prepaid Cards">Prepaid Cards</option>
-<option value="Charge Cards">Charge Cards</option>
-<option value="Student Credit Cards">Student Credit Cards</option>
-</select>
-</div>
-</div>
-<div class="form-row">
-<div class="form-holder form-holder-3">
-<label for="card-number">Card Number</label>
-<input type="text" name="card-number" class="card-number" id="card-number" placeholder="ex: 489050625008xxxx">
-</div>
-<div class="form-holder">
-<label for="cvc">CVC</label>
-<input type="text" name="cvc" class="cvc" id="cvc" placeholder="xxx">
-</div>
-</div>
-<div class="form-row form-row-2">
-<div class="form-holder">
-<label for="month">Expiry Month</label>
-<select name="month" id="month" class="form-control">
-<option value="" disabled="" selected="">Expiry Month</option>
-<option value="January">January</option>
-<option value="February">February</option>
-<option value="March">March</option>
-<option value="February">February</option>
-<option value="April">April</option>
-<option value="May">May</option>
-</select>
-</div>
-<div class="form-holder">
-<label for="year">Expiry Year</label>
-<select name="year" id="year" class="form-control">
-<option value="" disabled="" selected="">Expiry Year</option>
-<option value="2018">2018</option>
-<option value="2017">2017</option>
-<option value="2016">2016</option>
-<option value="2015">2015</option>
-<option value="2014">2014</option>
-<option value="2013">2013</option>
-</select>
-</div>
-</div>
-</div>
+<section id="form-total-p-0" role="tabpanel" aria-labelledby="form-total-h-1" class="body current" aria-hidden="false">
+    <div class="inner">
+        <div class="form-row form-row-2">
+            <div class="form-holder form-holder-2 col-md-6">
+                <label for="month">Cash</label>
+                <input type="text" id="fname" name="fname" value="Pay Upon Delivery" readonly>
+            </div>
+            <div class="form-holder form-holder-2 col-md-6"> <!-- Adjust the column width to make it longer -->
+                <label for="year">Change for how much?</label>
+                <input type="number" class="form-control" placeholder="0000.0" step="0.01" min="0" max="10" />
+            </div>
+        </div>
+    </div>
 </section>
 
 </div>
 <div class="actions clearfix">
     <ul role="menu" aria-label="Pagination">
-        <button type="button" class="btn btn-outline-info bi bi-shop">
-            <a href="/Shop" role="menuitem" class="text-info"> Buy More</a>
-        </button>
+        <li class="true" aria-disabled="true">
+            <a href="/Checkout" role="menuitem" class="text-info">Back</a>
+        </li>
         <li aria-hidden="false" aria-disabled="false">
-            <a href="/Checkout2" role="menuitem">
+            <a href="/Checkout3" role="menuitem">
                 <i class="bi bi-arrow-right"></i> <!-- Use Bootstrap arrow-right icon -->
             </a>
         </li>
@@ -305,53 +233,7 @@
         // ... other methods
         loadScripts() {
           const scriptUrls = [
-            'https://www.googletagmanager.com/gtag/js?id=UA-23581568-13',
-          '../../../../frontend/public/User/js/jquery.steps.js',
-          '../../../../frontend/public/User/js/jquery-3.3.1.min.js',
-          '../../../../frontend/public/User/js/main.js',
-          '../../../../frontend/public/User/js/scripts.js',
-          '../../../../frontend/public/User/cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js',
-          '../../../../frontend/public/User/cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js',
-            '../../../../frontend/public/User/js5.js',
-            '../../../../frontend/public/User/js6.js',
-            '../../../../frontend/public/User/js16.js',
-            '../../../../frontend/public/User/js17.js',
-            '../../../../frontend/public/User/js18.js',
-            '../../../../frontend/public/User/js19.js',
-            '../../../../frontend/public/User/js20.js',
-            '../../../../frontend/public/User/js21.js',
-            '../../../../frontend/public/User/js22.js',
-            '../../../../frontend/public/User/js12.js',
-            '../../../../frontend/public/User/js14.js',
-            '../../../../frontend/public/User/js243.js',
-            '../../../../frontend/public/User/scripts.js',
-            '../../../../frontend/public/User/wp-content/themes/pawsitive/framework/js/fancySelecte35d.js',
-            '../../../../frontend/public/User/wp-content/plugins/duracelltomi-google-tag-manager/js/gtm4wp-form-move-tracker7100.js',
-            '../../../../frontend/public/User/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min2632.js',
-            '../../../../frontend/public/User/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.mine1a3.js',
-            '../../../../frontend/public/User/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min2632.js',
-            '../../../../frontend/public/User/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.minf0ea.js',
-            '../../../../frontend/public/User/wp-content/plugins/contact-form-7/includes/swv/js/indexf658.js',
-            '../../../../frontend/public/User/wp-content/plugins/contact-form-7/includes/js/indexf658.js',
-            '../../../../frontend/public/User/wp-includes/js/jquery/ui/core.min3f14.js',
-            '../../../../frontend/public/User/wp-includes/js/jquery/ui/datepicker.min3f14.js',
-            '../../../../frontend/public/User/wp-includes/js/jquery/ui/mouse.min3f14.js',
-            '../../../../frontend/public/User/wp-includes/js/jquery/ui/slider.min3f14.js',
-            '../../../../frontend/public/User/wp-content/plugins/bt_cost_calculator/jquery.ui.touch-punch.mine35d.js',
-            '../../../../frontend/public/User/wp-content/themes/pawsitive/framework/js/header.misce35d.js',
-            '../../../../frontend/public/User/wp-content/themes/pawsitive/framework/js/misce35d.js',
-            '../../../../frontend/public/User/wp-content/plugins/bold-page-builder/content_elements/bt_bb_section/bt_bb_elementse35d.js',
-            '../../../../frontend/public/User/wp-content/themes/pawsitive/bold-page-builder/content_elements/bt_bb_floating_image/bt_bb_floating_imagee35d.js',
-            '../../../../frontend/public/User/wp-content/themes/pawsitive/bold-page-builder/content_elements/bt_bb_organic_animation/anime.mine35d.js',
-            '../../../../frontend/public/User/wp-includes/js/jquery/jquery.min3088.js',
-            '../../../../frontend/public/User/wp-includes/js/jquery/jquery-migrate.min5589.js',
-            '../../../../frontend/public/User/wp-content/plugins/bold-page-builder/slick/slick.min1849.js',
-            '../../../../frontend/public/User/wp-content/plugins/bold-page-builder/content_elements_misc/js/jquery.magnific-popup.min1849.js',
-            '../../../../frontend/public/User/wp-content/plugins/bold-page-builder/content_elements_misc/js/content_elements1849.js',
-            '../../../../frontend/public/User/wp-content/plugins/bt_cost_calculator/jquery.dde35d.js',
-            '../../../../frontend/public/User/wp-content/plugins/bt_cost_calculator/cc.maine35d.js',
-            '../../../../frontend/public/User/bt_cc_main-js-after.js',
-            'https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js',
+            
           ];
           const head = document.getElementsByTagName('head')[0];
           scriptUrls.forEach((scriptUrl) => {
@@ -368,21 +250,4 @@
         <style>
     @import '../../../src/assets/User/css/style.css';
     @import '../../../src/assets/User/css/raleway-font.css';
-    @import '../../../src/assets/User/css/delivery.css';
-    @import '../../../src/assets/User/css/style2.css';
-    @import '../../../src/assets/User/css/style4.css';
-    @import '../../../src/assets/User/css/style5.css';
-    @import '../../../src/assets/User/css/style6.css';
-    @import '../../../src/assets/User/css/style7.css';
-    @import '../../../src/assets/User/css/style8.css';
-    @import '../../../src/assets/User/css/style9.css';
-    @import '../../../src/assets/User/css/style10.css';
-    @import '../../../src/assets/User/css/style13.css';
-    @import '../../../src/assets/User/css/style14.css';
-    @import '../../../src/assets/User/css/styles.css';
-    @import '../../../../frontend/public/User/wp-content/themes/pawsitive/stylee35d.css';
-    @import '../../../../frontend/public/User/wp-content/plugins/bold-page-builder/slick/slick1849.css';
-    @import '../../../../frontend/public/User/wp-content/plugins/bt_cost_calculator/style.mine35d.css';
-    @import '../../../../frontend/public/User/wp-content/plugins/contact-form-7/includes/css/stylesf658.css';
-    @import '../../../../frontend/public/User/wp-content/plugins/bold-page-builder/css/front_end/content_elements.crush1849.css';
     </style>
