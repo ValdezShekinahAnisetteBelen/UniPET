@@ -59,37 +59,38 @@
   </script>
   
   <style scoped>
-  h4 {
-text-align: center;
-  }
-  h6 {
-    text-align: center;
-  }
-  form {
-    max-width: 420px;
-    margin: 30px auto;
-    background: white;
-    text-align: center;
-    padding: 40px;
-    border-radius: 10px;
-  }
-  label {
-    color: #aaa;
-    display: inline-block;
-    margin: 20px 0 15px;
-    font-size: 0.6em;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: bold;
-  }
-  input {
-    display: block;
-    padding: 10px 6px;
-    width: 100%;
-    box-sizing: border-box;
-    border: none;
-    border-bottom: 1px solid #ddd;
-    color: #555;
-  }
+  h4, h6 {
+  text-align: center;
+}
+
+form {
+  max-width: 420px;
+  margin: 30px auto;
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+  text-align: center;
+}
+
+label {
+  color: #aaa;
+  display: inline-block;
+  margin: 20px 0 15px;
+  font-size: 0.6em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+input {
+  display: block;
+  padding: 10px 6px;
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  color: #555;
+}
   </style>
   
