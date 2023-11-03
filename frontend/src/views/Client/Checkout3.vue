@@ -70,7 +70,7 @@
         </li>
         <li id="menu-item-42" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-41">
             <div class="subToggler"></div>
-            <a href="/OrderHistory">Order History</a>
+            <a href="/OrderHistory">My Purchases</a>
         </li>
         <li id="menu-item-42" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-41">
             <div class="subToggler"></div>
@@ -82,7 +82,7 @@
         </li>
         <li id="menu-item-42" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-41">
             <div class="subToggler"></div>
-            <a href="">Log Out</a>
+            <a href="/SignUp">Log Out</a>
         </li>
     </ul>
 </nav>
@@ -106,7 +106,7 @@
                             <a id="form-total-t-1" href="#form-total-h-1" aria-controls="form-total-p-0">
                                 <span class="current-info audible"> </span>
                                 <div class="title">
-                                    <span class="step-icon"><i class="bi bi-person"></i></span> <!-- Change to Bootstrap person icon -->
+                                    <span class="step-icon"><i class="bi bi-check"></i></span> <!-- Change to Bootstrap person icon -->
                                     <span class="step-number">Step 1</span>
                                     <span class="step-text">Delivery Address</span>
                                 </div>
@@ -115,7 +115,7 @@
                         <li role="tab" class="disabled" aria-disabled="false">
                             <a id="form-total-t-1" href="#form-total-h-1" aria-controls="form-total-p-0">
                                 <div class="title">
-                                    <span class="step-icon"><i class="bi bi-credit-card"></i></span> <!-- Change to Bootstrap credit card icon -->
+                                    <span class="step-icon"><i class="bi bi-check"></i></span> <!-- Change to Bootstrap credit card icon -->
                                     <span class="step-number">Step 2</span>
                                     <span class="step-text">Payment Information</span>
                                 </div>
@@ -184,7 +184,7 @@
             <a href="/Shop" role="menuitem" class="text-light"> Cancel Order</a>
         </button>
         <button type="button" class="btn btn-success bi bi-truck">
-            <a href="/Shop" role="menuitem" class="text-light"> Place Order</a>
+            <a href="/DeliveryStatus" role="menuitem" class="text-light"> Place Order</a>
         </button>
     </ul>
 </div>

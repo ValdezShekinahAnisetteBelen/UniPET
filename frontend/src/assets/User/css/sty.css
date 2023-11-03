@@ -1,0 +1,60 @@
+
+.navbar {
+    position: fixed;
+    top: 0cm;
+    left: 35cm;
+    width: 30%;
+    background-color: skyblue; /* Change the background color as desired */
+    padding: 20px; 
+    z-index: 500;
+    text-align: right;/* Adjust the z-index to ensure it's above other content */
+    }
+    
+    .navbar li {
+    display: inline;
+    margin: 0 10px 20px;
+    padding: 0 50px 0 50px;
+    
+    
+    }
+    
+    h4 {
+    text-align: center;
+    margin-top: 5cm; /* Remove the top margin */
+    }
+    
+    h6 {
+    text-align: center;
+    margin: 0; /* Remove all margins */
+    }
+    
+    form {
+    max-width: 420px;
+    margin: 1cm auto;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    
+    }
+    
+    label {
+    color: #aaa;
+    display: inline-block;
+    margin: 20px 0 15px;
+    font-size: 0.6em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    }
+    
+    input {
+    display: block;
+    padding: 10px 6px;
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    color: #555;
+    }

@@ -72,7 +72,7 @@
         </li>
         <li id="menu-item-42" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-41">
             <div class="subToggler"></div>
-            <a href="/OrderHistory">Order History</a>
+            <a href="/OrderHistory">My Purchases</a>
         </li>
         <li id="menu-item-42" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-41">
             <div class="subToggler"></div>
@@ -85,7 +85,7 @@
         
         <li id="menu-item-42" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-41">
             <div class="subToggler"></div>
-            <a href="">Log Out</a>
+            <a href="/SignUp">Log Out</a>
         </li>
     </ul>
 </nav>

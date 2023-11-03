@@ -65,7 +65,7 @@
         </li>
         <li id="menu-item-42" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-41">
             <div class="subToggler"></div>
-            <a href="/OrderHistory">Order History</a>
+            <a href="/OrderHistory">My Purchases</a>
         </li>
         <li id="menu-item-42" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-41">
             <div class="subToggler"></div>
@@ -77,7 +77,7 @@
         </li>
         <li id="menu-item-42" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-41">
             <div class="subToggler"></div>
-            <a href="">Log Out</a>
+            <a href="/SignUp">Log Out</a>
         </li>
     </ul>
 </nav>
@@ -114,24 +114,14 @@
                       <!-- Page header -->
         <div class="border-bottom pb-3 mb-3">
             <div class="mb-2 mb-lg-0">
-          <h1><img src="User/gallery/completed-task.png" alt="Veterinary Icon" style="width: 1cm; height: cm;">Order History</h1>
-
-    <div class="input-group">
-        <select class="form-select" id="selectedDate">
-            <option value="" selected>Select a Date</option>
-            <option value="2023-11-01">November 1, 2023</option>
-            <option value="2023-11-02">November 2, 2023</option>
-            <option value="2023-11-03">November 3, 2023</option>
-            <!-- Add more date options as needed -->
-        </select>
-    </div>
+          <h1><img src="User/gallery/completed-task.png" alt="Veterinary Icon" style="width: 1cm; height: cm;">My Purchases</h1>
     <!-- Breadcrumb -->
 </div>
 
 
         </div>
               <h2 class="mb-0">Thank you for your order</h2>
-          <p class="mb-0">Your order has been successfully delivered. Thank you for choosing us!</p>
+          <p class="mb-0">Your Order has been Submitted. We will notify you once it's ready for delivery. Thank you for choosing us!</p>
             </div>
             <div>
 
@@ -149,7 +139,7 @@
                       <h5 class="mb-1">
                         lori soap amitraz
                       </h5>
-                      <span>Category: <span class="text-dark">SOAP</span>, Number of items purchased:<span class="text-dark"> 1</span>
+                      <span>Category: <span class="text-dark">SOAP</span>, Number of items:<span class="text-dark"> 1</span>
                       </span>
                     </div>
                   </div>
@@ -176,7 +166,7 @@
                         zert cheese gelato148g.
                       </h5>
                       <!-- text -->
-                      <span>Category: <span class="text-dark">Treats</span>, Number of items purchased:<span class="text-dark"> 1</span>
+                      <span>Category: <span class="text-dark">Treats</span>, Number of items:<span class="text-dark"> 1</span>
                       </span>
                     </div>
                   </div>
@@ -217,7 +207,7 @@
           <div class="card-body">
             <div class="mb-4">
               <!-- heading -->
-              <h2 class="mb-0">Your Order has been Delivered to</h2>
+              <h2 class="mb-0">Your Order will be delivered to</h2>
             </div>
             <div class="row">
           <div class="col-md-6 col-12">
@@ -244,6 +234,25 @@
         </div>
       </div>
     </div>
+    <div class="card mt-4">
+          <!-- card body -->
+          <div class="card-body">
+    <div class="mb-2 mb-lg-0">
+          <h1><img src="User/gallery/completed-task.png" alt="Veterinary Icon" style="width: 1cm; height: cm;">Order History</h1>
+
+    <div class="input-group">
+        <select class="form-select" id="selectedDate">
+            <option value="" selected>Select a Date</option>
+            <option value="2023-11-01">November 1, 2023</option>
+            <option value="2023-11-02">November 2, 2023</option>
+            <option value="2023-11-03">November 3, 2023</option>
+            <!-- Add more date options as needed -->
+        </select>
+    </div>
+  </div>
+          </div>
+    <!-- Breadcrumb -->
+</div>
   </section>
   </div>
 </div>

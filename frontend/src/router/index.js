@@ -57,7 +57,12 @@ component: () => import(/* webpackChunkName: "about" */ '../views/Client/Product
   path: '/RegisterForm',
   name: 'RegisterForm',
   component: () => import(/* webpackChunkName: "signup" */ '../components/RegisterForm')
-}
+},
+{
+  path: '/DeliveryStatus',
+  name: 'DeliveryStatus',
+  component: () => import(/* webpackChunkName: "signup" */ '../views/Client/DeliveryStatus')
+},
 ]
 
 const router = createRouter({

@@ -70,7 +70,7 @@
         </li>
         <li id="menu-item-42" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-41">
             <div class="subToggler"></div>
-            <a href="/OrderHistory">Order History</a>
+            <a href="/OrderHistory">My Purchases</a>
         </li>
         <li id="menu-item-42" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-41">
             <div class="subToggler"></div>
@@ -82,7 +82,7 @@
         </li>
         <li id="menu-item-42" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-41">
             <div class="subToggler"></div>
-            <a href="">Log Out</a>
+            <a href="/SignUp">Log Out</a>
         </li>
     </ul>
 </nav>
@@ -285,11 +285,34 @@ import App from '../../App.vue';
 
 export default {
     name: "Online_Store",
+        data() {
+      return {
+        myObject: {
+          content: null,
+        },
+      };
+    },
+    created() {
+  // Simulate asynchronous data loading
+  setTimeout(() => {
+    this.myObject = {
+      content: 'Some content',
+    };
+  }, 1000); // Simulated delay
+},
     mounted() {
       this.loadScripts();
     },
     methods: {
       loadScripts() {
+    if (this.myObject && this.myObject.content) {
+      // Access myObject.content safely
+      console.log(this.myObject.content);
+    } else {
+      // Handle the case where myObject or myObject.content is null or undefined
+      console.error("myObject or myObject.content is null or undefined");
+    }
+
         const scriptUrls = [
          '../../../../frontend/public/User/wp-includes/js/jquery/jquery.min3088.js',
          '../../../../frontend/public/User/wp-includes/js/jquery/jquery-migrate.min5589.js',
