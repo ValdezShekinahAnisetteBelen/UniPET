@@ -1,34 +1,30 @@
 <template>
-    <head>
-        <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name='robots' content='max-image-preview:large' />
-    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel='dns-prefetch' href='http://fonts.googleapis.com/' />
-    <link rel="alternate" type="application/rss+xml" title="Buddy &raquo; Feed" href="feed/index.html" />
-    <link rel="alternate" type="application/rss+xml" title="Buddy &raquo; Comments Feed" href="comments/feed/index.html" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    
-    <link rel='stylesheet' id='pawsitive-fonts-css' href='https://fonts.googleapis.com/css?family=Nunito+Sans%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900%2C100italic%2C200italic%2C300italic%2C400italic%2C500italic%2C600italic%2C700italic%2C800italic%2C900italic%7CNunito%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900%2C100italic%2C200italic%2C300italic%2C400italic%2C500italic%2C600italic%2C700italic%2C800italic%2C900italic%7CNunito+Sans%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900%2C100italic%2C200italic%2C300italic%2C400italic%2C500italic%2C600italic%2C700italic%2C800italic%2C900italic%7CNunito+Sans%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900%2C100italic%2C200italic%2C300italic%2C400italic%2C500italic%2C600italic%2C700italic%2C800italic%2C900italic%7CNunito+Sans%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900%2C100italic%2C200italic%2C300italic%2C400italic%2C500italic%2C600italic%2C700italic%2C800italic%2C900italic%7CNunito%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900%2C100italic%2C200italic%2C300italic%2C400italic%2C500italic%2C600italic%2C700italic%2C800italic%2C900italic&#038;subset=latin%2Clatin-ext&#038;ver=1.0.0' type='text/css' media='all' />
-    
-    <link rel="https://api.w.org/" href="wp-json/index.html" />
-    <link rel="alternate" type="application/json" href="../../../../frontend/public/User/wp-json/wp/v2/pages/2767.json" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc0db0.php?rsd" />
-    <meta name="generator" content="WordPress 6.3.2" />
-    <meta name="generator" content="WooCommerce 8.2.0" />
-    <link rel="canonical" href="index.html" />
-    <link rel='shortlink' href='index.html' />
-    <link rel="alternate" type="application/json+oembed" href="../../../../frontend/public/User/wp-json/oembed/1.0/embed0ee1.json" />
-    <link rel="alternate" type="text/xml+oembed" href="../../../../frontend/public/User/wp-json/oembed/1.0/embed858d" />
-     
-    <link rel="icon" href="../../../../frontend/public/User/wp-content/uploads/sites/2/2019/07/cropped-favicon-1-32x32.png" sizes="32x32" />
-    <link rel="icon" href="../../../../frontend/public/User/wp-content/uploads/sites/2/2019/07/cropped-favicon-1-192x192.png" sizes="192x192" />
-    <link rel="apple-touch-icon" href="../../../../frontend/public/User/wp-content/uploads/sites/2/2019/07/cropped-favicon-1-180x180.png" />
-    <meta name="msapplication-TileImage" content="https://pawsitive.bold-themes.com/buddy/wp-content/uploads/sites/2/2019/07/cropped-favicon-1-270x270.png"/>
-    </head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.19.0/font/bootstrap-icons.css" rel="stylesheet">
+
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name='robots' content='max-image-preview:large' />
+
+<link rel='dns-prefetch' href='http://fonts.googleapis.com/' />
+<link rel="alternate" type="application/rss+xml" title="Buddy &raquo; Feed" href="feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="Buddy &raquo; Comments Feed" href="comments/feed/index.html" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+<link rel='stylesheet' id='pawsitive-fonts-css' href='https://fonts.googleapis.com/css?family=Nunito+Sans%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900%2C100italic%2C200italic%2C300italic%2C400italic%2C500italic%2C600italic%2C700italic%2C800italic%2C900italic%7CNunito%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900%2C100italic%2C200italic%2C300italic%2C400italic%2C500italic%2C600italic%2C700italic%2C800italic%2C900italic%7CNunito+Sans%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900%2C100italic%2C200italic%2C300italic%2C400italic%2C500italic%2C600italic%2C700italic%2C800italic%2C900italic%7CNunito+Sans%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900%2C100italic%2C200italic%2C300italic%2C400italic%2C500italic%2C600italic%2C700italic%2C800italic%2C900italic%7CNunito+Sans%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900%2C100italic%2C200italic%2C300italic%2C400italic%2C500italic%2C600italic%2C700italic%2C800italic%2C900italic%7CNunito%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900%2C100italic%2C200italic%2C300italic%2C400italic%2C500italic%2C600italic%2C700italic%2C800italic%2C900italic&#038;subset=latin%2Clatin-ext&#038;ver=1.0.0' type='text/css' media='all' />
+
+<link rel="https://api.w.org/" href="wp-json/index.html" />
+<link rel="alternate" type="application/json" href="../../../../frontend/public/User/wp-json/wp/v2/pages/2767.json" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc0db0.php?rsd" />
+<meta name="generator" content="WordPress 6.3.2" />
+<meta name="generator" content="WooCommerce 8.2.0" />
+<link rel="canonical" href="index.html" />
+<link rel='shortlink' href='index.html' />
+<link rel="alternate" type="application/json+oembed" href="../../../../frontend/public/User/wp-json/oembed/1.0/embed0ee1.json" />
+<link rel="alternate" type="text/xml+oembed" href="../../../../frontend/public/User/wp-json/oembed/1.0/embed858d" />
+
     <body class="home page-template-default page page-id-2767 page-parent theme-pawsitive bt_bb_plugin_active bt_bb_fe_preview_toggle woocommerce-js btHeadingWeight_default btMenuWeight_default btCurrentPage_default btButtonWeight_default btMenuRightEnabled btStickyEnabled btHideHeadline btLightSkin btBelowMenu btNoDashInSidebar noBodyPreloader btDropButtons btTransparentDarkHeader btNoSidebar btMenuRight btMenuInitFinished btRemovePreloader btMenuHorizontal">
     
     <div class="btPageWrap" id="top">
@@ -40,8 +36,8 @@
                 <div class="logo">
                     <span>
                         <a href="index.html"><img class="btMainLogo" data-hw="2.1111111111111" src="../../../../frontend/public/User/wp-content/uploads/sites/2/2019/11/logo_black.svg" alt=""></a></span>
-                </div><!-- /logo -->
-            </div><!-- /btLogoArea -->
+                </div>
+            </div>
         </div>
         <header class="mainHeader btClear gutter ">
 		<div class="mainHeaderInner">
@@ -51,13 +47,12 @@
 										<div class="logo">
 						<span>
 							<a href="index.html"><img class="btMainLogo" data-hw="2.1111111111111" src="User/wp-content/uploads/sites/2/2019/11/logo_black.svg" alt="Buddy"></a></span>
-					</div><!-- /logo -->
+					</div>
 										<div class="menuPort">
 											<div class="topBarInMenu">
 						<div class="topBarInMenuCell">
 							<div class="btButtonWidget btOutline btWithLink"><a href="#" target="_self" class="btButtonWidgetLink"><div class="btIconWidgetIcon"><span data-ico-fontawesome="" class="bt_bb_icon_holder"></span></div><div class="btIconWidgetText"><span class="btButtonWidgetText">+63 998 868 3908</span></div></a></div>						</div><!-- /topBarInMenu -->
-					</div><!-- /topBarInMenuCell -->
-
+					</div>
           <nav>
     <ul id="menu-primary-menu" class="menu">
         <li id="menu-item-1685" class="btMenuWideDropdown menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-2767 current_page_item current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-1685 btMenuWideDropdownCols-3">
@@ -93,96 +88,167 @@
 		</div><!-- / inner header for scrolling -->
     </header><!-- /.mainHeader -->
              <!-- Add a div to display the animal picture -->
-           
-    <!-- Close the .about-us div here -->
-    <div class="page-content" style="background-image: url('images/wizard-v1.jpg')">
+ <div class="page-content" style="background-image: url('images/wizard-v1.jpg')">
         <div class="wizard-v1-content">
     <div class="wizard-form">
-        <form class="form-register" id="form-register" action="#" method="post" novalidate="novalidate">
-            <div id="form-total" role="application" class="wizard clearfix">
-                <div class="steps clearfix">
-                    <ul role="tablist">
-                        <li role="tab" class="disabled" aria-disabled="false">
-                            <a id="form-total-t-1" href="#form-total-h-1" aria-controls="form-total-p-0">
-                                <span class="current-info audible"> </span>
-                                <div class="title">
-                                    <span class="step-icon"><i class="bi bi-person"></i></span> <!-- Change to Bootstrap person icon -->
-                                    <span class="step-number">Step 1</span>
-                                    <span class="step-text">Delivery Address</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li role="tab" class="first current error" aria-disabled="true" aria-selected="true">
-                            <a id="form-total-t-0" href="#form-total-h-0" aria-controls="form-total-p-1">
-                                <div class="title">
-                                    <span class="step-icon"><i class="bi bi-credit-card"></i></span> <!-- Change to Bootstrap credit card icon -->
-                                    <span class="step-number">Step 2</span>
-                                    <span class="step-text">Payment Information</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li role="tab" class="disabled last" aria-disabled="true">
-                            <a id="form-total-t-2" href="#form-total-h-2" aria-controls="form-total-p-2">
-                                <div class="title">
-                                    <span class="step-icon"><i class="bi bi-receipt"></i></span> <!-- Change to Bootstrap receipt icon -->
-                                    <span class="step-number">Step 3</span>
-                                    <span class="step-text">Place Order</span>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="content clearfix">
-
-<h2 id="form-total-h-0" tabindex="-1" class="title current">
-<span class="step-icon"><i class="zmdi zmdi-card"></i></span>
-<span class="step-number">Step 2</span>
-<span class="step-text">Payment Infomation</span>
-</h2>
-<section id="form-total-p-0" role="tabpanel" aria-labelledby="form-total-h-1" class="body current" aria-hidden="false">
-    <div class="inner">
-        <div class="form-row form-row-2">
-            <div class="form-holder form-holder-2 col-md-6">
-                <label for="month">Cash</label>
-                <input type="text" id="fname" name="fname" value="Pay Upon Delivery" readonly>
-            </div>
-            <div class="form-holder form-holder-2 col-md-6"> <!-- Adjust the column width to make it longer -->
-                <label for="year">Change for how much?</label>
-                <input type="number" class="form-control" placeholder="0000.0" step="0.01" min="0" max="10" />
-            </div>
+<section class="container-fluid p-4">
+    <!-- row -->
+    <div class="row justify-content-center">
+      <div class="col-lg-8 col-12">
+        <!-- card -->
+        <div class="new">
+             <!-- card body -->
+          <div class="card-body">
+            
+            <div class="mb-6">
         </div>
+        </div>
+        </div>
+        <div class="card">
+            
+          <!-- card body -->
+          <div class="card-body">
+            
+            <div class="mb-6">
+              <!-- heading -->
+                      <!-- Page header -->
+        <div class="border-bottom pb-3 mb-3">
+            <div class="mb-2 mb-lg-0">
+          <h1><img src="User/gallery/completed-task.png" alt="Veterinary Icon" style="width: 1cm; height: cm;">Order History</h1>
+
+    <div class="input-group">
+        <select class="form-select" id="selectedDate">
+            <option value="" selected>Select a Date</option>
+            <option value="2023-11-01">November 1, 2023</option>
+            <option value="2023-11-02">November 2, 2023</option>
+            <option value="2023-11-03">November 3, 2023</option>
+            <!-- Add more date options as needed -->
+        </select>
     </div>
-</section>
-
-</div>
-<div class="actions clearfix">
-    <ul role="menu" aria-label="Pagination">
-        <li class="true" aria-disabled="true">
-            <a href="/Checkout" role="menuitem" class="text-info">Back</a>
-        </li>
-        <li aria-hidden="false" aria-disabled="false">
-            <a href="/Checkout3" role="menuitem">
-                <i class="bi bi-arrow-right"></i> <!-- Use Bootstrap arrow-right icon -->
-            </a>
-        </li>
-        <li aria-hidden="true" style="display: none;">
-            <a href="#finish" role="menuitem">
-                <i class="bi bi-arrow-right"></i> <!-- Use Bootstrap arrow-right icon -->
-            </a>
-        </li>
-        
-    </ul>
+    <!-- Breadcrumb -->
 </div>
 
 
-</div>
-</form>
-</div>
-</div>
-</div>
-   
+        </div>
+              <h2 class="mb-0">Thank you for your order</h2>
+          <p class="mb-0">Your order has been successfully delivered. Thank you for choosing us!</p>
+            </div>
+            <div>
 
-    
+              <!-- row -->
+              <div class="row justify-content-between">
+                <!-- col -->
+                <div class="col-lg-8 col-12">
+                  <div class="d-md-flex">
+                    <!-- img -->
+                    <div>
+                      <img src="User/assets/images/ecommerce/ecommerce-img-1.png" alt="" class="img-4by3-xl rounded">
+                    </div>
+                    <!-- text -->
+                    <div class="ms-md-4 mt-2">
+                      <h5 class="mb-1">
+                        lori soap amitraz
+                      </h5>
+                      <span>Category: <span class="text-dark">SOAP</span>, Number of items purchased:<span class="text-dark"> 1</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <!-- price -->
+                <div class="col-lg-4 col-12">
+                  <div class="d-flex justify-content-end mt-2">
+                    <h5>₱49.00</h5>
+                  </div>
+                </div>
+              </div>
+              <hr class="my-3">
+              <div class="row justify-content-between">
+                <!-- col -->
+                <div class="col-lg-8 col-12">
+                  <div class="d-md-flex">
+                    <!-- img -->
+                    <div>
+                      <img src="User/assets/images/ecommerce/ecommerce-img-9.png" alt="" class="img-4by3-xl rounded">
+                    </div>
+                    <div class="ms-md-4 mt-2">
+                      <!-- heading -->
+                      <h5 class="mb-1">
+                        zert cheese gelato148g.
+                      </h5>
+                      <!-- text -->
+                      <span>Category: <span class="text-dark">Treats</span>, Number of items purchased:<span class="text-dark"> 1</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-12">
+                  <!-- price -->
+                  <div class="d-flex justify-content-end mt-2">
+                    <h5>₱79.00</h5>
+                  </div>
+                </div>
+              </div>
+              <!-- hr -->
+              <hr class="my-3">
+              <div>
+                <!-- list -->
+                <ul class="list-unstyled mb-0">
+                  <li class="d-flex justify-content-between mb-2">
+                    <span>Subtotal</span>
+                    <span class="text-dark fw-medium">₱128.00</span>
+                  </li>
+                  <li class="d-flex justify-content-between mb-2">
+                    <span>Delivery Fee</span>
+                    <span class="text-dark fw-medium">₱54.00</span>
+                  </li>
+                  <li class="border-top my-2"></li>
+                  <li class="d-flex justify-content-between mb-2">
+                    <span class="fw-medium text-dark">Grand Total</span>
+                    <span class="fw-medium text-dark">₱182.00</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- card -->
+        <div class="card mt-4">
+          <!-- card body -->
+          <div class="card-body">
+            <div class="mb-4">
+              <!-- heading -->
+              <h2 class="mb-0">Your Order has been Delivered to</h2>
+            </div>
+            <div class="row">
+          <div class="col-md-6 col-12">
+            <!-- address -->
+            <h4>Delivery Address</h4>
+            <p>
+              F. Del Rosario St. <br>
+              Camilmil, <br>
+              Calapan Oriental Mindoro, <br>
+              Philippines
+            </p>
+            <!-- phone -->
+            <p class="mb-0">Phone: +63 9151537833</p>
+          </div>
+          <div class="col-md-6 col-12">
+            <!-- text -->
+            <h4 class="mb-3">Payment Method</h4>
+            <p class="mb-0 text-dark">
+             Cash on Delivery
+            </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  </div>
+</div>
+</div>
+  
     <div class="btSiteFooter">
     
     <div class="bt_bb_wrapper"><section id="bt_bb_section653e328393367" class="bt_bb_section bt_bb_layout_boxed_1200 bt_bb_vertical_align_top bt_bb_top_spacing_large bt_bb_bottom_spacing_normal" data-bt-override-class="null"><div class="bt_bb_port">
@@ -228,30 +294,45 @@
     
     
         </template>
-    
-    <script>
-    
-    import axios from 'axios';
-    export default {
 
-        // ... other methods
-        loadScripts() {
-          const scriptUrls = [
-            
-          ];
-          const head = document.getElementsByTagName('head')[0];
-          scriptUrls.forEach((scriptUrl) => {
-            const script = document.createElement('script');
-            script.src = scriptUrl;
-            script.async = true;
-            head.appendChild(script);
-          });
-      },
-    };
-    </script>
+<script>
     
-    
-        <style>
-    @import '../../../src/assets/User/css/style.css';
-    @import '../../../src/assets/User/css/raleway-font.css';
-    </style>
+import axios from 'axios';
+export default {
+
+    // ... other methods
+    loadScripts() {
+      const scriptUrls = [
+        "../../../../frontend/public/User/assets/libs/jquery/dist/jquery.min.js",
+        "../../../../frontend/public/User/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js",
+        "../../../../frontend/public/User/assets/libs/simplebar/dist/simplebar.min.js",
+      ];
+      const head = document.getElementsByTagName('head')[0];
+      scriptUrls.forEach((scriptUrl) => {
+        const script = document.createElement('script');
+        script.src = scriptUrl;
+        script.async = true;
+        head.appendChild(script);
+      });
+  },
+};
+</script>
+
+  <style>
+@import '../../../src/assets/User/css/style1.css';
+@import '../../../src/assets/User/css/style2.css';
+@import '../../../src/assets/User/css/style10.css';
+@import '../../../src/assets/User/css/classic-theme-styles-inline-css.css';
+@import '../../../src/assets/User/css/global-styles-inline-css.css';
+@import '../../../../frontend/public/User/wp-content/plugins/bold-page-builder/css/front_end/content_elements.crush1849.css';
+@import '../../../../frontend/public/User/wp-content/plugins/bold-page-builder/slick/slick1849.css';
+@import '../../../../frontend/public/User/wp-content/plugins/bt_cost_calculator/style.mine35d.css';
+@import '../../../../frontend/public/User/wp-content/plugins/contact-form-7/includes/css/stylesf658.css';
+@import '../../../src/assets/User/css/global-styles-inline-css.css';
+@import '../../../src/assets/User/css/woocommerce-inline-inline-css';
+@import '../../../../frontend/public/User/wp-content/themes/pawsitive/stylee35d.css';
+@import '../../../src/assets/User/css/style3.css';
+@import '../../../src/assets/User/css/bt_bb_color_schemes';
+@import '../../../src/assets/User/css/menu2.css';
+
+</style>

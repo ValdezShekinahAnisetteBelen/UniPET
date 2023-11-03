@@ -49,6 +49,11 @@ component: () => import(/* webpackChunkName: "about" */ '../views/Client/Product
   component: () => import(/* webpackChunkName: "signup" */ '../views/Client/Checkout3')
 },
 {
+  path: '/OrderHistory',
+  name: 'OrderHistory',
+  component: () => import(/* webpackChunkName: "signup" */ '../views/Client/OrderHistory')
+},
+{
   path: '/RegisterForm',
   name: 'RegisterForm',
   component: () => import(/* webpackChunkName: "signup" */ '../components/RegisterForm')
