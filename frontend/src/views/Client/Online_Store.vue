@@ -64,21 +64,25 @@
             <div class="subToggler"></div>
             <a href="/" aria-current="page">Home</a>
         </li>
-        <li id="menu-item-2608" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2608">
+        <li id="menu-item-41" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-41">
             <div class="subToggler"></div>
-            <a href="#">Pages</a>
+            <a href="/shop">Shop</a>
+        </li>
+        <li id="menu-item-42" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-41">
+            <div class="subToggler"></div>
+            <a href="">Order History</a>
+        </li>
+        <li id="menu-item-42" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-41">
+            <div class="subToggler"></div>
+            <a href="">Appointment History</a>
         </li>
         <li id="menu-item-40" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-40">
             <div class="subToggler"></div>
             <a href="/Contact">Contact Us</a>
         </li>
-        <li id="menu-item-41" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-41">
+        <li id="menu-item-42" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-41">
             <div class="subToggler"></div>
-            <a href="/shop">Shop</a>
-        </li>
-        <li id="menu-item-1821" class="btMenuWideDropdown menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1821 btMenuWideDropdownCols-3">
-            <div class="subToggler"></div>
-            <a href="#">Elements</a>
+            <a href="">Log Out</a>
         </li>
     </ul>
 </nav>

@@ -44,50 +44,54 @@
             </div><!-- /btLogoArea -->
         </div>
         <header class="mainHeader btClear gutter ">
-            <div class="mainHeaderInner">
-                            <div class="btLogoArea menuHolder btClear">
-                    <div class="port">
-                                                <div class="btHorizontalMenuTrigger">&nbsp;<div class="bt_bb_icon" data-bt-override-class="null"><a href="#" target="_self" data-ico-fa="" class="bt_bb_icon_holder"></a></div></div>
-                                            <div class="logo">
-                            <span>
-                                <a href="index.html"><img class="btMainLogo" data-hw="2.1111111111111" src="User/wp-content/uploads/sites/2/2019/11/logo_black.svg" alt="Buddy"></a></span>
-                        </div><!-- /logo -->
-                                            <div class="menuPort">
-                                                <div class="topBarInMenu">
-                            <div class="topBarInMenuCell">
-                                <div class="btButtonWidget btOutline btWithLink"><a href="#" target="_self" class="btButtonWidgetLink"><div class="btIconWidgetIcon"><span data-ico-fontawesome="" class="bt_bb_icon_holder"></span></div><div class="btIconWidgetText"><span class="btButtonWidgetText">+63 998 868 3908</span></div></a></div>						
-                            </div><!-- /topBarInMenu -->
-                        </div><!-- /topBarInMenuCell -->
-                        <nav>
+		<div class="mainHeaderInner">
+						<div class="btLogoArea menuHolder btClear">
+				<div class="port">
+											<div class="btHorizontalMenuTrigger">&nbsp;<div class="bt_bb_icon" data-bt-override-class="null"><a href="#" target="_self" data-ico-fa="" class="bt_bb_icon_holder"></a></div></div>
+										<div class="logo">
+						<span>
+							<a href="index.html"><img class="btMainLogo" data-hw="2.1111111111111" src="User/wp-content/uploads/sites/2/2019/11/logo_black.svg" alt="Buddy"></a></span>
+					</div><!-- /logo -->
+										<div class="menuPort">
+											<div class="topBarInMenu">
+						<div class="topBarInMenuCell">
+							<div class="btButtonWidget btOutline btWithLink"><a href="#" target="_self" class="btButtonWidgetLink"><div class="btIconWidgetIcon"><span data-ico-fontawesome="" class="bt_bb_icon_holder"></span></div><div class="btIconWidgetText"><span class="btButtonWidgetText">+63 998 868 3908</span></div></a></div>						</div><!-- /topBarInMenu -->
+					</div><!-- /topBarInMenuCell -->
+
+          <nav>
     <ul id="menu-primary-menu" class="menu">
         <li id="menu-item-1685" class="btMenuWideDropdown menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-2767 current_page_item current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-1685 btMenuWideDropdownCols-3">
             <div class="subToggler"></div>
             <a href="/" aria-current="page">Home</a>
         </li>
-        <li id="menu-item-2608" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2608">
-            <div class="subToggler"></div>
-            <a href="#">Pages</a>
-        </li>
-        <li id="menu-item-40" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-40">
-            <div class="subToggler"></div>
-            <a href="blog/index.html">Blog</a>
-        </li>
         <li id="menu-item-41" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-41">
             <div class="subToggler"></div>
             <a href="/shop">Shop</a>
         </li>
-        <li id="menu-item-1821" class="btMenuWideDropdown menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1821 btMenuWideDropdownCols-3">
+        <li id="menu-item-42" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-41">
             <div class="subToggler"></div>
-            <a href="#">Elements</a>
+            <a href="">Order History</a>
+        </li>
+        <li id="menu-item-42" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-41">
+            <div class="subToggler"></div>
+            <a href="">Appointment History</a>
+        </li>
+        <li id="menu-item-40" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-40">
+            <div class="subToggler"></div>
+            <a href="/Contact">Contact Us</a>
+        </li>
+        <li id="menu-item-42" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-41">
+            <div class="subToggler"></div>
+            <a href="">Log Out</a>
         </li>
     </ul>
 </nav>
 
-                        </div><!-- .menuPort -->
-                    </div><!-- /port -->
-                </div><!-- /menuHolder / btBelowLogoArea -->
-            </div><!-- / inner header for scrolling -->
-        </header><!-- /.mainHeader -->
+					</div><!-- .menuPort -->
+				</div><!-- /port -->
+			</div><!-- /menuHolder / btBelowLogoArea -->
+		</div><!-- / inner header for scrolling -->
+    </header><!-- /.mainHeader -->
              <!-- Add a div to display the animal picture -->
            
     <!-- Close the .about-us div here -->

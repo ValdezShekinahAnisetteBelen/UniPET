@@ -10,6 +10,22 @@ use App\Models\CartModel;
 
 class CartController extends Controller
 {
+    public function del(Request $request) // Pass the Request object as a parameter
+    {
+        // Use the Request object to get the JSON data
+        $json = $request->getJSON();
+        $id = $json->id;
+        $cartModel = new CartModel();
+
+        // Check if the item exists before attempting to delete it.
+        $item = $cartModel->find($id);
+        if ($item) {
+            $cartModel->delete($id);
+            return $this->respond(['message' => 'Item deleted successfully'], 200);
+        } else {
+            return $this->respond(['error' => 'Item not found'], 404);
+        }
+    }
     public function addToCart()
     {
         // Retrieve the product details from the request.
