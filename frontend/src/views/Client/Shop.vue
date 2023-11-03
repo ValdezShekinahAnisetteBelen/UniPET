@@ -6,6 +6,8 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name='robots' content='max-image-preview:large' />
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <link rel='dns-prefetch' href='http://fonts.googleapis.com/' />
@@ -43,7 +45,7 @@
 			</div><!-- /logo -->
 		</div><!-- /btLogoArea -->
 	</div>
-	<header class="mainHeader btClear gutter ">
+  <header class="mainHeader btClear gutter ">
 		<div class="mainHeaderInner">
 						<div class="btLogoArea menuHolder btClear">
 				<div class="port">
@@ -55,30 +57,35 @@
 										<div class="menuPort">
 											<div class="topBarInMenu">
 						<div class="topBarInMenuCell">
-							<div class="btButtonWidget btOutline btWithLink"><a href="#" target="_self" class="btButtonWidgetLink"><div class="btIconWidgetIcon"><span data-ico-fontawesome="" class="bt_bb_icon_holder"></span></div><div class="btIconWidgetText"><span class="btButtonWidgetText">+63 998 868 3908</span></div></a></div>						
-						</div><!-- /topBarInMenu -->
+							<div class="btButtonWidget btOutline btWithLink"><a href="#" target="_self" class="btButtonWidgetLink"><div class="btIconWidgetIcon"><span data-ico-fontawesome="" class="bt_bb_icon_holder"></span></div><div class="btIconWidgetText"><span class="btButtonWidgetText">+63 998 868 3908</span></div></a></div>						</div><!-- /topBarInMenu -->
 					</div><!-- /topBarInMenuCell -->
+
           <nav>
     <ul id="menu-primary-menu" class="menu">
         <li id="menu-item-1685" class="btMenuWideDropdown menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-2767 current_page_item current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-1685 btMenuWideDropdownCols-3">
             <div class="subToggler"></div>
             <a href="/" aria-current="page">Home</a>
         </li>
-        <li id="menu-item-2608" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2608">
-            <div class="subToggler"></div>
-            <a href="#">Pages</a>
-        </li>
-        <li id="menu-item-40" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-40">
-            <div class="subToggler"></div>
-            <a href="blog/index.html">Blog</a>
-        </li>
         <li id="menu-item-41" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-41">
             <div class="subToggler"></div>
             <a href="/shop">Shop</a>
         </li>
-        <li id="menu-item-1821" class="btMenuWideDropdown menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1821 btMenuWideDropdownCols-3">
+        <li id="menu-item-42" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-41">
             <div class="subToggler"></div>
-            <a href="#">Elements</a>
+            <a href="">Order History</a>
+        </li>
+        <li id="menu-item-42" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-41">
+            <div class="subToggler"></div>
+            <a href="">Appointment History</a>
+        </li>
+        <li id="menu-item-40" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-40">
+            <div class="subToggler"></div>
+            <a href="/Contact">Contact Us</a>
+        </li>
+        
+        <li id="menu-item-42" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-41">
+            <div class="subToggler"></div>
+            <a href="">Log Out</a>
         </li>
     </ul>
 </nav>
@@ -125,7 +132,7 @@
 	<!--------------start of Shopping Cart----------->
   <div class="cart" style="border: 1px solid #0CC0DF; border-radius: 4px; padding: 20px;">
   <img src="User/gallery/shopping-cart.png" alt="Veterinary Icon" style="width: 2cm; height: 2cm;">
-  <h2 style="font-size: 1.5rem; margin-top: 10px;">Shopping Cart</h2>
+  <h2>Shopping Cart</h2>
   <ul style="list-style: none; padding: 0;">
     <li v-for="(cartItem, index) in cart" :key="index" style="border: 1px solid #E0E0E0; border-radius: 4px; padding: 10px; margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center;">
       <div class="plus-minus-input">
@@ -145,15 +152,19 @@
         ${{ cartItem.price }}
       </label>
       </div>
-      <div style="display: flex; align-items: center;">
-      <router-link :to="'/ProductDetails/'">
-        {{ product.name }} View Details
-      </router-link>
-        <button type="button" class="btn btn-danger btn-sm m-1">REMOVE</button>
-        </div>
+            <div style="display: flex; align-items: center;">
+        <router-link :to="'/ProductDetails/'">
+          {{ product.name }} View Details
+        </router-link>
+        <button @click="deleteRecord(cart.id)" type="button" class="btn btn-danger btn-sm m-1">
+        <i class="fas fa-trash"></i>
+      </button>
+      </div>
     </li>
   </ul>
-  <button type="button" class="btn btn-success btn-sm m-1"><a href="/Checkout">CHECK OUT</a></button>
+  <button type="button" class="btn btn-success btn-sm m-1">
+  <a href="/Checkout" style="color: white;">CHECK OUT</a>
+</button>
 </div>
 
 
@@ -312,6 +323,11 @@ export default {
     this.getInfo();
   },
   methods: {
+    async deleteRecord(recordId) {
+      await axios.post("del", {
+        id:recordId,
+      })
+    },
     async getInfo() {
       try {
         const response = await axios.get('getData');

@@ -44,50 +44,54 @@
       </div><!-- /btLogoArea -->
     </div>
     <header class="mainHeader btClear gutter ">
-      <div class="mainHeaderInner">
-              <div class="btLogoArea menuHolder btClear">
-          <div class="port">
-                        <div class="btHorizontalMenuTrigger">&nbsp;<div class="bt_bb_icon" data-bt-override-class="null"><a href="#" target="_self" data-ico-fa="" class="bt_bb_icon_holder"></a></div></div>
-                      <div class="logo">
-              <span>
-                <a href="index.html"><img class="btMainLogo" data-hw="2.1111111111111" src="User/wp-content/uploads/sites/2/2019/11/logo_black.svg" alt="Buddy"></a></span>
-            </div><!-- /logo -->
-                      <div class="menuPort">
-                        <div class="topBarInMenu">
-              <div class="topBarInMenuCell">
-                <div class="btButtonWidget btOutline btWithLink"><a href="#" target="_self" class="btButtonWidgetLink"><div class="btIconWidgetIcon"><span data-ico-fontawesome="" class="bt_bb_icon_holder"></span></div><div class="btIconWidgetText"><span class="btButtonWidgetText">+63 998 868 3908</span></div></a></div>						
-              </div><!-- /topBarInMenu -->
-            </div><!-- /topBarInMenuCell -->
-            <nav>
-      <ul id="menu-primary-menu" class="menu">
-          <li id="menu-item-1685" class="btMenuWideDropdown menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-2767 current_page_item current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-1685 btMenuWideDropdownCols-3">
-              <div class="subToggler"></div>
-              <a href="/" aria-current="page">Home</a>
-          </li>
-          <li id="menu-item-2608" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2608">
-              <div class="subToggler"></div>
-              <a href="#">Pages</a>
-          </li>
-          <li id="menu-item-40" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-40">
-              <div class="subToggler"></div>
-              <a href="blog/index.html">Blog</a>
-          </li>
-          <li id="menu-item-41" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-41">
-              <div class="subToggler"></div>
-              <a href="/shop">Shop</a>
-          </li>
-          <li id="menu-item-1821" class="btMenuWideDropdown menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1821 btMenuWideDropdownCols-3">
-              <div class="subToggler"></div>
-              <a href="#">Elements</a>
-          </li>
-      </ul>
-  </nav>
-  
-            </div><!-- .menuPort -->
-          </div><!-- /port -->
-        </div><!-- /menuHolder / btBelowLogoArea -->
-      </div><!-- / inner header for scrolling -->
-      </header><!-- /.mainHeader -->
+		<div class="mainHeaderInner">
+						<div class="btLogoArea menuHolder btClear">
+				<div class="port">
+											<div class="btHorizontalMenuTrigger">&nbsp;<div class="bt_bb_icon" data-bt-override-class="null"><a href="#" target="_self" data-ico-fa="" class="bt_bb_icon_holder"></a></div></div>
+										<div class="logo">
+						<span>
+							<a href="index.html"><img class="btMainLogo" data-hw="2.1111111111111" src="User/wp-content/uploads/sites/2/2019/11/logo_black.svg" alt="Buddy"></a></span>
+					</div><!-- /logo -->
+										<div class="menuPort">
+											<div class="topBarInMenu">
+						<div class="topBarInMenuCell">
+							<div class="btButtonWidget btOutline btWithLink"><a href="#" target="_self" class="btButtonWidgetLink"><div class="btIconWidgetIcon"><span data-ico-fontawesome="" class="bt_bb_icon_holder"></span></div><div class="btIconWidgetText"><span class="btButtonWidgetText">+63 998 868 3908</span></div></a></div>						</div><!-- /topBarInMenu -->
+					</div><!-- /topBarInMenuCell -->
+
+          <nav>
+    <ul id="menu-primary-menu" class="menu">
+        <li id="menu-item-1685" class="btMenuWideDropdown menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-2767 current_page_item current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-1685 btMenuWideDropdownCols-3">
+            <div class="subToggler"></div>
+            <a href="/" aria-current="page">Home</a>
+        </li>
+        <li id="menu-item-41" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-41">
+            <div class="subToggler"></div>
+            <a href="/shop">Shop</a>
+        </li>
+        <li id="menu-item-42" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-41">
+            <div class="subToggler"></div>
+            <a href="">Order History</a>
+        </li>
+        <li id="menu-item-42" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-41">
+            <div class="subToggler"></div>
+            <a href="">Appointment History</a>
+        </li>
+        <li id="menu-item-40" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-40">
+            <div class="subToggler"></div>
+            <a href="/Contact">Contact Us</a>
+        </li>
+        <li id="menu-item-42" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-41">
+            <div class="subToggler"></div>
+            <a href="">Log Out</a>
+        </li>
+    </ul>
+</nav>
+
+					</div><!-- .menuPort -->
+				</div><!-- /port -->
+			</div><!-- /menuHolder / btBelowLogoArea -->
+		</div><!-- / inner header for scrolling -->
+    </header><!-- /.mainHeader -->
        <!-- Add a div to display the animal picture -->
        <div class="animal-picture">
       <section id="bt_bb_section653e182cbf96f" data-parallax="0.7" data-parallax-offset="0" class="bt_bb_section bt_bb_color_scheme_1 bt_bb_layout_boxed_1200 bt_bb_vertical_align_top bt_bb_parallax bt_bb_background_image bt_bb_top_spacing_large bt_bb_bottom_spacing_large bt_bb_section_with_bottom_coverage_image" style="background-color: #96E6F7; background-image: url(&quot;https_/pawsitive.bold-themes.com/buddy/wp-content/uploads/sites/2/2019/08/background_05.html&quot;); --section-primary-color: #ffffff; --section-secondary-color: #EDCCCD; background-position-y: 0px;" data-bt-override-class="null"><div class="bt_bb_port"><div class="bt_bb_cell"><div class="bt_bb_cell_inner"><div class="bt_bb_row_wrapper"><div class="bt_bb_row" data-bt-override-class="{}" data-structure="6-6">
