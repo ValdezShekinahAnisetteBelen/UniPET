@@ -9,24 +9,20 @@
             <div class="form-section">
                 <h6>Appointment Details</h6>
                 <br>
-                <div class="form-row">
-                    <label for="full-name">Full Name</label>
+                <div class="form-row">                   
                     <input type="text" id="full-name" placeholder="Enter full name" class="form-control">
                 </div>
-                <div class="form-row">
-                    <label for="mobile-number">Mobile Number</label>
+                <div class="form-row">                  
                     <input type="tel" id="mobile-number" placeholder="Enter mobile number" class="form-control">
                 </div>
-                <div class="form-row">
-                    <label for="email">Email Address</label>
+                <div class="form-row">                  
                     <input type="email" id="email" placeholder="Enter email address" class="form-control">
                 </div>
                 <div class="form-row">
-                    <label for="appointment-date">Appointment Date</label>
                     <input type="date" id="appointment-date" class="form-control">
                 </div>
                 <div class="form-row">
-                    <label for="image-upload">Upload Image</label>
+                    <label>Upload Image</label>
                     <input type="file" id="image-upload" class="form-control" accept="image/*">
                 </div>
             </div>
@@ -34,24 +30,39 @@
                 <h6>Address Details</h6>
                 <br>
                 <div class="form-row">
-                    <label for="area">Area</label>
                     <input type="text" id="area" placeholder="Enter area" class="form-control">
                 </div>
                 <div class="form-row">
-                    <label for="city">City</label>
                     <input type="text" id="city" placeholder="Enter city" class="form-control">
                 </div>
                 <div class="form-row">
-                    <label for="state">State</label>
-                    <input type="text" id="state" placeholder="Enter state" class="form-control">
-                </div>
-                <div class="form-row">
-                    <label for="postal-code">Postal Code</label>
                     <input type="text" id="postal-code" placeholder="Postal code" class="form-control">
                 </div>
+                
                 <div class="form-row">
-                    <input type="submit" value="Book Now" id="button">
+                <label for="service-type">Groom</label>
+                <select id="groom-service-type" class="form-control" multiple>
+                  <option value="puppy-cut">Puppy Cut</option>
+                  <option value="summer-cut">Summer Cut</option>
+                  <option value="semi-kalbo">Semi Kalbo</option>
+                  <option value="trim-only">Trim Only</option>
+                  <option value="face-trim">Face Trim</option>
+                  <option value="kalbo">Kalbo</option>
+                </select>
                 </div>
+
+                <div class="form-row">
+                 <label for="service-type">Bath</label>
+                 <select id="bath-service-type" class="form-control" multiple>
+                  <option value="regular">Regular</option>
+                  <option value="medicated">Medicated</option>
+                  <option value="antimage">Antimage</option>
+                 </select>
+                </div>
+
+                <div class="center-button">
+        <input type="submit" value="Book Now" id="button" style="width: 130px; height: 40px;">
+    </div>   
             </div>
         </form>
     </div>
