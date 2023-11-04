@@ -25,6 +25,33 @@
                     <label>Upload Image</label>
                     <input type="file" id="image-upload" class="form-control" accept="image/*">
                 </div>
+
+                <div class="form-section">
+        <h6>Request</h6>
+        <br>
+        <div class="form-row">
+            <label for="request-checkbox">Select Request(s)</label>
+            <div class="checkbox-list">
+                <label>
+                    <input type="checkbox" name="request" value="check-up">
+                    Check Up
+                </label>
+                <label>
+                    <input type="checkbox" name="request" value="vaccine">
+                    Vaccine
+                </label>
+                <label>
+                    <input type="checkbox" name="request" value="deworm">
+                    Deworm
+                </label>
+                <label>
+                    <input type="checkbox" name="request" value="labtest">
+                    Labtest
+                </label>
+            </div>
+        </div>
+    </div>
+
             </div>
             <div class="form-section">
                 <h6>Address Details</h6>
@@ -60,10 +87,15 @@
                  </select>
                 </div>
 
-                <div class="center-button">
-        <input type="submit" value="Book Now" id="button" style="width: 130px; height: 40px;">
-    </div>   
-            </div>
+                <div class="sending-message">
+                <br>
+                 Sending your appointment request...
+                 <textarea placeholder="Additional comments" required></textarea>
+                 <div class="center-button">
+                  <input type="submit" value="Book Now" id="button" style="width: 130px; height: 40px;">
+                 </div>
+                </div>
+            </div>  
         </form>
     </div>
 </body>
