@@ -1,0 +1,196 @@
+CRITICAL - 2023-11-04 07:32:15 --> Undefined property: stdClass::$id
+in APPPATH\Controllers\CartController.php on line 36.
+ 1 APPPATH\Controllers\CartController.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$id', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\CartController.php', 36)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->deleteCartItem()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-04 07:32:26 --> Undefined property: stdClass::$id
+in APPPATH\Controllers\CartController.php on line 36.
+ 1 APPPATH\Controllers\CartController.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$id', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\CartController.php', 36)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->deleteCartItem()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-04 07:38:42 --> Undefined property: stdClass::$id
+in APPPATH\Controllers\CartController.php on line 36.
+ 1 APPPATH\Controllers\CartController.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$id', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\CartController.php', 36)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->deleteCartItem()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-04 07:38:52 --> Undefined property: stdClass::$id
+in APPPATH\Controllers\CartController.php on line 36.
+ 1 APPPATH\Controllers\CartController.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$id', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\CartController.php', 36)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->deleteCartItem()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-04 07:38:54 --> Undefined property: stdClass::$id
+in APPPATH\Controllers\CartController.php on line 36.
+ 1 APPPATH\Controllers\CartController.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$id', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\CartController.php', 36)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->deleteCartItem()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-04 07:41:56 --> Undefined property: stdClass::$id
+in APPPATH\Controllers\CartController.php on line 36.
+ 1 APPPATH\Controllers\CartController.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$id', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\CartController.php', 36)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->deleteCartItem()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-04 07:41:59 --> Undefined property: stdClass::$id
+in APPPATH\Controllers\CartController.php on line 36.
+ 1 APPPATH\Controllers\CartController.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$id', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\CartController.php', 36)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->deleteCartItem()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-04 07:44:02 --> Undefined property: stdClass::$id
+in APPPATH\Controllers\CartController.php on line 36.
+ 1 APPPATH\Controllers\CartController.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$id', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\CartController.php', 36)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->deleteCartItem()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-04 07:57:34 --> Undefined property: stdClass::$id
+in APPPATH\Controllers\CartController.php on line 36.
+ 1 APPPATH\Controllers\CartController.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$id', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\CartController.php', 36)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->deleteCartItem()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-04 07:59:15 --> Undefined property: stdClass::$id
+in APPPATH\Controllers\CartController.php on line 36.
+ 1 APPPATH\Controllers\CartController.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$id', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\CartController.php', 36)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->deleteCartItem()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-04 08:06:49 --> Undefined property: stdClass::$id
+in APPPATH\Controllers\CartController.php on line 36.
+ 1 APPPATH\Controllers\CartController.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$id', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\CartController.php', 36)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->deleteCartItem()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-04 08:15:54 --> Undefined property: stdClass::$id
+in APPPATH\Controllers\CartController.php on line 36.
+ 1 APPPATH\Controllers\CartController.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$id', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\CartController.php', 36)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->deleteCartItem()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-04 08:15:56 --> Undefined property: stdClass::$id
+in APPPATH\Controllers\CartController.php on line 36.
+ 1 APPPATH\Controllers\CartController.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$id', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\CartController.php', 36)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->deleteCartItem()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-04 08:15:59 --> Undefined property: stdClass::$id
+in APPPATH\Controllers\CartController.php on line 36.
+ 1 APPPATH\Controllers\CartController.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$id', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\CartController.php', 36)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->deleteCartItem()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-04 08:16:02 --> Undefined property: stdClass::$id
+in APPPATH\Controllers\CartController.php on line 36.
+ 1 APPPATH\Controllers\CartController.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$id', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\CartController.php', 36)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->deleteCartItem()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-04 08:16:11 --> Undefined property: stdClass::$id
+in APPPATH\Controllers\CartController.php on line 36.
+ 1 APPPATH\Controllers\CartController.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$id', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\CartController.php', 36)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->deleteCartItem()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-04 08:16:14 --> Undefined property: stdClass::$id
+in APPPATH\Controllers\CartController.php on line 36.
+ 1 APPPATH\Controllers\CartController.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$id', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\CartController.php', 36)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->deleteCartItem()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-04 08:26:06 --> Undefined property: stdClass::$id
+in APPPATH\Controllers\CartController.php on line 36.
+ 1 APPPATH\Controllers\CartController.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$id', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\CartController.php', 36)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->deleteCartItem()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-04 08:26:10 --> Undefined property: stdClass::$id
+in APPPATH\Controllers\CartController.php on line 36.
+ 1 APPPATH\Controllers\CartController.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$id', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\CartController.php', 36)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->deleteCartItem()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-04 08:26:13 --> Undefined property: stdClass::$id
+in APPPATH\Controllers\CartController.php on line 36.
+ 1 APPPATH\Controllers\CartController.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$id', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\CartController.php', 36)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->deleteCartItem()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-04 08:26:22 --> Undefined property: stdClass::$id
+in APPPATH\Controllers\CartController.php on line 36.
+ 1 APPPATH\Controllers\CartController.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$id', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\CartController.php', 36)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->deleteCartItem()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-04 08:28:10 --> Undefined property: stdClass::$id
+in APPPATH\Controllers\CartController.php on line 36.
+ 1 APPPATH\Controllers\CartController.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$id', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\CartController.php', 36)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->deleteCartItem()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-04 08:30:46 --> Undefined property: stdClass::$id
+in APPPATH\Controllers\CartController.php on line 36.
+ 1 APPPATH\Controllers\CartController.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$id', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\CartController.php', 36)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->deleteCartItem()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-04 08:43:47 --> Undefined property: stdClass::$id
+in APPPATH\Controllers\CartController.php on line 36.
+ 1 APPPATH\Controllers\CartController.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$id', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\CartController.php', 36)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->deleteCartItem()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-04 08:43:52 --> Undefined property: stdClass::$id
+in APPPATH\Controllers\CartController.php on line 36.
+ 1 APPPATH\Controllers\CartController.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$id', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\CartController.php', 36)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->deleteCartItem()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-04 08:44:42 --> Undefined property: stdClass::$id
+in APPPATH\Controllers\CartController.php on line 36.
+ 1 APPPATH\Controllers\CartController.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$id', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\CartController.php', 36)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->deleteCartItem()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-04 08:44:59 --> Undefined property: stdClass::$id
+in APPPATH\Controllers\CartController.php on line 36.
+ 1 APPPATH\Controllers\CartController.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$id', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\CartController.php', 36)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->deleteCartItem()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-04 08:45:16 --> Undefined property: stdClass::$id
+in APPPATH\Controllers\CartController.php on line 36.
+ 1 APPPATH\Controllers\CartController.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$id', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\CartController.php', 36)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->deleteCartItem()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()

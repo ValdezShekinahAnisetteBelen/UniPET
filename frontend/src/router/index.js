@@ -73,6 +73,7 @@ component: () => import(/* webpackChunkName: "about" */ '../views/Client/Product
   name: 'Dashboard',
   component: () => import(/* webpackChunkName: "signup" */ '../views/Admin/Dashboard')
 }
+
 ];
 
 const router = createRouter({

@@ -2,30 +2,13 @@
 
 namespace App\Controllers;
 
-namespace App\Controllers;
-
-use CodeIgniter\Controller;
 use CodeIgniter\HTTP\Request;
+use CodeIgniter\RestFul\ResourceController;
+use CodeIgniter\API\ResponseTrait;
 use App\Models\CartModel;
 
-class CartController extends Controller
+class CartController extends ResourceController
 {
-    public function del(Request $request) // Pass the Request object as a parameter
-    {
-        // Use the Request object to get the JSON data
-        $json = $request->getJSON();
-        $id = $json->id;
-        $cartModel = new CartModel();
-
-        // Check if the item exists before attempting to delete it.
-        $item = $cartModel->find($id);
-        if ($item) {
-            $cartModel->delete($id);
-            return $this->respond(['message' => 'Item deleted successfully'], 200);
-        } else {
-            return $this->respond(['error' => 'Item not found'], 404);
-        }
-    }
     public function addToCart()
     {
         // Retrieve the product details from the request.
@@ -46,4 +29,19 @@ class CartController extends Controller
         // Return a response to the front-end (e.g., success message).
         return $this->response->setJSON(['message' => 'Product added to the cart']);
     }
+
+    public function deleteCartItem()
+    {
+        // Retrieve the item ID from the request
+        $itemId = $this->request->getVar('id');
+    
+        // Delete the item from the database using the ID
+        $cartModel = new CartModel();
+        $cartModel->where('id', $itemId)->delete();
+    
+        // Return a response, e.g., success message
+        return $this->response->setJSON(['message' => 'Item deleted successfully']);
+    }
+    
+
 }

@@ -155,6 +155,8 @@
             <div style="display: flex; align-items: center;">
         <router-link :to="'/ProductDetails/'">
           {{ product.name }} View Details
+          
+     
         </router-link>
         <button @click="deleteRecord(cart.id)" type="button" class="btn btn-danger btn-sm m-1">
         <i class="fas fa-trash"></i>
@@ -301,12 +303,13 @@
 
 <script>
 import axios from 'axios';
+
 export default {
   data() {
     return {
       product: {},
       info: [], // All products
-	  cart: [],
+      cart: [],
       selectedCategory: '', // Selected category
     };
   },
@@ -316,17 +319,39 @@ export default {
         return this.info; // Return all products if no category is selected
       }
       // Filter products based on the selected category
-      return this.info.filter(product => product.productgroup === this.selectedCategory);
+      return this.info.filter((product) => product.productgroup === this.selectedCategory);
     },
   },
   created() {
     this.getInfo();
+    // Load the cart data from localStorage
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    // Update the cart data in your Vue component
+    this.cart = cart;
   },
   methods: {
     async deleteRecord(recordId) {
-      await axios.post("del", {
-        id:recordId,
-      })
+      const confirmed = window.confirm("Are you sure you want to remove this item from your cart?");
+      if (confirmed) {
+        try {
+          await axios.post("api/cart/delete", {
+            id: recordId,
+          });
+
+          // Handle successful deletion
+          this.removeFromCart(recordId);
+        } catch (error) {
+          console.error('Error deleting item:', error);
+        }
+      }
+    },
+    removeFromCart(recordId) {
+      // Remove the item from the client-side cart
+      this.cart = this.cart.filter((cartItem) => cartItem.id !== recordId);
+
+      // Update the local storage to reflect the updated cart
+      localStorage.setItem('cart', JSON.stringify(this.cart));
     },
     async getInfo() {
       try {
@@ -346,10 +371,10 @@ export default {
       // Filter products based on the selected category
       // This will be automatically handled by computed property filteredProducts
     },
-	async addToCart(product) {
+    async addToCart(product) {
       try {
         // Make a POST request to the server to add the item to the "cart" table
-		const response = await axios.post('http://unipet.test/public/api/add-to-cart', {
+        const response = await axios.post('http://unipet.test/public/api/add-to-cart', {
           name: product.name,
           price: product.price,
           image: product.image,
@@ -358,14 +383,22 @@ export default {
 
         if (response.status === 200) {
           // Item added to cart successfully
-          this.cart.push({
+
+          // Add the item to the client-side cart using localStorage
+          const cartItem = {
+            id: response.data.id, // Assuming you receive an 'id' from the server
             name: product.name,
             price: product.price,
             image: product.image,
             productgroup: product.productgroup,
-          });
+          };
+          const cart = JSON.parse(localStorage.getItem('cart')) || [];
+          cart.push(cartItem);
+          localStorage.setItem('cart', JSON.stringify(cart));
 
-          // You can also show a success message or update the UI
+          // Update the cart in your Vue component
+          this.cart = cart;
+
           console.log('Product added to cart:', product.name);
         } else {
           // Handle the error, e.g., display an error message
@@ -375,18 +408,6 @@ export default {
         console.error('Error:', error);
       }
     },
-    viewProductDetails(cartItem) {
-    // Check if cartItem has a productId
-    if (cartItem && cartItem.productId) {
-      // Navigate to the ProductDetails route with the 'id' parameter
-      this.$router.push({ name: 'ProductDetails', params: { id: cartItem.productId } });
-    } else {
-      console.error('Missing product ID in cartItem.');
-    }
-  }
-
-},
-
     // ... other methods
     loadScripts() {
       const scriptUrls = [
@@ -439,7 +460,7 @@ export default {
         head.appendChild(script);
       });
   },
-  
+}
 }
 </script>
 
