@@ -63,7 +63,12 @@ component: () => import(/* webpackChunkName: "about" */ '../views/Client/Product
   name: 'DeliveryStatus',
   component: () => import(/* webpackChunkName: "signup" */ '../views/Client/DeliveryStatus')
 },
-]
+{
+  path: '/Appointment',
+  name: 'Appointment',
+  component: () => import(/* webpackChunkName: "signup" */ '../views/Client/Appointment')
+}
+];
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),

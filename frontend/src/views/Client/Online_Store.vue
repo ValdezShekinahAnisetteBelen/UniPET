@@ -167,7 +167,7 @@ TASTY &amp; FRESH PET FOOD</div></header><div class="bt_bb_separator bt_bb_borde
                     <div class="bt_bb_card_text">We provide a wide range of veterinary services to prioritize your pet's health and happiness, offering routine check-ups, vaccinations, deworming, and lab tests for their well-being.</div>
                     <div class="bt_bb_card_inner_content">
                         <div class="bt_bb_button bt_bb_color_scheme_3 bt_bb_icon_position_right bt_bb_style_clean bt_bb_size_small bt_bb_width_inline bt_bb_shape_inherit bt_bb_target_self bt_bb_align_inherit" style="--primary-color:#ffffff; --secondary-color:#191919;" data-bt-override-class="{}">
-                            <a href="../../services/index.html" target="_self" class="bt_bb_link" title="BOOK NOW">
+                            <a href="Appointment" target="_self" class="bt_bb_link" title="BOOK NOW">
                                 <span class="bt_bb_button_text">BOOK NOW</span>
                             </a>
                         </div>
@@ -185,7 +185,7 @@ TASTY &amp; FRESH PET FOOD</div></header><div class="bt_bb_separator bt_bb_borde
                     <div class="bt_bb_card_text">Our grooming services are tailored to keep your furry friends looking and feeling their best, with options like stylish cuts, trims, and grooming by our skilled professionals.</div>
                     <div class="bt_bb_card_inner_content">
                         <div class="bt_bb_button bt_bb_color_scheme_3 bt_bb_icon_position_right bt_bb_style_clean bt_bb_size_small bt_bb_width_inline bt_bb_shape_inherit bt_bb_target_self bt_bb_align_inherit" style="--primary-color:#ffffff; --secondary-color:#191919;" data-bt-override-class="{}">
-                            <a href="../../services/index.html" target="_self" class="bt_bb_link" title="BOOK NOW">
+                            <a href="/Appointment" target="_self" class="bt_bb_link" title="BOOK NOW">
                                 <span class="bt_bb_button_text">BOOK NOW</span>
                             </a>
                         </div>
@@ -203,7 +203,7 @@ TASTY &amp; FRESH PET FOOD</div></header><div class="bt_bb_separator bt_bb_borde
                     <div class="bt_bb_card_text">Maintain your pet's hygiene and well-being through our bathing services, including regular, medicated, and anti-mange baths, addressing specific needs to keep them fresh and clean.</div>
                     <div class="bt_bb_card_inner_content">
                         <div class="bt_bb_button bt_bb_color_scheme_3 bt_bb_icon_position_right bt_bb_style_clean bt_bb_size_small bt_bb_width_inline bt_bb_shape_inherit bt_bb_target_self bt_bb_align_inherit" style="--primary-color:#ffffff; --secondary-color:#191919;" data-bt-override-class="{}">
-                            <a href="../../services/index.html" target="_self" class="bt_bb_link" title="BOOK NOW">
+                            <a href="/Appointment" target="_self" class="bt_bb_link" title="BOOK NOW">
                                 <span class="bt_bb_button_text">BOOK NOW</span>
                             </a>
                         </div>
@@ -221,7 +221,7 @@ TASTY &amp; FRESH PET FOOD</div></header><div class="bt_bb_separator bt_bb_borde
                     <div class="bt_bb_card_text">For your convenience, you can easily schedule appointments for check-ups, vaccinations, deworming, and lab tests, making your pet's health our top priority.</div>
                     <div class="bt_bb_card_inner_content">
                         <div class="bt_bb_button bt_bb_color_scheme_3 bt_bb_icon_position_right bt_bb_style_clean bt_bb_size_small bt_bb_width_inline bt_bb_shape_inherit bt_bb_target_self bt_bb_align_inherit" style="--primary-color:#ffffff; --secondary-color:#191919;" data-bt-override-class="{}">
-                            <a href="../../services/index.html" target="_self" class="bt_bb_link" title="BOOK NOW">
+                            <a href="/Appointment" target="_self" class="bt_bb_link" title="BOOK NOW">
                                 <span class="bt_bb_button_text">BOOK NOW</span>
                             </a>
                         </div>

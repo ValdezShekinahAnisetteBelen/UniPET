@@ -134,6 +134,7 @@
         <input type="tel" id="mobile" placeholder="Mobile" required>
         <h7>Type Your Message Here...</h7>
         <textarea required></textarea>
+        <br>
         <input type="submit" value="Send" id="button">
     </form>
 </section>
