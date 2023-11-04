@@ -13,10 +13,10 @@
                     <input type="text" id="full-name" placeholder="Enter full name" class="form-control">
                 </div>
                 <div class="form-row">                  
-                    <input type="tel" id="mobile-number" placeholder="Enter mobile number" class="form-control">
+                    <input type="tel" id="mobile-number" placeholder="(000) 000-0000" class="form-control">
                 </div>
                 <div class="form-row">                  
-                    <input type="email" id="email" placeholder="Enter email address" class="form-control">
+                    <input type="email" id="email" placeholder="ex: myname@example.com" class="form-control">
                 </div>
                 <div class="form-row">
                     <input type="date" id="appointment-date" class="form-control">
@@ -92,7 +92,7 @@
                  Sending your appointment request...
                  <textarea placeholder="Additional comments" required></textarea>
                  <div class="center-button">
-                  <input type="submit" value="Book Now" id="button" style="width: 130px; height: 40px;">
+                  <input type="submit" value="Submit Form" id="button" style="width: 130px; height: 40px;">
                  </div>
                 </div>
             </div>  
