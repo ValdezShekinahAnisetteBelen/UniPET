@@ -69,6 +69,16 @@ component: () => import(/* webpackChunkName: "about" */ '../views/Client/Product
   component: () => import(/* webpackChunkName: "signup" */ '../views/Client/Appointment')
 },
 {
+  path: '/AppointmentForm',
+  name: 'AppointmentForm',
+  component: () => import(/* webpackChunkName: "signup" */ '../components/AppointmentForm')
+},
+{
+path: '/PetInfo',
+name: 'PetInfo',
+component: () => import(/* webpackChunkName: "signup" */ '../views/Client/PetInfo')
+},
+{
   path: '/Dashboard',
   name: 'Dashboard',
   component: () => import(/* webpackChunkName: "signup" */ '../views/Admin/Dashboard')
