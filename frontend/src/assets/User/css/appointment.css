@@ -5,27 +5,35 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 1200px;
+    display: flex;
+    justify-content: center; /* Center the form horizontally */
+    align-items: center; /* Center the form vertically */
+    margin: 0 auto; /* Center the container horizontally */
 }
 
 .form-data {
     background-color: #fff;
-    padding: 10px;
+    padding: 20px; /* Increased padding for a desktop form */
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 100%; /* Adjust the width to your preference */
-    max-width: 900px; /* Adjust the max-width to your preference */
+    width: 100%;
+    max-width: 900px;
     text-align: center;
 }
 
 form {
     display: flex;
+    flex-wrap: wrap; /* Allow form elements to wrap to the next line on smaller screens */
     justify-content: space-between;
     align-items: flex-start;
+    width: 100%;
 }
 
 .form-section {
     flex: 1;
     padding: 20px;
+    max-width: 45%; /* Adjust the width of form sections as needed */
+    text-align: left; /* Reset text alignment to the left for form sections */
 }
 
 .form-row {
@@ -41,17 +49,8 @@ label {
 .form-control {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #454444;
     border-radius: 5px;
-}
-
-.btn-appointment {
-    background-color: #28a745;
-    color: #fff;
-    padding: 15px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
 }
 
 h2 {
@@ -63,53 +62,27 @@ h2 {
     .container {
         width: 80%;
     }
-}
-
-.form-container {
-    display: flex;
-    justify-content: space-between;
-}
-
-.form-column {
-    flex: 1;
-    margin-right: 10px;
-}
-
-/* dropdown list */
-
-.form-row {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-.form-row label {
-    flex-basis: 30%; /* Ayusin ang lapad ng label */
-    margin-right: 10px;
-}
-
-.form-row select {
-    flex-grow: 1; /* Mapunan ang natitirang espasyo */
+    .form-section {
+        max-width: 100%; /* Full width on smaller screens */
+    }
 }
 
 .center-button {
-    display: flex;
-    justify-content: flex-start;
-    margin-top: 30px;
+    text-align: center;
 }
 
-  .sending-message {
+.sending-message {
     background-color: #eeeef6;
     color: #0b0a0a;
-    padding: 10px;
+    padding: 20px;
     border-radius: 5px;
     text-align: center;
-  }
-  .sending-message textarea {
+}
+
+.sending-message textarea {
     width: 100%;
     padding: 10px;
     margin-top: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-  }
-
+}
