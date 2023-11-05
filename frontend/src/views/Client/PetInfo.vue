@@ -317,6 +317,10 @@
                   accept="image/*"
                 />
               </div>
+              <div class="sending-message">
+                 Sending your appointment request...
+                 <textarea placeholder="Additional comments" required></textarea>
+              </div>
               <div class="center-button">
       <button @click="showConfirmationDialog" id="button" style="width: 130px; height: 40px;">Book Now</button>
     </div>
