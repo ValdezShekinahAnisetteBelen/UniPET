@@ -1089,3 +1089,54 @@
     <!-- page-body-wrapper ends -->
   </div>
 </template>
+
+<script>
+export default {
+data() {
+  return {
+    email: '',
+    password: '',
+    rememberMe: false,
+  };
+},
+methods: {
+  signIn() {
+    // Handle sign-in logic here
+    console.log('Signing in...');
+  },
+},
+loadScripts() {
+          const scriptUrls = [
+          '../../../../frontend/public/User/vendor.bundle.base.js',
+          '../../../../frontend/public/User/vendors/chart.js/Chart.min.js',
+          '../../../../frontend/public/User/vendors/datatables.net-bs4/dataTables.bootstrap4.js',
+          '../../../../frontend/public/User/off-canvas.js',
+          '../../../../frontend/public/User/js/dataTables.select.min.js',
+          '../../../../frontend/public/User/vendors/datatables.net/jquery.dataTables.js',
+          '../../../../frontend/public/User//hoverable-collapse.js',
+          '../../../../frontend/public/User/js/off-canvas.js',
+          '../../../../frontend/public/User/js/hoverable-collapse.js',
+          '../../../../frontend/public/User/js/template.js',
+          '../../../../frontend/public/User/js/settings.js',
+          '../../../../frontend/public/User/js/todolist.js',
+          ];
+          const head = document.getElementsByTagName('head')[0];
+          scriptUrls.forEach((scriptUrl) => {
+            const script = document.createElement('script');
+            script.src = scriptUrl;
+            script.async = true;
+            head.appendChild(script);
+          });
+      },
+};
+</script>
+
+<style scoped>
+    @import '../../../src/assets/User/css/themify-icons.css';
+    @import '../../../src/assets/User/css/feather.css';
+    @import '../../../src/assets/User/css/vendor.bundle.base.css';
+    @import '../../../src/assets/User//css/stylel.css';
+    @import '../../../../frontend/public/User/vendors/datatables.net-bs4/dataTables.bootstrap4.css';
+    @import '../../../../frontend/public/User/vendors/ti-icons/css/themify-icons.css';
+    @import '../../../../frontend/public/User/js/select.dataTables.min.css';
+</style>
