@@ -91,6 +91,7 @@
                 <br>
                  Sending your appointment request...
                  <textarea placeholder="Additional comments" required></textarea>
+                 <br>
                  <div class="center-button">
                   <input type="submit" value="Submit Form" id="button" style="width: 130px; height: 40px;">
                  </div>
