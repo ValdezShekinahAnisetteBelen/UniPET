@@ -77,6 +77,11 @@ component: () => import(/* webpackChunkName: "signup" */ '../views/Client/PetInf
   path: '/Dashboard',
   name: 'Dashboard',
   component: () => import(/* webpackChunkName: "signup" */ '../views/Admin/Dashboard')
+},
+{
+  path: '/order',
+  name: 'order',
+  component: () => import(/* webpackChunkName: "signup" */ '../views/Admin/order')
 }
 
 ];

@@ -279,13 +279,11 @@ TASTY &amp; FRESH PET FOOD</div></header><div class="bt_bb_separator bt_bb_borde
   </template>
   
  
-<script>
-
-import App from '../../App.vue';
-
-export default {
-    name: "Online_Store",
-        data() {
+  <script>
+  import App from '../../App.vue';
+  
+  export default {
+    data() {
       return {
         myObject: {
           content: null,
@@ -293,26 +291,22 @@ export default {
       };
     },
     created() {
-  // Simulate asynchronous data loading
-  setTimeout(() => {
-    this.myObject = {
-      content: 'Some content',
-    };
-  }, 1000); // Simulated delay
-},
+      // Simulate asynchronous data loading
+      setTimeout(() => {
+        this.myObject = {
+          content: 'Some content',
+        };
+      }, 1000); // Simulated delay
+    },
     mounted() {
       this.loadScripts();
     },
     methods: {
       loadScripts() {
-    if (this.myObject && this.myObject.content) {
-      // Access myObject.content safely
-      console.log(this.myObject.content);
-    } else {
-      // Handle the case where myObject or myObject.content is null or undefined
-      console.error("myObject or myObject.content is null or undefined");
-    }
-
+        if (this.myObject && this.myObject.content) {
+          // Access myObject.content safely
+          console.log(this.myObject.content);
+      
         const scriptUrls = [
          '../../../../frontend/public/User/wp-includes/js/jquery/jquery.min3088.js',
          '../../../../frontend/public/User/wp-includes/js/jquery/jquery-migrate.min5589.js',
@@ -360,25 +354,23 @@ export default {
     	'https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js',
 		
 ];         
-		// Clone the template content
-		const template = document.querySelector('#myTemplate');
-		const clone = document.importNode(template.content, true);
+	 // Clone the template content
+   const head = document.getElementsByTagName('head')[0];
 
-		// Append the cloned content to a target element in your document
-		const targetElement = document.querySelector('#yourTargetElement');
-		targetElement.appendChild(clone);
-        const head = document.getElementsByTagName('head')[0];
-  
-        scriptUrls.forEach((scriptUrl) => {
-          const script = document.createElement('script');
-          script.src = scriptUrl;
-          script.async = true;
-          head.appendChild(script);
-        });
-      },
-    },
-  };
-  </script>
+scriptUrls.forEach((scriptUrl) => {
+  const script = document.createElement('script');
+  script.src = scriptUrl;
+  script.async = true;
+  head.appendChild(script);
+});
+} else {
+// Handle the case where myObject or myObject.content is null or undefined
+console.error("myObject or myObject.content is null or undefined");
+}
+},
+},
+};
+</script>
 
 <style> 
 @import '../../../src/assets/User/css/style1.css';

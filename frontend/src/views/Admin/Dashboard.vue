@@ -1,4 +1,11 @@
 <template>
+  <body>
+    <!-- Mirrored from demo.bootstrapdash.com/skydash-free/template/pages/tables/basic-table.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 05 Nov 2023 15:19:20 GMT -->
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
       <div class="container-scroller">
     <!-- partial:../../partials/_navbar.html -->
     <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
@@ -293,9 +300,9 @@
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
+            <a class="nav-link" data-toggle="collapse" href="/order" aria-expanded="false" aria-controls="form-elements">
               <i class="icon-columns menu-icon"></i>
-              <span class="menu-title">Form elements</span>
+              <span class="menu-title">Online Store</span>
               <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="form-elements">
@@ -1088,6 +1095,7 @@
     </div>
     <!-- page-body-wrapper ends -->
   </div>
+</body>
 </template>
 
 <script>
@@ -1135,7 +1143,7 @@ loadScripts() {
     @import '../../../src/assets/User/css/themify-icons.css';
     @import '../../../src/assets/User/css/feather.css';
     @import '../../../src/assets/User/css/vendor.bundle.base.css';
-    @import '../../../src/assets/User//css/stylel.css';
+    @import '../../../src/assets/User/css/vertical-layout-light/style.css';
     @import '../../../../frontend/public/User/vendors/datatables.net-bs4/dataTables.bootstrap4.css';
     @import '../../../../frontend/public/User/vendors/ti-icons/css/themify-icons.css';
     @import '../../../../frontend/public/User/js/select.dataTables.min.css';

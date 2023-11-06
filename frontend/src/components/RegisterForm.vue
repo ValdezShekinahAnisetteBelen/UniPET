@@ -84,5 +84,5 @@ loadScripts() {
     @import '../../src/assets/User/css/themify-icons.css';
     @import '../../src/assets/User/css/feather.css';
     @import '../../src/assets/User/css/vendor.bundle.base.css';
-    @import '../../src/assets/User//css/stylel.css';
+    @import '../../src/assets/User/css/stylel.css';
 </style>
