@@ -116,6 +116,8 @@
               the information below:
             </p>
             <div class="form-section">
+              <br>
+              <br>
               <h6>Pet Owner Information</h6>
               <div class="form-row">
                 <label for="full_name">Full Name</label>
@@ -128,7 +130,7 @@
                 />
               </div>
               <div class="form-row">
-                <label for="contact_no">Contact Number</label>
+                <label for="contact_no">Contact No</label>
                 <input
                   type="tel"
                   v-model="appointment.contact_no"
@@ -227,7 +229,7 @@
                 </section>
                 <section>
                   <div class="form-row">
-                    <label>Bath</label>
+                    <label>Bath Type</label>
                     <div>
           <button
             v-for="item in grooming_shampoo"
@@ -247,6 +249,7 @@
         <div class="col-md-6">
           <div class="form-data">
             <div class="form-section">
+              <br>
               <h6>Pet Details</h6>
               <div class="form-row">
                 <label for="pet_name">Pet Name</label>
@@ -318,12 +321,14 @@
                 />
               </div>
               <div class="sending-message">
+                 <br>
                  Sending your appointment request...
                  <textarea placeholder="Additional comments" required></textarea>
               </div>
               <div class="center-button">
-      <button @click="showConfirmationDialog" id="button" style="width: 130px; height: 40px;">Book Now</button>
-    </div>
+                <br>
+                <input type="submit" value="Book Now" id="button">
+              </div>
             </div>
           </div>
         </div>
@@ -583,7 +588,7 @@ export default {
 };
 </script>
 <style>
-    @import '../../../src/assets/User/css/appointment.css';
+    @import '../../../src/assets/User/css/petinfo.css';
     @import '../../../src/assets/User/css/new.css';
     @import '../../../src/assets/User/css/style1.css';
     @import '../../../src/assets/User/css/style2.css';

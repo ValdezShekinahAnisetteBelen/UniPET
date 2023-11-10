@@ -1,0 +1,105 @@
+/* Common styles */
+.col-md-6 {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .form-data {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+  }
+  
+  .form-section {
+    margin-bottom: 20px;
+  }
+  
+  /* Headings and text styles */
+  h3,
+  h6,
+  p {
+    color: #333;
+    font-size: 15px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  /* Form row styles */
+  .form-row {
+    margin-bottom: 15px;
+  }
+  
+  /* Label styles */
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+  }
+  
+  /* Input, textarea, select styles */
+  input,
+  textarea,
+  select {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+  }
+  
+  /* Button styles */
+  button,
+  input[type="submit"] {
+    background-color: #68b2e7;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 8px;
+  }
+  
+  /* Active button styles */
+  button.active {
+    background-color: #4583a0;
+  }
+  
+  /* Sending message styles */
+  .sending-message {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  /* Textarea inside the sending message styles */
+  .sending-message textarea {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: 10px;
+  }
+  
+  /* Responsive styles */
+  @media only screen and (max-width: 768px) {
+    h3,
+    h6,
+    p {
+      font-size: 16px;
+    }
+  
+    input,
+    textarea,
+    select {
+      padding: 8px;
+    }
+  
+    button,
+    input[type="submit"] {
+      padding: 8px 12px;
+    }
+  }
+
+  .center-button {
+    text-align: center;
+    margin: 0 auto; /* This will center the block element horizontally */
+  }
+  
