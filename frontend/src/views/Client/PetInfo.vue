@@ -192,60 +192,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-6">
-          <div class="form-data">
-            <div class="form-section">
-              <div class="form-section">
-                <h6>Pet Checklist</h6>
-                <section>
-                  <div class="form-row">
-                    <label>Appointment Type</label>
-                    <div>
-          <button
-            v-for="item in appointment_type"
-            :key="item"
-            :class="{ active: selectedappointment_type.includes(item) }"
-            @click="toggleAppointmentType(item)"
-          >
-            {{ item }}
-          </button>
-        </div>
-                  </div>
-                </section>
-                <section>
-                  <div class="form-row">
-                    <label>Grooming Type</label>
-                    <div>
-          <button
-            v-for="item in grooming_type"
-            :key="item"
-            :class="{ active: selectedgrooming_type.includes(item) }"
-            @click="toggleGroomingType(item)"
-          >
-            {{ item }}
-          </button>
-        </div>
-                  </div>
-                </section>
-                <section>
-                  <div class="form-row">
-                    <label>Bath Type</label>
-                    <div>
-          <button
-            v-for="item in grooming_shampoo"
-            :key="item"
-            :class="{ active: selectedgrooming_shampoo.includes(item) }"
-            @click="toggleGroomingShampoo(item)"
-          >
-            {{ item }}
-          </button>
-        </div>
-                  </div>
-                </section>
-              </div>
-            </div>
-          </div>
-        </div>
+      
         <div class="col-md-6">
           <div class="form-data">
             <div class="form-section">
@@ -310,24 +257,20 @@
                   class="form-control"
                 />
               </div>
-              <div class="form-row">
-                <label for="image-upload">Upload Image</label>
-                <input
-                  type="file"
-                  @change="handleImageUpload"
-                  id="image-upload"
-                  class="form-control"
-                  accept="image/*"
-                />
-              </div>
+              <div class="form-row" id="drag-and-drop-container">
+    <label for="image-upload">Drag and Drop or Click to Upload Image</label>
+    <input
+        type="file"
+        @change="handleImageUpload"
+        id="image-upload"
+        class="form-control"
+        accept="image/*"
+    />
+</div>
               <div class="sending-message">
                  <br>
                  Sending your appointment request...
                  <textarea placeholder="Additional comments" required></textarea>
-              </div>
-              <div class="center-button">
-                <br>
-                <input type="submit" value="Book Now" id="button">
               </div>
             </div>
           </div>
@@ -335,6 +278,75 @@
       </div>
     </form>
   </div>
+  
+  <div class="col-md-6">
+  <div class="form-data">
+    <div class="form-section">
+      <h6>Pet Checklist</h6>
+      <section>
+        <div class="form-row">
+          <div class="container">
+          <label>Appointment Type</label>
+          </div>
+          <div class="checkbox-list">
+            <label v-for="item in appointment_type" :key="item" class="checkbox-item">
+              <input
+                type="checkbox"
+                v-model="selectedappointment_type"
+                :value="item"
+                class="checkbox-input"
+              />
+              {{ item }}
+            </label>
+          </div>
+        </div>
+      </section>
+      <br>
+      <section>
+        <div class="form-row">
+          <div class="container">
+          <label>Grooming Type</label>
+          </div>
+          <div class="checkbox-list">
+            <label v-for="item in grooming_type" :key="item" class="checkbox-item">
+              <input
+                type="checkbox"
+                v-model="selectedgrooming_type"
+                :value="item"
+                class="checkbox-input"
+              />
+              {{ item }}
+            </label>
+          </div>
+        </div>
+      </section>
+      <br>
+      <section>
+        <div class="form-row">
+          <div class="container">
+          <label>Bath Type</label>
+          </div>
+          <div class="checkbox-list">
+            <label v-for="item in grooming_shampoo" :key="item" class="checkbox-item">
+              <input
+                type="checkbox"
+                v-model="selectedgrooming_shampoo"
+                :value="item"
+                class="checkbox-input"
+              />
+              {{ item }}
+            </label>
+          </div>
+          <div class="center-button">
+            <br>
+            <input type="submit" value="Submit Form" id="button">
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+
   <!-- <div>
     <insert @data-saved="getInfo" />
     <table>

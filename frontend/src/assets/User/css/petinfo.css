@@ -28,6 +28,7 @@
   /* Form row styles */
   .form-row {
     margin-bottom: 15px;
+    text-align: center;
   }
   
   /* Label styles */
@@ -102,6 +103,76 @@
     text-align: center;
     margin: 0 auto; /* This will center the block element horizontally */
   }
+
+  .center-button input[type="submit"] {
+    width: 290px; /* Adjust the width as needed */
+    height: 40px; /* Adjust the height as needed */
+    padding: 1px;
+}
+
+  .checkbox-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .checkbox-item {
+    width: 90px; /* Adjust the width as needed */
+    height: 70px; /* Adjust the height as needed */
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+  
+  .checkbox-input {
+    margin-right: 5px;
+  }
+
+   form {
+      background-color: #f4f4f4;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .container {
+      text-align: left;
+  }
+
+  .form-control {
+    width: 100%; /* Adjust the width as needed */
+    padding: 10px; /* Adjust the padding as needed */
+    margin-bottom: 15px; /* Adjust the margin as needed */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    border: 1px solid #ccc; /* Border color */
+    border-radius: 5px; /* Border radius for rounded corners */
+    font-size: 16px; /* Font size */
+    color: #333; /* Text color */
+}
+
+/* Additional css design for file image upload */
+
+#drag-and-drop-container {
+  position: relative;
+  border: 2px dashed #aaa;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+#drag-and-drop-container.hover {
+  border-color: #007bff;
+}
+
+#drag-and-drop-container label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+
+  
+
+  
 
   
   
