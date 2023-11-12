@@ -107,7 +107,7 @@
   .center-button input[type="submit"] {
     width: 290px; /* Adjust the width as needed */
     height: 40px; /* Adjust the height as needed */
-    padding: 1px;
+    padding: 1px; /* pantay ng submit form sa gitna ng button */
 }
 
   .checkbox-list {
