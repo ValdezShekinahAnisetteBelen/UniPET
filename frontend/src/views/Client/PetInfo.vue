@@ -280,72 +280,65 @@
   </div>
   
   <div class="col-md-6">
-  <div class="form-data">
-    <div class="form-section">
-      <h6>Pet Checklist</h6>
-      <section>
-        <div class="form-row">
-          <div class="container">
-          <label>Appointment Type</label>
-          </div>
-          <div class="checkbox-list">
-            <label v-for="item in appointment_type" :key="item" class="checkbox-item">
-              <input
-                type="checkbox"
-                v-model="selectedappointment_type"
-                :value="item"
-                class="checkbox-input"
-              />
-              {{ item }}
-            </label>
+          <div class="form-data">
+            <div class="form-section">
+              <div class="form-section">
+                <h6>Pet Checklist</h6>
+                <section>
+                  <div class="form-row">
+                    <label>Appointment Type</label>
+                    <div>
+          <button
+            v-for="item in appointment_type"
+            :key="item"
+            :class="{ active: selectedappointment_type.includes(item) }"
+            @click="toggleAppointmentType(item)"
+          >
+            {{ item }}
+          </button>
+        </div>
+                  </div>
+                </section>
+                <section>
+                  <div class="form-row">
+                    <label>Grooming Type</label>
+                    <div>
+          <button
+            v-for="item in grooming_type"
+            :key="item"
+            :class="{ active: selectedgrooming_type.includes(item) }"
+            @click="toggleGroomingType(item)"
+          >
+            {{ item }}
+          </button>
+        </div>
+                  </div>
+                </section>
+                <section>
+                  <div class="form-row">
+                    <label>Bath Type</label>
+                    <div>
+          <button
+            v-for="item in grooming_shampoo"
+            :key="item"
+            :class="{ active: selectedgrooming_shampoo.includes(item) }"
+            @click="toggleGroomingShampoo(item)"
+          >
+            {{ item }}
+          </button>
+        </div>
+        <div class="center-button">
+          <br>
+          <br>
+          <br>
+          <input type="submit" value="Submit Form" id="button">
+        </div>
+              </div>
+                </section>
+              </div>
+            </div>
           </div>
         </div>
-      </section>
-      <br>
-      <section>
-        <div class="form-row">
-          <div class="container">
-          <label>Grooming Type</label>
-          </div>
-          <div class="checkbox-list">
-            <label v-for="item in grooming_type" :key="item" class="checkbox-item">
-              <input
-                type="checkbox"
-                v-model="selectedgrooming_type"
-                :value="item"
-                class="checkbox-input"
-              />
-              {{ item }}
-            </label>
-          </div>
-        </div>
-      </section>
-      <br>
-      <section>
-        <div class="form-row">
-          <div class="container">
-          <label>Bath Type</label>
-          </div>
-          <div class="checkbox-list">
-            <label v-for="item in grooming_shampoo" :key="item" class="checkbox-item">
-              <input
-                type="checkbox"
-                v-model="selectedgrooming_shampoo"
-                :value="item"
-                class="checkbox-input"
-              />
-              {{ item }}
-            </label>
-          </div>
-          <div class="center-button">
-            <br>
-            <input type="submit" value="Submit Form" id="button">
-          </div>
-        </div>
-      </section>
-    </div>
-  </div>
-</div>
 
   <!-- <div>
     <insert @data-saved="getInfo" />
