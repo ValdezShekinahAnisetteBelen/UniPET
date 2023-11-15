@@ -25,10 +25,9 @@
     text-align: center;
   }
   
-  /* Form row styles */
+  /* Form row styles for button alignment */
   .form-row {
     margin-bottom: 15px;
-    text-align: center;
   }
   
   /* Label styles */
@@ -63,6 +62,10 @@
   /* Active button styles */
   button.active {
     background-color: #4583a0;
+  }
+
+  button:hover {
+    background-color: #0056b3; /* Darken the button color on hover */
   }
   
   /* Sending message styles */
@@ -105,10 +108,13 @@
   }
 
   .center-button input[type="submit"] {
-    width: 290px; /* Adjust the width as needed */
+    width: 280px; /* Adjust the width as needed */
     height: 40px; /* Adjust the height as needed */
     padding: 1px; /* pantay ng submit form sa gitna ng button */
 }
+
+
+/* additional css for checkbox */
 
   .checkbox-list {
     display: flex;
@@ -125,6 +131,8 @@
   .checkbox-input {
     margin-right: 5px;
   }
+
+  /* Form */
 
    form {
       background-color: #f4f4f4;
@@ -168,6 +176,8 @@
   margin-bottom: 8px;
   color: #333;
 }
+
+
 
 
   
