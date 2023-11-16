@@ -302,7 +302,16 @@
     </template>
 
 <script>
+
 import axios from 'axios';
+import jQuery from 'jquery';
+import 'jquery-ui';
+import 'jquery-ui/ui/widgets/mouse';
+import 'jquery-ui/ui/widgets/slider';
+
+
+const $ = jQuery.noConflict();
+
 
 export default {
   data() {
@@ -311,17 +320,25 @@ export default {
       info: [], // All products
       cart: [],
       selectedCategory: '', // Selected category
+      myObject: {
+        content: null,
+      },
     };
   },
   computed: {
-    filteredProducts() {
-      if (!this.selectedCategory) {
-        return this.info; // Return all products if no category is selected
-      }
-      // Filter products based on the selected category
-      return this.info.filter((product) => product.productgroup === this.selectedCategory);
-    },
+  filteredProducts() {
+    if (!this.selectedCategory) {
+      return this.info; // Return all products if no category is selected
+    }
+    // Filter products based on the selected category
+    const filtered = this.info.filter((product) => product.productgroup === this.selectedCategory);
+    
+    console.log('Selected Category:', this.selectedCategory);
+    console.log('Filtered Products:', filtered);
+
+    return filtered;
   },
+},
   created() {
     this.getInfo();
     // Load the cart data from localStorage
@@ -329,6 +346,13 @@ export default {
 
     // Update the cart data in your Vue component
     this.cart = cart;
+
+    // Simulate asynchronous data loading
+    setTimeout(() => {
+      this.myObject = {
+        content: 'Some content',
+      };
+    }, 1000); // Simulated delay
   },
   methods: {
     async deleteRecord(recordId) {
@@ -353,12 +377,13 @@ export default {
       // Update the local storage to reflect the updated cart
       localStorage.setItem('cart', JSON.stringify(this.cart));
     },
-    async getInfo() {
+        async getInfo() {
       try {
         const response = await axios.get('getData');
+        console.log('Response Data:', response.data);
         this.info = response.data;
       } catch (error) {
-        console.error(error);
+        console.error('Error fetching data:', error);
       }
     },
     getFilterValue(productgroup) {
@@ -408,61 +433,95 @@ export default {
         console.error('Error:', error);
       }
     },
-    // ... other methods
     loadScripts() {
-      const scriptUrls = [
-        '../../../../frontend/public/User/js5.js',
-        '../../../../frontend/public/User/js6.js',
-        '../../../../frontend/public/User/js16.js',
-        '../../../../frontend/public/User/js17.js',
-        '../../../../frontend/public/User/js18.js',
-        '../../../../frontend/public/User/js19.js',
-        '../../../../frontend/public/User/js20.js',
-        '../../../../frontend/public/User/js21.js',
-        '../../../../frontend/public/User/js22.js',
-        '../../../../frontend/public/User/js12.js',
-        '../../../../frontend/public/User/js14.js',
-        '../../../../frontend/public/User/js243.js',
-        '../../../../frontend/public/User/scripts.js',
-        '../../../../frontend/public/User/wp-content/themes/pawsitive/framework/js/fancySelecte35d.js',
-        '../../../../frontend/public/User/wp-content/plugins/duracelltomi-google-tag-manager/js/gtm4wp-form-move-tracker7100.js',
-        '../../../../frontend/public/User/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min2632.js',
-        '../../../../frontend/public/User/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.mine1a3.js',
-        '../../../../frontend/public/User/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min2632.js',
-        '../../../../frontend/public/User/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.minf0ea.js',
-        '../../../../frontend/public/User/wp-content/plugins/contact-form-7/includes/swv/js/indexf658.js',
-        '../../../../frontend/public/User/wp-content/plugins/contact-form-7/includes/js/indexf658.js',
-        '../../../../frontend/public/User/wp-includes/js/jquery/ui/core.min3f14.js',
-        '../../../../frontend/public/User/wp-includes/js/jquery/ui/datepicker.min3f14.js',
-        '../../../../frontend/public/User/wp-includes/js/jquery/ui/mouse.min3f14.js',
-        '../../../../frontend/public/User/wp-includes/js/jquery/ui/slider.min3f14.js',
-        '../../../../frontend/public/User/wp-content/plugins/bt_cost_calculator/jquery.ui.touch-punch.mine35d.js',
-        '../../../../frontend/public/User/wp-content/themes/pawsitive/framework/js/header.misce35d.js',
-        '../../../../frontend/public/User/wp-content/themes/pawsitive/framework/js/misce35d.js',
-        '../../../../frontend/public/User/wp-content/plugins/bold-page-builder/content_elements/bt_bb_section/bt_bb_elementse35d.js',
-        '../../../../frontend/public/User/wp-content/themes/pawsitive/bold-page-builder/content_elements/bt_bb_floating_image/bt_bb_floating_imagee35d.js',
-        '../../../../frontend/public/User/wp-content/themes/pawsitive/bold-page-builder/content_elements/bt_bb_organic_animation/anime.mine35d.js',
-        '../../../../frontend/public/User/wp-includes/js/jquery/jquery.min3088.js',
-        '../../../../frontend/public/User/wp-includes/js/jquery/jquery-migrate.min5589.js',
-        '../../../../frontend/public/User/wp-content/plugins/bold-page-builder/slick/slick.min1849.js',
-        '../../../../frontend/public/User/wp-content/plugins/bold-page-builder/content_elements_misc/js/jquery.magnific-popup.min1849.js',
-        '../../../../frontend/public/User/wp-content/plugins/bold-page-builder/content_elements_misc/js/content_elements1849.js',
-        '../../../../frontend/public/User/wp-content/plugins/bt_cost_calculator/jquery.dde35d.js',
-        '../../../../frontend/public/User/wp-content/plugins/bt_cost_calculator/cc.maine35d.js',
-        '../../../../frontend/public/User/bt_cc_main-js-after.js',
-        'https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js',
-      ];
-      const head = document.getElementsByTagName('head')[0];
-      scriptUrls.forEach((scriptUrl) => {
-        const script = document.createElement('script');
-        script.src = scriptUrl;
-        script.async = true;
-        head.appendChild(script);
-      });
+      if (this.myObject && this.myObject.content) {
+        console.log(this.myObject.content);
+
+        const scriptUrls = [
+          '/User/wp-includes/js/jquery/jquery.min3088.js',
+          '/User/wp-includes/js/jquery/jquery-migrate.min5589.js',
+          '/User/wp-content/plugins/bold-page-builder/slick/slick.min1849.js',
+          '/User/wp-content/plugins/bold-page-builder/content_elements_misc/js/jquery.magnific-popup.min1849.js',
+          '/User/wp-content/plugins/bold-page-builder/content_elements_misc/js/content_elements1849.js',
+          '/User/wp-content/plugins/bt_cost_calculator/jquery.dde35d.js',
+          '/User/wp-content/plugins/bt_cost_calculator/cc.maine35d.js',
+          '/User/bt_cc_main-js-after.js',
+          '/User/js1.js',
+          '/User/js2.js',
+          '/User/js3.js',
+          '/User/js4.js',
+          '/User/js5.js',
+          '/User/js6.js',
+          '/User/js7.js',
+          '/User/js8.js',
+          '/User/js9.js',
+          '/User/js10.js',
+          '/User/js11.js',
+          '/User/js12.js',
+          '/User/wp-content/plugins/contact-form-7/includes/swv/js/indexf658.js',
+          '/User/wp-content/plugins/contact-form-7/includes/js/indexf658.js',
+          '/User/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.minf0ea.js',
+          '/User/js13.js',
+          '/User/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min2632.js',
+          '/User/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.mine1a3.js',
+          '/User/js14.js',
+          '/User/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min2632.js',
+          '/User/wp-content/plugins/duracelltomi-google-tag-manager/js/gtm4wp-form-move-tracker7100.js',
+          '/User/wp-content/themes/pawsitive/framework/js/fancySelecte35d.js',
+          '/User/wp-content/themes/pawsitive/framework/js/header.misce35d.js',
+          '/User/wp-content/themes/pawsitive/framework/js/misce35d.js',
+          '/User/wp-content/plugins/bold-page-builder/content_elements/bt_bb_section/bt_bb_elementse35d.js',
+          '/User/wp-content/themes/pawsitive/bold-page-builder/content_elements/bt_bb_floating_image/bt_bb_floating_imagee35d.js',
+          '/User/wp-content/themes/pawsitive/bold-page-builder/content_elements/bt_bb_organic_animation/anime.mine35d.js',
+          '/User/wp-content/themes/pawsitive/bold-page-builder/content_elements/bt_bb_organic_animation/maine35d.js',
+          '/User/wp-includes/js/jquery/ui/core.min3f14.js',
+          '/User/wp-includes/js/jquery/ui/datepicker.min3f14.js',
+          '/User/wp-includes/js/jquery/ui/mouse.min3f14.js',
+          '/User/wp-includes/js/jquery/ui/slider.min3f14.js',
+          '/User/wp-content/plugins/bt_cost_calculator/jquery.ui.touch-punch.mine35d.js',
+          'https://code.jquery.com/jquery-3.5.1.slim.min.js',
+          'https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js',
+          'https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js',
+        ];
+
+        // Load jQuery first
+        const jqueryScript = document.createElement('script');
+        jqueryScript.src = scriptUrls[0]; // Assuming jQuery is the first script
+        jqueryScript.async = true;
+        jqueryScript.onload = () => {
+          console.log('jQuery loaded successfully');
+          // Now load other scripts
+          scriptUrls.slice(1).forEach(url => {
+            const script = document.createElement('script');
+            script.src = url;
+            script.async = true;
+            script.onload = () => {
+              console.log(`Script loaded successfully: ${url}`);
+            };
+            script.onerror = (error) => {
+              console.error(`Error loading script: ${url}`, error);
+            };
+
+            document.head.appendChild(script);
+          });
+        };
+        jqueryScript.onerror = (error) => {
+          console.error('Error loading jQuery', error);
+        };
+        document.head.appendChild(jqueryScript);
+      }
+    },
   },
-}
-}
+  mounted() {
+    window.onload = () => {
+      console.log('Window onload event triggered');
+      this.loadScripts();
+    };
+  },
+};
 </script>
+
+
 
 
     <style>
