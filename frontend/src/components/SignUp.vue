@@ -1,117 +1,109 @@
 <template>
-  <html lang="en">
-
-
-<!-- Mirrored from demo.bootstrapdash.com/skydash-free/template/pages/samples/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 03 Nov 2023 13:59:46 GMT -->
-<head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="shortcut icon" href="../../images/favicon.png" />  
-</head>
-
-<body>
-  <div class="container-scroller">
-    <div class="container-fluid page-body-wrapper full-page-wrapper">
-      <div class="content-wrapper d-flex align-items-center auth px-0">
-        <div class="row w-100 mx-0">
-          <div class="col-lg-4 mx-auto">
-            <div class="auth-form-light text-left py-5 px-4 px-sm-5">
-              <div class="brand-logo">
-                <img src="User/wp-content/uploads/sites/2/2019/11/login.svg" alt="logo">
+  <v-app>
+    <v-container fluid>
+      <v-row align="center" justify="center">
+        <v-col cols="12" sm="8" md="4">
+          <v-card class="auth-form-light text-left py-5 px-4 px-sm-5">
+            <v-img
+              src="User/wp-content/uploads/sites/2/2019/11/login.svg"
+              alt="logo"
+              class="brand-logo"
+            ></v-img>
+            <h4>Hello! let's get started</h4>
+            <h6 class="font-weight-light">Sign in to continue.</h6>
+            <v-form @submit.prevent="login">
+              <v-text-field
+                v-model="username"
+                label="username"
+                outlined
+                class="form-group"
+              ></v-text-field>
+              <v-text-field
+                v-model="password"
+                label="password"
+                type="password"
+                outlined
+                class="form-group"
+              ></v-text-field>
+              <v-btn
+                type="submit"
+                block
+                color="primary"
+                class="btn-lg font-weight-medium auth-form-btn"
+              >
+                SIGN IN
+              </v-btn>
+              <div class="my-2 d-flex justify-content-between align-items-center">
+                <v-checkbox
+                  v-model="rememberMe"
+                  label="Keep me signed in"
+                  class="form-check"
+                ></v-checkbox>
+                <v-btn text class="auth-link" @click="forgotPassword">
+                  Forgot password?
+                </v-btn>
               </div>
-              <h4>Hello! let's get started</h4>
-              <h6 class="font-weight-light">Sign in to continue.</h6>
-              <form class="pt-3">
-                <div class="form-group">
-                  <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="Username">
-                </div>
-                <div class="form-group">
-                  <input type="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Password">
-                </div>
-                <div class="mt-3">
-                  <a class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" href="../../index.html">SIGN IN</a>
-                </div>
-                <div class="my-2 d-flex justify-content-between align-items-center">
-                  <div class="form-check">
-                    <label class="form-check-label text-muted">
-                      <input type="checkbox" class="form-check-input">
-                      Keep me signed in
-                    </label>
-                  </div>
-                  <a href="#" class="auth-link text-black">Forgot password?</a>
-                </div>
-                <div class="mb-2">
-                  <button type="button" class="btn btn-block btn-facebook auth-form-btn">
-                    <i class="ti-facebook mr-2"></i>Connect using facebook
-                  </button>
-                </div>
-                <div class="text-center mt-4 font-weight-light">
-                  Don't have an account? <a href="/RegisterForm" class="text-primary">Create</a>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- content-wrapper ends -->
-    </div>
-    <!-- page-body-wrapper ends -->
-  </div>
-  <!-- container-scroller -->
-  <!-- plugins:js -->
-  <!-- <script src="../../vendors/js/vendor.bundle.base.js"></script> -->
-  <!-- endinject -->
-  <!-- Plugin js for this page -->
-  <!-- End plugin js for this page -->
-  <!-- inject:js -->
-  <!-- <script src="../../js/off-canvas.js"></script>
-  <script src="../../js/hoverable-collapse.js"></script>
-  <script src="../../js/template.js"></script>
-  <script src="../../js/settings.js"></script>
-  <script src="../../js/todolist.js"></script> -->
-  <!-- endinject -->
-</body>
-</html>
+              <v-btn
+                block
+                color="facebook"
+                class="btn-lg auth-form-btn"
+                @click="connectWithFacebook"
+              >
+                <v-icon left>mdi-facebook</v-icon> Connect using Facebook
+              </v-btn>
+              <div class="text-center mt-4 font-weight-light">
+                Don't have an account? <a href="/RegisterForm" class="text-primary">Register</a>
+              </div>
+            </v-form>
+          </v-card>
+        </v-col>
+      </v-row>
+    </v-container>
+  </v-app>
 </template>
+
 <script>
+import axios from 'axios';
+import router from '@/router';
+
 export default {
-data() {
-  return {
-    email: '',
-    password: '',
-    rememberMe: false,
-  };
-},
-methods: {
-  signIn() {
-    // Handle sign-in logic here
-    console.log('Signing in...');
+  data() {
+    return {
+      username:"",
+      password:"",
+      errorMsg:"",
+    };
   },
-},
-loadScripts() {
-          const scriptUrls = [
-          '../../../../frontend/public/User/vendor.bundle.base.js',
-          '../../../../frontend/public/User/off-canvas.js',
-          '../../../../frontend/public/User//hoverable-collapse.js',
-          '../../../../frontend/public/User/template.js',
-          '../../../../frontend/public/User/settings.js',
-          '../../../../frontend/public/User/todolist.js',
-          ];
-          const head = document.getElementsByTagName('head')[0];
-          scriptUrls.forEach((scriptUrl) => {
-            const script = document.createElement('script');
-            script.src = scriptUrl;
-            script.async = true;
-            head.appendChild(script);
-          });
-      },
-};
+  methods: {
+      // Handle sign-in logic here
+      async login() {
+       const d = await axios.post("api/login", {
+        username : this.username,
+        password: this.password
+       });
+       if(d.data.msg== 'okay') {
+        sessionStorage.setItem("token", d.data.token);
+        router.push('/');
+        
+       }
+      }
+    },
+    forgotPassword() {
+      // Handle forgot password logic here
+      console.log('Forgot password clicked...');
+    },
+    connectWithFacebook() {
+      // Handle Facebook login logic here
+      console.log('Connect with Facebook clicked...');
+    },
+  };
 </script>
 
 <style scoped>
-    @import '../../src/assets/User/css/themify-icons.css';
-    @import '../../src/assets/User/css/feather.css';
-    @import '../../src/assets/User/css/vendor.bundle.base.css';
-    @import '../../src/assets/User//css/stylel.css';
+  @import '../../src/assets/User/css/themify-icons.css';
+  @import '../../src/assets/User/css/feather.css';
+  @import '~vuetify/dist/vuetify.min.css';
+  /* Additional styling from your existing CSS */
+  @import '../../src/assets/User/css/vendor.bundle.base.css';
+  @import '../../src/assets/User/css/stylel.css';
 </style>

@@ -82,7 +82,9 @@
         </li>
         <li id="menu-item-42" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-41">
             <div class="subToggler"></div>
-            <a href="/SignUp">Log Out</a>
+            <router-link to="#" @click="logout" class="logout-link">
+           Logout
+          </router-link>
         </li>
     </ul>
 </nav>
@@ -297,7 +299,11 @@
       created() {
         this.getInfo();
       },
-      methods: {
+      methods: {    
+      logout() {
+      sessionStorage.removeItem('token'); // Remove the token from session storage
+      this.$router.push('/login'); // Navigate to the login page
+    },
         async getInfo() {
           try {
             const response = await axios.get('getData');

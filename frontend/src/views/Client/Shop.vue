@@ -197,7 +197,7 @@
   </select>
 </div>
 
-<div class="col-md-4 mb-4" v-for="product in filteredProducts" :key="product.id" :class="getFilterValue(product.productgroup)">
+<div class="col-md-4 col-sm-6 col-xs-12 mb-4" v-for="product in filteredProducts" :key="product.id" :class="getFilterValue(product.productgroup)">
       <div class="product type-product post-1860 status-publish first outofstock product_cat-beef has-post-thumbnail sale shipping-taxable purchasable product-type-simple">
         <div class="btWooShopLoopItemInner" style="border: 1px solid #0CC0DF; padding: 15px; margin: 10px; border-radius: 10px;">
           <span class="onsale">Sale!</span>
@@ -306,8 +306,8 @@
 import axios from 'axios';
 import jQuery from 'jquery';
 import 'jquery-ui';
-import 'jquery-ui/ui/widgets/mouse';
-import 'jquery-ui/ui/widgets/slider';
+// import 'jquery-ui/ui/widgets/mouse';
+// import 'jquery-ui/ui/widgets/slider';
 
 
 const $ = jQuery.noConflict();
@@ -354,7 +354,11 @@ export default {
       };
     }, 1000); // Simulated delay
   },
-  methods: {
+  methods: {    
+      logout() {
+      sessionStorage.removeItem('token'); // Remove the token from session storage
+      this.$router.push('/login'); // Navigate to the login page
+    },
     async deleteRecord(cartItem) {
     console.log('Deleting item with ID:', cartItem.id);
 
@@ -471,8 +475,8 @@ export default {
           '/User/wp-content/themes/pawsitive/bold-page-builder/content_elements/bt_bb_organic_animation/maine35d.js',
           '/User/wp-includes/js/jquery/ui/core.min3f14.js',
           '/User/wp-includes/js/jquery/ui/datepicker.min3f14.js',
-          '/User/wp-includes/js/jquery/ui/mouse.min3f14.js',
-          '/User/wp-includes/js/jquery/ui/slider.min3f14.js',
+          // '/User/wp-includes/js/jquery/ui/mouse.min3f14.js',
+          // '/User/wp-includes/js/jquery/ui/slider.min3f14.js',
           '/User/wp-content/plugins/bt_cost_calculator/jquery.ui.touch-punch.mine35d.js',
           'https://code.jquery.com/jquery-3.5.1.slim.min.js',
           'https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js',
@@ -487,18 +491,19 @@ export default {
           console.log('jQuery loaded successfully');
           // Now load other scripts
           scriptUrls.slice(1).forEach(url => {
-            const script = document.createElement('script');
-            script.src = url;
-            script.async = true;
-            script.onload = () => {
-              console.log(`Script loaded successfully: ${url}`);
-            };
-            script.onerror = (error) => {
-              console.error(`Error loading script: ${url}`, error);
-            };
+  const script = document.createElement('script');
+  script.src = url;
+  script.async = true;
+  script.onload = () => {
+    console.log(`Script loaded successfully: ${url}`);
+  };
+  script.onerror = (error) => {
+    console.error(`Error loading script: ${url}`, error);
+  };
 
-            document.head.appendChild(script);
-          });
+  document.head.appendChild(script);
+});
+
         };
         jqueryScript.onerror = (error) => {
           console.error('Error loading jQuery', error);

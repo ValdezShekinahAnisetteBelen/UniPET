@@ -474,7 +474,11 @@ export default {
       selectedgrooming_shampoo: [],
     };
   },
-  methods: {
+  methods: {    
+      logout() {
+      sessionStorage.removeItem('token'); // Remove the token from session storage
+      this.$router.push('/login'); // Navigate to the login page
+    },
     showConfirmationDialog() {
     if (window.confirm('Are you sure you want to book now?')) {
       // User clicked OK, proceed with the form submission
