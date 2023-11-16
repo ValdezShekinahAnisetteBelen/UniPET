@@ -68,7 +68,7 @@
             </li>
             <li id="menu-item-42" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-41">
                 <div class="subToggler"></div>
-                <a href="">Appointment History</a>
+                <a href="/PetInfo">Appointment History</a>
             </li>
             <li id="menu-item-40" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-40">
                 <div class="subToggler"></div>

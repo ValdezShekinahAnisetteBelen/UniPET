@@ -88,3 +88,21 @@ in APPPATH\Controllers\UserController.php on line 32.
  5 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
  6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  7 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-16 12:47:45 --> Class "Firebase\JWT\JWT" not found
+in APPPATH\Controllers\CartController.php on line 26.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-16 12:47:49 --> Class "Firebase\JWT\JWT" not found
+in APPPATH\Controllers\CartController.php on line 26.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-16 12:47:52 --> Class "Firebase\JWT\JWT" not found
+in APPPATH\Controllers\CartController.php on line 26.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
