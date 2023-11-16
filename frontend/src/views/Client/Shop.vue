@@ -158,7 +158,7 @@
           
      
         </router-link>
-        <button @click="deleteRecord(cart.id)" type="button" class="btn btn-danger btn-sm m-1">
+        <button @click="deleteRecord(cartItem)" type="button" class="btn btn-danger btn-sm m-1">
         <i class="fas fa-trash"></i>
       </button>
       </div>
@@ -355,28 +355,23 @@ export default {
     }, 1000); // Simulated delay
   },
   methods: {
-    async deleteRecord(recordId) {
-      const confirmed = window.confirm("Are you sure you want to remove this item from your cart?");
-      if (confirmed) {
+    async deleteRecord(cartItem) {
+    console.log('Deleting item with ID:', cartItem.id);
+
+    const confirmed = window.confirm("Are you sure you want to remove this item from your cart?");
+    if (confirmed) {
         try {
-          await axios.post("api/cart/delete", {
-            id: recordId,
-          });
+            await axios.post("api/cart/delete", {
+                id: cartItem.id,
+            });
 
-          // Handle successful deletion
-          this.removeFromCart(recordId);
+            // Handle successful deletion
+            this.removeFromCart(cartItem.id);
         } catch (error) {
-          console.error('Error deleting item:', error);
+            console.error('Error deleting item:', error);
         }
-      }
-    },
-    removeFromCart(recordId) {
-      // Remove the item from the client-side cart
-      this.cart = this.cart.filter((cartItem) => cartItem.id !== recordId);
-
-      // Update the local storage to reflect the updated cart
-      localStorage.setItem('cart', JSON.stringify(this.cart));
-    },
+    }
+},
         async getInfo() {
       try {
         const response = await axios.get('getData');
