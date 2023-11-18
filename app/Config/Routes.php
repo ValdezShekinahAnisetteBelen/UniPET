@@ -7,7 +7,7 @@ use CodeIgniter\Router\RouteCollection;
  */
 $routes->get('/', 'Home::index');
 $routes->match(['post', 'get'], '/api/login', 'UserController::login');
-$routes->match(['post', 'get'], 'api/register', 'UserController::register');
+$routes->match(['post', 'get'], '/api/register', 'UserController::register');
 $routes->get('/getData', 'Product::getData');
 $routes->post('api/products', 'Product::create');
 $routes->post('api/cart/add-to-cart', 'CartController::addToCart');

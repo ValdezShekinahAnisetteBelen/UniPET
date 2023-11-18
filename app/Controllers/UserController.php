@@ -1,28 +1,31 @@
 <?php
 
 namespace App\Controllers;
-use CodeIgniter\RESTful\ResourceController;
-use CodeIgniter\API\ResponseTrait;
 
-use App\Models\UserModel;
 use App\Controllers\BaseController;
+use CodeIgniter\RESTful\ResourceController;
+use CodeIgniter\API\ResponseTrait; 
+use App\Models\UserModel;
+
 
 class UserController extends ResourceController
 {
+    use ResponseTrait;
+
     public function register()
     {
         $user = new UserModel();
         $token = $this->verification(50);
-    
+
         $username = $this->request->getVar('username');
-        $email = $this->request->getVar('email'); // Add this line to capture the email field
+        $email = $this->request->getVar('email');
         $password = $this->request->getVar('password');
-    
+
         // Validate email format
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            return $this->respond(['msg' => 'invalidEmail']);
+            return $this->respond(['msg' => 'invalidEmail'], 400);
         }
-    
+
         $data = [
             'username' => $username,
             'email' => $email,
@@ -31,26 +34,26 @@ class UserController extends ResourceController
             'status' => 'active',
             'role' => 'user',
         ];
-    
+
         $u = $user->save($data);
-    
+
+        // Check for validation errors
+        if ($user->errors()) {
+            return $this->respond(['msg' => 'validationError', 'errors' => $user->errors()], 400);
+        }
+
         if ($u) {
             return $this->respond(['msg' => 'okay', 'token' => $token]);
         } else {
-            return $this->respond(['msg' => 'failed']);
+            return $this->respond(['msg' => 'failed'], 500);
         }
-    }    
+    }
 
-        public function verification($length){ 
-
-            $str_result = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'; 
-
-            return substr(str_shuffle($str_result), 
-
-            0, $length); 
-
-        } 
-        
+    public function verification($length)
+    {
+        $str_result = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+        return substr(str_shuffle($str_result), 0, $length);
+    }
     public function login() 
     {
         $username = $this->request->getVar("username");

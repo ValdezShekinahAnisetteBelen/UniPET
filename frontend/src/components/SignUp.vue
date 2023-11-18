@@ -52,7 +52,7 @@
                 <v-icon left>mdi-facebook</v-icon> Connect using Facebook
               </v-btn>
               <div class="text-center mt-4 font-weight-light">
-                Don't have an account? <a href="/RegisterForm" class="text-primary">Register</a>
+                Don't have an account? <a href="/register" class="text-primary">Register</a>
               </div>
             </v-form>
           </v-card>

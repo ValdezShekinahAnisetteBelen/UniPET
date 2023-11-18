@@ -64,7 +64,7 @@ meta:{ requiresAuth: true}
   meta:{ requiresAuth: true}
 },
 {
-  path: '/RegisterForm',
+  path: '/register',
   name: 'RegisterForm',
   component: () => import(/* webpackChunkName: "signup" */ '../components/RegisterForm')
 },
