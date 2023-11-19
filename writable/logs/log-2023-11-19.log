@@ -1,0 +1,234 @@
+CRITICAL - 2023-11-19 02:32:53 --> Undefined property: stdClass::$id
+in APPPATH\Controllers\CartController.php on line 40.
+ 1 APPPATH\Controllers\CartController.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$id', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\CartController.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->del()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-19 02:33:18 --> Undefined property: stdClass::$id
+in APPPATH\Controllers\CartController.php on line 40.
+ 1 APPPATH\Controllers\CartController.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$id', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\CartController.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->del()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-19 02:33:43 --> Undefined property: stdClass::$id
+in APPPATH\Controllers\CartController.php on line 40.
+ 1 APPPATH\Controllers\CartController.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$id', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\CartController.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->del()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-19 02:42:57 --> Error deleting record: Undefined property: stdClass::$id
+ERROR - 2023-11-19 02:53:50 --> Error deleting record: Undefined property: stdClass::$id
+ERROR - 2023-11-19 02:55:04 --> Error deleting record: Undefined property: stdClass::$id
+ERROR - 2023-11-19 03:54:27 --> Error deleting record: Undefined property: stdClass::$id
+ERROR - 2023-11-19 04:05:00 --> Error deleting record: Undefined property: stdClass::$id
+CRITICAL - 2023-11-19 04:06:30 --> Undefined property: stdClass::$customer_id
+in APPPATH\Controllers\CartController.php on line 23.
+ 1 APPPATH\Controllers\CartController.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$customer_id', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\CartController.php', 23)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-19 04:06:42 --> Undefined property: stdClass::$customer_id
+in APPPATH\Controllers\CartController.php on line 23.
+ 1 APPPATH\Controllers\CartController.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$customer_id', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\CartController.php', 23)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-19 04:06:51 --> Undefined property: stdClass::$customer_id
+in APPPATH\Controllers\CartController.php on line 23.
+ 1 APPPATH\Controllers\CartController.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$customer_id', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\CartController.php', 23)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-19 04:06:53 --> Undefined property: stdClass::$customer_id
+in APPPATH\Controllers\CartController.php on line 23.
+ 1 APPPATH\Controllers\CartController.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$customer_id', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\CartController.php', 23)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-19 04:06:55 --> Undefined property: stdClass::$customer_id
+in APPPATH\Controllers\CartController.php on line 23.
+ 1 APPPATH\Controllers\CartController.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$customer_id', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\CartController.php', 23)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-19 04:07:30 --> Undefined property: stdClass::$customer_id
+in APPPATH\Controllers\CartController.php on line 23.
+ 1 APPPATH\Controllers\CartController.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$customer_id', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\CartController.php', 23)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-19 04:08:06 --> Error deleting record: Undefined property: stdClass::$id
+ERROR - 2023-11-19 04:11:12 --> Error deleting record: Undefined property: stdClass::$id
+ERROR - 2023-11-19 04:12:58 --> Error deleting record: Undefined property: stdClass::$id
+ERROR - 2023-11-19 04:53:47 --> Error deleting record: Undefined property: stdClass::$id
+CRITICAL - 2023-11-19 05:19:05 --> Unmatched '}'
+in APPPATH\Controllers\CartController.php on line 75.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\laragon\\www\\UniPET\\app\\Controllers\\CartController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\CartController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\CartController')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\CartController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-19 05:19:07 --> Unmatched '}'
+in APPPATH\Controllers\CartController.php on line 75.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\laragon\\www\\UniPET\\app\\Controllers\\CartController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\CartController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\CartController')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\CartController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-19 05:19:11 --> Unmatched '}'
+in APPPATH\Controllers\CartController.php on line 75.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\laragon\\www\\UniPET\\app\\Controllers\\CartController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\CartController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\CartController')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\CartController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-19 05:19:11 --> Unmatched '}'
+in APPPATH\Controllers\CartController.php on line 75.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\laragon\\www\\UniPET\\app\\Controllers\\CartController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\CartController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\CartController')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\CartController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-19 05:19:11 --> Unmatched '}'
+in APPPATH\Controllers\CartController.php on line 75.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\laragon\\www\\UniPET\\app\\Controllers\\CartController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\CartController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\CartController')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\CartController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-19 05:19:11 --> Unmatched '}'
+in APPPATH\Controllers\CartController.php on line 75.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\laragon\\www\\UniPET\\app\\Controllers\\CartController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\CartController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\CartController')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\CartController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-19 05:19:12 --> Unmatched '}'
+in APPPATH\Controllers\CartController.php on line 75.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\laragon\\www\\UniPET\\app\\Controllers\\CartController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\CartController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\CartController')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\CartController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-19 05:19:27 --> Unmatched '}'
+in APPPATH\Controllers\CartController.php on line 75.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\laragon\\www\\UniPET\\app\\Controllers\\CartController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\CartController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\CartController')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\CartController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-19 05:19:30 --> Unmatched '}'
+in APPPATH\Controllers\CartController.php on line 75.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\laragon\\www\\UniPET\\app\\Controllers\\CartController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\CartController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\CartController')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\CartController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-19 05:19:31 --> Unmatched '}'
+in APPPATH\Controllers\CartController.php on line 75.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\laragon\\www\\UniPET\\app\\Controllers\\CartController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\CartController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\CartController')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\CartController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-19 05:19:31 --> Unmatched '}'
+in APPPATH\Controllers\CartController.php on line 75.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\laragon\\www\\UniPET\\app\\Controllers\\CartController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\CartController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\CartController')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\CartController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-19 05:19:31 --> Unmatched '}'
+in APPPATH\Controllers\CartController.php on line 75.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\laragon\\www\\UniPET\\app\\Controllers\\CartController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\CartController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\CartController')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\CartController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-19 08:15:30 --> Unclosed '{' on line 11
+in APPPATH\Controllers\CartController.php on line 68.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\laragon\\www\\UniPET\\app\\Controllers\\CartController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\CartController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\CartController')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\CartController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-19 08:15:32 --> Unclosed '{' on line 11
+in APPPATH\Controllers\CartController.php on line 68.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\laragon\\www\\UniPET\\app\\Controllers\\CartController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\CartController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\CartController')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\CartController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-19 08:15:32 --> Unclosed '{' on line 11
+in APPPATH\Controllers\CartController.php on line 68.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\laragon\\www\\UniPET\\app\\Controllers\\CartController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\CartController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\CartController')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\CartController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-19 08:15:32 --> Unclosed '{' on line 11
+in APPPATH\Controllers\CartController.php on line 68.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\laragon\\www\\UniPET\\app\\Controllers\\CartController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\CartController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\CartController')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\CartController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-19 08:15:33 --> Unclosed '{' on line 11
+in APPPATH\Controllers\CartController.php on line 68.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\laragon\\www\\UniPET\\app\\Controllers\\CartController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\CartController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\CartController')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\CartController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-19 08:15:59 --> Unclosed '{' on line 11
+in APPPATH\Controllers\CartController.php on line 68.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\laragon\\www\\UniPET\\app\\Controllers\\CartController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\CartController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\CartController')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\CartController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()

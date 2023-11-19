@@ -193,6 +193,11 @@ dl {
   margin-top: 0;
   margin-bottom: 1rem;
 }
+.pagination-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
 
 ol ol,
 ul ul,
