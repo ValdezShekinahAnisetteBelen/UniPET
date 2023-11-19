@@ -44,6 +44,7 @@ class AppointmentController extends ResourceController
             'contact_no' => $json->contact_no,
             'email_address' => $json->email_address,
             'appointment_date' => $json->appointment_date,
+            'appointment_time' => $json->appointment_time,
             'appointment_type' => implode(',', $appointment_type), // Convert array to comma-separated string
             'grooming_type' => implode(',', $grooming_type), // Convert array to comma-separated string
             'grooming_shampoo' => implode(',', $grooming_shampoo), // Convert array to comma-separated string

@@ -38,54 +38,6 @@
                     </div>
                 </div>
             </div>
-            <header class="mainHeader btClear gutter ">
-            <div class="mainHeaderInner">
-                            <div class="btLogoArea menuHolder btClear">
-                    <div class="port">
-                                                <div class="btHorizontalMenuTrigger">&nbsp;<div class="bt_bb_icon" data-bt-override-class="null"><a href="#" target="_self" data-ico-fa="" class="bt_bb_icon_holder"></a></div></div>
-                                            <div class="logo">
-                            <span>
-                                <a href="index.html"><img class="btMainLogo" data-hw="2.1111111111111" src="User/wp-content/uploads/sites/2/2019/11/logo_black.svg" alt="Buddy"></a></span>
-                        </div>
-                                            <div class="menuPort">
-                                                <div class="topBarInMenu">
-                            <div class="topBarInMenuCell">
-                                <div class="btButtonWidget btOutline btWithLink"><a href="#" target="_self" class="btButtonWidgetLink"><div class="btIconWidgetIcon"><span data-ico-fontawesome="" class="bt_bb_icon_holder"></span></div><div class="btIconWidgetText"><span class="btButtonWidgetText">+63 998 868 3908</span></div></a></div>						</div><!-- /topBarInMenu -->
-                        </div>
-              <nav>
-        <ul id="menu-primary-menu" class="menu">
-            <li id="menu-item-1685" class="btMenuWideDropdown menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-2767 current_page_item current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-1685 btMenuWideDropdownCols-3">
-                <div class="subToggler"></div>
-                <a href="/" aria-current="page">Home</a>
-            </li>
-            <li id="menu-item-41" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-41">
-                <div class="subToggler"></div>
-                <a href="/shop">Shop</a>
-            </li>
-            <li id="menu-item-42" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-41">
-                <div class="subToggler"></div>
-                <a href="/OrderHistory">My Purchases</a>
-            </li>
-            <li id="menu-item-42" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-41">
-                <div class="subToggler"></div>
-                <a href="/PetInfo">Appointment History</a>
-            </li>
-            <li id="menu-item-40" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-40">
-                <div class="subToggler"></div>
-                <a href="/Contact">Contact Us</a>
-            </li>
-            <li id="menu-item-42" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-41">
-                <div class="subToggler"></div>
-                <a href="/SignUp">Log Out</a>
-            </li>
-        </ul>
-    </nav>
-    
-                        </div><!-- .menuPort -->
-                    </div><!-- /port -->
-                </div><!-- /menuHolder / btBelowLogoArea -->
-            </div><!-- / inner header for scrolling -->
-        </header><!-- /.mainHeader -->
         <div class="page-content" style="background-image: url('images/wizard-v1.jpg')">
             <div class="wizard-v1-content">
         <div class="wizard-form">
@@ -99,25 +51,24 @@
               <div class="card-body">
                 
                 <div class="mb-6">
+                   <h3>Appointment and Pet Information Form</h3>
+            <p>
+              To schedule an appointment and enter pet details, please fill out
+              the information below:
+            </p>
             </div>
             </div>
             </div>
             <div class="card">
 <body>
+      
+  <form @submit.prevent="save">
   <div class="container">
-    
-    <form @submit.prevent="save">
       <div class="row">
         <div class="col-md-6">
           <div class="form-data">
-            <h3>Appointment and Pet Information Form</h3>
-            <p>
-              To schedule an appointment and enter pet details, please fill out
-              the information below:
-            </p>
+           
             <div class="form-section">
-              <br>
-              <br>
               <h6>Pet Owner Information</h6>
               <div class="form-row">
                 <label for="full_name">Full Name</label>
@@ -126,7 +77,7 @@
                   v-model="appointment.full_name"
                   id="full_name"
                   placeholder="Enter full name"
-                  class="form-control"
+                  class="form-control" required
                 />
               </div>
               <div class="form-row">
@@ -136,7 +87,7 @@
                   v-model="appointment.contact_no"
                   id="contact_no"
                   placeholder="Enter contact number"
-                  class="form-control"
+                  class="form-control" required
                 />
               </div>
               <!-- Add other Pet Owner Information fields here -->
@@ -147,7 +98,7 @@
                   v-model="appointment.email_address"
                   id="email_address"
                   placeholder="Enter email address"
-                  class="form-control"
+                  class="form-control" required
                 />
               </div>
               <div class="form-row">
@@ -157,7 +108,7 @@
                   v-model="appointment.area"
                   id="area"
                   placeholder="Enter area"
-                  class="form-control"
+                  class="form-control" required
                 />
               </div>
               <div class="form-row">
@@ -167,7 +118,7 @@
                   v-model="appointment.city"
                   id="city"
                   placeholder="Enter city"
-                  class="form-control"
+                  class="form-control" required
                 />
               </div>
               <div class="form-row">
@@ -177,7 +128,7 @@
                   v-model="appointment.postal_code"
                   id="postal_code"
                   placeholder="Enter postal code"
-                  class="form-control"
+                  class="form-control" required
                 />
               </div>
               <div class="form-row">
@@ -187,8 +138,26 @@
                   v-model="appointment.appointment_date"
                   id="appointment_date"
                   class="form-control"
-                />
-              </div>
+                  @change="validateDate" required
+              />
+            </div>
+            <div id="message"></div>
+  <!-- ... your other template code ... -->
+  <div class="form-row">
+  <label for="appointment_time">Selected Time:</label>
+  <select v-model="appointment.appointment_time" id="appointment_time" class="form-control"  required>
+    <option value="" style="color: black;">Select a time slot</option>
+    <option value="9:00 am to 11:00 am" style="color: black;">9:00 am to 11:00 am</option>
+    <option value="2:00 pm to 4:00 pm" style="color: black;">2:00 pm to 4:00 pm</option>
+  </select>
+</div>
+
+<p>Selected Time: {{ appointment.appointment_time }}</p>
+
+
+
+
+
             </div>
           </div>
         </div>
@@ -196,16 +165,25 @@
         <div class="col-md-6">
           <div class="form-data">
             <div class="form-section">
-              <br>
               <h6>Pet Details</h6>
               <div class="form-row">
+                <div class="form-row" id="drag-and-drop-container">
+                <label for="image-upload">Drag and Drop or Click to Upload Image</label>
+                <input
+                    type="file"
+                    @change="handleImageUpload"
+                    id="image-upload"
+                    class="form-control"
+                    accept="image/*"
+                />
+            </div>
                 <label for="pet_name">Pet Name</label>
                 <input
                   type="text"
                   v-model="appointment.pet_name"
                   id="pet_name"
                   placeholder="Enter pet name"
-                  class="form-control"
+                  class="form-control" required
                 />
               </div>
               <div class="form-row">
@@ -215,7 +193,7 @@
                   v-model="appointment.breed"
                   id="breed"
                   placeholder="Enter breed"
-                  class="form-control"
+                  class="form-control" required
                 />
               </div>
               <div class ="form-row">
@@ -224,7 +202,7 @@
                   type="date"
                   v-model="appointment.date_of_birth"
                   id="date_of_birth"
-                  class="form-control"
+                  class="form-control" required
                 />
               </div>
               <div class="form-row">
@@ -234,7 +212,7 @@
                   v-model="appointment.weight"
                   id="weight"
                   placeholder="Enter weight"
-                  class="form-control"
+                  class="form-control" required
                 />
               </div>
               <div class="form-row">
@@ -244,7 +222,7 @@
                   v-model="appointment.color"
                   id="color"
                   placeholder="Enter color"
-                  class="form-control"
+                  class="form-control" required
                 />
               </div>
               <div class="form-row">
@@ -254,92 +232,70 @@
                   v-model="appointment.temperature"
                   id="temperature"
                   placeholder="Enter temperature"
-                  class="form-control"
+                  class="form-control" required
                 />
-              </div>
-              <div class="form-row" id="drag-and-drop-container">
-    <label for="image-upload">Drag and Drop or Click to Upload Image</label>
-    <input
-        type="file"
-        @change="handleImageUpload"
-        id="image-upload"
-        class="form-control"
-        accept="image/*"
-    />
-</div>
-              <div class="sending-message">
-                 <br>
-                 Sending your appointment request...
-                 <textarea placeholder="Additional comments" required></textarea>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </form>
-  </div>
-  
-  <div class="col-md-6">
-          <div class="form-data">
-            <div class="form-section">
-              <div class="form-section">
-                <h6>Pet Checklist</h6>
-                <section>
-                  <div class="form-row">
-                    <label>Appointment Type</label>
-                    <div>
-          <button
-            v-for="item in appointment_type"
-            :key="item"
-            :class="{ active: selectedappointment_type.includes(item) }"
-            @click="toggleAppointmentType(item)"
-          >
-            {{ item }}
-          </button>
-        </div>
-                  </div>
-                </section>
-                <section>
-                  <div class="form-row">
-                    <label>Grooming Type</label>
-                    <div>
-          <button
-            v-for="item in grooming_type"
-            :key="item"
-            :class="{ active: selectedgrooming_type.includes(item) }"
-            @click="toggleGroomingType(item)"
-          >
-            {{ item }}
-          </button>
-        </div>
-                  </div>
-                </section>
-                <section>
-                  <div class="form-row">
-                    <label>Bath Type</label>
-                    <div>
-          <button
-            v-for="item in grooming_shampoo"
-            :key="item"
-            :class="{ active: selectedgrooming_shampoo.includes(item) }"
-            @click="toggleGroomingShampoo(item)"
-          >
-            {{ item }}
-          </button>
-        </div>
-        <div class="center-button">
-          <br>
-          <br>
-          <br>
-          <input type="submit" value="Submit Form" id="button">
-        </div>
-              </div>
-                </section>
-              </div>
-            </div>
-          </div>
-        </div>
 
+      <div class="col-md-6 mx-auto">
+    <h6>Pet Checklist</h6>
+    <section class="mb-3">
+  <label>Appointment Type</label>
+  <div class="mb-2">
+    <label v-for="item in appointment_type" :key="item">
+      <input
+        type="checkbox"
+        v-model="selectedappointment_type"
+        :value="item"
+        class="mr-2 mb-2"
+        required
+      />
+      {{ item }}
+    </label>
+  </div>
+</section>
+<section class="mb-3">
+  <label>Grooming Type</label>
+  <div class="mb-2">
+    <label v-for="item in grooming_type" :key="item">
+      <input
+        type="checkbox"
+        v-model="selectedgrooming_type"
+        :value="item"
+        class="mr-2 mb-2"
+        required
+      />
+      {{ item }}
+    </label>
+  </div>
+</section>
+<section>
+  <div class="form-row">
+    <label>Bath Type</label>
+    <div>
+      <label v-for="item in grooming_shampoo" :key="item">
+        <input
+          type="checkbox"
+          v-model="selectedgrooming_shampoo"
+          :value="item"
+          class="mr-2 mb-2"
+          required
+        />
+        {{ item }}
+      </label>
+    </div>
+  </div>
+</section>
+
+  </div>
+    </div>
+    <div class="button mt-3">
+    <input type="button" class="submit" value="Submit Form" id="button" @click="showConfirmationDialog">
+  </div>
+  </form>
   <!-- <div>
     <insert @data-saved="getInfo" />
     <table>
@@ -397,45 +353,7 @@
       </div>
     </div>
     </div>
-  <div class="btSiteFooter">
-        
-        <div class="bt_bb_wrapper"><section id="bt_bb_section653e328393367" class="bt_bb_section bt_bb_layout_boxed_1200 bt_bb_vertical_align_top bt_bb_top_spacing_large bt_bb_bottom_spacing_normal" data-bt-override-class="null"><div class="bt_bb_port">
-            
-          <div class="bt_bb_cell"><div class="bt_bb_cell_inner"><div class="bt_bb_row_wrapper"><div class="bt_bb_row" data-bt-override-class="{}" data-structure="3-3-3-3"><div class="bt_bb_column col-xxl-3 col-xl-3 bt_bb_vertical_align_top bt_bb_align_left bt_bb_padding_normal bt_bb_animation_fade_in animate bt_bb_shape_inherit animated" data-width="3" data-bt-override-class="{}">
-            <div class="bt_bb_column_content"><div class="bt_bb_column_content_inner"><div class="bt_bb_image bt_bb_shape_square bt_bb_align_inherit bt_bb_hover_style_simple bt_bb_content_display_always bt_bb_content_align_middle" data-bt-override-class="null"><span><img src="User/wp-content/uploads/sites/2/2019/11/logo_black.svg" alt="Buddy" class="btLazyLoadImage btLazyLoaded"></span></div><div class="bt_bb_separator bt_bb_border_style_none bt_bb_bottom_spacing_normal" data-bt-override-class="null"></div><div class="bt_bb_icon bt_bb_color_scheme_6 bt_bb_style_filled bt_bb_shape_circle bt_bb_size_small bt_bb_align_inherit" style="; --icon-primary-color:#ffffff; --icon-secondary-color:#0CC0DF;" data-bt-override-class="null"><a href="https://twitter.com/bold_themes" target="_blank" data-ico-fontawesome="" class="bt_bb_icon_holder"></a></div><div class="bt_bb_icon bt_bb_color_scheme_6 bt_bb_style_filled bt_bb_shape_circle bt_bb_size_small bt_bb_align_inherit" style="; --icon-primary-color:#ffffff; --icon-secondary-color:#0CC0DF;" data-bt-override-class="null"><a href="https://www.instagram.com/bold_themes/" target="_blank" data-ico-fontawesome="" class="bt_bb_icon_holder"></a></div><div class="bt_bb_icon bt_bb_color_scheme_6 bt_bb_style_filled bt_bb_shape_circle bt_bb_size_small bt_bb_align_inherit" style="; --icon-primary-color:#ffffff; --icon-secondary-color:#0CC0DF;" data-bt-override-class="null"><a href="https://www.facebook.com/boldthemes/" target="_blank" data-ico-fontawesome="" class="bt_bb_icon_holder"></a></div><div class="bt_bb_separator bt_bb_border_style_none bt_bb_bottom_spacing_medium" data-bt-override-class="null"></div></div></div></div><div class="bt_bb_column col-xxl-3 col-xl-3 bt_bb_vertical_align_top bt_bb_align_left bt_bb_padding_normal bt_bb_animation_fade_in animate bt_bb_shape_inherit animated" data-width="3" data-bt-override-class="{}"><div class="bt_bb_column_content"><div class="bt_bb_column_content_inner"><header class="bt_bb_headline bt_bb_color_scheme_3 bt_bb_dash_none bt_bb_size_extrasmall bt_bb_align_inherit" style="; --primary-color:#0CC0DF; --secondary-color:#EDCCCD;" data-bt-override-class="{}"><h5 class="bt_bb_headline_tag"><span class="bt_bb_headline_content"><span>About</span></span></h5></header><div class="bt_bb_separator bt_bb_border_style_none bt_bb_bottom_spacing_small" data-bt-override-class="null"></div><div class="bt_bb_icon bt_bb_style_borderless bt_bb_shape_circle bt_bb_size_xsmall bt_bb_align_left" data-bt-override-class="null"><span data-ico-dripicons="" class="bt_bb_icon_holder">
-              <span>Main: J.P Rizal St. Tawiran, Calapan City</span></span></div><div class="bt_bb_separator bt_bb_border_style_none bt_bb_bottom_spacing_small" data-bt-override-class="null"></div>
-          <div class="bt_bb_icon bt_bb_style_borderless bt_bb_shape_circle bt_bb_size_xsmall bt_bb_align_left" data-bt-override-class="null"><span data-ico-dripicons="" class="bt_bb_icon_holder"><span>+63 998 868 3908</span></span></div><div class="bt_bb_separator bt_bb_border_style_none bt_bb_bottom_spacing_small" data-bt-override-class="null"></div><div class="bt_bb_icon bt_bb_style_borderless bt_bb_shape_circle bt_bb_size_xsmall bt_bb_align_left" data-bt-override-class="null"><span data-ico-dripicons="" class="bt_bb_icon_holder"><span>Thursday - Friday - Sunday: <br><br> 9:00 AM TO 11:00 AM <br><br> 2:00 PM TO 4:00 PM</span></span></div><div class="bt_bb_separator bt_bb_border_style_none bt_bb_bottom_spacing_medium" data-bt-override-class="null"></div></div></div></div><div class="bt_bb_column col-xxl-3 col-xl-3 bt_bb_vertical_align_top bt_bb_align_left bt_bb_padding_normal bt_bb_animation_fade_in animate bt_bb_shape_inherit animated" data-width="3" data-bt-override-class="{}"><div class="bt_bb_column_content"><div class="bt_bb_column_content_inner"><header class="bt_bb_headline bt_bb_color_scheme_3 bt_bb_dash_none bt_bb_size_extrasmall bt_bb_align_inherit" style="; --primary-color:#0CC0DF; --secondary-color:#EDCCCD;" data-bt-override-class="{}"><h5 class="bt_bb_headline_tag"><span class="bt_bb_headline_content"><span>Quick Links</span></span></h5></header><div class="bt_bb_separator bt_bb_border_style_none bt_bb_bottom_spacing_small" data-bt-override-class="null"></div><div class="bt_bb_custom_menu bt_bb_direction_vertical"><div class="menu-quick-links-container"><ul id="menu-quick-links" class="menu"><li id="menu-item-2555" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2555"><a href="#">Veterinary Services</a></li>
-        <li id="menu-item-2556" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2556"><a href="#">Grooming Services</a></li>
-        <li id="menu-item-2557" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2557"><a href="#">Bathing Services</a></li>
-        <li id="menu-item-2558" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2558"><a href="#">Request an Appointment</a></li>
-        </ul></div></div><div class="bt_bb_separator bt_bb_border_style_none bt_bb_bottom_spacing_medium" data-bt-override-class="null"></div></div></div></div>
-        <div class="bt_bb_column col-xxl-3 col-xl-3 bt_bb_vertical_align_top bt_bb_align_left bt_bb_padding_normal bt_bb_animation_fade_in animate bt_bb_shape_inherit animated" data-width="3" data-bt-override-class="{}"><div class="bt_bb_column_content"><div class="bt_bb_column_content_inner"><header class="bt_bb_headline bt_bb_color_scheme_3 bt_bb_dash_none bt_bb_size_extrasmall bt_bb_align_inherit" style="; --primary-color:#0CC0DF; --secondary-color:#EDCCCD;" data-bt-override-class="{}"><h5 class="bt_bb_headline_tag"><span class="bt_bb_headline_content"><span>Newsletter</span></span></h5></header><div class="bt_bb_separator bt_bb_border_style_none bt_bb_bottom_spacing_small" data-bt-override-class="null"></div><div class="bt_bb_contact_form_7">
-        <div class="wpcf7 js" id="wpcf7-f1539-p2767-o1" lang="en-US" dir="ltr">
-        <div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
-        <form action="https://pawsitive.bold-themes.com/buddy/#wpcf7-f1539-p2767-o1" method="post" class="wpcf7-form init" aria-label="Contact form" novalidate="novalidate" data-status="init">
-        <div style="display: none;">
-        <input type="hidden" name="_wpcf7" value="1539">
-        <input type="hidden" name="_wpcf7_version" value="5.8.1">
-        <input type="hidden" name="_wpcf7_locale" value="en_US">
-        <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f1539-p2767-o1">
-        <input type="hidden" name="_wpcf7_container_post" value="2767">
-        <input type="hidden" name="_wpcf7_posted_data_hash" value="">
-        <input type="hidden" name="_wpcf7_recaptcha_response" value="">
-        </div>
-        <div class="btNewsletter">
-            <div class="btNewsletterColumn">
-                <p><span class="wpcf7-form-control-wrap" data-name="your-email"><input size="40" class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Your email" value="" type="email" name="your-email"></span>
-                </p>
-            </div>
-            <div class="btNewsletterButton">
-                <p><input class="wpcf7-form-control wpcf7-submit has-spinner" type="submit" value="SUBSCRIBE"><span class="wpcf7-spinner"></span>
-                </p>
-            </div>
-        </div><div class="wpcf7-response-output" aria-hidden="true"></div>
-        </form>
-        </div>
-        </div><div class="bt_bb_separator bt_bb_border_style_none bt_bb_bottom_spacing_medium" data-bt-override-class="null"></div></div></div></div></div></div></div></div></div></section></div><footer class="btLightSkin"></footer>
-        </div><!-- /btSiteFooter -->  
+
         </div>
         </body> 
             </template>
@@ -461,11 +379,13 @@ export default {
         contact_no: '',
         email_address: '',
         appointment_date: '',
+        appointment_time: '',
         appointment_type: '',
         grooming_type: '',
         grooming_shampoo: '',
         image: '',
       },
+      isFormSubmitted: false, // Flag to track form submission
       appointment_type: ['Checkup', 'Vaccine', 'Deworm', 'LabTest'],
       grooming_type: ['PuppyCut', 'SummerCut', 'SemiKalbo', 'TrimOnly', 'FaceTrim', 'Kalbo'],
       grooming_shampoo: ['Regular', 'Medicated', 'AntiMage'],
@@ -474,12 +394,34 @@ export default {
       selectedgrooming_shampoo: [],
     };
   },
-  methods: {    
-      logout() {
-      sessionStorage.removeItem('token'); // Remove the token from session storage
-      this.$router.push('/login'); // Navigate to the login page
+  methods: {
+     updateComboBox() {
+        // Get the selected value from the dropdown
+        var selectedTime = document.getElementById("appointment_time_select").value;
+
+        // Update the combobox or display area
+        var selectedTimeDisplay = document.getElementById("selectedTimeDisplay");
+        selectedTimeDisplay.innerHTML = "Selected Time: " + selectedTime;
     },
+
+    validateDate() {
+  var selectedDate = new Date(this.appointment.appointment_date);
+  var dayOfWeek = selectedDate.getDay(); // 0 = Sunday, 1 = Monday, ..., 6 = Saturday
+
+  var messageElement = document.getElementById("message");
+
+  if (dayOfWeek === 4 || dayOfWeek === 5 || dayOfWeek === 0) {
+    // Thursday, Friday, Sunday
+    messageElement.innerHTML =
+      '<span style="color: green;">You have chosen a suitable day for an appointment! 🎉</span>';
+  } else {
+    messageElement.innerHTML =
+      '<span style="color: red;">Please choose another day. Appointments are available on Thursday, Friday, and Sunday only.</span>';
+  }
+},
+
     showConfirmationDialog() {
+      this.isFormSubmitted = true;
     if (window.confirm('Are you sure you want to book now?')) {
       // User clicked OK, proceed with the form submission
       this.save(); // Call your save method here
@@ -487,7 +429,11 @@ export default {
       // User clicked Cancel, do nothing or show a message
     }
   },
-    toggleAppointmentType(item) {
+  toggleAppointmentType(item) {
+      if (this.isFormSubmitted) {
+        return; // Do not proceed if the form has been submitted
+      }
+
       if (this.selectedappointment_type.includes(item)) {
         this.selectedappointment_type = this.selectedappointment_type.filter((i) => i !== item);
       } else {
@@ -496,6 +442,10 @@ export default {
     },
 
     toggleGroomingType(item) {
+      if (this.isFormSubmitted) {
+        return; // Do not proceed if the form has been submitted
+      }
+
       if (this.selectedgrooming_type.includes(item)) {
         this.selectedgrooming_type = this.selectedgrooming_type.filter((i) => i !== item);
       } else {
@@ -504,12 +454,17 @@ export default {
     },
 
     toggleGroomingShampoo(item) {
+      if (this.isFormSubmitted) {
+        return; // Do not proceed if the form has been submitted
+      }
+
       if (this.selectedgrooming_shampoo.includes(item)) {
         this.selectedgrooming_shampoo = this.selectedgrooming_shampoo.filter((i) => i !== item);
       } else {
         this.selectedgrooming_shampoo.push(item);
       }
     },
+
     async getInfo() {
       try {
         const inf = await axios.get('getData1');
@@ -519,6 +474,7 @@ export default {
       }
     },
     async save() {
+      
       try {
         const ins = await axios.post('save', {
           pet_name: this.appointment.pet_name,
@@ -535,6 +491,7 @@ export default {
           email_address: this.appointment.email_address,
           appointment_date: this.appointment.appointment_date,
           appointment_type: this.selectedappointment_type,
+          appointment_time: this.appointment.appointment_time, // Fix the property name
           grooming_type: this.selectedgrooming_type,
           grooming_shampoo: this.selectedgrooming_shampoo,
           image: this.appointment.image,
@@ -542,6 +499,7 @@ export default {
         this.selectedappointment_type; // Your toggled appointment_type
     this.selectedgrooming_type; // Your toggled grooming_type
     this.selectedgrooming_shampoo; // Your toggled grooming_shampoo
+    
 
         // Clear the form fields after saving
         for (const key in this.appointment) {
@@ -562,6 +520,7 @@ export default {
       } catch (error) {
         console.error(error);
       }
+      
     },
 
     createAppointment() {
@@ -582,9 +541,9 @@ export default {
   },
   loadScripts() {
           const scriptUrls = [
-            "../../../../frontend/public/User/assets/libs/jquery/dist/jquery.min.js",
-            "../../../../frontend/public/User/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js",
-            "../../../../frontend/public/User/assets/libs/simplebar/dist/simplebar.min.js",
+            "/User/assets/libs/jquery/dist/jquery.min.js",
+            "/User/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js",
+            "/User/assets/libs/simplebar/dist/simplebar.min.js",
           ];
           const head = document.getElementsByTagName('head')[0];
           scriptUrls.forEach((scriptUrl) => {
@@ -596,6 +555,7 @@ export default {
       },
 };
 </script>
+
 <style>
     @import '../../../src/assets/User/css/petinfo.css';
     @import '../../../src/assets/User/css/new.css';
