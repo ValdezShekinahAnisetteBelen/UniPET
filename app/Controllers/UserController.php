@@ -4,9 +4,8 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 use CodeIgniter\RESTful\ResourceController;
-use CodeIgniter\API\ResponseTrait; 
+use CodeIgniter\API\ResponseTrait;
 use App\Models\UserModel;
-
 
 class UserController extends ResourceController
 {
@@ -17,15 +16,53 @@ class UserController extends ResourceController
         $user = new UserModel();
         $token = $this->verification(50);
 
+        // Get form input
         $username = $this->request->getVar('username');
         $email = $this->request->getVar('email');
         $password = $this->request->getVar('password');
 
-        // Validate email format
-        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            return $this->respond(['msg' => 'invalidEmail'], 400);
-        }
+        // Set validation rules
+        $validationRules = [
+            'username' => 'required|min_length[5]|max_length[255]',
+            'email' => 'required|valid_email',
+            'password' => 'required|min_length[8]',
+        ];
 
+        if (!$this->validate($validationRules)) {
+            // Set flash message for validation errors
+            session()->setFlashdata('error', 'Validation errors. Please check your input.');
+    
+            // Check if there is a specific error for the username field
+            if ($this->validator->hasError('username')) {
+                // Customize the flash message for the username validation error
+                session()->setFlashdata('username_error', 'Username must be between 5 and 255 characters.');
+            }
+    
+            // Check if there is a specific error for the email field
+            if ($this->validator->hasError('email')) {
+                // Customize the flash message for the email validation error
+                session()->setFlashdata('email_error', 'Invalid email format.');
+            }
+    
+            // Check if there is a specific error for the password field
+            if ($this->validator->hasError('password')) {
+                // Customize the flash message for the password validation error
+                session()->setFlashdata('password_error', 'Password must be at least 8 characters.');
+            }
+    
+            return $this->respond([
+                'msg' => 'validationError',
+                'errors' => $this->validator->getErrors(),
+                'flash' => [
+                    'username_error' => session()->getFlashdata('username_error'),
+                    'email_error' => session()->getFlashdata('email_error'),
+                    'password_error' => session()->getFlashdata('password_error'),
+                    'success' => session()->getFlashdata('success'),
+                    'error' => session()->getFlashdata('error'),
+                ],
+            ], 400);
+        }
+        // Prepare data for saving
         $data = [
             'username' => $username,
             'email' => $email,
@@ -35,50 +72,70 @@ class UserController extends ResourceController
             'role' => 'user',
         ];
 
+        // Save the data
         $u = $user->save($data);
 
-        // Check for validation errors
+        // Check for validation errors after save
         if ($user->errors()) {
+            // Set flash message for validation errors after save
+            session()->setFlashdata('error', 'Validation errors. Please check your input.');
             return $this->respond(['msg' => 'validationError', 'errors' => $user->errors()], 400);
         }
 
         if ($u) {
+            // Set flash message for successful registration
+            session()->setFlashdata('success', 'Registration successful');
             return $this->respond(['msg' => 'okay', 'token' => $token]);
         } else {
+            // Set flash message for registration failure
+            session()->setFlashdata('error', 'Registration failed. Please try again later.');
             return $this->respond(['msg' => 'failed'], 500);
         }
     }
-
     public function verification($length)
     {
         $str_result = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
         return substr(str_shuffle($str_result), 0, $length);
     }
-    public function login() 
-    {
-        $username = $this->request->getVar("username");
-        $password = $this->request->getVar("password");
+    public function login()
+{
+    // Validate input
+    $validationRules = [
+        'username' => 'required',
+        'password' => 'required'
+    ];
 
-        $user = new UserModel();
-        $data = $user->where('username', $username)->first();
-        if($data){
-            $pass = $data['password'];
-            $authenticatedPassword = password_verify($password, $pass);
-            if($authenticatedPassword)
-            {
-                return $this->respond(['msg' => 'okay', 'token' => $data['token']], 200);
-            }
-        else{
-            return $this->respond(['msg' => 'invalid password'], 200);
+    if (!$this->validate($validationRules)) {
+        return $this->respond(['msg' => 'validationError', 'errors' => $this->validator->getErrors()], 400);
+    }
+
+    $username = $this->request->getVar("username");
+    $password = $this->request->getVar("password");
+
+    $user = new UserModel();
+    $data = $user->where('username', $username)->first();
+
+    // Clear existing flash data
+    session()->setFlashdata('success', '');
+    session()->setFlashdata('error', '');
+
+    if ($data) {
+        $pass = $data['password'];
+        $authenticatedPassword = password_verify($password, $pass);
+
+        if ($authenticatedPassword) {
+            // Use the session() helper to set flashdata
+            session()->setFlashdata('success', 'Login successful');
+            return $this->respond(['msg' => 'okay', 'token' => $data['token'], 'flashMessages' => session()->getFlashdata()]);
+        } else {
+            // Incorrect password
+            session()->setFlashdata('error', 'Invalid password');
+            return $this->respond(['msg' => 'Invalid Password', 'flashMessages' => session()->getFlashdata()]);
         }
-    }else {
-        return $this->respond(['msg' => 'no user found'], 200);
+    } else {
+        // User not found
+        session()->setFlashdata('error', 'User not found');
+        return $this->respond(['msg' => 'User not found', 'flashMessages' => session()->getFlashdata()]);
     }
 }
-    
-
-    public function index()
-    {
-        //
-    }
 }
