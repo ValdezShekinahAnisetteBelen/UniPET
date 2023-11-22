@@ -15,6 +15,10 @@ class ProductModel extends Model
     protected $protectFields    = true;
     protected $allowedFields = ['name', 'description', 'price', 'stock', 'image', 'productgroup','Status'];
 
+    public function getProductByName($productName)
+    {
+        return $this->where('name', $productName)->first();
+    }
     // Dates
     protected $useTimestamps = false;
     protected $dateFormat    = 'datetime';

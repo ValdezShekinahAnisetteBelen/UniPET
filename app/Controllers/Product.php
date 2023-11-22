@@ -16,6 +16,18 @@ class Product extends ResourceController
         $data = $main->findAll();
         return $this->respond($data, 200);
     }
+
+    public function getProductDetails($productName)
+    {
+        $productModel = new ProductModel();
+        $product = $productModel->getProductByName($productName);
+
+        if ($product) {
+            return $this->respond($product, 200);
+        } else {
+            return $this->failNotFound('Product not found');
+        }
+    }
 //     use ResponseTrait;
 
 //     public function create()

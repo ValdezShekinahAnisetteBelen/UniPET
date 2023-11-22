@@ -57,7 +57,12 @@
                       <div class="menuPort">
                         <div class="topBarInMenu">
               <div class="topBarInMenuCell">
-                <div class="btButtonWidget btOutline btWithLink"><a href="#" target="_self" class="btButtonWidgetLink"><div class="btIconWidgetIcon"><span data-ico-fontawesome="" class="bt_bb_icon_holder"></span></div><div class="btIconWidgetText"><span class="btButtonWidgetText">+63 998 868 3908</span></div></a></div>						</div>
+                <div class="btButtonWidget btOutline btWithLink"><a href="#" target="_self" class="btButtonWidgetLink"><div class="btIconWidgetIcon"><span data-ico-fontawesome="" class="bt_bb_icon_holder"></span></div><div class="btIconWidgetText">
+                  <span class="btButtonWidgetText">+63 998 868 3908</span>
+                </div>
+              </a>
+              </div>						
+              </div>
             </div>
   
             <nav>
@@ -66,14 +71,17 @@
               <div class="subToggler"></div>
               <a href="/" aria-current="page">Home</a>
           </li>
+
           <li id="menu-item-41" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-41">
-              <div class="subToggler"></div>
-              <a href="/shop">Shop</a>
-          </li>
-          <li id="menu-item-42" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-41">
-              <div class="subToggler"></div>
-              <a href="/OrderHistory">My Purchases</a>
-          </li>
+    <div class="subToggler"><span class="dropdown-icon">▼</span></div>
+    <a href="/shop">Shop</a>
+    <ul class="sub-menu">
+        <li id="menu-item-45" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-42">
+            <a href="/OrderHistory">My Purchases</a>
+        </li>
+    </ul>
+  </li>
+
        <li id="menu-item-42" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-41">
     <div class="subToggler"><span class="dropdown-icon">▼</span></div>
     <a href="/PetInfo">Appointment</a>
@@ -90,11 +98,14 @@
           </li>
           
           <li id="menu-item-42" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-41">
-              <div class="subToggler"></div>
-              <router-link to="#" @click="logout" class="logout-link">
-             Logout
-            </router-link>
-          </li>
+    <div class="subToggler"><span class="dropdown-icon">▼</span></div>
+    <a href="/UserProfile">Profile</a>
+    <ul class="sub-menu">
+        <li id="menu-item-44" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-42">
+          <a href="#" @click.prevent="logout" class="logout-link">Logout</a>
+        </li>
+    </ul>
+  </li>
       </ul>
   </nav>
   
@@ -218,9 +229,10 @@
           <div class="btWooShopLoopItemInner" style="border: 1px solid #0CC0DF; padding: 15px; margin: 10px; border-radius: 10px;">
             <span class="onsale">Sale!</span>
             <div class="bt_bb_image" data-bt-override-class="null">
-              <a :href="'/ProductDetails' + product.slug" target="_self" :title="product.name">
-                <img :src="product.image" :title="product.name" :alt="product.name">
-              </a>
+              <router-link :to="{ name: 'ProductDetails', params: { productName: encodeURIComponent(product.name) } }" target="_self" :title="product.name">
+              <img :src="product.image" :title="product.name" :alt="product.name">
+            </router-link>
+
             </div>
             <header class="bt_bb_headline bt_bb_superheadline bt_bb_superheadline_outside bt_bb_subheadline bt_bb_size_extrasmall" data-bt-override-class="{}">
               <div class="bt_bb_headline_superheadline_outside">
@@ -233,9 +245,9 @@
               <h2 class="bt_bb_headline_tag">
                 <span class="bt_bb_headline_content">
                   <span>
-                    <a :href="'/ProductDetails' + product.slug" target="_self" :title="product.name">
-                      {{ product.name }}
-                    </a>
+                    <router-link :to="'/ProductDetails/' + encodeURIComponent(product.name)" :title="product.name">
+                {{ product.name }}
+              </router-link>
                   </span>
                 </span>
               </h2>
@@ -490,6 +502,7 @@ try {
   } else {
     // If the product is not in the cart, add it
     const response = await axios.post('api/cart/add-to-cart', {
+      customer_id:  this.$store.state.userId,
       id: product.id, // Include the id property
       name: product.name,
       price: product.price,
@@ -500,6 +513,7 @@ try {
     if (response.status === 200) {
       // Assuming you receive an 'id' from the server
       const cartItem = {
+        customer_id:  this.$store.state.userId,
         id: response.data.id,
         name: product.name,
         price: product.price,

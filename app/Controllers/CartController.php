@@ -36,36 +36,37 @@ class CartController extends ResourceController
     
 
     public function del($id) 
-{
-    try {
-        // Ensure $id is a valid integer
-        if (!is_numeric($id) || $id <= 0) {
-            return $this->respond(['error' => 'Invalid ID provided'], 400);
+    {
+        try {
+            // Ensure $id is a valid integer
+            if (!is_numeric($id) || $id <= 0) {
+                return $this->respond(['error' => 'Invalid ID provided'], 400);
+            }
+    
+            $cartModel = new CartModel();
+    
+            // Check if the record exists before deleting
+            $record = $cartModel->find($id);
+            if (!$record) {
+                return $this->respond(['error' => 'Record not found'], 404);
+            }
+    
+            // Log the deletion attempt with record details
+            log_message('cart', 'Deleting record with ID ' . $id . ': ' . json_encode($record));
+    
+            // Perform the deletion
+            $cartModel->delete($id);
+    
+            return $this->respond(['message' => 'Record deleted successfully', 'deletedId' => $id], 200);
+        } catch (\Exception $e) {
+            // Log the error with details
+            log_message('error', 'Error deleting record with ID ' . $id . ': ' . $e->getMessage());
+    
+            // Return an error response
+            return $this->respond(['error' => 'Failed to delete record'], 500);
         }
-
-        $cartModel = new CartModel();
-
-        // Check if the record exists before deleting
-        $record = $cartModel->find($id);
-        if (!$record) {
-            return $this->respond(['error' => 'Record not found'], 404);
-        }
-
-        // Log the deletion attempt
-        log_message('cart', 'Deleting record with ID: ' . $id);
-
-        // Perform the deletion
-        $cartModel->delete($id);
-
-        return $this->respond(['message' => 'Record deleted successfully', 'deletedId' => $id], 200);
-    } catch (\Exception $e) {
-        // Log the error
-        log_message('error', 'Error deleting record: ' . $e->getMessage());
-        // Return an error response
-        return $this->respond(['error' => 'Failed to delete record'], 500);
     }
-}
-
+    
     
     
 

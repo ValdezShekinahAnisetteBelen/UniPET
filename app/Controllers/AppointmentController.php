@@ -31,6 +31,7 @@ class AppointmentController extends ResourceController
         $grooming_shampoo = $json->grooming_shampoo;
     
         $data = [
+            'customer_id' => $json->customer_id,
             'pet_name' => $json->pet_name,
             'breed' => $json->breed,
             'date_of_birth' => $json->date_of_birth,

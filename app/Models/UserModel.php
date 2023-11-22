@@ -38,4 +38,14 @@ class UserModel extends Model
     protected $afterFind      = [];
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
+
+    public function getUserByToken($token)
+    {
+        return $this->where('token', $token)->first();
+    }
+
+    public function getUserById($customerId)
+    {
+        return $this->find($customerId);
+    }
 }

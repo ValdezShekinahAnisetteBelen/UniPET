@@ -45,7 +45,7 @@
         </div><!-- /logo -->
       </div><!-- /btLogoArea -->
     </div>
-    <header class="mainHeader btClear gutter ">
+  <header class="mainHeader btClear gutter ">
       <div class="mainHeaderInner">
               <div class="btLogoArea menuHolder btClear">
           <div class="port">
@@ -53,12 +53,17 @@
                       <div class="logo">
               <span>
                 <a href="index.html"><img class="btMainLogo" data-hw="2.1111111111111" src="User/wp-content/uploads/sites/2/2019/11/logo_black.svg" alt="Buddy"></a></span>
-            </div><!-- /logo -->
+            </div>
                       <div class="menuPort">
                         <div class="topBarInMenu">
               <div class="topBarInMenuCell">
-                <div class="btButtonWidget btOutline btWithLink"><a href="#" target="_self" class="btButtonWidgetLink"><div class="btIconWidgetIcon"><span data-ico-fontawesome="" class="bt_bb_icon_holder"></span></div><div class="btIconWidgetText"><span class="btButtonWidgetText">+63 998 868 3908</span></div></a></div>						</div><!-- /topBarInMenu -->
-            </div><!-- /topBarInMenuCell -->
+                <div class="btButtonWidget btOutline btWithLink"><a href="#" target="_self" class="btButtonWidgetLink"><div class="btIconWidgetIcon"><span data-ico-fontawesome="" class="bt_bb_icon_holder"></span></div><div class="btIconWidgetText">
+                  <span class="btButtonWidgetText">+63 998 868 3908</span>
+                </div>
+              </a>
+              </div>						
+              </div>
+            </div>
   
             <nav>
       <ul id="menu-primary-menu" class="menu">
@@ -66,14 +71,17 @@
               <div class="subToggler"></div>
               <a href="/" aria-current="page">Home</a>
           </li>
+
           <li id="menu-item-41" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-41">
-              <div class="subToggler"></div>
-              <a href="/shop">Shop</a>
-          </li>
-          <li id="menu-item-42" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-41">
-              <div class="subToggler"></div>
-              <a href="/OrderHistory">My Purchases</a>
-          </li>
+    <div class="subToggler"><span class="dropdown-icon">▼</span></div>
+    <a href="/shop">Shop</a>
+    <ul class="sub-menu">
+        <li id="menu-item-45" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-42">
+            <a href="/OrderHistory">My Purchases</a>
+        </li>
+    </ul>
+  </li>
+
        <li id="menu-item-42" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-41">
     <div class="subToggler"><span class="dropdown-icon">▼</span></div>
     <a href="/PetInfo">Appointment</a>
@@ -82,27 +90,30 @@
             <a href="/AppointmentHistory">Appointment History</a>
         </li>
     </ul>
-</li>
-
+  </li>
+  
           <li id="menu-item-40" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-40">
               <div class="subToggler"></div>
               <a href="/Contact">Contact Us</a>
           </li>
           
           <li id="menu-item-42" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-41">
-              <div class="subToggler"></div>
-              <router-link to="#" @click="logout" class="logout-link">
-             Logout
-            </router-link>
-          </li>
+    <div class="subToggler"><span class="dropdown-icon">▼</span></div>
+    <a href="/UserProfile">Profile</a>
+    <ul class="sub-menu">
+        <li id="menu-item-44" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-42">
+          <a href="#" @click.prevent="logout" class="logout-link">Logout</a>
+        </li>
+    </ul>
+  </li>
       </ul>
   </nav>
   
-            </div><!-- .menuPort -->
-          </div><!-- /port -->
-        </div><!-- /menuHolder / btBelowLogoArea -->
-      </div><!-- / inner header for scrolling -->
-      </header><!-- /.mainHeader -->
+            </div>
+          </div>
+        </div>
+      </div>
+      </header>  
        <!-- Add a div to display the animal picture -->
 
 	 <!-- Add a div to display the animal picture -->
@@ -115,7 +126,10 @@
         </div>
     </div>
 </div>
-	<div class="bt_bb_column col-xxl-6 col-xl-6 bt_bb_vertical_align_middle bt_bb_align_left bt_bb_padding_double bt_bb_animation_fade_in bt_bb_animation_move_left animate bt_bb_shape_inherit animated" data-width="6" data-bt-override-class="{}"><div class="bt_bb_column_content"><div class="bt_bb_column_content_inner"><div class="bt_bb_separator bt_bb_border_style_none bt_bb_bottom_spacing_large" data-bt-override-class="null"></div><header class="bt_bb_headline bt_bb_font_weight_bold bt_bb_dash_none bt_bb_size_huge bt_bb_align_inherit" data-bt-override-class="{}"><h1 class="bt_bb_headline_tag"><span class="bt_bb_headline_content"><span><strong>Hi,</strong> We are the UniPET</span></span></h1></header><header class="bt_bb_headline bt_bb_font_weight_normal bt_bb_dash_none bt_bb_subheadline bt_bb_size_extrasmall bt_bb_align_inherit btNoHeadline" data-bt-override-class="{}"><div class="bt_bb_headline_subheadline">PREMIUM AIR-DRIED, LOCALY PRODUCED<br>
+	<div class="bt_bb_column col-xxl-6 col-xl-6 bt_bb_vertical_align_middle bt_bb_align_left bt_bb_padding_double bt_bb_animation_fade_in bt_bb_animation_move_left animate bt_bb_shape_inherit animated" data-width="6" data-bt-override-class="{}"><div class="bt_bb_column_content"><div class="bt_bb_column_content_inner"><div class="bt_bb_separator bt_bb_border_style_none bt_bb_bottom_spacing_large" data-bt-override-class="null"></div><header class="bt_bb_headline bt_bb_font_weight_bold bt_bb_dash_none bt_bb_size_huge bt_bb_align_inherit" data-bt-override-class="{}"><h1 class="bt_bb_headline_tag"><span class="bt_bb_headline_content"><span><strong>Hi <h1 v-if="userData">Welcome, {{ userData.userId }}!</h1>
+                    <div v-else>
+                      <p>User ID from store: {{ userId }}</p>
+                    </div>,</strong> We are the UniPET</span></span></h1></header><header class="bt_bb_headline bt_bb_font_weight_normal bt_bb_dash_none bt_bb_subheadline bt_bb_size_extrasmall bt_bb_align_inherit btNoHeadline" data-bt-override-class="{}"><div class="bt_bb_headline_subheadline">PREMIUM AIR-DRIED, LOCALY PRODUCED<br>
 TASTY &amp; FRESH PET FOOD</div></header><div class="bt_bb_separator bt_bb_border_style_none bt_bb_bottom_spacing_medium" data-bt-override-class="null"></div><div class="bt_bb_button bt_bb_color_scheme_6 bt_bb_icon_position_left bt_bb_style_filled bt_bb_size_small bt_bb_width_inline bt_bb_shape_drop bt_bb_target_self bt_bb_align_inherit" style="; --primary-color:#EDCCCD; --secondary-color:#f47932;" data-bt-override-class="{}"><a href="../../contact/index.html" target="_self" class="bt_bb_link" title="FOR DOGS"><span class="bt_bb_button_text">FOR DOGS</span></a></div><div class="bt_bb_button bt_bb_color_scheme_6 bt_bb_icon_position_left bt_bb_style_outline bt_bb_size_small bt_bb_width_inline bt_bb_shape_drop bt_bb_target_self bt_bb_align_inherit" style="; --primary-color:#ffffff; --secondary-color:#f47932;" data-bt-override-class="{}"><a href="../../contact/index.html" target="_self" class="bt_bb_link" title="FOR CATS"><span class="bt_bb_button_text">FOR CATS</span></a></div><div class="bt_bb_separator bt_bb_border_style_none bt_bb_top_spacing_large" data-bt-override-class="null"></div></div></div></div></div></div></div></div></div><div class="bt_bb_section_bottom_section_coverage_image"><img src="User/wp-content/uploads/sites/2/2019/08/white_bottom_wave_02.png" alt="bt_bb_section_bottom_section_coverage_image"></div></section>
       </div>
 <div class="about-us">
@@ -294,133 +308,195 @@ TASTY &amp; FRESH PET FOOD</div></header><div class="bt_bb_separator bt_bb_borde
 
   
   <script>
+  import axios from 'axios';
   import jQuery from 'jquery';
   import 'jquery-ui';
-  // import 'jquery-ui/ui/widgets/mouse';
-  // import 'jquery-ui/ui/widgets/slider';
-  
+  import store from '../../store';
   
   const $ = jQuery.noConflict();
   
-  
   export default {
+    props: {
+    userData: Object
+  },
     data() {
       return {
-       
+        // Your data properties go here
+        id : this.$store.state.userId,
       };
     },
-   
-    methods: {    
-      logout() {
-      sessionStorage.removeItem('token'); // Remove the token from session storage
-      this.$router.push('/login'); // Navigate to the login page
+    computed: {
+      userId() {
+      // Access user ID from the Vuex store
+      return this.$store.state.userId;
     },
-      
-    loadScripts() {
-        if (this.myObject && this.myObject.content) {
-          console.log(this.myObject.content);
-  
-          const scriptUrls = [
-            '/User/wp-includes/js/jquery/jquery.min3088.js',
-            '/User/wp-includes/js/jquery/jquery-migrate.min5589.js',
-            '/User/wp-content/plugins/bold-page-builder/slick/slick.min1849.js',
-            '/User/wp-content/plugins/bold-page-builder/content_elements_misc/js/jquery.magnific-popup.min1849.js',
-            '/User/wp-content/plugins/bold-page-builder/content_elements_misc/js/content_elements1849.js',
-            '/User/wp-content/plugins/bt_cost_calculator/jquery.dde35d.js',
-            '/User/wp-content/plugins/bt_cost_calculator/cc.maine35d.js',
-            '/User/bt_cc_main-js-after.js',
-            '/User/js1.js',
-            '/User/js2.js',
-            '/User/js3.js',
-            '/User/js4.js',
-            '/User/js5.js',
-            '/User/js6.js',
-            '/User/js7.js',
-            '/User/js8.js',
-            '/User/js9.js',
-            '/User/js10.js',
-            '/User/js11.js',
-            '/User/js12.js',
-            '/User/wp-content/plugins/contact-form-7/includes/swv/js/indexf658.js',
-            '/User/wp-content/plugins/contact-form-7/includes/js/indexf658.js',
-            '/User/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.minf0ea.js',
-            '/User/js13.js',
-            '/User/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min2632.js',
-            '/User/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.mine1a3.js',
-            '/User/js14.js',
-            '/User/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min2632.js',
-            '/User/wp-content/plugins/duracelltomi-google-tag-manager/js/gtm4wp-form-move-tracker7100.js',
-            '/User/wp-content/themes/pawsitive/framework/js/fancySelecte35d.js',
-            '/User/wp-content/themes/pawsitive/framework/js/header.misce35d.js',
-            '/User/wp-content/themes/pawsitive/framework/js/misce35d.js',
-            '/User/wp-content/plugins/bold-page-builder/content_elements/bt_bb_section/bt_bb_elementse35d.js',
-            '/User/wp-content/themes/pawsitive/bold-page-builder/content_elements/bt_bb_floating_image/bt_bb_floating_imagee35d.js',
-            '/User/wp-content/themes/pawsitive/bold-page-builder/content_elements/bt_bb_organic_animation/anime.mine35d.js',
-            '/User/wp-content/themes/pawsitive/bold-page-builder/content_elements/bt_bb_organic_animation/maine35d.js',
-            '/User/wp-includes/js/jquery/ui/core.min3f14.js',
-            '/User/wp-includes/js/jquery/ui/datepicker.min3f14.js',
-            // '/User/wp-includes/js/jquery/ui/mouse.min3f14.js',
-            // '/User/wp-includes/js/jquery/ui/slider.min3f14.js',
-            // '/User/wp-content/plugins/bt_cost_calculator/jquery.ui.touch-punch.mine35d.js',
-            'https://code.jquery.com/jquery-3.5.1.slim.min.js',
-            'https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js',
-            'https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js',
-          ];
-  
-          // Load jQuery first
-          const jqueryScript = document.createElement('script');
-          jqueryScript.src = scriptUrls[0]; // Assuming jQuery is the first script
-          jqueryScript.async = true;
-          jqueryScript.onload = () => {
-            console.log('jQuery loaded successfully');
-            // Now load other scripts
-            scriptUrls.slice(1).forEach(url => {
-    const script = document.createElement('script');
-    script.src = url;
-    script.async = true;
-    script.onload = () => {
-      console.log(`Script loaded successfully: ${url}`);
-    };
-    script.onerror = (error) => {
-      console.error(`Error loading script: ${url}`, error);
-    };
-  
-    document.head.appendChild(script);
-  });
-  
-          };
-          jqueryScript.onerror = (error) => {
-            console.error('Error loading jQuery', error);
-          };
-          document.head.appendChild(jqueryScript);
+    },
+    created() {
+              // Check if a session token is available
+          const token = sessionStorage.getItem('token');
+
+        if (token) {
+          // Fetch user data or perform any other necessary actions
+          this.fetchUserData(token);
         }
+    },
+    methods: {
+      async handleLogin() {
+    try {
+      // Perform login logic and get the token from the server
+      const response = await axios.post('/api/login', { /* login credentials */ });
+      
+      // Set the token in sessionStorage
+      sessionStorage.setItem('token', response.data.token);
+
+      // Redirect to the home page or any other route
+      this.$router.push('/');
+    } catch (error) {
+      // Handle login error
+      console.error('Login failed:', error);
+    }
+  },
+      async fetchUserData(token) {
+    try {
+      // Use axios or your preferred method to fetch user data
+      const response = await axios.get('/api/user', {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+
+      // Set the user data in the component
+      this.userData = response.data;
+    } catch (error) {
+      console.error('Error fetching user data:', error);
+      // Handle errors, e.g., redirect to login page
+      this.$router.push('/login');
+    }
+  },
+      // Your methods go here
+      logout() {
+        sessionStorage.removeItem('token');
+        this.$router.push('/login');
       },
-    },
-    mounted() {
-      window.onload = () => {
-        console.log('Window onload event triggered');
-        this.loadScripts();
+      loadScripts() {
+  console.log('this.myObject:', this.myObject);
+if (this.myObject && this.myObject.content) {
+  console.log('this.myObject.content:', this.myObject.content);
+
+      const scriptUrls = [
+                      '/User/wp-includes/js/jquery/jquery.min3088.js',
+              '/User/wp-includes/js/jquery/jquery-migrate.min5589.js',
+              '/User/wp-content/plugins/bold-page-builder/slick/slick.min1849.js',
+              '/User/wp-content/plugins/bold-page-builder/content_elements_misc/js/jquery.magnific-popup.min1849.js',
+              '/User/wp-content/plugins/bold-page-builder/content_elements_misc/js/content_elements1849.js',
+              '/User/wp-content/plugins/bt_cost_calculator/jquery.dde35d.js',
+              '/User/wp-content/plugins/bt_cost_calculator/cc.maine35d.js',
+              '/User/bt_cc_main-js-after.js',
+              '/User/js1.js',
+              '/User/js2.js',
+              '/User/js3.js',
+              '/User/js4.js',
+              '/User/js5.js',
+              '/User/js6.js',
+              '/User/js7.js',
+              '/User/js8.js',
+              '/User/js9.js',
+              '/User/js10.js',
+              '/User/js11.js',
+              '/User/js12.js',
+              '/User/wp-content/plugins/contact-form-7/includes/swv/js/indexf658.js',
+              '/User/wp-content/plugins/contact-form-7/includes/js/indexf658.js',
+              '/User/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.minf0ea.js',
+              '/User/js13.js',
+              '/User/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min2632.js',
+              '/User/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.mine1a3.js',
+              '/User/js14.js',
+              '/User/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min2632.js',
+              '/User/wp-content/plugins/duracelltomi-google-tag-manager/js/gtm4wp-form-move-tracker7100.js',
+              '/User/wp-content/themes/pawsitive/framework/js/fancySelecte35d.js',
+              '/User/wp-content/themes/pawsitive/framework/js/header.misce35d.js',
+              '/User/wp-content/themes/pawsitive/framework/js/misce35d.js',
+              '/User/wp-content/plugins/bold-page-builder/content_elements/bt_bb_section/bt_bb_elementse35d.js',
+              '/User/wp-content/themes/pawsitive/bold-page-builder/content_elements/bt_bb_floating_image/bt_bb_floating_imagee35d.js',
+              '/User/wp-content/themes/pawsitive/bold-page-builder/content_elements/bt_bb_organic_animation/anime.mine35d.js',
+              '/User/wp-content/themes/pawsitive/bold-page-builder/content_elements/bt_bb_organic_animation/maine35d.js',
+              '/User/wp-includes/js/jquery/ui/core.min3f14.js',
+              '/User/wp-includes/js/jquery/ui/datepicker.min3f14.js',
+                          'https://code.jquery.com/jquery-3.5.1.slim.min.js',
+              'https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js',
+              'https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js',
+            
+            ];
+      // Load jQuery first
+      // Load jQuery first
+      const jqueryScript = document.createElement('script');
+      jqueryScript.src = scriptUrls[0]; // Assuming jQuery is the first script
+      jqueryScript.async = true;
+      jqueryScript.onload = () => {
+        console.log('jQuery loaded successfully');
+        // Now load other scripts
+        scriptUrls.slice(1).forEach(url => {
+          const script = document.createElement('script');
+          script.src = url;
+          script.async = true;
+          script.onload = () => {
+            console.log(`Script loaded successfully: ${url}`);
+          };
+          script.onerror = (error) => {
+            console.error(`Error loading script: ${url}`, error);
+          };
+
+          // Check if document.head is not null before appending the script
+          if (document.head) {
+            document.head.appendChild(script);
+          } else {
+            console.error('document.head is null');
+          }
+        });
       };
-    },
-  };
-  </script>
+
+      jqueryScript.onerror = (error) => {
+        console.error('Error loading jQuery', error);
+      };
+
+      // Check if document.head is not null before appending the jQuery script
+      if (document.head) {
+        document.head.appendChild(jqueryScript);
+      } else {
+        console.error('document.head is null');
+      }
+    }
+  },
+},
+mounted() {
+  console.log('userData:', this.userData);
+    window.onload = () => {
+      console.log('Window onload event triggered');
+      this.loadScripts();
+    };
+  },
+};
+</script>
   
-
-<style> 
-@import '../../../src/assets/User/css/style1.css';
-@import '../../../src/assets/User/css/style2.css';
-@import '../../../src/assets/User/css/style10.css';
-@import '../../../src/assets/User/css/classic-theme-styles-inline-css.css';
-@import '../../../src/assets/User/css/global-styles-inline-css.css';
-@import '../../../../frontend/public/User/wp-content/plugins/bold-page-builder/css/front_end/content_elements.crush1849.css';
-@import '../../../../frontend/public/User/wp-content/plugins/bold-page-builder/slick/slick1849.css';
-@import '../../../../frontend/public/User/wp-content/plugins/bt_cost_calculator/style.mine35d.css';
-@import '../../../../frontend/public/User/wp-content/plugins/contact-form-7/includes/css/stylesf658.css';
-@import '../../../src/assets/User/css/global-styles-inline-css.css';
-@import '../../../src/assets/User/css/woocommerce-inline-inline-css';
-@import '../../../../frontend/public/User/wp-content/themes/pawsitive/stylee35d.css';
-@import '../../../src/assets/User/css/style3.css';
-@import '../../../src/assets/User/css/bt_bb_color_schemes';
-@import '../../../src/assets/User/css/menu2.css';
-</style>  
-
+  
+  
+  
+      <style>
+      
+  @import '../../../src/assets/User/css/style2.css';
+  @import '../../../src/assets/User/css/style4.css';
+  @import '../../../src/assets/User/css/style5.css';
+  @import '../../../src/assets/User/css/style6.css';
+  @import '../../../src/assets/User/css/style7.css';
+  @import '../../../src/assets/User/css/style8.css';
+  @import '../../../src/assets/User/css/style9.css';
+  @import '../../../src/assets/User/css/style10.css';
+  @import '../../../src/assets/User/css/style13.css';
+  @import '../../../src/assets/User/css/style14.css';
+  @import '../../../src/assets/User/css/styles.css';
+  @import '../../../../frontend/public/User/wp-content/themes/pawsitive/stylee35d.css';
+  @import '../../../../frontend/public/User/wp-content/plugins/bold-page-builder/slick/slick1849.css';
+  @import '../../../../frontend/public/User/wp-content/plugins/bt_cost_calculator/style.mine35d.css';
+  @import '../../../../frontend/public/User/wp-content/plugins/contact-form-7/includes/css/stylesf658.css';
+  @import '../../../../frontend/public/User/wp-content/plugins/bold-page-builder/css/front_end/content_elements.crush1849.css';
+  </style>

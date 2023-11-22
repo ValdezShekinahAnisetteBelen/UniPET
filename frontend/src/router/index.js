@@ -19,7 +19,7 @@ const routes = [
     meta:{ requiresAuth: true}
 },
 {
-path: '/ProductDetails',
+  path: '/ProductDetails/:productName',
 name: 'ProductDetails',
 // route level code-splitting
 // this generates a separate chunk (about.[hash].js) for this route
@@ -97,6 +97,12 @@ meta:{ requiresAuth: true}
   name: 'order',
   component: () => import(/* webpackChunkName: "signup" */ '../views/Admin/order'),
   meta:{ requiresAuth: true}
+},
+{
+  path: '/AppointmentHistory',
+  name: 'AppointmentHistory',
+  component: () => import(/* webpackChunkName: "signup" */ '../views/Client/AppointmentHistory'),
+  meta:{ requiresAuth: true}
 }
 
 ];
@@ -105,25 +111,21 @@ const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
 });
-
 router.beforeEach((to, from, next) => {
-  const isLoggedin = checkUserLogin();
+  const isAuthenticated = sessionStorage.getItem('token') !== null;
+  const isLoginPage = to.name === 'SignUp';
 
-  // Exclude the '/login' route from redirection logic
-  if (to.name !== 'SignUp' && to.matched.some((record) => record.meta.requiresAuth)) {
-    if (!isLoggedin) {
-      next('/login');
-    } else {
-      next();
-    }
+  if (to.matched.some(record => record.meta.requiresAuth) && !isAuthenticated && !isLoginPage) {
+    // Redirect to login if authentication is required and the user is not authenticated
+    next('/login');
+  } else if (isAuthenticated && isLoginPage) {
+    // Redirect to the home page if the user is authenticated and trying to access the login page
+    next('/');
   } else {
+    // Proceed to the route
     next();
   }
 });
 
-function checkUserLogin() {
-  const userToken = sessionStorage.getItem('token');
-  return !!userToken;
-}
 
 export default router;

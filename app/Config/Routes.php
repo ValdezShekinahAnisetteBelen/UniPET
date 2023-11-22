@@ -14,6 +14,10 @@ $routes->post('api/cart/add-to-cart', 'CartController::addToCart');
 $routes->delete('api/cart/delete/(:num)', 'CartController::del/$1');
 $routes->get('/getData1', 'AppointmentController::getData1');
 $routes->post('/save', 'AppointmentController::save');
+$routes->get('api/user', 'UserController::homepage');
+$routes->get('api/product/details/(:segment)', 'ProductController::getProductDetails/$1');
+
+
 
 
 

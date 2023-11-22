@@ -101,13 +101,13 @@
             <div class="container px-4 px-lg-5 my-5">
                 <div class="row gx-4 gx-lg-5 align-items-center">
                     <div class="col-md-6">
-                      <img class="card-img-top mb-5 mb-md-0" src="User/images/3.png" />
+                      <img :src="product.image" :alt="product.name">
                     </div>
                     <div class="col-md-6">
                         <div class="small mb-1">SKU: BST-498</div>
-                        <h1 class="display-5 fw-bolder">Shop item</h1>
+                        <h1>{{ product.name }}</h1>
                         <div class="fs-5 mb-5">
-                            <span>₱100.00</span>
+                            <span>{{ product.price }}</span>
                         </div>
                         <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium at dolorem quidem modi. Nam sequi consequatur obcaecati excepturi alias magni, accusamus eius blanditiis delectus ipsam minima ea iste laborum vero?</p>
                         <div class="d-flex">
@@ -277,81 +277,50 @@
         </template>
     
     <script>
-    
     import axios from 'axios';
+  
     export default {
       data() {
         return {
-          info: [], // All products
-          cart: [],
-          selectedCategory: '', // Selected category
+          product: {},
+          allProducts: [], // Add this line assuming you want to store all products
         };
       },
-      computed: {
-        filteredProducts() {
-          if (!this.selectedCategory) {
-            return this.info; // Return all products if no category is selected
-          }
-          // Filter products based on the selected category
-          return this.info.filter(product => product.productgroup === this.selectedCategory);
-        },
-      },
       created() {
-        this.getInfo();
+        // Fetch all products when the component is created
+        this.fetchAllProducts();
       },
-      methods: {    
-      logout() {
-      sessionStorage.removeItem('token'); // Remove the token from session storage
-      this.$router.push('/login'); // Navigate to the login page
-    },
-        async getInfo() {
+      methods: {
+        async fetchAllProducts() {
           try {
-            const response = await axios.get('getData');
-            this.info = response.data;
+            const response = await axios.get('/getData');
+            this.allProducts = response.data; // Assuming you have a data property named allProducts
           } catch (error) {
-            console.error(error);
+            console.error('Error fetching all products:', error);
+            // Handle errors, e.g., redirect to an error page
           }
         },
-        getFilterValue(productgroup) {
-          if (!this.selectedCategory || productgroup === this.selectedCategory) {
-            return '';
-          }
-          return 'd-none';
-        },
-        filterProducts() {
-          // Filter products based on the selected category
-          // This will be automatically handled by computed property filteredProducts
-        },
-        async addToCart(product) {
-          try {
-            // Make a POST request to the server to add the item to the "cart" table
-            const response = await axios.post('http://unipet.test/public/api/add-to-cart', {
-              name: product.name,
-              price: product.price,
-              image: product.image,
-              productgroup: product.productgroup,
-            });
-    
-            if (response.status === 200) {
-              // Item added to cart successfully
-              this.cart.push({
-                name: product.name,
-                price: product.price,
-                image: product.image,
-                productgroup: product.productgroup,
-              });
-    
-              // You can also show a success message or update the UI
-              console.log('Product added to cart:', product.name);
-            } else {
-              // Handle the error, e.g., display an error message
-              console.error('Failed to add the product to the cart');
+        async fetchProductDetails(productName) {
+          // Filter the product from the already fetched products
+          const product = this.allProducts.find(product => product.name === productName);
+  
+          if (product) {
+            this.product = product;
+          } else {
+            // If the product is not found, fetch it from the API
+            try {
+              const response = await axios.get(`/api/product/details/${productName}`);
+              this.product = response.data;
+            } catch (error) {
+              console.error('Error fetching product details:', error);
+              // Handle errors, e.g., redirect to an error page
             }
-          } catch (error) {
-            console.error('Error:', error);
           }
         },
-    },
+        logout() {
+          sessionStorage.removeItem('token'); // Remove the token from session storage
+          this.$router.push('/login'); // Navigate to the login page
+        },
         // ... other methods
         loadScripts() {
           const scriptUrls = [
@@ -396,17 +365,18 @@
             '../../../../frontend/public/User/wp-content/plugins/bt_cost_calculator/cc.maine35d.js',
             '../../../../frontend/public/User/bt_cc_main-js-after.js',
             'https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js',
-          ];
-          const head = document.getElementsByTagName('head')[0];
-          scriptUrls.forEach((scriptUrl) => {
-            const script = document.createElement('script');
-            script.src = scriptUrl;
-            script.async = true;
-            head.appendChild(script);
-          });
+            ];
+        const head = document.getElementsByTagName('head')[0];
+        scriptUrls.forEach((scriptUrl) => {
+          const script = document.createElement('script');
+          script.src = scriptUrl;
+          script.async = true;
+          head.appendChild(script);
+        });
       },
-    };
-    </script>
+    },
+  };
+</script>
     
     
         <style>

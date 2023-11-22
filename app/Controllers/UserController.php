@@ -6,10 +6,22 @@ use App\Controllers\BaseController;
 use CodeIgniter\RESTful\ResourceController;
 use CodeIgniter\API\ResponseTrait;
 use App\Models\UserModel;
+use Firebase\JWT\JWT;
 
 class UserController extends ResourceController
 {
     use ResponseTrait;
+    private function getUserFromSession()
+    {
+        $userId = session()->get('customer_id');
+
+        if ($userId) {
+            $userModel = new UserModel();
+            return $userModel->getUserById($userId);
+        }
+
+        return null;
+    }
 
     public function register()
     {
@@ -124,9 +136,22 @@ class UserController extends ResourceController
         $authenticatedPassword = password_verify($password, $pass);
 
         if ($authenticatedPassword) {
-            // Use the session() helper to set flashdata
-            session()->setFlashdata('success', 'Login successful');
-            return $this->respond(['msg' => 'okay', 'token' => $data['token'], 'flashMessages' => session()->getFlashdata()]);
+            // Generate JWT
+            $key = 'your-secret-key'; // Replace with your secret key
+            $tokenData = [
+                'customer_id' => $data['customer_id'],
+                'role' => $data['role'],
+                // Add other claims as needed
+            ];
+            $algorithm = 'HS256';
+            $key = env('JWT_SECRET_KEY');
+            $token = JWT::encode($tokenData, $key, $algorithm);
+
+            // Save the token to the user's record (you need to implement this in your database)
+            $user->update($data['customer_id'], ['token' => $token]);
+
+            // Return JWT and success message
+            return $this->respond(['msg' => 'okay', 'token' => $token, 'flashMessages' => session()->getFlashdata()]);
         } else {
             // Incorrect password
             session()->setFlashdata('error', 'Invalid password');
@@ -138,4 +163,87 @@ class UserController extends ResourceController
         return $this->respond(['msg' => 'User not found', 'flashMessages' => session()->getFlashdata()]);
     }
 }
+    
+public function homepage()
+    {
+        // Check if the user is logged in
+        if (!$this->isLoggedIn()) {
+            // Redirect or respond with an error if the user is not logged in
+            return redirect()->to('/login'); // Redirect to the login page or another appropriate action
+        }
+
+        // Load the user dashboard view
+        $userData = $this->getUserFromSession();
+
+        // Load the user dashboard view with user data
+        return view('Online_Store', ['userData' => $userData]);
+    }
+    public function shop()
+    {
+        // Check if the user is logged in
+        if (!$this->isLoggedIn()) {
+            // Redirect or respond with an error if the user is not logged in
+            return redirect()->to('/login'); // Redirect to the login page or another appropriate action
+        }
+
+        // Load the user dashboard view
+        return view('Shop'); // Replace 'user_dashboard' with your actual view file
+    }
+    // public function petinfo()
+    // {
+    //     // Check if the user is logged in
+    //     if (!$this->isLoggedIn()) {
+    //         // Redirect or respond with an error if the user is not logged in
+    //         return redirect()->to('/login'); // Redirect to the login page or another appropriate action
+    //     }
+
+    //     $userData = $this->getUserFromSession();
+
+    //     // Load the user dashboard view with user data
+    //     return view('PetInfo', ['userData' => $userData]);
+    // }
+    public function appointmenthistory()
+    {
+        // Check if the user is logged in
+        if (!$this->isLoggedIn()) {
+            // Redirect or respond with an error if the user is not logged in
+            return redirect()->to('/login'); // Redirect to the login page or another appropriate action
+        }
+
+        // Load the user dashboard view
+        return view('AppointmentHistory'); // Replace 'user_dashboard' with your actual view file
+    }
+    public function myPurchases()
+    {
+        // Check if the user is logged in
+        if (!$this->isLoggedIn()) {
+            // Redirect or respond with an error if the user is not logged in
+            return redirect()->to('/login'); // Redirect to the login page or another appropriate action
+        }
+
+        // Load the user purchases view
+        return view('OrderHistory'); // Replace 'my_purchases' with your actual view file
+    }
+
+    private function isLoggedIn()
+{
+    $token = session()->get('token');
+
+    if ($token) {
+        $userModel = new UserModel();
+        $userData = $userModel->getUserByToken($token);
+
+        log_message('debug', 'Session Token: ' . $token);
+        log_message('debug', 'Database Token: ' . ($userData ? $userData['token'] : 'Not found'));
+
+        if ($userData) {
+            session()->set('customer_id', $userData['customer_id']);
+            return true;
+        }
+    }
+
+    return false;
+}
+
+
 }

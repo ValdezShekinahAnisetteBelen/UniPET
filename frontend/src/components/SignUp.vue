@@ -68,8 +68,10 @@
 </template>
 
 <script>
+import { jwtDecode as jwt_decode } from "jwt-decode";
 import axios from 'axios';
 import router from '@/router';
+
 
 export default {
   data() {
@@ -78,9 +80,11 @@ export default {
       password: "",
       errorMsg: "",
       flashMessage: "", // New property to store flash messages
+      userData: {}, // Initialize userData property
     };
   },
   methods: {
+    
     // Handle sign-in logic here
     async login() {
   try {
@@ -92,8 +96,26 @@ export default {
     if (response.data.msg === 'okay') {
       // Set token in sessionStorage
       sessionStorage.setItem("token", response.data.token);
-      // Redirect to the home page
-      router.push('/');
+
+      // Decode the token to extract user information
+      const decodedToken = jwt_decode(response.data.token);
+
+      this.$store.commit('setUserId', decodedToken.customer_id);
+this.$store.commit('setUserRole', decodedToken.role);
+console.log('Updated State:', {
+  userId: this.$store.state.userId,
+  userRole: this.$store.state.userRole,
+});
+
+
+      // Redirect based on user role
+      if (this.$store.state.userRole === 'admin') {
+        // Redirect to the admin dashboard
+        this.$router.push('/admin-dashboard');
+      } else if(this.$store.state.userRole ==='user') {
+        // Redirect to the user dashboard
+        this.$router.push('/');
+      }
     } else {
       // Set flash messages
       this.flashMessage = response.data.flashMessages;
@@ -102,20 +124,19 @@ export default {
     }
   } catch (error) {
     console.error("An error occurred during login:", error);
-    // Set a generic error message
-    this.errorMsg = "An error occurred during login.";
+
+    // Log more details about the error
+    console.error("Error details:", error.response || error.message || error);
+
+    // Set a more specific error message
+    this.errorMsg = "An error occurred during login. Please check the console for details.";
   }
 },
-    // Your other methods here
 
-    forgotPassword() {
-      // Handle forgot password logic here
-      console.log('Forgot password clicked...');
-    },
-    connectWithFacebook() {
-      // Handle Facebook login logic here
-      console.log('Connect with Facebook clicked...');
-    },
+  created() {
+  const token = sessionStorage.getItem('token');
+  this.fetchUserData(token);
+},
   }
 };
 </script>
