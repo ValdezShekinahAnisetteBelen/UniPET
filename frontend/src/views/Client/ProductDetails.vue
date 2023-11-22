@@ -118,6 +118,11 @@
            
     <!-- Close the .about-us div here -->
     <section class="py-5">
+        <div class="container mt-4">
+        <router-link to="/shop" class="btn btn-outline-info">
+            <i class="fas fa-arrow-left me-2"></i> Back to Shop
+        </router-link>
+    </div>
     <div v-if="product">
         <div class="container px-4 px-lg-5 my-5">
             <div class="row gx-4 gx-lg-5 align-items-center">
@@ -131,7 +136,7 @@
                         <span>₱ {{ product.price }}.00</span>
                     </div>
                     <p class="lead">Product Category: <b>{{ product.productgroup }}</b></p>
-                    <p class="lead">Description: {{ product.description }}</p>
+                    <p class="lead">Description: <b>{{ product.description }}</b></p>
                     <div class="d-flex">
                         <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 5rem" />
                         <button class="btn btn-outline-info" type="button">

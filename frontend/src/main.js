@@ -8,6 +8,7 @@ import store from './store';
 
 import axios from 'axios'
 
+
 axios.defaults.baseURL="http://unipet.test/public/"
 
 loadFonts()

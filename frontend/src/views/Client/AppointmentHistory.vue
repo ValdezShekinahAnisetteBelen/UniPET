@@ -125,52 +125,55 @@
     <!-- Close the .about-us div here -->
    
     <div v-if="userData" style="display: flex; align-items: center; justify-content: center; height: 100vh;">
-        <div style="max-width: 600px; margin: 0 auto; padding: 0px;">
-      <section id="h1" class="h1 text-center mb-4">
-        <h2 v-if="userData" style="text-transform: capitalize;">{{ userData.full_name }} Information</h2>
-      </section></div>
-      <form style="max-width: 1000px; width: 100%;">
+    <div style="max-width: 600px; margin: 0 auto; padding: 0px;">
+      <form style="max-width: 1000px; width: 100%;" @submit.prevent="saveData">
+        <section id="h1" class="h1 text-center mb-4">
+          <h2 v-if="userData" style="text-transform: capitalize;">{{ userData.full_name }} Information</h2>
+        </section>
         <div class="form-row">
           <div v-for="(value, field) in formData" :key="field" class="form-group col-md-6">
             <label :for="field">{{ capitalize(field.replace('_', ' ')) }}</label>
-            <input :type="field === 'email_address' ? 'email' : 'text'" class="form-control" :id="field" :placeholder="capitalize(field.replace('_', ' ')) + ' for ' + userData.full_name" v-model="formData[field]" style="width: 100%;">
+            <input :type="field === 'email_address' ? 'email' : 'text'" class="form-control" :id="field" :placeholder="capitalize(field.replace('_', ' ')) + ' for ' + userData.full_name" v-model="formData[field]" style="width: 100%;"  :readonly="!editMode">
           </div>
         </div>
+        <button @click="toggleEditMode">{{ editMode ? 'Save' : 'Edit' }}</button>
       </form>
     </div>
-
+  </div>
 
     <div v-if="userData" style="display: flex; align-items: center; justify-content: center; height: 100vh;">
     <div style="max-width: 600px; margin: 0 auto; padding: 0px;">
+      <form style="max-width: 1000px; width: 100%;" @submit.prevent="saveData">
       <section id="h1" class="h1 text-center mb-4">
         <h2 style="text-transform: capitalize;">PET {{ userData.pet_name }} Information</h2>
       </section>
-    </div>
-    <form style="max-width: 800px; width: 100%;">
       <div class="form-row">
         <div v-for="(value, field) in formData2" :key="field" class="form-group col-md-6">
           <label :for="field">{{ capitalize(field.replace('_', ' ')) }}</label>
-          <input :type="field === 'pet_name' ? 'text' : 'text'" class="form-control" :id="field" :placeholder="getPlaceholder(field)" v-model="formData2[field]" style="width: 100%;">
+          <input :type="field === 'pet_name' ? 'text' : 'text'" class="form-control" :id="field" :placeholder="getPlaceholder(field)" v-model="formData2[field]" style="width: 100%;"  :readonly="!editMode">
         </div>
       </div>
     </form>
+    <button @click="toggleEditMode">{{ editMode ? 'Save' : 'Edit' }}</button>
   </div>
+</div>
 
   <div v-if="userData" style="display: flex; align-items: center; justify-content: center; height: 100vh;">
     <div style="max-width: 600px; margin: 0 auto; padding: 0px;">
+      <form style="max-width: 1000px; width: 100%;">
       <section id="h1" class="h1 text-center mb-4">
         <h2 style="text-transform: capitalize;">YOUR REQUEST</h2>
       </section>
-    </div>
-    <form style="max-width: 800px; width: 100%;">
       <div class="form-row">
         <div v-for="(value, field) in formData3" :key="field" class="form-group col-md-6">
           <label :for="field">{{ capitalize(field.replace('_', ' ')) }}</label>
-          <input :type="field === 'grooming_type' ? 'text' : 'text'" class="form-control" :id="field" :placeholder="getPlaceholder(field)" v-model="formData3[field]" style="width: 100%;">
+          <input :type="field === 'grooming_type' ? 'text' : 'text'" class="form-control" :id="field" :placeholder="getPlaceholder(field)" v-model="formData3[field]" style="width: 100%;" :readonly="!editMode">
         </div>
       </div>
     </form>
   </div>
+  </div>
+ 
 
 
 
@@ -259,6 +262,8 @@
         grooming_shampoo: '',
         appointment_time: '',
       },
+      editMode: false,
+        initialFormData: {}, // New property to store initial form data
     };
   },
   computed: {
@@ -271,6 +276,7 @@
   },
   methods: {
     async getUserData() {
+      this.initialFormData = { ...this.userData };
       try {
         const response = await axios.get('getData1', {
           params: {
@@ -322,7 +328,50 @@
       }
       return ''; // Return an empty string if userData or the specific field is undefined
     },
+    toggleEditMode() {
+        if (this.editMode) {
+          const confirmed = window.confirm('Are you sure you want to edit your information?');
+          if (!confirmed) {
+            // If the user cancels the edit, revert to the initial form data
+            this.formData = { ...this.initialFormData };
+          }
+        }
 
+        // Toggle edit mode
+        this.editMode = !this.editMode;
+      },
+      saveData() {
+      // Extract the selected values from the form data
+      const updatedData = {
+    pet_name: this.formData.pet_name,
+    breed: this.formData.breed,
+    date_of_birth: this.formData.date_of_birth,
+    weight: this.formData.weight,
+    color: this.formData.color,
+    temperature: this.formData.temperature,
+    full_name: this.formData.full_name,
+    area: this.formData.area,
+    city: this.formData.city,
+    postal_code: this.formData.postal_code,
+    contact_no: this.formData.contact_no,
+    email_address: this.formData.email_address,
+    image: this.formData.image,
+    // Add any other fields here
+  };
+
+  console.log('Updated Data:', updatedData);
+
+  // Send an HTTP request to update user data
+  axios.put('/api/updateUserData', updatedData)
+    .then(response => {
+      // Handle success, update the local data if needed
+      console.log(response.data);
+    })
+    .catch(error => {
+      // Handle error
+      console.error(error);
+    });
+  },
     loadScripts() {
       if (this.myObject && this.myObject.content) {
         console.log(this.myObject.content);

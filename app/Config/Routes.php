@@ -16,6 +16,10 @@ $routes->get('/getData1', 'AppointmentController::getData1');
 $routes->post('/save', 'AppointmentController::save');
 $routes->get('api/user', 'UserController::homepage');
 $routes->get('api/product/details/(:segment)', 'Product::getProductDetails/$1');
+// $routes->get('api_get_appointments/(:any)', 'AppointmentController::api_get_appointments/$1');
+$routes->put('/api/updateUserData', 'AppointmentController::updateUserData');
+
+
 
 
 

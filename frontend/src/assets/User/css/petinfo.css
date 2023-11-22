@@ -47,6 +47,9 @@
     margin-bottom: 10px;
   }
   
+  .error-message {
+    color: red;
+  }
   /* Button styles */
   button,
   input[type="submit"] {

@@ -57,6 +57,39 @@ class AppointmentController extends ResourceController
     
         return $this->respond(['status' => 'Data saved successfully']);
     }
+
+    public function updateUserData()
+{
+    $json = $this->request->getJSON();
+
+    $data = [
+        'pet_name' => $json->pet_name,
+        'breed' => $json->breed,
+        'date_of_birth' => $json->date_of_birth,
+        'weight' => $json->weight,
+        'color' => $json->color,
+        'temperature' => $json->temperature,
+        'full_name' => $json->full_name,
+        'area' => $json->area,
+        'city' => $json->city,
+        'postal_code' => $json->postal_code,
+        'contact_no' => $json->contact_no,
+        'email_address' => $json->email_address,
+        'image' => $json->image,
+    ];
+    
+
+    $app = new AppointmentModel();
+    $app->update(['pet_id' => $json->pet_id], $data); // Assuming 'id' is the primary key
+
+    return $this->respond(['status' => 'Data updated successfully']);
+}
+    // public function api_get_appointments($params)
+    // {
+    //     $app = new AppointmentModel();
+    //     $appointments = $app->where('customer_id', $params)->findAll(); 
+    //     return $this->respond($appointments);
+    // }
     
 
 }

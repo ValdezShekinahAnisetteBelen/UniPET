@@ -15,6 +15,18 @@ class AppointmentModel extends Model
     protected $protectFields    = true;
     protected $allowedFields = ['pet_name', 'breed', 'date_of_birth', 'weight', 'color', 'temperature','full_name', 'area', 'city', 'postal_code', 'contact_no', 'email_address','appointment_date','appointment_time', 'appointment_type', 'grooming_type', 'grooming_shampoo', 'image', 'customer_id'];
     
+    public function updateUserData($petId, $data)
+    {
+        // Log the SQL query
+        $queries = $this->db->getLastQuery();
+        log_message('error', $queries);
+    
+        // Rest of your code...
+        
+        $this->update(['pet_id' => $petId], $data);
+    }
+    
+    
     // Dates
     protected $useTimestamps = false;
     protected $dateFormat    = 'datetime';

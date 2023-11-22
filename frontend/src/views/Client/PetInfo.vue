@@ -147,14 +147,14 @@
               <div class="card">
   <body>
         
-    <form @submit.prevent="save">
+    <form @submit.prevent="save" @change="updateLocalStorage">
     <div class="container">
         <div class="row">
           <div class="col-md-6">
             <div class="form-data">
              
               <div class="form-section">
-                <h6>Pet Owner Information</h6>
+                <h6 class="text-info">Pet Owner Information</h6>
                 <div class="form-row">
                   <label for="full_name">Full Name</label>
                   <input
@@ -250,18 +250,19 @@
           <div class="col-md-6">
             <div class="form-data">
               <div class="form-section">
-                <h6>Pet Details</h6>
+                <h6 class="text-info">Pet Details</h6>
                 <div class="form-row">
                   <div class="form-row" id="drag-and-drop-container">
-                  <label for="image-upload">Drag and Drop or Click to Upload Image</label>
-                  <input
-                      type="file"
-                      @change="handleImageUpload"
-                      id="image-upload"
-                      class="form-control"
-                      accept="image/*"
-                  />
-              </div>
+    <label for="image-upload">Drag and Drop or Click to Upload Image</label>
+    <input
+      type="file"
+      @change="handleImageUpload"
+      id="image-upload"
+      class="form-control"
+      accept="image/*"
+    />
+    <p v-if="appointment.image">Selected Image: {{ imageName }}</p>
+  </div>
                   <label for="pet_name">Pet Name</label>
                   <input
                     type="text"
@@ -326,60 +327,58 @@
         </div>
   
         <div class="col-md-6 mx-auto">
-      <h6>Pet Checklist</h6>
-      <section class="mb-3">
-    <label>Appointment Type</label>
-    <div class="mb-2">
-      <label v-for="item in appointment_type" :key="item">
-        <input
-          type="checkbox"
-          v-model="selectedappointment_type"
-          :value="item"
-          class="mr-2 mb-2"
-          required
-        />
-        {{ item }}
-      </label>
-    </div>
-  </section>
-  <section class="mb-3">
-    <label>Grooming Type</label>
-    <div class="mb-2">
-      <label v-for="item in grooming_type" :key="item">
-        <input
-          type="checkbox"
-          v-model="selectedgrooming_type"
-          :value="item"
-          class="mr-2 mb-2"
-          required
-        />
-        {{ item }}
-      </label>
-    </div>
-  </section>
-  <section>
-    <div class="form-row">
-      <label>Bath Type</label>
-      <div>
-        <label v-for="item in grooming_shampoo" :key="item">
-          <input
-            type="checkbox"
-            v-model="selectedgrooming_shampoo"
-            :value="item"
-            class="mr-2 mb-2"
-            required
-          />
-          {{ item }}
+    <h6 class="text-info">Request</h6>
+    <section class="mb-3 text-center">
+    <label><h4>Appointment Type</h4></label>
+    <div class="mb-2 d-flex flex-wrap border border-dashed border-info rounded p-2">
+        <label v-for="item in appointment_type" :key="item" class="form-check form-check-inline mx-2">
+            <input
+                type="checkbox"
+                v-model="selectedappointment_type"
+                :value="item"
+                class="form-check-input"
+                required
+            />
+            <span class="form-check-label">{{ item }}</span>
         </label>
-      </div>
     </div>
-  </section>
-  
-    </div>
+</section>
+
+    <section class="mb-3 text-center">
+        <label><h4>Grooming Type</h4></label>
+        <div class="mb-2 d-flex flex-wrap border border-dashed border-info rounded p-2">
+            <label v-for="item in grooming_type" :key="item" class="form-check form-check-inline mx-2">
+                <input
+                    type="checkbox"
+                    v-model="selectedgrooming_type"
+                    :value="item"
+                    class="form-check-input"
+                    required
+                />
+                <span class="form-check-label">{{ item }}</span>
+            </label>
+        </div>
+    </section>
+    <section class="mb-3 text-center">
+            <label><h4>Bath Type</h4></label>
+            <div class="mb-2 d-flex flex-wrap border border-dashed border-info rounded p-2">
+                <label v-for="item in grooming_shampoo" :key="item" class="form-check form-check-inline mx-2">
+                    <input
+                        type="checkbox"
+                        v-model="selectedgrooming_shampoo"
+                        :value="item"
+                        class="form-check-input"
+                        required
+                    />
+                    <span class="form-check-label">{{ item }}</span>
+                </label>
+            </div>
+    </section>
+</div>
       </div>
       <div class="button mt-3">
-      <input type="button" class="submit" value="Submit Form" id="button" @click="showConfirmationDialog">
-    </div>
+    <input type="button" class="submit" value="Submit Form" id="button" @click="showConfirmationDialog" style="background-color: lightblue; cursor: pointer;" onmouseover="this.style.backgroundColor='#87CEFA'" onmouseout="this.style.backgroundColor='lightblue'">
+</div>
     </form>
     <!-- <div>
       <insert @data-saved="getInfo" />
@@ -489,6 +488,7 @@
   export default {
     data() {
       return {
+        
         pet: [],
         appointment: {
          
@@ -510,6 +510,9 @@
           grooming_type: '',
           grooming_shampoo: '',
           image: '',
+          selectedappointment_type: [],
+        selectedgrooming_type: [],
+        selectedgrooming_shampoo: [],
         },
         isFormSubmitted: false, // Flag to track form submission
         appointment_type: ['Checkup', 'Vaccine', 'Deworm', 'LabTest'],
@@ -521,6 +524,17 @@
       };
     },
     methods: {
+      updateLocalStorage() {
+      // Save form data to localStorage on change
+      localStorage.setItem('form_data', JSON.stringify(this.appointment));
+    },
+    loadLocalStorage() {
+      // Load form data from localStorage
+      const storedData = localStorage.getItem('form_data');
+      if (storedData) {
+        this.appointment = JSON.parse(storedData);
+      }
+    },
       logout() {
         sessionStorage.removeItem('token'); // Remove the token from session storage
         this.$router.push('/login'); // Navigate to the login page
@@ -550,15 +564,45 @@
     }
   },
   
-      showConfirmationDialog() {
-        this.isFormSubmitted = true;
-      if (window.confirm('Are you sure you want to book now?')) {
-        // User clicked OK, proceed with the form submission
-        this.save(); // Call your save method here
-      } else {
-        // User clicked Cancel, do nothing or show a message
-      }
-    },
+  showConfirmationDialog() {
+  // Check if any required field is empty
+  const requiredFields = [
+    'full_name',
+    'contact_no',
+    'email_address',
+    'area',
+    'city',
+    'postal_code',
+    'appointment_date',
+    'appointment_time',
+    'pet_name',
+    'breed',
+    'date_of_birth',
+    'weight',
+    'color',
+    'temperature',
+    
+    
+  ];
+
+  for (const field of requiredFields) {
+    if (!this.appointment[field]) {
+      alert(`Please fill in the ${field.replace('_', ' ')} field.`);
+      return; // Stop the submission
+    }
+  }
+
+  // Continue with the confirmation dialog
+  this.isFormSubmitted = true;
+
+  if (window.confirm('Are you sure you want to book now?')) {
+    // User clicked OK, proceed with the form submission
+    this.save();
+  } else {
+    // User clicked Cancel, do nothing or show a message
+  }
+},
+
     toggleAppointmentType(item) {
         if (this.isFormSubmitted) {
           return; // Do not proceed if the form has been submitted
@@ -625,7 +669,7 @@
             appointment_time: this.appointment.appointment_time, // Fix the property name
             grooming_type: this.selectedgrooming_type,
             grooming_shampoo: this.selectedgrooming_shampoo,
-            image: this.appointment.image,
+            image: this.appointment.image, // Send the image name to the server
           });
           this.selectedappointment_type; // Your toggled appointment_type
       this.selectedgrooming_type; // Your toggled grooming_type
@@ -648,6 +692,7 @@
   
           this.$emit('data-saved');
           this.getInfo();
+          localStorage.removeItem('form_data');
         } catch (error) {
           console.error(error);
         }
@@ -663,12 +708,16 @@
         // Handle the response (success or error)
       },
       handleImageUpload(event) {
-        // Handle image upload and add the image data to the appointment object
-        const file = event.target.files[0];
-        if (file) {
-          this.appointment.image = file;
-        }
-      },
+  // Handle image upload and add the image data to the appointment object
+  const file = event.target.files[0];
+  if (file) {
+    // Update the image name property
+    this.imageName = file.name;
+
+    // Store the image name in the appointment object
+    this.appointment.image = this.imageName; // Store only the image name, not the file
+  }
+},
       loadScripts() {
         if (this.myObject && this.myObject.content) {
           console.log(this.myObject.content);
@@ -747,6 +796,7 @@
     },
 
     mounted() {
+      this.loadLocalStorage();
       window.onload = () => {
         console.log('Window onload event triggered');
         this.loadScripts();

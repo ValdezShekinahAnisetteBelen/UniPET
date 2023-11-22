@@ -1,5 +1,7 @@
 <?php
 namespace App\Controllers;
+
+use App\Models\AppointmentModel;
 use CodeIgniter\RestFul\ResourceController;
 use CodeIgniter\API\ResponseTrait;
 use App\Models\ProductModel;
@@ -30,6 +32,7 @@ class Product extends ResourceController
 
         return $this->respond($product);
     }
+
 //     use ResponseTrait;
 
 //     public function create()
