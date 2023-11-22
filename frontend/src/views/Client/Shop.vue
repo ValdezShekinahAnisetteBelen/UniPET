@@ -154,22 +154,22 @@
   <h2>Shopping Cart</h2>
   <ul style="list-style: none; padding: 0;">
       <li v-for="(cartItem, index) in cart" :key="index" style="border: 1px solid #E0E0E0; border-radius: 4px; padding: 10px; margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center;">
-  <div class="plus-minus-input">
-      <button type="button" class="btn-number" data-quantity="minus" data-field="quantity">
-          <i class="fa fa-minus" aria-hidden="true"></i>
-      </button>
-      <input class="input-number" type="number" name="quantity" value="1" style="width: 80px; text-align: center;">
-      <button type="button" class="btn-number" data-quantity="plus" data-field="quantity">
-          <i class="fa fa-plus" aria-hidden="true"></i>
-      </button>
-  </div>
+        <div class="plus-minus-input">
+          <button @click="decrementQuantity(cartItem)" type="button" class="btn-number" data-quantity="minus" data-field="quantity">
+    <i class="fa fa-minus" aria-hidden="true"></i>
+</button>
+<input class="input-number" type="number" name="quantity" v-model="cartItem.quantity" style="width: 80px; text-align: center;">
+<button @click="incrementQuantity(cartItem)" type="button" class="btn-number" data-quantity="plus" data-field="quantity">
+    <i class="fa fa-plus" aria-hidden="true"></i>
+</button>
+</div>
   <div style="flex: 1; text-align: center;">
       <div style="text-align: center;">
           <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
           <label class="form-check-label" for="flexCheckDefault">
-              {{ cartItem.name }}<br>
-              ₱{{ cartItem.price }}
-          </label>
+  {{ cartItem.name }}<br>
+  ₱{{ cartItem.price * cartItem.quantity }}
+</label>
       </div>
       <div style="display: flex; align-items: center; justify-content: flex-end;">
           <!-- Optional: You can add a router link to view details -->
@@ -399,6 +399,28 @@ export default {
     }, 1000); // Simulated delay
   },
   methods: {
+    incrementQuantity(cartItem) {
+        cartItem.quantity++;
+        this.updatePrice(cartItem);
+    },
+    decrementQuantity(cartItem) {
+        if (cartItem.quantity > 1) {
+            cartItem.quantity--;
+            this.updatePrice(cartItem);
+        }
+    },
+    updatePrice(cartItem) {
+    // Ensure 'cart' is accessed as a property of 'this' (the Vue instance)
+    let itemInCart = this.cart.find(item => item.id === cartItem.id);
+    if (itemInCart) {
+        itemInCart.totalPrice = itemInCart.quantity * itemInCart.price;
+    }
+},
+    calculateTotalPrice() {
+      this.totalPrice = this.cart.reduce((total, item) => {
+        return total + (item.price * item.quantity);
+      }, 0);
+    },
     // Method to change the current page
     changePage(newPage) {
       // Check if the requested page number is within valid bounds
@@ -513,6 +535,7 @@ try {
     if (response.status === 200) {
       // Assuming you receive an 'id' from the server
       const cartItem = {
+        originalPrice: product.price,
         customer_id:  this.$store.state.userId,
         id: response.data.id,
         name: product.name,

@@ -98,30 +98,31 @@
            
     <!-- Close the .about-us div here -->
     <section class="py-5">
-            <div class="container px-4 px-lg-5 my-5">
-                <div class="row gx-4 gx-lg-5 align-items-center">
-                    <div class="col-md-6">
-                      <img :src="product.image" :alt="product.name">
+    <div v-if="product">
+        <div class="container px-4 px-lg-5 my-5">
+            <div class="row gx-4 gx-lg-5 align-items-center">
+                <div class="col-md-6">
+                    <img :src="product.image" :title="product.name" :alt="product.name">
+                </div>
+                <div class="col-md-6">
+                    <div class="small mb-1">SKU: BST-498</div>
+                    <h1>{{ product.name }}</h1>
+                    <div class="fs-5 mb-5">
+                        <span>₱ {{ product.price }}.00</span>
                     </div>
-                    <div class="col-md-6">
-                        <div class="small mb-1">SKU: BST-498</div>
-                        <h1>{{ product.name }}</h1>
-                        <div class="fs-5 mb-5">
-                            <span>{{ product.price }}</span>
-                        </div>
-                        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium at dolorem quidem modi. Nam sequi consequatur obcaecati excepturi alias magni, accusamus eius blanditiis delectus ipsam minima ea iste laborum vero?</p>
-                        <div class="d-flex">
-                            <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 5rem" />
-                            <button class="btn btn-outline-info" type="button">
-                                <i class="bi-cart-fill me-1"></i>
-                                Add to cart
-                            </button>
-                        </div>
+                    <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium at dolorem quidem modi. Nam sequi consequatur obcaecati excepturi alias magni, accusamus eius blanditiis delectus ipsam minima ea iste laborum vero?</p>
+                    <div class="d-flex">
+                        <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 5rem" />
+                        <button class="btn btn-outline-info" type="button">
+                            <i class="bi-cart-fill me-1"></i>
+                            Add to cart
+                        </button>
                     </div>
                 </div>
             </div>
-        </section>
-
+        </div>
+    </div>
+</section>
          <!-- Related items section-->
          <section class="py-5 bg-light">
             <div class="container px-4 px-lg-5 mt-5">
@@ -280,50 +281,44 @@
     import axios from 'axios';
   
     export default {
-      data() {
-        return {
-          product: {},
-          allProducts: [], // Add this line assuming you want to store all products
-        };
-      },
-      created() {
-        // Fetch all products when the component is created
-        this.fetchAllProducts();
-      },
-      methods: {
-        async fetchAllProducts() {
-          try {
-            const response = await axios.get('/getData');
-            this.allProducts = response.data; // Assuming you have a data property named allProducts
-          } catch (error) {
-            console.error('Error fetching all products:', error);
-            // Handle errors, e.g., redirect to an error page
-          }
-        },
-        async fetchProductDetails(productName) {
-          // Filter the product from the already fetched products
-          const product = this.allProducts.find(product => product.name === productName);
-  
-          if (product) {
-            this.product = product;
-          } else {
-            // If the product is not found, fetch it from the API
-            try {
-              const response = await axios.get(`/api/product/details/${productName}`);
-              this.product = response.data;
-            } catch (error) {
-              console.error('Error fetching product details:', error);
-              // Handle errors, e.g., redirect to an error page
-            }
-          }
-        },
-        logout() {
-          sessionStorage.removeItem('token'); // Remove the token from session storage
-          this.$router.push('/login'); // Navigate to the login page
-        },
-        // ... other methods
-        loadScripts() {
-          const scriptUrls = [
+        props: ['productName'],
+  data() {
+    return {
+      product: {},
+      products: [],
+    };
+  },
+  created() {
+  this.fetchProductDetails(this.productName);
+},
+  mounted() {
+    this.fetchProductDetails(this.$route.params.productName);
+  },
+  methods: {
+    async fetchAllProducts() {
+      try {
+        const response = await axios.get('/api/products');
+        this.products = response.data;
+      } catch (error) {
+        console.error('Error fetching all products:', error);
+        // Handle errors, e.g., redirect to an error page
+      }
+    },
+    async fetchProductDetails(productName) {
+    try {
+        const response = await axios.get(`/api/product/details/${decodeURIComponent(productName)}`);
+        this.product = response.data;
+    } catch (error) {
+        console.error('Error fetching product details:', error);
+        // Handle errors, e.g., redirect to an error page
+    }
+},
+    logout() {
+      sessionStorage.removeItem('token'); // Remove the token from session storage
+      this.$router.push('/login'); // Navigate to the login page
+    },
+    loadScripts() {
+      const scriptUrls = [
           '../../../../frontend/public/User/js/scripts.js',
             '../../../../frontend/public/User/js5.js',
             '../../../../frontend/public/User/js6.js',
@@ -366,16 +361,16 @@
             '../../../../frontend/public/User/bt_cc_main-js-after.js',
             'https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js',
             ];
-        const head = document.getElementsByTagName('head')[0];
-        scriptUrls.forEach((scriptUrl) => {
-          const script = document.createElement('script');
-          script.src = scriptUrl;
-          script.async = true;
-          head.appendChild(script);
-        });
-      },
+      const head = document.getElementsByTagName('head')[0];
+      scriptUrls.forEach((scriptUrl) => {
+        const script = document.createElement('script');
+        script.src = scriptUrl;
+        script.async = true;
+        head.appendChild(script);
+      });
     },
-  };
+  },
+};
 </script>
     
     

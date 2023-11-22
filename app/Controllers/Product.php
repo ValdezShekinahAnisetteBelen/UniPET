@@ -5,6 +5,9 @@ use CodeIgniter\API\ResponseTrait;
 use App\Models\ProductModel;
 class Product extends ResourceController
 {
+    protected $modelName = 'App\Models\ProductModel';
+    protected $format    = 'json';
+
     public function index()
     {
 
@@ -19,14 +22,13 @@ class Product extends ResourceController
 
     public function getProductDetails($productName)
     {
-        $productModel = new ProductModel();
-        $product = $productModel->getProductByName($productName);
+        $product = $this->model->where('name', urldecode($productName))->first();
 
-        if ($product) {
-            return $this->respond($product, 200);
-        } else {
-            return $this->failNotFound('Product not found');
+        if(!$product){
+            return $this->failNotFound('No product found');
         }
+
+        return $this->respond($product);
     }
 //     use ResponseTrait;
 
