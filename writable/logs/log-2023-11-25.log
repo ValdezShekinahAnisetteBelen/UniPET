@@ -1,0 +1,922 @@
+ERROR - 2023-11-25 02:15:43 --> mysqli_sql_exception: Column 'quantity' cannot be null in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `ca...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ca...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ca...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ca...', Array, false)
+#4 C:\laragon\www\UniPET\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\UniPET\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\UniPET\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\laragon\www\UniPET\app\Controllers\CartController.php(31): CodeIgniter\Model->insert(Array)
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+#9 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+#10 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-11-25 02:15:43 --> Column 'quantity' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `cart` (`name`, `price`, `image`, `productgroup`, `customer_id`, `quantity`) VALUES (:name:, :price:, :image:, :productgroup:, :customer_id:, :quantity:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\CartController.php(31): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-25 02:15:45 --> mysqli_sql_exception: Column 'quantity' cannot be null in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `ca...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ca...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ca...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ca...', Array, false)
+#4 C:\laragon\www\UniPET\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\UniPET\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\UniPET\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\laragon\www\UniPET\app\Controllers\CartController.php(31): CodeIgniter\Model->insert(Array)
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+#9 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+#10 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-11-25 02:15:45 --> Column 'quantity' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `cart` (`name`, `price`, `image`, `productgroup`, `customer_id`, `quantity`) VALUES (:name:, :price:, :image:, :productgroup:, :customer_id:, :quantity:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\CartController.php(31): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-25 02:15:49 --> mysqli_sql_exception: Column 'quantity' cannot be null in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `ca...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ca...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ca...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ca...', Array, false)
+#4 C:\laragon\www\UniPET\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\UniPET\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\UniPET\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\laragon\www\UniPET\app\Controllers\CartController.php(31): CodeIgniter\Model->insert(Array)
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+#9 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+#10 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-11-25 02:15:49 --> Column 'quantity' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `cart` (`name`, `price`, `image`, `productgroup`, `customer_id`, `quantity`) VALUES (:name:, :price:, :image:, :productgroup:, :customer_id:, :quantity:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\CartController.php(31): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-25 02:15:49 --> mysqli_sql_exception: Column 'quantity' cannot be null in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `ca...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ca...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ca...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ca...', Array, false)
+#4 C:\laragon\www\UniPET\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\UniPET\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\UniPET\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\laragon\www\UniPET\app\Controllers\CartController.php(31): CodeIgniter\Model->insert(Array)
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+#9 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+#10 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-11-25 02:15:49 --> Column 'quantity' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `cart` (`name`, `price`, `image`, `productgroup`, `customer_id`, `quantity`) VALUES (:name:, :price:, :image:, :productgroup:, :customer_id:, :quantity:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\CartController.php(31): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-25 02:15:49 --> mysqli_sql_exception: Column 'quantity' cannot be null in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `ca...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ca...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ca...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ca...', Array, false)
+#4 C:\laragon\www\UniPET\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\UniPET\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\UniPET\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\laragon\www\UniPET\app\Controllers\CartController.php(31): CodeIgniter\Model->insert(Array)
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+#9 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+#10 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-11-25 02:15:49 --> Column 'quantity' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `cart` (`name`, `price`, `image`, `productgroup`, `customer_id`, `quantity`) VALUES (:name:, :price:, :image:, :productgroup:, :customer_id:, :quantity:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\CartController.php(31): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-25 02:15:49 --> mysqli_sql_exception: Column 'quantity' cannot be null in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `ca...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ca...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ca...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ca...', Array, false)
+#4 C:\laragon\www\UniPET\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\UniPET\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\UniPET\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\laragon\www\UniPET\app\Controllers\CartController.php(31): CodeIgniter\Model->insert(Array)
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+#9 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+#10 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-11-25 02:15:49 --> Column 'quantity' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `cart` (`name`, `price`, `image`, `productgroup`, `customer_id`, `quantity`) VALUES (:name:, :price:, :image:, :productgroup:, :customer_id:, :quantity:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\CartController.php(31): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-25 02:15:50 --> mysqli_sql_exception: Column 'quantity' cannot be null in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `ca...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ca...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ca...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ca...', Array, false)
+#4 C:\laragon\www\UniPET\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\UniPET\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\UniPET\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\laragon\www\UniPET\app\Controllers\CartController.php(31): CodeIgniter\Model->insert(Array)
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+#9 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+#10 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-11-25 02:15:50 --> Column 'quantity' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `cart` (`name`, `price`, `image`, `productgroup`, `customer_id`, `quantity`) VALUES (:name:, :price:, :image:, :productgroup:, :customer_id:, :quantity:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\CartController.php(31): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-25 02:15:50 --> mysqli_sql_exception: Column 'quantity' cannot be null in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `ca...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ca...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ca...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ca...', Array, false)
+#4 C:\laragon\www\UniPET\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\UniPET\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\UniPET\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\laragon\www\UniPET\app\Controllers\CartController.php(31): CodeIgniter\Model->insert(Array)
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+#9 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+#10 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-11-25 02:15:50 --> Column 'quantity' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `cart` (`name`, `price`, `image`, `productgroup`, `customer_id`, `quantity`) VALUES (:name:, :price:, :image:, :productgroup:, :customer_id:, :quantity:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\CartController.php(31): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-25 02:15:51 --> mysqli_sql_exception: Column 'quantity' cannot be null in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `ca...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ca...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ca...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ca...', Array, false)
+#4 C:\laragon\www\UniPET\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\UniPET\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\UniPET\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\laragon\www\UniPET\app\Controllers\CartController.php(31): CodeIgniter\Model->insert(Array)
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+#9 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+#10 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-11-25 02:15:51 --> Column 'quantity' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `cart` (`name`, `price`, `image`, `productgroup`, `customer_id`, `quantity`) VALUES (:name:, :price:, :image:, :productgroup:, :customer_id:, :quantity:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\CartController.php(31): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-25 02:16:22 --> mysqli_sql_exception: Column 'quantity' cannot be null in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `ca...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ca...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ca...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ca...', Array, false)
+#4 C:\laragon\www\UniPET\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\UniPET\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\UniPET\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\laragon\www\UniPET\app\Controllers\CartController.php(31): CodeIgniter\Model->insert(Array)
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+#9 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+#10 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-11-25 02:16:22 --> Column 'quantity' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `cart` (`name`, `price`, `image`, `productgroup`, `customer_id`, `quantity`) VALUES (:name:, :price:, :image:, :productgroup:, :customer_id:, :quantity:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\CartController.php(31): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-25 02:16:40 --> mysqli_sql_exception: Column 'quantity' cannot be null in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `ca...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ca...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ca...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ca...', Array, false)
+#4 C:\laragon\www\UniPET\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\UniPET\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\UniPET\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\laragon\www\UniPET\app\Controllers\CartController.php(31): CodeIgniter\Model->insert(Array)
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+#9 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+#10 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-11-25 02:16:40 --> Column 'quantity' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `cart` (`name`, `price`, `image`, `productgroup`, `customer_id`, `quantity`) VALUES (:name:, :price:, :image:, :productgroup:, :customer_id:, :quantity:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\CartController.php(31): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-25 02:16:41 --> mysqli_sql_exception: Column 'quantity' cannot be null in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `ca...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ca...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ca...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ca...', Array, false)
+#4 C:\laragon\www\UniPET\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\UniPET\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\UniPET\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\laragon\www\UniPET\app\Controllers\CartController.php(31): CodeIgniter\Model->insert(Array)
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+#9 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+#10 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-11-25 02:16:41 --> Column 'quantity' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `cart` (`name`, `price`, `image`, `productgroup`, `customer_id`, `quantity`) VALUES (:name:, :price:, :image:, :productgroup:, :customer_id:, :quantity:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\CartController.php(31): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-25 02:16:41 --> mysqli_sql_exception: Column 'quantity' cannot be null in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `ca...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ca...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ca...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ca...', Array, false)
+#4 C:\laragon\www\UniPET\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\UniPET\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\UniPET\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\laragon\www\UniPET\app\Controllers\CartController.php(31): CodeIgniter\Model->insert(Array)
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+#9 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+#10 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-11-25 02:16:41 --> Column 'quantity' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `cart` (`name`, `price`, `image`, `productgroup`, `customer_id`, `quantity`) VALUES (:name:, :price:, :image:, :productgroup:, :customer_id:, :quantity:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\CartController.php(31): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-25 02:16:41 --> mysqli_sql_exception: Column 'quantity' cannot be null in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `ca...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ca...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ca...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ca...', Array, false)
+#4 C:\laragon\www\UniPET\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\UniPET\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\UniPET\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\laragon\www\UniPET\app\Controllers\CartController.php(31): CodeIgniter\Model->insert(Array)
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+#9 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+#10 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-11-25 02:16:41 --> Column 'quantity' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `cart` (`name`, `price`, `image`, `productgroup`, `customer_id`, `quantity`) VALUES (:name:, :price:, :image:, :productgroup:, :customer_id:, :quantity:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\CartController.php(31): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-25 02:16:41 --> mysqli_sql_exception: Column 'quantity' cannot be null in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `ca...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ca...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ca...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ca...', Array, false)
+#4 C:\laragon\www\UniPET\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\UniPET\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\UniPET\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\laragon\www\UniPET\app\Controllers\CartController.php(31): CodeIgniter\Model->insert(Array)
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+#9 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+#10 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-11-25 02:16:41 --> Column 'quantity' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `cart` (`name`, `price`, `image`, `productgroup`, `customer_id`, `quantity`) VALUES (:name:, :price:, :image:, :productgroup:, :customer_id:, :quantity:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\CartController.php(31): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-25 02:16:42 --> mysqli_sql_exception: Column 'quantity' cannot be null in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `ca...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ca...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ca...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ca...', Array, false)
+#4 C:\laragon\www\UniPET\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\UniPET\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\UniPET\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\laragon\www\UniPET\app\Controllers\CartController.php(31): CodeIgniter\Model->insert(Array)
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+#9 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+#10 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-11-25 02:16:42 --> Column 'quantity' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `cart` (`name`, `price`, `image`, `productgroup`, `customer_id`, `quantity`) VALUES (:name:, :price:, :image:, :productgroup:, :customer_id:, :quantity:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\CartController.php(31): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-25 02:16:44 --> mysqli_sql_exception: Column 'quantity' cannot be null in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `ca...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ca...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ca...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ca...', Array, false)
+#4 C:\laragon\www\UniPET\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\UniPET\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\UniPET\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\laragon\www\UniPET\app\Controllers\CartController.php(31): CodeIgniter\Model->insert(Array)
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+#9 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+#10 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-11-25 02:16:44 --> Column 'quantity' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `cart` (`name`, `price`, `image`, `productgroup`, `customer_id`, `quantity`) VALUES (:name:, :price:, :image:, :productgroup:, :customer_id:, :quantity:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\CartController.php(31): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-25 11:02:14 --> mysqli_sql_exception: Unknown column 'price' in 'field list' in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pu...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pu...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pu...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pu...', Array, false)
+#4 C:\laragon\www\UniPET\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\UniPET\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\UniPET\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\laragon\www\UniPET\app\Controllers\PurchaseController.php(43): CodeIgniter\Model->insert(Array)
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\PurchaseController->purchase()
+#9 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PurchaseController))
+#10 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-11-25 11:02:14 --> Unknown column 'price' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `purchase_product` (`name`, `price`, `image`, `productgroup`) VALUES (:name:, :price:, :image:, :productgroup:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\PurchaseController.php(43): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\PurchaseController->purchase()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PurchaseController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-25 11:02:38 --> mysqli_sql_exception: Unknown column 'price' in 'field list' in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pu...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pu...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pu...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pu...', Array, false)
+#4 C:\laragon\www\UniPET\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\UniPET\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\UniPET\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\laragon\www\UniPET\app\Controllers\PurchaseController.php(43): CodeIgniter\Model->insert(Array)
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\PurchaseController->purchase()
+#9 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PurchaseController))
+#10 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-11-25 11:02:38 --> Unknown column 'price' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `purchase_product` (`name`, `price`, `image`, `productgroup`) VALUES (:name:, :price:, :image:, :productgroup:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\PurchaseController.php(43): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\PurchaseController->purchase()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PurchaseController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-25 14:28:18 --> Too few arguments to function App\Controllers\AppointmentController::getData1(), 0 passed in C:\laragon\www\UniPET\system\CodeIgniter.php on line 919 and exactly 1 expected
+in APPPATH\Controllers\AppointmentController.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AppointmentController->getData1()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AppointmentController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-25 14:44:48 --> Undefined property: stdClass::$transaction_no
+in APPPATH\Controllers\TransactionController.php on line 23.
+ 1 APPPATH\Controllers\TransactionController.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$transaction_no', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\TransactionController.php', 23)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\TransactionController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TransactionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-25 14:55:03 --> Undefined property: stdClass::$transaction_no
+in APPPATH\Controllers\TransactionController.php on line 23.
+ 1 APPPATH\Controllers\TransactionController.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$transaction_no', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\TransactionController.php', 23)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\TransactionController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TransactionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-25 15:52:02 --> Undefined property: stdClass::$customer_id
+in APPPATH\Controllers\TransactionController.php on line 26.
+ 1 APPPATH\Controllers\TransactionController.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$customer_id', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\TransactionController.php', 26)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\TransactionController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TransactionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-25 15:55:17 --> Undefined property: stdClass::$customer_id
+in APPPATH\Controllers\TransactionController.php on line 26.
+ 1 APPPATH\Controllers\TransactionController.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$customer_id', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\TransactionController.php', 26)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\TransactionController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TransactionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-25 15:57:10 --> Undefined property: stdClass::$customer_id
+in APPPATH\Controllers\TransactionController.php on line 26.
+ 1 APPPATH\Controllers\TransactionController.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$customer_id', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\TransactionController.php', 26)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\TransactionController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TransactionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-25 16:36:20 --> Undefined property: stdClass::$customer_id
+in APPPATH\Controllers\TransactionController.php on line 26.
+ 1 APPPATH\Controllers\TransactionController.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$customer_id', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\TransactionController.php', 26)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\TransactionController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TransactionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-25 16:57:38 --> Undefined property: stdClass::$customer_id
+in APPPATH\Controllers\TransactionController.php on line 26.
+ 1 APPPATH\Controllers\TransactionController.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$customer_id', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\TransactionController.php', 26)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\TransactionController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TransactionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-25 17:02:39 --> Undefined property: stdClass::$customer_id
+in APPPATH\Controllers\TransactionController.php on line 26.
+ 1 APPPATH\Controllers\TransactionController.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$customer_id', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\TransactionController.php', 26)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\TransactionController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TransactionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-25 17:12:28 --> Undefined property: stdClass::$customer_id
+in APPPATH\Controllers\TransactionController.php on line 26.
+ 1 APPPATH\Controllers\TransactionController.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$customer_id', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\TransactionController.php', 26)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\TransactionController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TransactionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-25 17:14:09 --> Undefined property: stdClass::$customer_id
+in APPPATH\Controllers\TransactionController.php on line 26.
+ 1 APPPATH\Controllers\TransactionController.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$customer_id', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\TransactionController.php', 26)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\TransactionController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TransactionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-25 17:15:25 --> Undefined property: stdClass::$customer_id
+in APPPATH\Controllers\TransactionController.php on line 26.
+ 1 APPPATH\Controllers\TransactionController.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$customer_id', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\TransactionController.php', 26)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\TransactionController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TransactionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-25 17:21:10 --> Undefined property: stdClass::$customer_id
+in APPPATH\Controllers\TransactionController.php on line 26.
+ 1 APPPATH\Controllers\TransactionController.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$customer_id', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\TransactionController.php', 26)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\TransactionController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TransactionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-25 17:22:26 --> Undefined property: stdClass::$customer_id
+in APPPATH\Controllers\TransactionController.php on line 26.
+ 1 APPPATH\Controllers\TransactionController.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$customer_id', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\TransactionController.php', 26)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\TransactionController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TransactionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-25 17:25:30 --> Undefined property: stdClass::$customer_id
+in APPPATH\Controllers\TransactionController.php on line 26.
+ 1 APPPATH\Controllers\TransactionController.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$customer_id', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\TransactionController.php', 26)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\TransactionController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TransactionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-25 17:31:32 --> Undefined property: stdClass::$customer_id
+in APPPATH\Controllers\TransactionController.php on line 26.
+ 1 APPPATH\Controllers\TransactionController.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$customer_id', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\TransactionController.php', 26)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\TransactionController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TransactionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-25 17:52:47 --> Undefined property: stdClass::$customer_id
+in APPPATH\Controllers\TransactionController.php on line 26.
+ 1 APPPATH\Controllers\TransactionController.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$customer_id', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\TransactionController.php', 26)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\TransactionController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TransactionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-25 18:03:12 --> Undefined property: stdClass::$customer_id
+in APPPATH\Controllers\TransactionController.php on line 26.
+ 1 APPPATH\Controllers\TransactionController.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$customer_id', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\TransactionController.php', 26)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\TransactionController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TransactionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-25 18:21:00 --> Undefined property: stdClass::$customer_id
+in APPPATH\Controllers\TransactionController.php on line 26.
+ 1 APPPATH\Controllers\TransactionController.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$customer_id', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\TransactionController.php', 26)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\TransactionController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TransactionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-25 18:50:59 --> Undefined property: stdClass::$customer_id
+in APPPATH\Controllers\TransactionController.php on line 26.
+ 1 APPPATH\Controllers\TransactionController.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$customer_id', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\TransactionController.php', 26)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\TransactionController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TransactionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-25 18:53:08 --> Undefined property: stdClass::$customer_id
+in APPPATH\Controllers\TransactionController.php on line 26.
+ 1 APPPATH\Controllers\TransactionController.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$customer_id', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\TransactionController.php', 26)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\TransactionController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TransactionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-25 18:55:57 --> Undefined property: stdClass::$customer_id
+in APPPATH\Controllers\TransactionController.php on line 26.
+ 1 APPPATH\Controllers\TransactionController.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$customer_id', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\TransactionController.php', 26)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\TransactionController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TransactionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-25 18:58:02 --> Undefined property: stdClass::$customer_id
+in APPPATH\Controllers\TransactionController.php on line 26.
+ 1 APPPATH\Controllers\TransactionController.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$customer_id', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\TransactionController.php', 26)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\TransactionController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TransactionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-25 19:08:18 --> Undefined property: stdClass::$customer_id
+in APPPATH\Controllers\TransactionController.php on line 26.
+ 1 APPPATH\Controllers\TransactionController.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$customer_id', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\TransactionController.php', 26)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\TransactionController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TransactionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-25 19:30:43 --> Call to undefined method App\Models\PurchaseModel::findAllFilteredByDatetime
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Controllers\PurchaseController.php(23): CodeIgniter\Model->__call('findAllFilteredByDatetime', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\PurchaseController->getData3()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PurchaseController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-25 19:30:43 --> Call to undefined method App\Models\PurchaseModel::findAllFilteredByDatetime
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Controllers\PurchaseController.php(23): CodeIgniter\Model->__call('findAllFilteredByDatetime', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\PurchaseController->getData3()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PurchaseController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-25 19:30:43 --> Call to undefined method App\Models\PurchaseModel::findAllFilteredByDatetime
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Controllers\PurchaseController.php(23): CodeIgniter\Model->__call('findAllFilteredByDatetime', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\PurchaseController->getData3()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PurchaseController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-25 19:30:43 --> Call to undefined method App\Models\PurchaseModel::findAllFilteredByDatetime
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Controllers\PurchaseController.php(23): CodeIgniter\Model->__call('findAllFilteredByDatetime', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\PurchaseController->getData3()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PurchaseController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-25 19:30:43 --> Call to undefined method App\Models\PurchaseModel::findAllFilteredByDatetime
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Controllers\PurchaseController.php(23): CodeIgniter\Model->__call('findAllFilteredByDatetime', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\PurchaseController->getData3()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PurchaseController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-25 19:30:43 --> Call to undefined method App\Models\PurchaseModel::findAllFilteredByDatetime
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Controllers\PurchaseController.php(23): CodeIgniter\Model->__call('findAllFilteredByDatetime', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\PurchaseController->getData3()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PurchaseController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-25 19:30:48 --> Undefined property: stdClass::$customer_id
+in APPPATH\Controllers\TransactionController.php on line 26.
+ 1 APPPATH\Controllers\TransactionController.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$customer_id', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\TransactionController.php', 26)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\TransactionController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TransactionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-25 19:30:52 --> Call to undefined method App\Models\PurchaseModel::findAllFilteredByDatetime
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Controllers\PurchaseController.php(23): CodeIgniter\Model->__call('findAllFilteredByDatetime', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\PurchaseController->getData3()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PurchaseController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-25 19:33:43 --> Call to undefined method App\Models\PurchaseModel::findAllFilteredByDatetime
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Controllers\PurchaseController.php(23): CodeIgniter\Model->__call('findAllFilteredByDatetime', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\PurchaseController->getData3()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PurchaseController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-25 19:33:43 --> Call to undefined method App\Models\PurchaseModel::findAllFilteredByDatetime
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Controllers\PurchaseController.php(23): CodeIgniter\Model->__call('findAllFilteredByDatetime', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\PurchaseController->getData3()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PurchaseController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-25 19:33:45 --> Undefined property: stdClass::$customer_id
+in APPPATH\Controllers\TransactionController.php on line 26.
+ 1 APPPATH\Controllers\TransactionController.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$customer_id', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\TransactionController.php', 26)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\TransactionController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TransactionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-25 19:33:54 --> Call to undefined method App\Models\PurchaseModel::findAllFilteredByDatetime
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Controllers\PurchaseController.php(23): CodeIgniter\Model->__call('findAllFilteredByDatetime', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\PurchaseController->getData3()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PurchaseController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-25 19:34:24 --> Call to undefined method App\Models\PurchaseModel::findAllFilteredByDatetime
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Controllers\PurchaseController.php(23): CodeIgniter\Model->__call('findAllFilteredByDatetime', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\PurchaseController->getData3()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PurchaseController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-25 19:34:24 --> Call to undefined method App\Models\PurchaseModel::findAllFilteredByDatetime
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Controllers\PurchaseController.php(23): CodeIgniter\Model->__call('findAllFilteredByDatetime', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\PurchaseController->getData3()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PurchaseController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-25 19:34:45 --> Call to undefined method App\Models\PurchaseModel::findAllFilteredByDatetime
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Controllers\PurchaseController.php(23): CodeIgniter\Model->__call('findAllFilteredByDatetime', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\PurchaseController->getData3()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PurchaseController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-25 19:34:47 --> Undefined property: stdClass::$customer_id
+in APPPATH\Controllers\TransactionController.php on line 26.
+ 1 APPPATH\Controllers\TransactionController.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$customer_id', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\TransactionController.php', 26)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\TransactionController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TransactionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-25 19:34:50 --> Call to undefined method App\Models\PurchaseModel::findAllFilteredByDatetime
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Controllers\PurchaseController.php(23): CodeIgniter\Model->__call('findAllFilteredByDatetime', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\PurchaseController->getData3()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PurchaseController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-25 19:37:21 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'IS NULL' at line 5 in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\UniPET\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\UniPET\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\UniPET\app\Models\PurchaseModel.php(26): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\UniPET\app\Controllers\PurchaseController.php(23): App\Models\PurchaseModel->findAllFilteredByDatetime('1', '2023-11-25 19:3...', NULL)
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\PurchaseController->getData3()
+#9 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PurchaseController))
+#10 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-11-25 19:37:21 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'IS NULL' at line 5
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `purchase_product`
+WHERE `customer_id` = :customer_id:
+AND `purchase_datetime` >= :purchase_datetime:
+AND `purchase_datetime` < IS NULL', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\PurchaseModel.php(26): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\PurchaseController.php(23): App\Models\PurchaseModel->findAllFilteredByDatetime('1', '2023-11-25 19:37:20', null)
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\PurchaseController->getData3()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PurchaseController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-25 19:37:23 --> Undefined property: stdClass::$customer_id
+in APPPATH\Controllers\TransactionController.php on line 26.
+ 1 APPPATH\Controllers\TransactionController.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$customer_id', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\TransactionController.php', 26)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\TransactionController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TransactionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-25 19:39:46 --> Undefined property: stdClass::$customer_id
+in APPPATH\Controllers\TransactionController.php on line 26.
+ 1 APPPATH\Controllers\TransactionController.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$customer_id', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\TransactionController.php', 26)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\TransactionController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TransactionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-25 19:42:11 --> Undefined property: stdClass::$customer_id
+in APPPATH\Controllers\TransactionController.php on line 26.
+ 1 APPPATH\Controllers\TransactionController.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$customer_id', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\TransactionController.php', 26)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\TransactionController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TransactionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-25 19:44:14 --> Undefined property: stdClass::$customer_id
+in APPPATH\Controllers\TransactionController.php on line 26.
+ 1 APPPATH\Controllers\TransactionController.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$customer_id', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\TransactionController.php', 26)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\TransactionController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TransactionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-25 19:44:27 --> Undefined property: stdClass::$customer_id
+in APPPATH\Controllers\TransactionController.php on line 26.
+ 1 APPPATH\Controllers\TransactionController.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$customer_id', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\TransactionController.php', 26)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\TransactionController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TransactionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-25 19:44:52 --> Undefined property: stdClass::$customer_id
+in APPPATH\Controllers\TransactionController.php on line 26.
+ 1 APPPATH\Controllers\TransactionController.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$customer_id', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\TransactionController.php', 26)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\TransactionController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TransactionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-25 19:49:03 --> Undefined property: stdClass::$customer_id
+in APPPATH\Controllers\TransactionController.php on line 26.
+ 1 APPPATH\Controllers\TransactionController.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$customer_id', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\TransactionController.php', 26)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\TransactionController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TransactionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-25 19:54:11 --> Undefined property: stdClass::$customer_id
+in APPPATH\Controllers\TransactionController.php on line 26.
+ 1 APPPATH\Controllers\TransactionController.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$customer_id', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\TransactionController.php', 26)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\TransactionController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TransactionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-25 19:55:26 --> Undefined property: stdClass::$customer_id
+in APPPATH\Controllers\TransactionController.php on line 26.
+ 1 APPPATH\Controllers\TransactionController.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$customer_id', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\TransactionController.php', 26)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\TransactionController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TransactionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-25 19:56:37 --> Undefined property: stdClass::$customer_id
+in APPPATH\Controllers\TransactionController.php on line 26.
+ 1 APPPATH\Controllers\TransactionController.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$customer_id', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\TransactionController.php', 26)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\TransactionController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TransactionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-25 19:57:28 --> Undefined property: stdClass::$customer_id
+in APPPATH\Controllers\TransactionController.php on line 26.
+ 1 APPPATH\Controllers\TransactionController.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$customer_id', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\TransactionController.php', 26)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\TransactionController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TransactionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-25 19:58:58 --> Undefined property: stdClass::$customer_id
+in APPPATH\Controllers\TransactionController.php on line 26.
+ 1 APPPATH\Controllers\TransactionController.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$customer_id', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\TransactionController.php', 26)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\TransactionController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TransactionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-25 19:59:27 --> Undefined property: stdClass::$customer_id
+in APPPATH\Controllers\TransactionController.php on line 26.
+ 1 APPPATH\Controllers\TransactionController.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$customer_id', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\TransactionController.php', 26)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\TransactionController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TransactionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-25 20:00:02 --> Undefined property: stdClass::$customer_id
+in APPPATH\Controllers\TransactionController.php on line 26.
+ 1 APPPATH\Controllers\TransactionController.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$customer_id', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\TransactionController.php', 26)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\TransactionController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TransactionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-25 20:02:09 --> Undefined property: stdClass::$customer_id
+in APPPATH\Controllers\TransactionController.php on line 26.
+ 1 APPPATH\Controllers\TransactionController.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$customer_id', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\TransactionController.php', 26)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\TransactionController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TransactionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-25 20:02:31 --> Undefined property: stdClass::$customer_id
+in APPPATH\Controllers\TransactionController.php on line 26.
+ 1 APPPATH\Controllers\TransactionController.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$customer_id', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\TransactionController.php', 26)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\TransactionController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TransactionController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()

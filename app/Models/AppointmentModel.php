@@ -13,18 +13,28 @@ class AppointmentModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields = ['pet_name', 'breed', 'date_of_birth', 'weight', 'color', 'temperature','full_name', 'area', 'city', 'postal_code', 'contact_no', 'email_address','appointment_date','appointment_time', 'appointment_type', 'grooming_type', 'grooming_shampoo', 'image', 'customer_id'];
+    protected $allowedFields = ['pet_name', 'breed', 'date_of_birth', 'weight', 'color', 'temperature','full_name', 'area', 'city', 'postal_code', 'contact_no', 'email_address','appointment_date','appointment_time', 'appointment_type', 'grooming_type', 'grooming_shampoo', 'image', 'customer_id', 'status'];
     
-    public function updateUserData($petId, $data)
+    public function updateUserDataAndPetData($pet_id, $combinedData)
     {
-        // Log the SQL query
-        $queries = $this->db->getLastQuery();
-        log_message('error', $queries);
+        try {
+            // Log SQL query
+            $this->db->transStart();
     
-        // Rest of your code...
-        
-        $this->update(['pet_id' => $petId], $data);
+            print_r($pet_id); // print the pet_id
+            print_r($combinedData); // print the data to be updated
+    
+            $this->where('pet_id', $pet_id)->set($combinedData)->update();
+    
+            $this->db->transComplete();
+        } catch (\Exception $e) {
+            log_message('error', 'Error updating data: ' . $e->getMessage());
+            $this->db->transRollback();
+            throw $e;
+        }
     }
+    
+    
     
     
     // Dates

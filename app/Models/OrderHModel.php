@@ -4,16 +4,16 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class CartModel extends Model
+class OrderHModel extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'cart';
+    protected $table            = 'purchase_product';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    =  ['name', 'description', 'price', 'image', 'productgroup', 'items', 'customer_id', 'quantity','product_id'];
+    protected $allowedFields    = ['product_id', 'customer_id', 'transaction_no'];
 
     // Dates
     protected $useTimestamps = false;

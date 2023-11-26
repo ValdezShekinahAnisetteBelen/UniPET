@@ -9,6 +9,7 @@ use App\Models\CartModel;
 
 class CartController extends ResourceController
 {
+    
     public function addToCart()
     {
         // Retrieve the product details and customer_id from the request.
@@ -16,12 +17,14 @@ class CartController extends ResourceController
         $name = $this->request->getVar('name');
         $price = $this->request->getVar('price');
         $image = $this->request->getVar('image');
+        $product_id = $this->request->getVar('product_id');
         $productgroup = $this->request->getVar('productgroup');
         $customer_id = $this->request->getVar('customer_id');
     
         // Save the product details to the cart using a model.
         $cartModel = new CartModel();
         $cartModel->insert([
+            'product_id' => $product_id,
             'name' => $name,
             'price' => $price,
             'image' => $image,
@@ -33,40 +36,41 @@ class CartController extends ResourceController
         return $this->response->setJSON(['message' => 'Product added to the cart']);
     }
     
-    
-
-    public function del($id) 
+    public function updateItem($id)
     {
-        try {
-            // Ensure $id is a valid integer
-            if (!is_numeric($id) || $id <= 0) {
-                return $this->respond(['error' => 'Invalid ID provided'], 400);
-            }
+        // Retrieve the new quantity and price from the request.
+        $quantity = $this->request->getVar('quantity');
+        $price = $this->request->getVar('price');
+
+        // Save the updated quantity and price to the cart using the model.
+        $cartModel = new \App\Models\CartModel(); // Adjust namespace if needed
+        $cartItem = $cartModel->find($id);
+
+        if (!$cartItem) {
+            return $this->fail('Cart item not found', 404);
+        }
+
+        $cartModel->update($id, [
+            'quantity' => $quantity,
+            'price' => $price,
+        ]);
+
+        // Return a JSON response to the front-end (e.g., success message).
+        return $this->respond(['message' => 'Cart item updated successfully']);
+    }
+
+
+    public function del($id) {
+        $model = new CartModel();
+        $product = $model->where('id', $id)->delete();
     
-            $cartModel = new CartModel();
-    
-            // Check if the record exists before deleting
-            $record = $cartModel->find($id);
-            if (!$record) {
-                return $this->respond(['error' => 'Record not found'], 404);
-            }
-    
-            // Log the deletion attempt with record details
-            log_message('cart', 'Deleting record with ID ' . $id . ': ' . json_encode($record));
-    
-            // Perform the deletion
-            $cartModel->delete($id);
-    
-            return $this->respond(['message' => 'Record deleted successfully', 'deletedId' => $id], 200);
-        } catch (\Exception $e) {
-            // Log the error with details
-            log_message('error', 'Error deleting record with ID ' . $id . ': ' . $e->getMessage());
-    
-            // Return an error response
-            return $this->respond(['error' => 'Failed to delete record'], 500);
+        if ($product) {
+          return $this->respondDeleted($product);
+        } else {
+          return $this->failNotFound('No product found for id ' . $id);
         }
     }
-    
+
     
     
 

@@ -1,0 +1,97 @@
+CRITICAL - 2023-11-24 07:33:07 --> Undefined property: stdClass::$status
+in APPPATH\Controllers\AppointmentController.php on line 58.
+ 1 APPPATH\Controllers\AppointmentController.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$status', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\AppointmentController.php', 58)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AppointmentController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AppointmentController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-24 07:33:29 --> Undefined property: stdClass::$status
+in APPPATH\Controllers\AppointmentController.php on line 58.
+ 1 APPPATH\Controllers\AppointmentController.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$status', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\AppointmentController.php', 58)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AppointmentController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AppointmentController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-24 07:34:14 --> Undefined property: stdClass::$status
+in APPPATH\Controllers\AppointmentController.php on line 58.
+ 1 APPPATH\Controllers\AppointmentController.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$status', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\AppointmentController.php', 58)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AppointmentController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AppointmentController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-24 07:36:38 --> Undefined property: stdClass::$status
+in APPPATH\Controllers\AppointmentController.php on line 58.
+ 1 APPPATH\Controllers\AppointmentController.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$status', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\AppointmentController.php', 58)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AppointmentController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AppointmentController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-24 07:37:21 --> Too few arguments to function App\Controllers\AppointmentController::getData1(), 0 passed in C:\laragon\www\UniPET\system\CodeIgniter.php on line 919 and exactly 1 expected
+in APPPATH\Controllers\AppointmentController.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AppointmentController->getData1()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AppointmentController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-24 07:39:00 --> Too few arguments to function App\Controllers\AppointmentController::getData1(), 0 passed in C:\laragon\www\UniPET\system\CodeIgniter.php on line 919 and exactly 1 expected
+in APPPATH\Controllers\AppointmentController.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AppointmentController->getData1()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AppointmentController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-24 13:14:24 --> syntax error, unexpected variable "$json", expecting "function" or "const"
+in APPPATH\Controllers\AppointmentController.php on line 66.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\laragon\\www\\UniPET\\app\\Controllers\\AppointmentController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\AppointmentController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\AppointmentController')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\AppointmentController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-24 14:08:37 --> Undefined property: stdClass::$full_name
+in APPPATH\Controllers\AppointmentController.php on line 78.
+ 1 APPPATH\Controllers\AppointmentController.php(78): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$full_name', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\AppointmentController.php', 78)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AppointmentController->updatePetData('36')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AppointmentController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-24 14:08:42 --> Undefined property: stdClass::$full_name
+in APPPATH\Controllers\AppointmentController.php on line 78.
+ 1 APPPATH\Controllers\AppointmentController.php(78): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$full_name', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\AppointmentController.php', 78)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AppointmentController->updatePetData('36')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AppointmentController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-24 14:08:42 --> Undefined property: stdClass::$full_name
+in APPPATH\Controllers\AppointmentController.php on line 78.
+ 1 APPPATH\Controllers\AppointmentController.php(78): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$full_name', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\AppointmentController.php', 78)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AppointmentController->updatePetData('36')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AppointmentController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-24 14:09:07 --> Undefined property: stdClass::$full_name
+in APPPATH\Controllers\AppointmentController.php on line 78.
+ 1 APPPATH\Controllers\AppointmentController.php(78): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$full_name', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\AppointmentController.php', 78)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AppointmentController->updatePetData('36')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AppointmentController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-24 14:09:22 --> Undefined property: stdClass::$full_name
+in APPPATH\Controllers\AppointmentController.php on line 78.
+ 1 APPPATH\Controllers\AppointmentController.php(78): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$full_name', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\AppointmentController.php', 78)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AppointmentController->updatePetData('36')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AppointmentController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-24 14:09:22 --> Undefined property: stdClass::$full_name
+in APPPATH\Controllers\AppointmentController.php on line 78.
+ 1 APPPATH\Controllers\AppointmentController.php(78): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$full_name', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\AppointmentController.php', 78)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AppointmentController->updatePetData('36')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AppointmentController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-24 23:58:33 --> Too few arguments to function App\Controllers\AppointmentController::getData1(), 0 passed in C:\laragon\www\UniPET\system\CodeIgniter.php on line 919 and exactly 1 expected
+in APPPATH\Controllers\AppointmentController.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AppointmentController->getData1()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AppointmentController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()

@@ -150,42 +150,51 @@
     
     <!--------------start of Shopping Cart----------->
     <div class="cart" style="border: 1px solid #0CC0DF; border-radius: 4px; padding: 20px;">
-  <img src="User/gallery/shopping-cart.png" alt="Veterinary Icon" style="width: 2cm; height: 2cm;">
-  <h2>Shopping Cart</h2>
-  <ul style="list-style: none; padding: 0;">
-      <li v-for="(cartItem, index) in cart" :key="index" style="border: 1px solid #E0E0E0; border-radius: 4px; padding: 10px; margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center;">
-        <div class="plus-minus-input">
-          <button @click="decrementQuantity(cartItem)" type="button" class="btn-number" data-quantity="minus" data-field="quantity">
-    <i class="fa fa-minus" aria-hidden="true"></i>
-</button>
-<input class="input-number" type="number" name="quantity" v-model="cartItem.quantity" style="width: 80px; text-align: center;">
-<button @click="incrementQuantity(cartItem)" type="button" class="btn-number" data-quantity="plus" data-field="quantity">
-    <i class="fa fa-plus" aria-hidden="true"></i>
+      <div class="cart border border-primary rounded p-3">
+    <img src="User/gallery/shopping-cart.png" alt="Veterinary Icon" style="width: 2cm; height: 2cm;">
+    <h2>Shopping Cart</h2>
+    <p class="ml-auto">Total Price: ₱{{ calculateSelectedTotalPrice() }}</p>
+
+    <ul class="list-unstyled">
+        <li v-for="(cartItem, index) in cart" :key="index" class="border rounded p-3 mb-3 d-flex justify-content-between align-items-center">
+            <div class="plus-minus-input">
+                <button @click="decrementQuantity(cartItem)" type="button" class="btn btn-number" data-quantity="minus" data-field="quantity">
+                    <i class="fa fa-minus" aria-hidden="true"></i>
+                </button>
+                <input class="input-number form-control" type="number" name="quantity" v-model="cartItem.quantity" style="width: 80px; text-align: center;">
+                <button @click="incrementQuantity(cartItem)" type="button" class="btn btn-number" data-quantity="plus" data-field="quantity">
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="flex-grow-1 text-center">
+                <div class="text-center">
+                  <input
+                      class="form-check-input"
+                      type="checkbox"
+                      v-model="cartItem.selected"
+                      :id="'checkbox-' + index"
+                    >
+                    <label class="form-check-label" for="flexCheckDefault"> 
+                        {{ cartItem.name }}<br>
+                        Quantity:  {{ cartItem.quantity }}<br>
+                        Unit Price: ₱{{ cartItem.price}}<br>
+                        Total Price: ₱{{ cartItem.price * cartItem.quantity }}<br>
+                    </label>
+                </div>
+                <div class="d-flex align-items-center justify-content-end">
+                    <button @click="deleteRecord(cartItem.name)" type="button" class="btn btn-danger btn-sm m-1">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </div>
+            </div>
+        </li>
+    </ul>
+    
+    <button @click="PurchaseRecord()" type="button" class="btn btn-success btn-sm m-1">
+    <router-link to="/Checkout" style="color: white;">CHECK OUT</router-link>
 </button>
 </div>
-  <div style="flex: 1; text-align: center;">
-      <div style="text-align: center;">
-          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-          <label class="form-check-label" for="flexCheckDefault">
-  {{ cartItem.name }}<br>
-  ₱{{ cartItem.price * cartItem.quantity }}
-</label>
-      </div>
-      <div style="display: flex; align-items: center; justify-content: flex-end;">
-          <!-- Optional: You can add a router link to view details -->
-          <!-- <router-link :to="'/ProductDetails/' + cartItem.id">
-              {{ cartItem.name }} View Details
-          </router-link> -->
-          <button @click="deleteRecord(cartItem.name)" type="button" class="btn btn-danger btn-sm m-1">
-              <i class="fas fa-trash"></i>
-          </button>
-      </div>
-  </div>
-</li>
-  </ul>
-  <button type="button" class="btn btn-success btn-sm m-1">
-    <router-link to="/Checkout" style="color: white;">CHECK OUT</router-link>
-  </button>
+
 </div>
   
   
@@ -353,6 +362,7 @@ export default {
       product: {},
       info: [], // All products
       cart: [],
+      cart:{},
       selectedCategory: '', // Selected category
       myObject: {
         content: null,
@@ -399,18 +409,118 @@ export default {
     }, 1000); // Simulated delay
   },
   methods: {
-    incrementQuantity(cartItem) {
-        cartItem.quantity++;
+  async PurchaseRecord() {
+    // Filter selected items in the cart
+    const selectedItems = this.cart.filter(cartItem => cartItem.selected);
+
+    // Process each selected item
+    for (const cartItem of selectedItems) {
+      console.log('Name:', cartItem.name);
+      console.log('Total Price:', cartItem.price * cartItem.quantity);
+      console.log(cartItem.id);
+      try {
+        const response = await axios.post('api/cart/purchase', {
+        customer_id: this.$store.state.userId,
+        product_id: cartItem.product_id,
+        name: cartItem.name,
+        total_price: cartItem.price * cartItem.quantity,
+        image: cartItem.image,
+        productgroup: cartItem.productgroup,
+        quantity: cartItem.quantity,
+        unit_price: cartItem.price,
+        
+      });
+
+      if (response.status === 200) {
+        // Assuming you receive an 'id' from the server
+        const purchaseRecord = {
+          // Map the relevant fields from the response or modify as needed
+          customer_id:  this.$store.state.userId,
+          product_id: cartItem.product_id,
+          name: response.data.name,
+          total_price: response.data.total_price,
+          image: response.data.image,
+          productgroup: response.data.productgroup,
+          quantity: response.data.quantity,
+          unit_price: cartItem.price,
+        };
+
+        // You can use this purchaseRecord as needed, for example, log it or display a confirmation message
+        console.log('Purchase Record:', purchaseRecord);
+
+        // Optionally, you can clear the cart or perform other actions after the purchase
+
+        // Redirect to the Checkout page
+        this.$router.push('/Checkout');
+      } else {
+        console.error('Failed to insert the purchase record into the database');
+      }
+
+      } catch (error) {
+        console.error('Error:', error);
+        window.alert('Failed to complete the purchase. Please try again.');
+      }
+    }
+
+    this.$router.push('/Checkout');
+  },
+    calculateSelectedTotalPrice() {
+    return this.cart.reduce((total, cartItem) => {
+      if (cartItem.selected) {
+        return total + cartItem.price * cartItem.quantity;
+      }
+      return total;
+    }, 0);
+  },
+  async updateCart(cartItem) {
+    try {
+        const response = await axios.post(`/api/cart/update/${cartItem.id}`, {
+            quantity: cartItem.quantity,
+            price: cartItem.price,
+        });
+
+        // Handle response as needed
+    } catch (error) {
+        console.error('Error updating cart item:', error);
+    }
+},
+
+    calculateSelectedTotalPrice() {
+    return this.cart.reduce((total, cartItem) => {
+      if (cartItem.selected) {
+        return total + cartItem.price * cartItem.quantity;
+      }
+      return total;
+    }, 0);
+  },
+  async updateCart(cartItem) {
+    try {
+        const response = await axios.post(`/api/cart/update/${cartItem.id}`, {
+            quantity: cartItem.quantity,
+            price: cartItem.price,
+        });
+
+        // Handle response as needed
+    } catch (error) {
+        console.error('Error updating cart item:', error);
+    }
+},
+async incrementQuantity(cartItem) {
+    cartItem.quantity++;
+    await this.updateCart(cartItem);
+    this.updatePrice(cartItem);
+},
+
+async decrementQuantity(cartItem) {
+    if (cartItem.quantity > 1) {
+        cartItem.quantity--;
+        await this.updateCart(cartItem);
         this.updatePrice(cartItem);
-    },
-    decrementQuantity(cartItem) {
-        if (cartItem.quantity > 1) {
-            cartItem.quantity--;
-            this.updatePrice(cartItem);
-        }
-    },
-    updatePrice(cartItem) {
+    }
+},
+  async updatePrice(cartItem) {
     // Ensure 'cart' is accessed as a property of 'this' (the Vue instance)
+    await this.updateCart(cartItem);
     let itemInCart = this.cart.find(item => item.id === cartItem.id);
     if (itemInCart) {
         itemInCart.totalPrice = itemInCart.quantity * itemInCart.price;
@@ -525,7 +635,7 @@ try {
     // If the product is not in the cart, add it
     const response = await axios.post('api/cart/add-to-cart', {
       customer_id:  this.$store.state.userId,
-      id: product.id, // Include the id property
+      product_id: product.id, // Include the id property
       name: product.name,
       price: product.price,
       image: product.image,
@@ -537,12 +647,13 @@ try {
       const cartItem = {
         originalPrice: product.price,
         customer_id:  this.$store.state.userId,
-        id: response.data.id,
+        product_id: product.id,
         name: product.name,
         price: product.price,
         image: product.image,
         productgroup: product.productgroup,
-        quantity: 1, // Initialize the quantity to 1
+        quantity: 1,
+  selected: true,
       };
 
       // Add the item to the client-side cart using localStorage

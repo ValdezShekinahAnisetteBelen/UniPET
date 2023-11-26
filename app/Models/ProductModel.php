@@ -7,13 +7,13 @@ use CodeIgniter\Model;
 class ProductModel extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'online_store';
+    protected $table            = 'products';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields = ['name', 'description', 'price', 'stock', 'image', 'productgroup','Status'];
+    protected $allowedFields = ['name', 'description', 'price', 'stock', 'image', 'productgroup','status'];
 
     public function getProductByName($productName)
     {

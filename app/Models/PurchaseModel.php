@@ -4,17 +4,18 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class CartModel extends Model
+class PurchaseModel extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'cart';
-    protected $primaryKey       = 'id';
+    protected $table            = 'checkout';
+    protected $primaryKey       = 'purchase_id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    =  ['name', 'description', 'price', 'image', 'productgroup', 'items', 'customer_id', 'quantity','product_id'];
+    protected $allowedFields    = ['name', 'total_price', 'image', 'productgroup', 'status', 'quantity', 'unit_price', 'product_id', 'customer_id', 'created_at'];
 
+    
     // Dates
     protected $useTimestamps = false;
     protected $dateFormat    = 'datetime';
