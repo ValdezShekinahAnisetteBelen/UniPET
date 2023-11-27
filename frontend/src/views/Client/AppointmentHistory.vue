@@ -127,6 +127,12 @@
  
 <!-- User Information -->
 <!-- Combined User and Pet Information Form -->
+<div class="container mt-3 mb-3 d-flex justify-content-center">
+  <router-link :to="{ path: '/PetInfo' }" class="btn btn-outline-info btn-sm" :style="{ border: '2px solid #17a2b8' }">
+    <i class="fas fa-address-card"></i> Make Another Appointment
+  </router-link>
+</div>
+
 <div v-if="userData" class="container mt-5">
   <form class="card" style="max-width: 600px; margin: 0 auto; padding: 20px; border: 2px solid #17a2b8; border-radius: 10px;" @submit.prevent="saveData">
     <h2 class="text-center mb-4">{{ userData.full_name }} Information</h2>
@@ -198,7 +204,11 @@
       </div>
     </div>
   </form>
+
 </div>
+
+
+
 
 
 
@@ -251,6 +261,7 @@
   
       </template>
 <script>
+import router from '@/router';
 import VuePaginator from 'vuejs-paginator';
 import axios from 'axios';
 import jQuery from 'jquery';
@@ -301,6 +312,14 @@ created() {
   this.getUserData();
 },
 methods: {
+  makeAnotherAppointment() {
+      // Add logic here to handle making another appointment
+      // For example, you can reset the form data or perform other actions
+      console.log("Making another appointment...");
+
+      // Redirect to the "/PetInfo" route
+      router.push('/PetInfo');
+    },
   
   getStatusColor(status) {
   switch (status) {

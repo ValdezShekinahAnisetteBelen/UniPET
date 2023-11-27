@@ -20,7 +20,7 @@ class PurchaseController extends BaseController
 
     // Fetch data based on customer_id and created_at being today
     $data = $main->where('customer_id', $customer_id)
-                 ->where('DATE(created_at)', $today)
+                
                  ->findAll();
 
     // Return a JSON response

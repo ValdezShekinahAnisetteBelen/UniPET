@@ -539,22 +539,26 @@ export default {
       }
     },
     async getProduct() {
-      try {
+    try {
         const customerId = this.$store.state.userId;
-        const currentDatetime = new Date().toISOString().slice(0, 19).replace("T", " ");
-        const orderStatus = this.checkout.length > 0 ? this.checkout[0].status : null;
+        console.log('Checkout array:', this.checkout);
 
         // Include the customer_id parameter in the URL
-        const response = await axios.get(`getData3/${customerId}`);
+        const response = await axios.get(`getData3/${customerId}?name=true`);
 
         console.log('Response from getData3:', response.data);
 
         this.checkout = response.data;
-        console.log('checkout:', this.checkout);
-      } catch (error) {
+        console.log('Updated checkout:', this.checkout);
+
+        // Access name from the updated checkout
+        const name = this.checkout && this.checkout[0] ? this.checkout[0].name : null;
+        console.log('Name:', name);
+
+    } catch (error) {
         console.error('Error in getProduct:', error);
-      }
-    },
+    }
+},
     async getInfo() {
       try {
         const customerId = this.$store.state.userId;

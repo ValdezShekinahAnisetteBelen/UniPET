@@ -30,7 +30,6 @@ class OrderHistoryController extends BaseController
                 'transaction_no' => $transactionNo,
                 'product_id' => $productId,
                 'customer_id' => $customerId,
-                // Include other relevant data as needed
             ];
     
             // Save the data to the database using the model
