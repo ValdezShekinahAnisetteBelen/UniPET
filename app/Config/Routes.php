@@ -28,6 +28,22 @@ $routes->get('/getData2', 'TransactionController::getData2');
 // In your server-side route
 $routes->get('getData3/(:num)', 'PurchaseController::getData3/$1');
 $routes->post('api/publish/save', 'OrderHistoryController::saveOrder');
+$routes->get('api/appointments/distribution/(:any)', 'AppointmentController::getAppointmentDistributionByArea/$1');
+$routes->get('api/best/products/(:any)', 'OrderHistoryController::getBestSellingProductsByYear/$1');
+$routes->get('api/orders', 'OrderHistoryController::getOrders');
+$routes->post('api/edit-status', 'OrderHistoryController::editStatus');
+$routes->get('api/products/(:num)', 'Product::getProductDetails2/$1');
+$routes->get('api/customers/(:num)', 'UserController::getCustomerDetails/$1');
+$routes->get('api/transactions/(:num)', 'TransactionController::getTransactionDetails/$1');
+// app/Config/Routes.php
+
+$routes->post('api/edit-status2', 'Product::editStatus2');
+
+
+
+
+
+
 
 
 

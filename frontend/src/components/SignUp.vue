@@ -111,7 +111,7 @@ console.log('Updated State:', {
       // Redirect based on user role
       if (this.$store.state.userRole === 'admin') {
         // Redirect to the admin dashboard
-        this.$router.push('/admin-dashboard');
+        this.$router.push('/Dashboard');
       } else if(this.$store.state.userRole ==='user') {
         // Redirect to the user dashboard
         this.$router.push('/');

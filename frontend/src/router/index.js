@@ -75,6 +75,12 @@ meta:{ requiresAuth: true}
   meta:{ requiresAuth: true}
 },
 {
+  path: '/AppointmentHistory',
+  name: 'AppointmentHistory',
+  component: () => import(/* webpackChunkName: "signup" */ '../views/Client/AppointmentHistory'),
+  meta:{ requiresAuth: true}
+},
+{
   path: '/Appointment',
   name: 'Appointment',
   component: () => import(/* webpackChunkName: "signup" */ '../views/Client/Appointment'),
@@ -92,18 +98,88 @@ meta:{ requiresAuth: true}
   component: () => import(/* webpackChunkName: "signup" */ '../views/Admin/Dashboard'),
   meta:{ requiresAuth: true}
 },
+
 {
-  path: '/order',
-  name: 'order',
-  component: () => import(/* webpackChunkName: "signup" */ '../views/Admin/order'),
+  path: '/admin/products',
+  name: 'products',
+  component: () => import(/* webpackChunkName: "signup" */ '../views/Admin/products'),
+  meta:{ requiresAuth: true}
+},
+
+{
+  path: '/Sidebar',
+  name: 'Sidebar',
+  component: () => import(/* webpackChunkName: "signup" */ '../components/Sidebar'),
+  meta:{ requiresAuth: true}
+},
+// {
+//   path: '/Dashboard',
+//   name: 'Dashboard',
+//   component: () => import(/* webpackChunkName: "signup" */ '../views/Admin/Dashboard'),
+//   meta:{ requiresAuth: true}
+// },
+{
+  path: '/admin/orders',
+  name: 'orders',
+  component: () => import(/* webpackChunkName: "signup" */ '../views/Admin/Orders'),
+  meta:{ requiresAuth: true}
+},
+
+{
+  path: '/admin/orders',
+  name: 'orders',
+  component: () => import(/* webpackChunkName: "signup" */ '../views/Admin/Orders'),
   meta:{ requiresAuth: true}
 },
 {
-  path: '/AppointmentHistory',
-  name: 'AppointmentHistory',
-  component: () => import(/* webpackChunkName: "signup" */ '../views/Client/AppointmentHistory'),
+  path: '/admin/Appointments',
+  name: 'Appointments',
+  component: () => import(/* webpackChunkName: "signup" */ '../views/Admin/Appointments'),
   meta:{ requiresAuth: true}
-}
+},
+{
+  path: '/admin/Pets',
+  name: 'Pets',
+  component: () => import(/* webpackChunkName: "signup" */ '../views/Admin/Pets'),
+  meta:{ requiresAuth: true}
+},
+{
+  path: '/admin/Customers',
+  name: 'Customers',
+  component: () => import(/* webpackChunkName: "signup" */ '../views/Admin/Customers'),
+  meta:{ requiresAuth: true}
+},
+
+{
+  path: '/admin/Profiles',
+  name: 'Customer Profiles',
+  component: () => import(/* webpackChunkName: "signup" */ '../views/Admin/Profiles'),
+  meta:{ requiresAuth: true}
+},
+
+{
+  path: '/admin/Admin',
+  name: 'Admin Accounts',
+  component: () => import(/* webpackChunkName: "signup" */ '../views/Admin/Admin'),
+  meta:{ requiresAuth: true}
+},
+
+{
+  path: '/admin/Payment',
+  name: 'Customers Payment Status',
+  component: () => import(/* webpackChunkName: "signup" */ '../views/Admin/Payment'),
+  meta:{ requiresAuth: true}
+},
+
+
+
+
+{
+  path: '/DetailsModal',
+  name: 'DetailsModal',
+  component: () => import(/* webpackChunkName: "signup" */ '../views/Admin/DetailsModal'),
+  meta:{ requiresAuth: true}
+},
 
 ];
 

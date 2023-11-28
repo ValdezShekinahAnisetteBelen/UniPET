@@ -4,3 +4,610 @@ in APPPATH\Controllers\AppointmentController.php on line 17.
  2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AppointmentController))
  3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-27 13:36:58 --> You cannot use "getCompiledSelect()" in "App\Models\AppointmentModel". This is a method of the Query Builder Class.
+in SYSTEMPATH\Model.php on line 889.
+ 1 SYSTEMPATH\Model.php(889): CodeIgniter\Exceptions\ModelException::forMethodNotAvailable('App\\Models\\AppointmentModel', 'getCompiledSelect()')
+ 2 SYSTEMPATH\Model.php(869): CodeIgniter\Model->checkBuilderMethod('getCompiledSelect')
+ 3 APPPATH\Models\AppointmentModel.php(40): CodeIgniter\Model->__call('getCompiledSelect', [])
+ 4 APPPATH\Controllers\AppointmentController.php(14): App\Models\AppointmentModel->getAppointmentDistributionByArea('2023')
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AppointmentController->getAppointmentDistributionByArea('2023')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AppointmentController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-27 13:50:17 --> A non-numeric value encountered
+in APPPATH\Models\AppointmentModel.php on line 39.
+ 1 APPPATH\Models\AppointmentModel.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'A non-numeric value encountered', 'C:\\laragon\\www\\UniPET\\app\\Models\\AppointmentModel.php', 39)
+ 2 APPPATH\Controllers\AppointmentController.php(14): App\Models\AppointmentModel->getAppointmentDistributionByArea('2003-12-12 00:00:00')
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AppointmentController->getAppointmentDistributionByArea('2003-12-12 00:00:00')
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AppointmentController))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-27 13:52:06 --> Call to undefined method App\Models\AppointmentModel::getAppointmentDistributionByArea
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Controllers\AppointmentController.php(14): CodeIgniter\Model->__call('getAppointmentDistributionByArea', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AppointmentController->getAppointmentDistributionByArea('2023-11-27')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AppointmentController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-27 13:52:23 --> Call to undefined method App\Models\AppointmentModel::getAppointmentDistributionByArea
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Controllers\AppointmentController.php(14): CodeIgniter\Model->__call('getAppointmentDistributionByArea', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AppointmentController->getAppointmentDistributionByArea('2003-12-12 00:00:00')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AppointmentController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-27 15:22:20 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '`utf8mb4_general_ci`' at line 4 in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `area`, ...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `area`, ...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `area`, ...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `area`, ...', Array, false)
+#4 C:\laragon\www\UniPET\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\UniPET\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\UniPET\app\Models\AppointmentModel.php(42): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\UniPET\app\Controllers\AppointmentController.php(14): App\Models\AppointmentModel->getAppointmentDistributionByArea('2023')
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\AppointmentController->getAppointmentDistributionByArea('2023')
+#9 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AppointmentController))
+#10 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-11-27 15:22:20 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '`utf8mb4_general_ci`' at line 4
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `area`, COUNT(*) as count
+FROM `pet`
+WHERE YEAR(appointment_date) = :YEAR(appointment_date):
+GROUP BY `area COLLATE` `utf8mb4_general_ci`', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\AppointmentModel.php(42): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\AppointmentController.php(14): App\Models\AppointmentModel->getAppointmentDistributionByArea('2023')
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AppointmentController->getAppointmentDistributionByArea('2023')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AppointmentController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-27 15:22:50 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '`utf8mb4_general_ci`' at line 4 in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `area`, ...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `area`, ...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `area`, ...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `area`, ...', Array, false)
+#4 C:\laragon\www\UniPET\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\UniPET\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\UniPET\app\Models\AppointmentModel.php(42): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\UniPET\app\Controllers\AppointmentController.php(14): App\Models\AppointmentModel->getAppointmentDistributionByArea('2023')
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\AppointmentController->getAppointmentDistributionByArea('2023')
+#9 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AppointmentController))
+#10 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-11-27 15:22:50 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '`utf8mb4_general_ci`' at line 4
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `area`, COUNT(*) as count
+FROM `pet`
+WHERE YEAR(appointment_date) = :YEAR(appointment_date):
+GROUP BY `area COLLATE` `utf8mb4_general_ci`', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\AppointmentModel.php(42): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\AppointmentController.php(14): App\Models\AppointmentModel->getAppointmentDistributionByArea('2023')
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AppointmentController->getAppointmentDistributionByArea('2023')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AppointmentController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-27 15:23:11 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '`utf8mb4_general_ci`' at line 4 in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `area`, ...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `area`, ...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `area`, ...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `area`, ...', Array, false)
+#4 C:\laragon\www\UniPET\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\UniPET\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\UniPET\app\Models\AppointmentModel.php(42): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\UniPET\app\Controllers\AppointmentController.php(14): App\Models\AppointmentModel->getAppointmentDistributionByArea('2023')
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\AppointmentController->getAppointmentDistributionByArea('2023')
+#9 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AppointmentController))
+#10 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-11-27 15:23:11 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '`utf8mb4_general_ci`' at line 4
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `area`, COUNT(*) as count
+FROM `pet`
+WHERE YEAR(appointment_date) = :YEAR(appointment_date):
+GROUP BY `area COLLATE` `utf8mb4_general_ci`', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\AppointmentModel.php(42): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\AppointmentController.php(14): App\Models\AppointmentModel->getAppointmentDistributionByArea('2023')
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AppointmentController->getAppointmentDistributionByArea('2023')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AppointmentController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-27 15:23:12 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '`utf8mb4_general_ci`' at line 4 in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `area`, ...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `area`, ...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `area`, ...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `area`, ...', Array, false)
+#4 C:\laragon\www\UniPET\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\UniPET\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\UniPET\app\Models\AppointmentModel.php(42): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\UniPET\app\Controllers\AppointmentController.php(14): App\Models\AppointmentModel->getAppointmentDistributionByArea('2023')
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\AppointmentController->getAppointmentDistributionByArea('2023')
+#9 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AppointmentController))
+#10 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-11-27 15:23:12 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '`utf8mb4_general_ci`' at line 4
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `area`, COUNT(*) as count
+FROM `pet`
+WHERE YEAR(appointment_date) = :YEAR(appointment_date):
+GROUP BY `area COLLATE` `utf8mb4_general_ci`', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\AppointmentModel.php(42): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\AppointmentController.php(14): App\Models\AppointmentModel->getAppointmentDistributionByArea('2023')
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AppointmentController->getAppointmentDistributionByArea('2023')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AppointmentController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-27 15:23:51 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '`utf8mb4_general_ci`' at line 4 in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT GROUP_CO...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT GROUP_CO...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT GROUP_CO...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT GROUP_CO...', Array, false)
+#4 C:\laragon\www\UniPET\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\UniPET\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\UniPET\app\Models\AppointmentModel.php(42): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\UniPET\app\Controllers\AppointmentController.php(14): App\Models\AppointmentModel->getAppointmentDistributionByArea('2023')
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\AppointmentController->getAppointmentDistributionByArea('2023')
+#9 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AppointmentController))
+#10 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-11-27 15:23:51 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '`utf8mb4_general_ci`' at line 4
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT GROUP_CONCAT(area) as area, COUNT(*) as count
+FROM `pet`
+WHERE YEAR(appointment_date) = :YEAR(appointment_date):
+GROUP BY `area COLLATE` `utf8mb4_general_ci`', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\AppointmentModel.php(42): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\AppointmentController.php(14): App\Models\AppointmentModel->getAppointmentDistributionByArea('2023')
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AppointmentController->getAppointmentDistributionByArea('2023')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AppointmentController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-27 15:23:53 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '`utf8mb4_general_ci`' at line 4 in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT GROUP_CO...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT GROUP_CO...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT GROUP_CO...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT GROUP_CO...', Array, false)
+#4 C:\laragon\www\UniPET\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\UniPET\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\UniPET\app\Models\AppointmentModel.php(42): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\UniPET\app\Controllers\AppointmentController.php(14): App\Models\AppointmentModel->getAppointmentDistributionByArea('2023')
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\AppointmentController->getAppointmentDistributionByArea('2023')
+#9 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AppointmentController))
+#10 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-11-27 15:23:53 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '`utf8mb4_general_ci`' at line 4
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT GROUP_CONCAT(area) as area, COUNT(*) as count
+FROM `pet`
+WHERE YEAR(appointment_date) = :YEAR(appointment_date):
+GROUP BY `area COLLATE` `utf8mb4_general_ci`', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\AppointmentModel.php(42): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\AppointmentController.php(14): App\Models\AppointmentModel->getAppointmentDistributionByArea('2023')
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AppointmentController->getAppointmentDistributionByArea('2023')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AppointmentController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-27 15:23:54 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '`utf8mb4_general_ci`' at line 4 in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT GROUP_CO...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT GROUP_CO...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT GROUP_CO...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT GROUP_CO...', Array, false)
+#4 C:\laragon\www\UniPET\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\UniPET\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\UniPET\app\Models\AppointmentModel.php(42): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\UniPET\app\Controllers\AppointmentController.php(14): App\Models\AppointmentModel->getAppointmentDistributionByArea('2023')
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\AppointmentController->getAppointmentDistributionByArea('2023')
+#9 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AppointmentController))
+#10 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-11-27 15:23:54 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '`utf8mb4_general_ci`' at line 4
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT GROUP_CONCAT(area) as area, COUNT(*) as count
+FROM `pet`
+WHERE YEAR(appointment_date) = :YEAR(appointment_date):
+GROUP BY `area COLLATE` `utf8mb4_general_ci`', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\AppointmentModel.php(42): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\AppointmentController.php(14): App\Models\AppointmentModel->getAppointmentDistributionByArea('2023')
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AppointmentController->getAppointmentDistributionByArea('2023')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AppointmentController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-27 15:25:32 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '`utf8mb4_general_ci`' at line 4 in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT GROUP_CO...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT GROUP_CO...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT GROUP_CO...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT GROUP_CO...', Array, false)
+#4 C:\laragon\www\UniPET\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\UniPET\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\UniPET\app\Models\AppointmentModel.php(42): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\UniPET\app\Controllers\AppointmentController.php(14): App\Models\AppointmentModel->getAppointmentDistributionByArea('2023')
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\AppointmentController->getAppointmentDistributionByArea('2023')
+#9 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AppointmentController))
+#10 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-11-27 15:25:32 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '`utf8mb4_general_ci`' at line 4
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT GROUP_CONCAT(area) as area, COUNT(*) as count
+FROM `pet`
+WHERE YEAR(appointment_date) = :YEAR(appointment_date):
+GROUP BY `area COLLATE` `utf8mb4_general_ci`', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\AppointmentModel.php(42): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\AppointmentController.php(14): App\Models\AppointmentModel->getAppointmentDistributionByArea('2023')
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AppointmentController->getAppointmentDistributionByArea('2023')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AppointmentController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-27 15:25:34 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '`utf8mb4_general_ci`' at line 4 in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT GROUP_CO...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT GROUP_CO...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT GROUP_CO...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT GROUP_CO...', Array, false)
+#4 C:\laragon\www\UniPET\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\UniPET\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\UniPET\app\Models\AppointmentModel.php(42): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\UniPET\app\Controllers\AppointmentController.php(14): App\Models\AppointmentModel->getAppointmentDistributionByArea('2023')
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\AppointmentController->getAppointmentDistributionByArea('2023')
+#9 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AppointmentController))
+#10 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-11-27 15:25:34 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '`utf8mb4_general_ci`' at line 4
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT GROUP_CONCAT(area) as area, COUNT(*) as count
+FROM `pet`
+WHERE YEAR(appointment_date) = :YEAR(appointment_date):
+GROUP BY `area COLLATE` `utf8mb4_general_ci`', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\AppointmentModel.php(42): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\AppointmentController.php(14): App\Models\AppointmentModel->getAppointmentDistributionByArea('2023')
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AppointmentController->getAppointmentDistributionByArea('2023')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AppointmentController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-27 15:25:35 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '`utf8mb4_general_ci`' at line 4 in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT GROUP_CO...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT GROUP_CO...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT GROUP_CO...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT GROUP_CO...', Array, false)
+#4 C:\laragon\www\UniPET\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\UniPET\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\UniPET\app\Models\AppointmentModel.php(42): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\UniPET\app\Controllers\AppointmentController.php(14): App\Models\AppointmentModel->getAppointmentDistributionByArea('2023')
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\AppointmentController->getAppointmentDistributionByArea('2023')
+#9 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AppointmentController))
+#10 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-11-27 15:25:35 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '`utf8mb4_general_ci`' at line 4
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT GROUP_CONCAT(area) as area, COUNT(*) as count
+FROM `pet`
+WHERE YEAR(appointment_date) = :YEAR(appointment_date):
+GROUP BY `area COLLATE` `utf8mb4_general_ci`', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\AppointmentModel.php(42): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\AppointmentController.php(14): App\Models\AppointmentModel->getAppointmentDistributionByArea('2023')
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AppointmentController->getAppointmentDistributionByArea('2023')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AppointmentController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-27 15:26:33 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '`utf8mb4_general_ci`' at line 4 in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT GROUP_CO...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT GROUP_CO...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT GROUP_CO...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT GROUP_CO...', Array, false)
+#4 C:\laragon\www\UniPET\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\UniPET\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\UniPET\app\Models\AppointmentModel.php(42): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\UniPET\app\Controllers\AppointmentController.php(14): App\Models\AppointmentModel->getAppointmentDistributionByArea('2023')
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\AppointmentController->getAppointmentDistributionByArea('2023')
+#9 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AppointmentController))
+#10 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-11-27 15:26:33 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '`utf8mb4_general_ci`' at line 4
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT GROUP_CONCAT(area COLLATE utf8mb4_general_ci) as area, COUNT(*) as count
+FROM `pet`
+WHERE YEAR(appointment_date) = :YEAR(appointment_date):
+GROUP BY `area COLLATE` `utf8mb4_general_ci`', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\AppointmentModel.php(42): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\AppointmentController.php(14): App\Models\AppointmentModel->getAppointmentDistributionByArea('2023')
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AppointmentController->getAppointmentDistributionByArea('2023')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AppointmentController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-27 15:26:34 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '`utf8mb4_general_ci`' at line 4 in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT GROUP_CO...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT GROUP_CO...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT GROUP_CO...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT GROUP_CO...', Array, false)
+#4 C:\laragon\www\UniPET\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\UniPET\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\UniPET\app\Models\AppointmentModel.php(42): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\UniPET\app\Controllers\AppointmentController.php(14): App\Models\AppointmentModel->getAppointmentDistributionByArea('2023')
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\AppointmentController->getAppointmentDistributionByArea('2023')
+#9 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AppointmentController))
+#10 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-11-27 15:26:34 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '`utf8mb4_general_ci`' at line 4
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT GROUP_CONCAT(area COLLATE utf8mb4_general_ci) as area, COUNT(*) as count
+FROM `pet`
+WHERE YEAR(appointment_date) = :YEAR(appointment_date):
+GROUP BY `area COLLATE` `utf8mb4_general_ci`', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\AppointmentModel.php(42): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\AppointmentController.php(14): App\Models\AppointmentModel->getAppointmentDistributionByArea('2023')
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AppointmentController->getAppointmentDistributionByArea('2023')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AppointmentController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-27 15:27:27 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '`utf8mb4_general_ci`' at line 4 in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT GROUP_CO...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT GROUP_CO...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT GROUP_CO...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT GROUP_CO...', Array, false)
+#4 C:\laragon\www\UniPET\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\UniPET\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\UniPET\app\Models\AppointmentModel.php(42): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\UniPET\app\Controllers\AppointmentController.php(14): App\Models\AppointmentModel->getAppointmentDistributionByArea('2023')
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\AppointmentController->getAppointmentDistributionByArea('2023')
+#9 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AppointmentController))
+#10 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-11-27 15:27:27 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '`utf8mb4_general_ci`' at line 4
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT GROUP_CONCAT(area COLLATE utf8mb4_general_ci) as area, COUNT(*) as count
+FROM `pet`
+WHERE YEAR(appointment_date) = :YEAR(appointment_date):
+GROUP BY `area COLLATE` `utf8mb4_general_ci`', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\AppointmentModel.php(42): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\AppointmentController.php(14): App\Models\AppointmentModel->getAppointmentDistributionByArea('2023')
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AppointmentController->getAppointmentDistributionByArea('2023')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AppointmentController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-27 15:27:28 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '`utf8mb4_general_ci`' at line 4 in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT GROUP_CO...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT GROUP_CO...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT GROUP_CO...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT GROUP_CO...', Array, false)
+#4 C:\laragon\www\UniPET\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\UniPET\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\UniPET\app\Models\AppointmentModel.php(42): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\UniPET\app\Controllers\AppointmentController.php(14): App\Models\AppointmentModel->getAppointmentDistributionByArea('2023')
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\AppointmentController->getAppointmentDistributionByArea('2023')
+#9 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AppointmentController))
+#10 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-11-27 15:27:28 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '`utf8mb4_general_ci`' at line 4
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT GROUP_CONCAT(area COLLATE utf8mb4_general_ci) as area, COUNT(*) as count
+FROM `pet`
+WHERE YEAR(appointment_date) = :YEAR(appointment_date):
+GROUP BY `area COLLATE` `utf8mb4_general_ci`', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\AppointmentModel.php(42): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\AppointmentController.php(14): App\Models\AppointmentModel->getAppointmentDistributionByArea('2023')
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AppointmentController->getAppointmentDistributionByArea('2023')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AppointmentController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-27 15:27:39 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '`utf8mb4_general_ci`' at line 4 in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT GROUP_CO...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT GROUP_CO...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT GROUP_CO...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT GROUP_CO...', Array, false)
+#4 C:\laragon\www\UniPET\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\UniPET\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\UniPET\app\Models\AppointmentModel.php(42): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\UniPET\app\Controllers\AppointmentController.php(14): App\Models\AppointmentModel->getAppointmentDistributionByArea('2023')
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\AppointmentController->getAppointmentDistributionByArea('2023')
+#9 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AppointmentController))
+#10 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-11-27 15:27:39 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '`utf8mb4_general_ci`' at line 4
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT GROUP_CONCAT(area COLLATE utf8mb4_general_ci) as area, COUNT(*) as count
+FROM `pet`
+WHERE YEAR(appointment_date) = :YEAR(appointment_date):
+GROUP BY `area COLLATE` `utf8mb4_general_ci`', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\AppointmentModel.php(42): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\AppointmentController.php(14): App\Models\AppointmentModel->getAppointmentDistributionByArea('2023')
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AppointmentController->getAppointmentDistributionByArea('2023')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AppointmentController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-27 15:27:40 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '`utf8mb4_general_ci`' at line 4 in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT GROUP_CO...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT GROUP_CO...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT GROUP_CO...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT GROUP_CO...', Array, false)
+#4 C:\laragon\www\UniPET\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\UniPET\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\UniPET\app\Models\AppointmentModel.php(42): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\UniPET\app\Controllers\AppointmentController.php(14): App\Models\AppointmentModel->getAppointmentDistributionByArea('2023')
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\AppointmentController->getAppointmentDistributionByArea('2023')
+#9 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AppointmentController))
+#10 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-11-27 15:27:40 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '`utf8mb4_general_ci`' at line 4
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT GROUP_CONCAT(area COLLATE utf8mb4_general_ci) as area, COUNT(*) as count
+FROM `pet`
+WHERE YEAR(appointment_date) = :YEAR(appointment_date):
+GROUP BY `area COLLATE` `utf8mb4_general_ci`', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\AppointmentModel.php(42): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\AppointmentController.php(14): App\Models\AppointmentModel->getAppointmentDistributionByArea('2023')
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AppointmentController->getAppointmentDistributionByArea('2023')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AppointmentController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-27 15:28:21 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '`utf8mb4_general_ci`' at line 4 in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT GROUP_CO...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT GROUP_CO...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT GROUP_CO...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT GROUP_CO...', Array, false)
+#4 C:\laragon\www\UniPET\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\UniPET\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\UniPET\app\Models\AppointmentModel.php(42): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\UniPET\app\Controllers\AppointmentController.php(14): App\Models\AppointmentModel->getAppointmentDistributionByArea('2023')
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\AppointmentController->getAppointmentDistributionByArea('2023')
+#9 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AppointmentController))
+#10 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-11-27 15:28:21 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '`utf8mb4_general_ci`' at line 4
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT GROUP_CONCAT(area) as area, COUNT(*) as count
+FROM `pet`
+WHERE YEAR(appointment_date) = :YEAR(appointment_date):
+GROUP BY `area COLLATE` `utf8mb4_general_ci`', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\AppointmentModel.php(42): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\AppointmentController.php(14): App\Models\AppointmentModel->getAppointmentDistributionByArea('2023')
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AppointmentController->getAppointmentDistributionByArea('2023')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AppointmentController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-27 15:28:22 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '`utf8mb4_general_ci`' at line 4 in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT GROUP_CO...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT GROUP_CO...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT GROUP_CO...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT GROUP_CO...', Array, false)
+#4 C:\laragon\www\UniPET\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\UniPET\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\UniPET\app\Models\AppointmentModel.php(42): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\UniPET\app\Controllers\AppointmentController.php(14): App\Models\AppointmentModel->getAppointmentDistributionByArea('2023')
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\AppointmentController->getAppointmentDistributionByArea('2023')
+#9 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AppointmentController))
+#10 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-11-27 15:28:22 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '`utf8mb4_general_ci`' at line 4
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT GROUP_CONCAT(area) as area, COUNT(*) as count
+FROM `pet`
+WHERE YEAR(appointment_date) = :YEAR(appointment_date):
+GROUP BY `area COLLATE` `utf8mb4_general_ci`', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\AppointmentModel.php(42): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\AppointmentController.php(14): App\Models\AppointmentModel->getAppointmentDistributionByArea('2023')
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AppointmentController->getAppointmentDistributionByArea('2023')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AppointmentController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-27 15:29:16 --> mysqli_sql_exception: Table 'unipet.your_table' doesn't exist in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT GROUP_CO...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT GROUP_CO...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT GROUP_CO...')
+#3 C:\laragon\www\UniPET\app\Models\AppointmentModel.php(43): CodeIgniter\Database\BaseConnection->query('SELECT GROUP_CO...', Array)
+#4 C:\laragon\www\UniPET\app\Controllers\AppointmentController.php(14): App\Models\AppointmentModel->getAppointmentDistributionByArea('2023')
+#5 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\AppointmentController->getAppointmentDistributionByArea('2023')
+#6 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AppointmentController))
+#7 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-11-27 15:29:16 --> Table 'unipet.your_table' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 APPPATH\Models\AppointmentModel.php(43): CodeIgniter\Database\BaseConnection->query('SELECT GROUP_CONCAT(area COLLATE utf8mb4_general_ci) as area, COUNT(*) as count
+              FROM your_table
+              WHERE YEAR(appointment_date) = ?', [...])
+ 2 APPPATH\Controllers\AppointmentController.php(14): App\Models\AppointmentModel->getAppointmentDistributionByArea('2023')
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AppointmentController->getAppointmentDistributionByArea('2023')
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AppointmentController))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-27 16:26:58 --> mysqli_sql_exception: Table 'unipet.your_transaction_table_name' doesn't exist in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT product_...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product_...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product_...')
+#3 C:\laragon\www\UniPET\app\Models\OrderHModel.php(26): CodeIgniter\Database\BaseConnection->query('SELECT product_...', Array)
+#4 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(15): App\Models\OrderHModel->getBestSellingProductsByYear('2023')
+#5 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\OrderHistoryController->getBestSellingProductsByYear('2023')
+#6 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+#7 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-11-27 16:26:58 --> Table 'unipet.your_transaction_table_name' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 APPPATH\Models\OrderHModel.php(26): CodeIgniter\Database\BaseConnection->query('SELECT product_id, COUNT(*) as sales_count
+                  FROM your_transaction_table_name
+                  WHERE status = \'Delivered\' AND YEAR(created_at) = ?
+                  GROUP BY product_id
+                  ORDER BY sales_count DESC
+                  LIMIT 5', [...])
+ 2 APPPATH\Controllers\OrderHistoryController.php(15): App\Models\OrderHModel->getBestSellingProductsByYear('2023')
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\OrderHistoryController->getBestSellingProductsByYear('2023')
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-27 23:53:02 --> Too few arguments to function App\Controllers\AppointmentController::getData1(), 0 passed in C:\laragon\www\UniPET\system\CodeIgniter.php on line 919 and exactly 1 expected
+in APPPATH\Controllers\AppointmentController.php on line 24.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AppointmentController->getData1()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AppointmentController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()

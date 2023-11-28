@@ -7,7 +7,12 @@ import { loadFonts } from './plugins/webfontloader'
 import store from './store';
 
 import axios from 'axios'
+import { Chart, LineController, LineElement, PointElement, LinearScale, CategoryScale } from 'chart.js';
 
+Chart.register(LineController, LineElement, PointElement, LinearScale, CategoryScale);
+
+import { BarController, BarElement } from 'chart.js';
+Chart.register(BarController, BarElement);
 
 axios.defaults.baseURL="http://unipet.test/public/"
 

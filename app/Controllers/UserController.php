@@ -22,6 +22,13 @@ class UserController extends ResourceController
 
         return null;
     }
+    public function getCustomerDetails($customerId)
+    {
+        $customerModel = new UserModel();
+        $customerDetails = $customerModel->find($customerId);
+
+        return $this->response->setJSON($customerDetails);
+    }
 
     public function register()
     {

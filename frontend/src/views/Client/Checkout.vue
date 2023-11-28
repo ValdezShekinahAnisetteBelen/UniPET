@@ -326,6 +326,9 @@
             <input type="number" id="unit-price-val" class="form-control" v-model="product.unit_price">
           </div>
 
+          <input type="number" id="unit-price-val" class="form-control" v-model="product.total_price" v-show="false">
+
+
           <div style="flex: 0 0 calc(33.33% - 10px); margin-right: 0; margin-bottom: 10px;">
             <label for="unit-price-val" class="col-form-label">Image:</label>
             <input type="text" id="unit-price-val" class="form-control" v-model="product.image">

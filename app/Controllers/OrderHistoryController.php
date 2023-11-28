@@ -2,10 +2,54 @@
 
 namespace App\Controllers;
 
+
 use App\Controllers\BaseController;
+use App\Models\OrderHModel;
 
 class OrderHistoryController extends BaseController
 {
+    public function editStatus()
+    {
+        // Receive the updated status and order ID from the frontend
+        $status = $this->request->getVar('status');
+        $orderId = $this->request->getVar('orderId');
+    
+        // Update the status in the database
+        $orderModel = new OrderHModel();
+        $orderModel->update($orderId, ['status' => $status]);
+    
+        // Return a success response
+        return $this->response->setJSON([
+            'status' => true,
+            'message' => 'Status updated successfully',
+            'data' => [
+                'orderId' => $orderId,
+                'newStatus' => $status,
+            ],
+        ]);
+    }
+    
+
+    public function getOrders()
+    {
+        $transactionNo = new OrderHModel();
+        $orders = $transactionNo->findAll();
+
+        return $this->response->setJSON($orders);
+    }
+
+    public function getBestSellingProductsByYear(string $year)
+    {
+        $transactionNo = new OrderHModel();
+        $data = $transactionNo->getBestSellingProductsByYear($year);
+    
+        // Check if data is not empty before including it in the response
+        if (!empty($data)) {
+            return $this->response->setJSON(['year' => $year, 'data' => $data]);
+        } else {
+            return $this->response->setJSON(['status' => 'No data found']);
+        }
+    }
     public function index()
     {
         //

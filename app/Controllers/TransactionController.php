@@ -17,6 +17,13 @@ public function __construct()
 {
     $this->transactionModel = new TransactionModel(); // Load the model
 }
+public function getTransactionDetails($transactionNo)
+{
+    $transactionModel = new TransactionModel();
+    $transactionDetails = $transactionModel->where('transaction_no', $transactionNo)->first();
+
+    return $this->response->setJSON($transactionDetails);
+}
     public function index()
     {
         //

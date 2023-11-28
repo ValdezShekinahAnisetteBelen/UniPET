@@ -1,310 +1,334 @@
 <template>
-  <div class="container">
-         <div class="navigation">
-             <ul>
-                 <li>
-                     <a href="#">
-                         <span class="icon">
-                             <ion-icon name="logo-apple"></ion-icon>
-                         </span>
-                         <span class="title">Brand Name</span>
-                     </a>
-                 </li>
- 
-                 <li>
-                     <a href="Product.vue">
-                         <span class="icon">
-                             <ion-icon name="home-outline"></ion-icon>
-                         </span>
-                         <span class="title">Dashboard</span>
-                     </a>
-                 </li>
- 
-                 <li>
-                     <a href="#">
-                         <span class="icon">
-                             <ion-icon name="people-outline"></ion-icon>
-                         </span>
-                         <span class="title">Customers</span>
-                     </a>
-                 </li>
- 
-                 <li>
-                     <a href="#">
-                         <span class="icon">
-                             <ion-icon name="chatbubble-outline"></ion-icon>
-                         </span>
-                         <span class="title">Product</span>
-                     </a>
-                 </li>
- 
-                 <li>
-                     <a href="#">
-                         <span class="icon">
-                             <ion-icon name="help-outline"></ion-icon>
-                         </span>
-                         <span class="title">Help</span>
-                     </a>
-                 </li>
- 
-                 <li>
-                     <a href="#">
-                         <span class="icon">
-                             <ion-icon name="settings-outline"></ion-icon>
-                         </span>
-                         <span class="title">Settings</span>
-                     </a>
-                 </li>
- 
-                 <li>
-                     <a href="#">
-                         <span class="icon">
-                             <ion-icon name="lock-closed-outline"></ion-icon>
-                         </span>
-                         <span class="title">Password</span>
-                     </a>
-                 </li>
- 
-                 <li>
-                     <a href="#">
-                         <span class="icon">
-                             <ion-icon name="log-out-outline"></ion-icon>
-                         </span>
-                         <span class="title">Sign Out</span>
-                     </a>
-                 </li>
-             </ul>
-         </div>
- 
-         <!-- ========================= Main ==================== -->
-         <div class="main">
-             <div class="topbar">
-                 <div class="toggle">
-                     <ion-icon name="menu-outline"></ion-icon>
-                 </div>
- 
-                 <div class="search">
-                     <label>
-                         <input type="text" placeholder="Search here">
-                         <ion-icon name="search-outline"></ion-icon>
-                     </label>
-                 </div>
- 
-                 <div class="user">
-                     <img src="assets/imgs/customer01.jpg" alt="">
-                 </div>
-             </div>
- 
-             <!-- ======================= Cards ================== -->
-             <div class="cardBox">
-                 <div class="card">
-                     <div>
-                         <div class="numbers">1,504</div>
-                         <div class="cardName">Daily Views</div>
-                     </div>
- 
-                     <div class="iconBx">
-                         <ion-icon name="eye-outline"></ion-icon>
-                     </div>
-                 </div>
- 
-                 <div class="card">
-                     <div>
-                         <div class="numbers">80</div>
-                         <div class="cardName">Sales</div>
-                     </div>
- 
-                     <div class="iconBx">
-                         <ion-icon name="cart-outline"></ion-icon>
-                     </div>
-                 </div>
- 
-                 <div class="card">
-                     <div>
-                         <div class="numbers">284</div>
-                         <div class="cardName">Comments</div>
-                     </div>
- 
-                     <div class="iconBx">
-                         <ion-icon name="chatbubbles-outline"></ion-icon>
-                     </div>
-                 </div>
- 
-                 <div class="card">
-                     <div>
-                         <div class="numbers">$7,842</div>
-                         <div class="cardName">Earning</div>
-                     </div>
- 
-                     <div class="iconBx">
-                         <ion-icon name="cash-outline"></ion-icon>
-                     </div>
-                 </div>
-             </div>
- 
-             <!-- ================ Order Details List ================= -->
-             <div class="details">
-                 <div class="recentOrders">
-                     <div class="cardHeader">
-                         <h2>Recent Orders</h2>
-                         <a href="#" class="btn">View All</a>
-                     </div>
- 
-                     <table>
-                         <thead>
-                             <tr>
-                                 <td>Name</td>
-                                 <td>Price</td>
-                                 <td>Payment</td>
-                                 <td>Status</td>
-                             </tr>
-                         </thead>
- 
-                         <tbody>
-                             <tr>
-                                 <td>Star Refrigerator</td>
-                                 <td>$1200</td>
-                                 <td>Paid</td>
-                                 <td><span class="status delivered">Delivered</span></td>
-                             </tr>
- 
-                             <tr>
-                                 <td>Dell Laptop</td>
-                                 <td>$110</td>
-                                 <td>Due</td>
-                                 <td><span class="status pending">Pending</span></td>
-                             </tr>
- 
-                             <tr>
-                                 <td>Apple Watch</td>
-                                 <td>$1200</td>
-                                 <td>Paid</td>
-                                 <td><span class="status return">Return</span></td>
-                             </tr>
- 
-                             <tr>
-                                 <td>Addidas Shoes</td>
-                                 <td>$620</td>
-                                 <td>Due</td>
-                                 <td><span class="status inProgress">In Progress</span></td>
-                             </tr>
- 
-                             <tr>
-                                 <td>Star Refrigerator</td>
-                                 <td>$1200</td>
-                                 <td>Paid</td>
-                                 <td><span class="status delivered">Delivered</span></td>
-                             </tr>
- 
-                             <tr>
-                                 <td>Dell Laptop</td>
-                                 <td>$110</td>
-                                 <td>Due</td>
-                                 <td><span class="status pending">Pending</span></td>
-                             </tr>
- 
-                             <tr>
-                                 <td>Apple Watch</td>
-                                 <td>$1200</td>
-                                 <td>Paid</td>
-                                 <td><span class="status return">Return</span></td>
-                             </tr>
- 
-                             <tr>
-                                 <td>Addidas Shoes</td>
-                                 <td>$620</td>
-                                 <td>Due</td>
-                                 <td><span class="status inProgress">In Progress</span></td>
-                             </tr>
-                         </tbody>
-                     </table>
-                 </div>
- 
-                 <!-- ================= New Customers ================ -->
-                 <div class="recentCustomers">
-                     <div class="cardHeader">
-                         <h2>Recent Customers</h2>
-                     </div>
- 
-                     <table>
-                         <tr>
-                             <td width="60px">
-                                 <div class="imgBx"><img src="assets/imgs/customer02.jpg" alt=""></div>
-                             </td>
-                             <td>
-                                 <h4>David <br> <span>Italy</span></h4>
-                             </td>
-                         </tr>
- 
-                         <tr>
-                             <td width="60px">
-                                 <div class="imgBx"><img src="assets/imgs/customer01.jpg" alt=""></div>
-                             </td>
-                             <td>
-                                 <h4>Amit <br> <span>India</span></h4>
-                             </td>
-                         </tr>
- 
-                         <tr>
-                             <td width="60px">
-                                 <div class="imgBx"><img src="assets/imgs/customer02.jpg" alt=""></div>
-                             </td>
-                             <td>
-                                 <h4>David <br> <span>Italy</span></h4>
-                             </td>
-                         </tr>
- 
-                         <tr>
-                             <td width="60px">
-                                 <div class="imgBx"><img src="assets/imgs/customer01.jpg" alt=""></div>
-                             </td>
-                             <td>
-                                 <h4>Amit <br> <span>India</span></h4>
-                             </td>
-                         </tr>
- 
-                         <tr>
-                             <td width="60px">
-                                 <div class="imgBx"><img src="assets/imgs/customer02.jpg" alt=""></div>
-                             </td>
-                             <td>
-                                 <h4>David <br> <span>Italy</span></h4>
-                             </td>
-                         </tr>
- 
-                         <tr>
-                             <td width="60px">
-                                 <div class="imgBx"><img src="assets/imgs/customer01.jpg" alt=""></div>
-                             </td>
-                             <td>
-                                 <h4>Amit <br> <span>India</span></h4>
-                             </td>
-                         </tr>
- 
-                         <tr>
-                             <td width="60px">
-                                 <div class="imgBx"><img src="assets/imgs/customer01.jpg" alt=""></div>
-                             </td>
-                             <td>
-                                 <h4>David <br> <span>Italy</span></h4>
-                             </td>
-                         </tr>
- 
-                         <tr>
-                             <td width="60px">
-                                 <div class="imgBx"><img src="assets/imgs/customer02.jpg" alt=""></div>
-                             </td>
-                             <td>
-                                 <h4>Amit <br> <span>India</span></h4>
-                             </td>
-                         </tr>
-                     </table>
-                 </div>
-             </div>
-         </div>
-     </div>
- </template>
- 
- <style>
-   @import '../../../src/assets/User/css/dashboard.css';
- </style>
+    <v-app>
+      <v-app-bar app color="#03C9D7">
+        <v-app-bar-nav-icon @click.stop="drawer = !drawer" color="#FFFF"></v-app-bar-nav-icon>
+        <v-app-bar-title class="d-inline align-center" style="color: #FFFFFF;">
+          UniPET
+          <v-icon color="#FFFF">mdi-paw</v-icon>
+        </v-app-bar-title>
+      </v-app-bar>
+  
+      <v-navigation-drawer
+        app
+        v-model="drawer"
+        style="color: #FB9678; overflow-y: auto;"
+        class="custom-scrollbar"
+      >
+      <v-list style="background-color: #03C9D7;">
+  <v-list-item>
+    <v-list-item-content>
+      <v-list-item-icon>
+      </v-list-item-icon>
+      <v-list-item-title>DASHBOARD</v-list-item-title>
+    </v-list-item-content>
+  </v-list-item>
+  <router-link v-for="(link, index) in links1" :key="index" :to="link.route" class="nav-link" style="color: #03C9D7; font-weight: bold; display: flex; align-items: center;">
+    <v-icon>{{ link.icon }}</v-icon>
+    {{ link.text }}
+  </router-link>
+</v-list>
+
+<v-list style="background-color: #03C9D7;">
+  <v-list-item>
+    <v-list-item-content>
+      <v-list-item-icon>
+      </v-list-item-icon>
+      <v-list-item-title>E-COMMERCE</v-list-item-title>
+    </v-list-item-content>
+  </v-list-item>
+  <router-link v-for="(link, index) in links2" :key="index" :to="link.route" class="nav-link" style="color: #03C9D7; font-weight: bold; display: flex; align-items: center;">
+    <v-icon>{{ link.icon }}</v-icon>
+    {{ link.text }}
+  </router-link>
+</v-list>
+
+<v-list style="background-color: #03C9D7;">
+  <v-list-item>
+    <v-list-item-content>
+      <v-list-item-icon>
+      </v-list-item-icon>
+      <v-list-item-title>PETS APPOINTMENT</v-list-item-title>
+    </v-list-item-content>
+  </v-list-item>
+  <router-link v-for="(link, index) in links3" :key="index" :to="link.route" class="nav-link" style="color: #03C9D7; font-weight: bold; display: flex; align-items: center;">
+    <v-icon>{{ link.icon }}</v-icon>
+    {{ link.text }}
+  </router-link>
+</v-list>
+
+<v-list style="background-color: #03C9D7;">
+  <v-list-item>
+    <v-list-item-content>
+      <v-list-item-icon>
+      </v-list-item-icon>
+      <v-list-item-title>ACCOUNTS</v-list-item-title>
+    </v-list-item-content>
+  </v-list-item>
+  <router-link v-for="(link, index) in links4" :key="index" :to="link.route" class="nav-link" style="color: #03C9D7; font-weight: bold; display: flex; align-items: center;">
+    <v-icon>{{ link.icon }}</v-icon>
+    {{ link.text }}
+  </router-link>
+</v-list>
+  
+      </v-navigation-drawer>
+  
+      <v-main class="d-flex align-center justify-center" style="min-height: 300px;">
+  
+        <v-container class="bg-white"> <!-- Set background color to white -->
+          <v-row no-gutters>
+            <v-col>
+              <v-sheet class="pa-2 ma-2 shadow"> <!-- Add shadow class for shadows -->
+                <p>Top 5 Best-Selling Products in the Year 2023</p>
+<div v-if="productData.length > 0" class="d-flex flex-row flex-nowrap overflow-auto">
+  <div v-for="(item, index) in productData" :key="index" class="card mr-3" style="width: 18rem; position: relative;">
+    <div v-if="index < 5" style="position: absolute; top: 10px; left: 10px; background-color: #0CC0DF; color: white; border-radius: 30%; padding: 5px; font-size: 15px;">
+      {{ index + 1 }}
+    </div>
+    <img :src="item.productImage" class="card-img-top" alt="Product Image" style="max-width: 100%; height: auto;">
+    <div class="card-body">
+      <p class="card-text">Product ID: {{ item.productId }}</p>
+      <p class="card-text">Product Name: {{ item.productName }}</p>
+      <p class="card-text">Total Sales: {{ item.totalSales }}</p>
+    </div>
+  </div>
+</div>
+
+              </v-sheet>
+            </v-col>
+  
+            <v-col cols="6">
+              <v-sheet class="pa-2 ma-2 shadow">
+                <div>
+                <p>Distribution of Appointments by Area in the Year 2023</p>
+                <AppointmentsByArea :appointment="appointment" :chartOptions2="chartOptions2" />
+            </div>
+              </v-sheet>
+            </v-col>
+  
+            <v-col>
+              <v-sheet class="pa-2 ma-2 shadow">
+                .v-col-auto
+              </v-sheet>
+            </v-col>
+          </v-row>
+  
+          <v-row no-gutters>
+            <v-col>
+              <v-sheet class="pa-2 ma-2 shadow">
+                .v-col-auto
+              </v-sheet>
+            </v-col>
+  
+            <v-col cols="2">
+              <v-sheet class="pa-2 ma-2 shadow">
+                .v-col-2
+              </v-sheet>
+            </v-col>
+  
+            <v-col>
+              <v-sheet class="pa-2 ma-2 shadow">
+                .v-col-auto
+              </v-sheet>
+            </v-col>
+          </v-row>
+        </v-container>
+  
+      </v-main>
+    </v-app>
+  </template>
+  
+  <script>
+import axios from 'axios';
+import 'chartjs-adapter-moment';
+import 'chartjs-adapter-date-fns';
+import { Chart, LineController, LineElement, PointElement, LinearScale, CategoryScale } from 'chart.js';
+import { ref, onMounted, watch } from 'vue';
+import DynamicCharts from './DynamicCharts.vue';
+import AppointmentsByArea from './Appointments_by_Area.vue';
+
+Chart.register(LineController, LineElement, PointElement, LinearScale, CategoryScale);
+
+export default {
+  components: {
+    DynamicCharts,
+    AppointmentsByArea,
+  },
+  data() {
+    return {
+      productData: [],
+      drawer: false,
+      chartData: {},
+      appointment: {},
+      chartOptions: {},
+      chartOptions2: {},
+      links1: [
+      { text: ' Key Metrics ', route: '/Dashboard', icon: 'mdi-view-dashboard' },
+    ],
+    links2: [
+      { text: ' Orders ', route: '/admin/orders', icon: 'mdi-cart' },
+      { text: ' Products ', route: '/admin/products', icon: 'mdi-cart' },
+    ],
+    links3: [
+      { text: ' Appointments ', route: '/admin/Appointments', icon: 'mdi-paw' },
+      { text: ' Pets ', route: '/admin/Pets', icon: 'mdi-paw' },
+      { text: ' Customers ', route: '/admin/Customers', icon: 'mdi-paw' },
+    ],
+    links4: [
+      { text: ' Customer Profiles ', route: '/admin/Profiles', icon: 'mdi-account' },
+      { text: ' Admin Accounts ', route: '/admin/Admin', icon: 'mdi-account' },
+      { text: ' Customers Payment Status ', route: '/admin/Payment', icon: 'mdi-account' },
+    ],
+  };
+  },
+  setup() {
+    const appointment = ref({
+      labels: [],
+      datasets: [
+        {
+          data: [],
+          backgroundColor: [
+            'rgba(75, 192, 192, 0.8)',
+            'rgba(255, 99, 132, 0.8)',
+            'rgba(54, 162, 235, 0.8)',
+            'rgba(153, 102, 255, 0.8)',
+          ],
+        },
+      ],
+    });
+    let myChart;
+
+    onMounted(() => {
+      // Initialization logic can be added here if needed
+    });
+
+    watch(
+      () => appointment.value,
+      (newData) => {
+        if (myChart) {
+          myChart.data = {
+            labels: newData.labels,
+            datasets: [
+              {
+                label: 'Distribution of Appointments by Area in the Year 2023',
+                data: newData.datasets[0].data,
+                backgroundColor: [
+                  'rgba(75, 192, 192, 0.8)',
+                  'rgba(255, 99, 132, 0.8)',
+                  'rgba(54, 162, 235, 0.8)',
+                  'rgba(153, 102, 255, 0.8)',
+                ],
+              },
+            ],
+          };
+          myChart.update();
+        }
+      },
+      { deep: true }
+    );
+    const chartData = ref({
+      labels: [],
+      datasets: [
+        {
+          data: [],
+          backgroundColor: [
+            'rgba(75, 192, 192, 0.8)',
+            'rgba(255, 99, 132, 0.8)',
+            'rgba(54, 162, 235, 0.8)',
+            'rgba(153, 102, 255, 0.8)',
+          ],
+        },
+      ],
+    });
+    let myChart2;
+
+    onMounted(() => {
+      // Initialization logic can be added here if needed
+    });
+
+    watch(
+  () => chartData,
+  (newData) => {
+    if (myChart2) {
+      myChart2.data = {
+        labels: newData.map((product) => product.product_name),
+        datasets: [
+          {
+            label: 'Top 5 Best-Selling Products in the Year 2023',
+            data: newData.map((product) => product.sales_count),
+            backgroundColor: [
+              'rgba(75, 192, 192, 0.8)',
+              'rgba(255, 99, 132, 0.8)',
+              'rgba(54, 162, 235, 0.8)',
+              'rgba(153, 102, 255, 0.8)',
+            ],
+          },
+        ],
+      };
+      myChart2.update();
+    }
+  },
+  { deep: true }
+);
+
+    return {
+      appointment,
+      chartData,
+    };
+  },
+  methods: {
+  navigate(link) {
+    console.log(`Navigating to: ${link.route}`);
+  },
+  fetchAppointmentDistributionByArea(year) {
+    axios.get(`api/appointments/distribution/${year}`).then((response) => {
+      this.appointment.labels = response.data.map((item) => item.area);
+      this.appointment.datasets[0].data = response.data.map((item) => item.count);
+    });
+  },
+  // New method to fetch best-selling products
+  // Assuming this is within your Vue component
+
+  fetchBestSellingProducts(year) {
+  axios.get(`api/best/products/${year}`)
+    .then((response) => {
+      console.log('Response from API:', response.data);
+
+      // Extract product_id, name, image, and total_sales for display
+      const productData = response.data.data.map((item) => ({
+        productId: item.product_id,
+        productName: item.name,
+        productImage: item.image, // Assuming the image URL is provided
+        totalSales: item.total_sales,
+      }));
+
+      // Update chart data
+      this.chartData = {
+        labels: productData.map((item) => item.productId),
+        datasets: [
+          {
+            label: 'Top 5 Best-Selling Products in the Year 2023',
+            data: productData.map((item) => item.totalSales),
+            backgroundColor: [
+              'rgba(75, 192, 192, 0.8)',
+              'rgba(255, 99, 132, 0.8)',
+              'rgba(54, 162, 235, 0.8)',
+              'rgba(153, 102, 255, 0.8)',
+            ],
+          },
+        ],
+      };
+
+      // Set up additional data for display in the template
+      this.productData = productData;
+    })
+    .catch((error) => {
+      console.error('Error fetching best-selling products:', error);
+    });
+},
+  },
+mounted() {
+  this.fetchAppointmentDistributionByArea(2023);
+  this.fetchBestSellingProducts(2023); // Fetch best-selling products on mount
+},
+};
+</script>

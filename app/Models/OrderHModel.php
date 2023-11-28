@@ -13,8 +13,21 @@ class OrderHModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['product_id', 'customer_id', 'transaction_no'];
-
+    protected $allowedFields    = ['product_id', 'customer_id', 'transaction_no', 'status'];
+    public function getBestSellingProductsByYear($Year)
+    {
+        $query = "SELECT pp.product_id, p.name, p.image, COUNT(*) as total_sales
+                  FROM purchase_product pp
+                  JOIN products p ON pp.product_id = p.id
+                  WHERE pp.status = 'Delivered' AND YEAR(pp.created_at) = ?
+                  GROUP BY pp.product_id
+                  ORDER BY total_sales DESC
+                  LIMIT 5";
+    
+        return $this->db->query($query, [$Year])->getResultArray();
+    }
+    
+    
     // Dates
     protected $useTimestamps = false;
     protected $dateFormat    = 'datetime';

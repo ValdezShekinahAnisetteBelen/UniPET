@@ -10,6 +10,102 @@ class Product extends ResourceController
     protected $modelName = 'App\Models\ProductModel';
     protected $format    = 'json';
 
+    public function getProductDetails2($productId)
+    {
+        $modelName = new ProductModel();
+        $productDetails = $modelName->find($productId);
+
+        return $this->response->setJSON($productDetails);
+    }
+  
+    // public function editStatus2()
+    // {
+    //     $orderId = $this->request->getPost('orderId');
+    //     // Get the rest of the fields from the request
+    //     $name = $this->request->getPost('name');
+    //     $description = $this->request->getPost('description');
+    //     $price = $this->request->getPost('price');
+    //     $stock = $this->request->getPost('stock');
+    //     $image = $this->request->getPost('image');
+    //     $productgroup = $this->request->getPost('productgroup');
+    //     $status = $this->request->getPost('status');
+    
+    //     // Update the product in the database based on the $orderId
+    //     $productModel = new ProductModel();
+    //     $data = [
+    //         'name' => $name,
+    //         'description' => $description,
+    //         'price' => $price,
+    //         'stock' => $stock,
+    //         'image' => $image,
+    //         'productgroup' => $productgroup,
+    //         'status' => $status,
+    //     ];
+    
+    //     // Perform the update
+    //     $productModel->update($orderId, $data);
+    
+    //     // Send a response indicating success
+    //     return $this->response
+    //         ->setStatusCode(200)
+    //         ->setJSON([
+    //             'success' => true,
+    //             'message' => 'Product updated successfully',
+    //         ]);
+    // }
+    
+    
+    public function editStatus2()
+    {
+        try {
+            $orderId = $this->request->getVar('orderId');
+            $name = $this->request->getVar('name');
+            $description = $this->request->getVar('description');
+            $price = $this->request->getVar('price');
+            $stock = $this->request->getVar('stock');
+            $image = $this->request->getVar('image');
+            $productgroup = $this->request->getVar('productgroup');
+            $status = $this->request->getVar('status');
+        
+            // Update the product in the database based on the $orderId
+            $modelName = new ProductModel();
+            $data = [
+                'name' => $name,
+                'description' => $description,
+                'price' => $price,
+                'stock' => $stock,
+                'image' => $image,
+                'productgroup' => $productgroup,
+                'status' => $status,
+            ];
+    
+            $modelName->update($orderId, $data);
+    
+            // Send a response indicating success
+            return $this->response->setJSON([
+                'success' => true,
+                'message' => 'Product updated successfully',
+            ]);
+        } catch (\Exception $e) {
+            // Log the exception or print the error message for debugging
+            error_log($e->getMessage());
+    
+            // Send a response indicating failure
+            return $this->response->setStatusCode(500)->setJSON([
+                'success' => false,
+                'message' => 'Internal Server Error',
+            ]);
+        }
+    }
+    
+    
+
+    // Helper function to get the request
+    private function getRequest()
+    {
+        return service('request');
+    }
+
     public function index()
     {
 

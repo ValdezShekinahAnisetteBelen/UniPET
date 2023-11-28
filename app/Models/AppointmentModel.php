@@ -13,7 +13,7 @@ class AppointmentModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields = ['pet_name', 'breed', 'date_of_birth', 'weight', 'color', 'temperature','full_name', 'area', 'city', 'postal_code', 'contact_no', 'email_address','appointment_date','appointment_time', 'appointment_type', 'grooming_type', 'grooming_shampoo', 'image', 'customer_id', 'status'];
+    protected $allowedFields = ['pet_name', 'breed', 'date_of_birth', 'weight', 'color', 'temperature','full_name', 'area', 'city', 'postal_code', 'contact_no', 'email_address','appointment_date','appointment_time', 'appointment_type', 'grooming_type', 'grooming_shampoo', 'image', 'customer_id', 'status', 'Year'];
     
     public function updateUserDataAndPetData($pet_id, $combinedData)
     {
@@ -32,6 +32,14 @@ class AppointmentModel extends Model
             $this->db->transRollback();
             throw $e;
         }
+    }
+    public function getAppointmentDistributionByArea($Year) {
+        $query = "SELECT area, COUNT(*) as count
+                  FROM pet
+                  WHERE YEAR(appointment_date) = ?
+                  GROUP BY area";
+    
+        return $this->db->query($query, [$Year])->getResultArray();
     }
     
     

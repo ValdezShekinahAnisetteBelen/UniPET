@@ -9,6 +9,13 @@ use App\Models\AppointmentModel;
 
 class AppointmentController extends ResourceController
 {
+    public function getAppointmentDistributionByArea(string $Year) {
+        $model = new AppointmentModel();
+        $data = $model->getAppointmentDistributionByArea($Year);
+        
+        return $this->respond($data);
+    }
+    
     public function index()
     {
         //
