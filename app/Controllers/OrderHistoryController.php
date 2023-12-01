@@ -5,6 +5,7 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 use App\Models\OrderHModel;
+use App\Models\PurchaseModel;
 
 class OrderHistoryController extends BaseController
 {
@@ -54,6 +55,23 @@ class OrderHistoryController extends BaseController
     {
         //
     }
+
+    public function deleteOrdersByCustomer($customer_id)
+    {
+        try {
+            $orderModel = new PurchaseModel(); // Use PurchaseModel here
+    
+            // Delete all orders for the specific customer_id
+            $orderModel->where('customer_id', $customer_id)->delete();
+    
+            // Optionally, you can return a response to indicate success
+            return $this->response->setJSON(['message' => 'Orders deleted successfully']);
+        } catch (\Exception $e) {
+            // Handle any exceptions that might occur during deletion
+            return $this->response->setJSON(['error' => $e->getMessage()])->setStatusCode(500);
+        }
+    }
+    
 
     public function saveOrder()
     {

@@ -12,6 +12,10 @@ $routes->get('/getData', 'Product::getData');
 $routes->post('api/products', 'Product::create');
 $routes->post('api/cart/add-to-cart', 'CartController::addToCart');
 $routes->delete('api/cart/delete/(:num)', 'CartController::del/$1');
+$routes->get('api/getPetIdsByCustomerId/(:num)', 'AppointmentController::getPetIdsByCustomerId/$1');
+$routes->get('api/getPetDataById/(:num)', 'AppointmentController::getPetDataById/$1');
+
+
 $routes->get('/getData1', 'AppointmentController::getData1');
 $routes->post('/save', 'AppointmentController::save');
 $routes->get('api/user', 'UserController::homepage');
@@ -20,7 +24,6 @@ $routes->get('api/product/details/(:segment)', 'Product::getProductDetails/$1');
 // In your CodeIgniter 4 routes file (app/Config/Routes.php or similar)
 $routes->get('getData1/(:segment)', 'AppointmentController::getData1/$1');
 $routes->post('api/updatePetData/(:num)', 'AppointmentController::updateUserDataAndPetData/$1');
-$routes->delete('api/cart/delete/(:num)', 'CartController::del/$1');
 $routes->post('api/cart/update/(:segment)', 'CartController::updateItem/$1');
 $routes->post('api/cart/purchase', 'PurchaseController::purchase');
 $routes->post('api/transaction/save', 'TransactionController::saveTransaction');
@@ -38,6 +41,14 @@ $routes->get('api/transactions/(:num)', 'TransactionController::getTransactionDe
 // app/Config/Routes.php
 
 $routes->post('api/edit-status2', 'Product::editStatus2');
+$routes->delete('api/order-history/delete-orders/(:num)', 'OrderHistoryController::deleteOrdersByCustomer/$1');
+
+$routes->delete('api/checkout1/delete/(:num)', 'PurchaseController::delete/$1');
+// Add this route to handle the cancelOrder method
+$routes->get('api/cart/get-by-customer-id/(:num)', 'CartController::getCartByCustomerId/$1');
+
+$routes->delete('api/cancel-order/(:num)/(:num)', 'OrderController::cancelOrder/$1/$2');
+
 
 
 

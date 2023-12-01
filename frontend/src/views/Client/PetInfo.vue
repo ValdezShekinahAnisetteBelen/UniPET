@@ -581,8 +581,6 @@
     'weight',
     'color',
     'temperature',
-    
-    
   ];
 
   for (const field of requiredFields) {
@@ -592,16 +590,25 @@
     }
   }
 
-  // Continue with the confirmation dialog
-  this.isFormSubmitted = true;
+  // Check the message to determine if the day is suitable
+  const messageElement = document.getElementById("message");
 
-  if (window.confirm('Are you sure you want to book now?')) {
-    // User clicked OK, proceed with the form submission
-    this.save();
+  if (messageElement.textContent.includes('suitable day')) {
+    // Suitable day chosen, proceed with the confirmation dialog
+    this.isFormSubmitted = true;
+
+    if (window.confirm('Are you sure you want to book now?')) {
+      // User clicked OK, proceed with the form submission
+      this.save();
+    } else {
+      // User clicked Cancel, do nothing or show a message
+    }
   } else {
-    // User clicked Cancel, do nothing or show a message
+    // Unsuitable day chosen, show a message to the user
+    alert('Please choose a suitable day for the appointment.');
   }
 },
+
 
     toggleAppointmentType(item) {
         if (this.isFormSubmitted) {

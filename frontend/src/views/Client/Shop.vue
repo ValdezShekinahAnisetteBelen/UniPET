@@ -182,10 +182,12 @@
                     </label>
                 </div>
                 <div class="d-flex align-items-center justify-content-end">
-                    <button @click="deleteRecord(cartItem.name)" type="button" class="btn btn-danger btn-sm m-1">
-                        <i class="fas fa-trash"></i>
-                    </button>
-                </div>
+  <!-- Updated deleteSelectedRecords method -->
+<button @click="deleteSelectedRecords" type="button" class="btn btn-danger btn-sm m-1">
+    <i class="fas fa-trash"></i>
+</button>
+
+</div>
             </div>
         </li>
     </ul>
@@ -359,10 +361,10 @@ export default {
   },
   data() {
     return {
+      
       product: {},
       info: [], // All products
       cart: [],
-      cart:{},
       selectedCategory: '', // Selected category
       myObject: {
         content: null,
@@ -409,33 +411,35 @@ export default {
     }, 1000); // Simulated delay
   },
   methods: {
-  async PurchaseRecord() {
-    // Filter selected items in the cart
-    const selectedItems = this.cart.filter(cartItem => cartItem.selected);
+  
+    async PurchaseRecord() {
+  // Calculate the total price of selected items in the cart
+  const totalSelectedPrice = this.calculateSelectedTotalPrice();
 
-    // Process each selected item
-    for (const cartItem of selectedItems) {
-      console.log('Name:', cartItem.name);
-      console.log('Total Price:', cartItem.price * cartItem.quantity);
-      console.log(cartItem.id);
-      try {
-        const response = await axios.post('api/cart/purchase', {
+  // Filter selected items in the cart
+  const selectedItems = this.cart.filter(cartItem => cartItem.selected);
+
+  // Process each selected item
+  for (const cartItem of selectedItems) {
+    console.log('Name:', cartItem.name);
+    console.log(cartItem.id);
+    try {
+      const response = await axios.post('api/cart/purchase', {
         customer_id: this.$store.state.userId,
         product_id: cartItem.product_id,
         name: cartItem.name,
-        total_price: cartItem.price * cartItem.quantity,
+        total_price: totalSelectedPrice,
         image: cartItem.image,
         productgroup: cartItem.productgroup,
         quantity: cartItem.quantity,
         unit_price: cartItem.price,
-        
       });
 
       if (response.status === 200) {
         // Assuming you receive an 'id' from the server
         const purchaseRecord = {
           // Map the relevant fields from the response or modify as needed
-          customer_id:  this.$store.state.userId,
+          customer_id: this.$store.state.userId,
           product_id: cartItem.product_id,
           name: response.data.name,
           total_price: response.data.total_price,
@@ -455,15 +459,14 @@ export default {
       } else {
         console.error('Failed to insert the purchase record into the database');
       }
-
-      } catch (error) {
-        console.error('Error:', error);
-        window.alert('Failed to complete the purchase. Please try again.');
-      }
+    } catch (error) {
+      console.error('Error:', error);
+      window.alert('Failed to complete the purchase. Please try again.');
     }
+  }
+  this.$router.push('/Checkout');
+},
 
-    this.$router.push('/Checkout');
-  },
     calculateSelectedTotalPrice() {
     return this.cart.reduce((total, cartItem) => {
       if (cartItem.selected) {
@@ -569,38 +572,71 @@ async decrementQuantity(cartItem) {
     sessionStorage.removeItem('token'); // Remove the token from session storage
     this.$router.push('/login'); // Navigate to the login page
   },
-  async deleteRecord(cartId) {
-        console.log('Delete button clicked. Cart ID:', cartId);
-try {
-  const isConfirmed = window.confirm('Are you sure you want to delete this record?');
 
-  if (isConfirmed) {
-    // Send a request to delete the record on the server
-    const response = await axios.delete(`api/cart/delete/${cartId}`);
+  async deleteRecord(cartItem) {
+    try {
+        const isConfirmed = window.confirm('Are you sure you want to delete this record?');
 
-    if (response.status === 200) {
-      // Remove the item from the client-side cart using the unique identifier
-      this.cart = this.cart.filter(item => item.name !== cartId);
+        if (isConfirmed) {
+            // Send a request to delete the record on the server
+            const response = await axios.delete(`api/cart/delete/${cartItem.id}`);
 
-      // Update localStorage with the modified cart
-      localStorage.setItem('cart', JSON.stringify(this.cart));
+            if (response.status === 200) {
+                // Remove the item from the client-side cart using the unique identifier
+                this.cart = this.cart.filter(item => item.id !== cartItem.id);
 
-      // Update the total cart on the server (you might need to implement this)
-      // This step depends on your server-side logic
+                // Update localStorage with the modified cart
+                localStorage.setItem('cart', JSON.stringify(this.cart));
 
-      window.alert('Record deleted successfully');
-    } else {
-      console.error('Failed to delete the record from the cart');
+                window.alert('Record deleted successfully');
+            } else {
+                console.error('Failed to delete the record from the cart');
+            }
+        } else {
+            console.log('Deletion canceled');
+        }
+    } catch (error) {
+        console.error('Error deleting record:', error);
+        window.alert('Failed to delete record');
     }
-  } else {
-    console.log('Deletion canceled');
-  }
-} catch (error) {
-  console.error('Error deleting record:', error);
-  window.alert('Failed to delete record');
-}
 },
 
+async deleteSelectedRecords() {
+    const selectedItems = this.cart.filter(cartItem => cartItem.selected);
+
+    if (selectedItems.length === 0) {
+        window.alert('No items selected for deletion.');
+        return;
+    }
+
+    const isConfirmed = window.confirm(`Are you sure you want to delete ${selectedItems.length} selected items?`);
+
+    if (isConfirmed) {
+        try {
+            // Send individual delete requests for each selected record
+            for (const cartItem of selectedItems) {
+                const response = await axios.delete(`api/cart/delete/${cartItem.id}`);
+
+                if (response.status === 200) {
+                    // Remove the item from the client-side cart using the unique identifier
+                    this.cart = this.cart.filter(item => item.id !== cartItem.id);
+                } else {
+                    console.error('Failed to delete a selected record from the cart');
+                }
+            }
+
+            // Update localStorage with the modified cart
+            localStorage.setItem('cart', JSON.stringify(this.cart));
+
+            window.alert('Selected records deleted successfully');
+        } catch (error) {
+            console.error('Error deleting selected records:', error);
+            window.alert('Failed to delete selected records');
+        }
+    } else {
+        console.log('Deletion canceled');
+    }
+},
 
 async getInfo() {
   try {
@@ -624,54 +660,66 @@ async getInfo() {
     // This will be automatically handled by computed property filteredProducts
   },
   async addToCart(product) {
-try {
-  // Check if the product is already in the cart
-  const existingCartItemIndex = this.cart.findIndex(item => item.name === product.name);
+  try {
+    // Check if the product is already in the cart
+    const existingCartItemIndex = this.cart.findIndex(item => item.name === product.name);
 
-  if (existingCartItemIndex !== -1) {
-    // If the product is already in the cart, update the quantity
-    this.cart[existingCartItemIndex].quantity += 1;
-  } else {
-    // If the product is not in the cart, add it
-    const response = await axios.post('api/cart/add-to-cart', {
-      customer_id:  this.$store.state.userId,
-      product_id: product.id, // Include the id property
-      name: product.name,
-      price: product.price,
-      image: product.image,
-      productgroup: product.productgroup,
-    });
-
-    if (response.status === 200) {
-      // Assuming you receive an 'id' from the server
-      const cartItem = {
-        originalPrice: product.price,
-        customer_id:  this.$store.state.userId,
+    if (existingCartItemIndex !== -1) {
+      // If the product is already in the cart, update the quantity
+      this.cart[existingCartItemIndex].quantity += 1;
+      // Update the cart in your Vue component
+      this.cart = [...this.cart];
+    } else {
+      // If the product is not in the cart, add it
+      const response = await axios.post('api/cart/add-to-cart', {
+        customer_id: this.$store.state.userId,
         product_id: product.id,
         name: product.name,
         price: product.price,
         image: product.image,
         productgroup: product.productgroup,
-        quantity: 1,
-  selected: true,
-      };
+      });
 
-      // Add the item to the client-side cart using localStorage
-      this.cart.push(cartItem);
-      localStorage.setItem('cart', JSON.stringify([...this.cart]));
-    } else {
-      console.error('Failed to add the product to the cart');
+      if (response.status === 200) {
+        // Assuming you receive an 'id' from the server
+        const cartItem = {
+          originalPrice: product.price,
+          customer_id: this.$store.state.userId,
+          product_id: product.id,
+          name: product.name,
+          price: product.price,
+          image: product.image,
+          productgroup: product.productgroup,
+          quantity: 1,
+          selected: true,
+        };
+
+        // Add the item to the client-side cart using localStorage
+        this.cart.push(cartItem);
+        localStorage.setItem('cart', JSON.stringify([...this.cart]));
+
+        // Fetch the updated cart data
+        await this.getCartData();
+      } else {
+        console.error('Failed to add the product to the cart');
+      }
     }
-  }
 
-  // Update the cart in your Vue component
-  this.cart = [...this.cart];
-  window.alert('Product added to cart: ' + product.name);
-} catch (error) {
-  console.error('Error:', error);
-}
+    window.alert('Product added to cart: ' + product.name);
+  } catch (error) {
+    console.error('Error:', error);
+  }
 },
 
+async getCartData() {
+  try {
+    const response = await axios.get(`api/cart/get-by-customer-id/${this.$store.state.userId}`);
+    // Assuming the response contains updated cart data
+    this.cart = response.data.cartItems;
+  } catch (error) {
+    console.error('Error fetching cart data:', error);
+  }
+},
   loadScripts() {
     if (this.myObject && this.myObject.content) {
       console.log(this.myObject.content);

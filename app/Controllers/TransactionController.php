@@ -42,7 +42,7 @@ public function getTransactionDetails($transactionNo)
             'mobile_contact_number' => $json->mobile_contact_number,
             'change_for_how_much' => $json->change_for_how_much,
             'payment_method' => $json->payment_method,
-          //  'total_price' => $json->total_price,
+           'total_price' => $json->total_price,
         ];
         //return $this->respond($json,200);
 

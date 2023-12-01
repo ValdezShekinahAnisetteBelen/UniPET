@@ -15,6 +15,20 @@ class AppointmentModel extends Model
     protected $protectFields    = true;
     protected $allowedFields = ['pet_name', 'breed', 'date_of_birth', 'weight', 'color', 'temperature','full_name', 'area', 'city', 'postal_code', 'contact_no', 'email_address','appointment_date','appointment_time', 'appointment_type', 'grooming_type', 'grooming_shampoo', 'image', 'customer_id', 'status', 'Year'];
     
+    public function getPetDataById($petId)
+    {
+        return $this->where('pet_id', $petId)->first();
+    }
+
+    public function getPetIdsByCustomerId($customer_id)
+    {
+        $result = $this->select('pet_id')->where('customer_id', $customer_id)->findAll();
+    
+        // Extract the 'pet_id' values into a simple array
+        $petIds = array_column($result, 'pet_id');
+    
+        return $petIds;
+    }
     public function updateUserDataAndPetData($pet_id, $combinedData)
     {
         try {

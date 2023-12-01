@@ -1,0 +1,1133 @@
+CRITICAL - 2023-12-01 07:06:32 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 07:06:36 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 07:06:36 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 07:06:36 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 07:09:17 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 07:09:38 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 07:09:39 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 09:52:45 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 09:52:47 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 09:53:48 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 09:53:52 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 09:53:52 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 09:53:53 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 09:53:53 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 09:53:55 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 09:53:56 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 09:53:59 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 09:56:39 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 09:56:41 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 09:56:45 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 09:56:47 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 09:56:50 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 09:56:50 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 09:56:51 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 09:56:51 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 09:57:43 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 09:57:45 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 09:57:45 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 09:58:25 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 09:58:28 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:00:14 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:00:16 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:00:17 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:00:18 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:00:22 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:06:47 --> foreach() argument must be of type array|object, string given
+in APPPATH\Controllers\CartController.php on line 92.
+ 1 APPPATH\Controllers\CartController.php(92): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\CartController.php', 92)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->del('124')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:06:52 --> foreach() argument must be of type array|object, string given
+in APPPATH\Controllers\CartController.php on line 92.
+ 1 APPPATH\Controllers\CartController.php(92): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\CartController.php', 92)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->del('124')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:06:56 --> foreach() argument must be of type array|object, string given
+in APPPATH\Controllers\CartController.php on line 92.
+ 1 APPPATH\Controllers\CartController.php(92): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\CartController.php', 92)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->del('124')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:11:41 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:14:03 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:14:04 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:14:05 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:14:07 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:14:08 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:14:08 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:22:00 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:23:42 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:23:47 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:23:49 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:23:49 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:23:49 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:23:50 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:23:50 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:23:50 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:23:51 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:23:51 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:23:51 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:23:51 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:23:52 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:23:53 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:23:53 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:23:54 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:24:03 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:24:05 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:32:01 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:32:04 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:32:06 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:35:53 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:35:55 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:35:57 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:43:11 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:43:13 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:43:14 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:43:15 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:43:16 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:43:17 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:43:20 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:44:34 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:45:04 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:45:05 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:45:07 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:45:09 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:45:10 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:45:12 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:45:13 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:45:17 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:45:18 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:47:53 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:47:54 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:47:54 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:47:54 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:47:54 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:47:55 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:47:55 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:47:55 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:47:55 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:47:55 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:47:55 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:47:56 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:47:56 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:47:56 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:47:56 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:47:56 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:47:56 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:47:56 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:47:57 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:47:57 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:47:57 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:47:57 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:47:57 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:47:57 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:47:58 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:47:58 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:47:58 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:47:58 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:47:58 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:47:58 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:47:59 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:47:59 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:47:59 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:47:59 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:47:59 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:47:59 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:48:00 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:48:00 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:48:00 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:48:00 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:48:00 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:48:01 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:48:01 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:48:01 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:48:01 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:48:01 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:48:01 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:48:02 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:48:02 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:48:02 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:48:02 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:48:02 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:48:03 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:48:03 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:48:03 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:48:03 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:48:03 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:48:03 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:48:04 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:48:05 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:48:05 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:48:06 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:48:06 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:48:06 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:48:06 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:48:06 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:48:06 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:48:07 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:48:08 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:48:09 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:48:09 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:48:09 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:48:09 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 10:48:09 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 11:11:30 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 11:11:32 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 11:11:32 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 11:11:35 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 11:11:37 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 11:22:17 --> Too few arguments to function App\Controllers\AppointmentController::getData1(), 0 passed in C:\laragon\www\UniPET\system\CodeIgniter.php on line 919 and exactly 1 expected
+in APPPATH\Controllers\AppointmentController.php on line 24.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AppointmentController->getData1()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AppointmentController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 12:04:31 --> Call to undefined method App\Models\AppointmentModel::findAllColumn
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Models\AppointmentModel.php(20): CodeIgniter\Model->__call('findAllColumn', [...])
+ 2 APPPATH\Controllers\AppointmentController.php(21): App\Models\AppointmentModel->getPetIdsByCustomerId('21')
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AppointmentController->getPetIdsAndData('21')
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AppointmentController))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 12:06:06 --> Call to undefined method App\Models\AppointmentModel::findAllColumn
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Models\AppointmentModel.php(20): CodeIgniter\Model->__call('findAllColumn', [...])
+ 2 APPPATH\Controllers\AppointmentController.php(21): App\Models\AppointmentModel->getPetIdsByCustomerId('21')
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AppointmentController->getPetIdsAndData('21')
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AppointmentController))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 12:06:06 --> Call to undefined method App\Models\AppointmentModel::findAllColumn
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Models\AppointmentModel.php(20): CodeIgniter\Model->__call('findAllColumn', [...])
+ 2 APPPATH\Controllers\AppointmentController.php(21): App\Models\AppointmentModel->getPetIdsByCustomerId('21')
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AppointmentController->getPetIdsAndData('21')
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AppointmentController))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 12:06:09 --> Call to undefined method App\Models\AppointmentModel::findAllColumn
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Models\AppointmentModel.php(20): CodeIgniter\Model->__call('findAllColumn', [...])
+ 2 APPPATH\Controllers\AppointmentController.php(21): App\Models\AppointmentModel->getPetIdsByCustomerId('21')
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AppointmentController->getPetIdsAndData('21')
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AppointmentController))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 12:06:46 --> Call to undefined method App\Models\AppointmentModel::findAllColumn
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Models\AppointmentModel.php(20): CodeIgniter\Model->__call('findAllColumn', [...])
+ 2 APPPATH\Controllers\AppointmentController.php(21): App\Models\AppointmentModel->getPetIdsByCustomerId('46')
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AppointmentController->getPetIdsAndData('46')
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AppointmentController))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 12:15:03 --> Too few arguments to function App\Controllers\AppointmentController::getData1(), 0 passed in C:\laragon\www\UniPET\system\CodeIgniter.php on line 919 and exactly 1 expected
+in APPPATH\Controllers\AppointmentController.php on line 24.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AppointmentController->getData1()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AppointmentController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 12:15:56 --> Unclosed '{' on line 36
+in APPPATH\Models\AppointmentModel.php on line 70.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\laragon\\www\\UniPET\\app\\Models\\AppointmentModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\AppointmentModel')
+ 3 APPPATH\Controllers\AppointmentController.php(27): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\AppointmentModel')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AppointmentController->getData1('21')
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AppointmentController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 12:16:16 --> Unclosed '{' on line 36
+in APPPATH\Models\AppointmentModel.php on line 70.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\laragon\\www\\UniPET\\app\\Models\\AppointmentModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\AppointmentModel')
+ 3 APPPATH\Controllers\AppointmentController.php(27): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\AppointmentModel')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AppointmentController->getData1('21')
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AppointmentController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 12:28:12 --> Call to undefined method App\Models\AppointmentModel::findAllColumn
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Models\AppointmentModel.php(20): CodeIgniter\Model->__call('findAllColumn', [...])
+ 2 APPPATH\Controllers\AppointmentController.php(15): App\Models\AppointmentModel->getPetIdsByCustomerId('21')
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AppointmentController->getPetIdsByCustomerId('21')
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AppointmentController))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 12:30:07 --> Call to undefined method App\Models\AppointmentModel::findAllColumn
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Models\AppointmentModel.php(20): CodeIgniter\Model->__call('findAllColumn', [...])
+ 2 APPPATH\Controllers\AppointmentController.php(15): App\Models\AppointmentModel->getPetIdsByCustomerId('20')
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AppointmentController->getPetIdsByCustomerId('20')
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AppointmentController))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 12:30:15 --> Call to undefined method App\Models\AppointmentModel::findAllColumn
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Models\AppointmentModel.php(20): CodeIgniter\Model->__call('findAllColumn', [...])
+ 2 APPPATH\Controllers\AppointmentController.php(15): App\Models\AppointmentModel->getPetIdsByCustomerId('48')
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AppointmentController->getPetIdsByCustomerId('48')
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AppointmentController))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 12:44:42 --> Undefined property: stdClass::$pet_name
+in APPPATH\Controllers\AppointmentController.php on line 88.
+ 1 APPPATH\Controllers\AppointmentController.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$pet_name', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\AppointmentController.php', 88)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AppointmentController->updateUserDataAndPetData('47')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AppointmentController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 12:44:47 --> Undefined property: stdClass::$pet_name
+in APPPATH\Controllers\AppointmentController.php on line 88.
+ 1 APPPATH\Controllers\AppointmentController.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$pet_name', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\AppointmentController.php', 88)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AppointmentController->updateUserDataAndPetData('47')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AppointmentController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 12:44:47 --> Undefined property: stdClass::$pet_name
+in APPPATH\Controllers\AppointmentController.php on line 88.
+ 1 APPPATH\Controllers\AppointmentController.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$pet_name', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\AppointmentController.php', 88)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AppointmentController->updateUserDataAndPetData('47')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AppointmentController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 12:45:35 --> Undefined property: stdClass::$pet_name
+in APPPATH\Controllers\AppointmentController.php on line 88.
+ 1 APPPATH\Controllers\AppointmentController.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$pet_name', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\AppointmentController.php', 88)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AppointmentController->updateUserDataAndPetData('47')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AppointmentController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 13:50:57 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-01 13:59:29 --> Too few arguments to function App\Controllers\AppointmentController::getData1(), 0 passed in C:\laragon\www\UniPET\system\CodeIgniter.php on line 919 and exactly 1 expected
+in APPPATH\Controllers\AppointmentController.php on line 32.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AppointmentController->getData1()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AppointmentController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()

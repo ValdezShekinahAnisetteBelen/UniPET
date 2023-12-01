@@ -6,6 +6,8 @@
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name='robots' content='max-image-preview:large' />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+WyylPEfQKTb1URg9dF7bT3EVM9gbyQ8tdf" crossorigin="anonymous">
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -127,11 +129,20 @@
  
 <!-- User Information -->
 <!-- Combined User and Pet Information Form -->
-<div class="container mt-3 mb-3 d-flex justify-content-center">
-  <router-link :to="{ path: '/PetInfo' }" class="btn btn-outline-info btn-sm" :style="{ border: '2px solid #17a2b8' }">
-    <i class="fas fa-address-card"></i> Make Another Appointment
-  </router-link>
+
+
+<div class="form-row d-flex justify-content-center">
+  <div class="form-group col-md-6" style="position: relative;">
+    <label for="petId" class="text-white bg-info p-2 rounded mb-0">Choose Appointment History</label>
+    <select id="petId" class="custom-select" v-model="selectedPetId" @change="handlePetIdChange" style="width: 100%; border-radius: 0.25rem; background-color: #f8f9fa;">
+      <option v-for="petId in petIds" :key="petId" :value="petId">{{ petId }}</option>
+    </select>
+    <div style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%);">
+      <i class="fas fa-caret-down" style="position: absolute; font-size: 18px; color: #495057;"></i>
+    </div>
+  </div>
 </div>
+
 
 <div v-if="userData" class="container mt-5">
   <form class="card" style="max-width: 600px; margin: 0 auto; padding: 20px; border: 2px solid #17a2b8; border-radius: 10px;" @submit.prevent="saveData">
@@ -207,6 +218,12 @@
 
 </div>
 
+<div class="container mt-3 mb-3 d-flex justify-content-center">
+  <router-link :to="{ path: '/PetInfo' }" class="btn btn-outline-info btn-sm" :style="{ border: '2px solid #17a2b8' }">
+    <i class="fas fa-address-card"></i> Make Another Appointment
+  </router-link>
+</div>
+
 
 
 
@@ -272,6 +289,9 @@ const $ = jQuery.noConflict();
 export default {
 data() {
   return {
+    petIds: [],            // Array to store pet_id values
+    selectedPetId: null,    // Selected pet_id
+
     userData: [],
     formData: {
       email_address: '',
@@ -309,9 +329,48 @@ computed: {
   },
 },
 created() {
+  this.fetchPetIds();  // Fetch pet_id values when the component is mounted
   this.getUserData();
 },
 methods: {
+
+  async fetchPetIds() {
+      try {
+        const response = await axios.get(`/api/getPetIdsByCustomerId/${this.$store.state.userId}`);
+        this.petIds = response.data;  // Assuming the response is an array of pet_ids
+      } catch (error) {
+        console.error('Error fetching pet_ids:', error);
+      }
+    },
+    async handlePetIdChange() {
+  try {
+    const response = await axios.get(`/api/getPetDataById/${this.selectedPetId}`);
+    this.userData = response.data; // Assuming the API response contains the pet data
+
+    // Update formData, formData2, and formData3 based on the new userData
+    for (const field in this.formData) {
+      if (this.userData[field] !== undefined) {
+        this.formData[field] = this.userData[field];
+      }
+    }
+
+    for (const field in this.formData2) {
+      if (this.userData[field] !== undefined) {
+        this.formData2[field] = this.userData[field];
+      }
+    }
+
+    for (const field in this.formData3) {
+      if (this.userData[field] !== undefined) {
+        this.formData3[field] = this.userData[field];
+      }
+    }
+  } catch (error) {
+    console.error('Error fetching pet data:', error);
+  }
+},
+
+
   makeAnotherAppointment() {
       // Add logic here to handle making another appointment
       // For example, you can reset the form data or perform other actions

@@ -9,11 +9,19 @@ use App\Models\AppointmentModel;
 
 class AppointmentController extends ResourceController
 {
-    public function getAppointmentDistributionByArea(string $Year) {
+    public function getPetIdsByCustomerId($customer_id)
+    {
         $model = new AppointmentModel();
-        $data = $model->getAppointmentDistributionByArea($Year);
-        
-        return $this->respond($data);
+        $petIds = $model->getPetIdsByCustomerId($customer_id);
+
+        return $this->response->setJSON($petIds);
+    }
+    public function getPetDataById($petId)
+    {
+        $model = new AppointmentModel();
+        $petData = $model->getPetDataById($petId); // Add this method to your model
+
+        return $this->response->setJSON($petData);
     }
     
     public function index()

@@ -1,0 +1,274 @@
+ERROR - 2023-11-30 05:10:20 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`unipet`.`purchase_product`, CONSTRAINT `fk_purchase_product_transaction` FOREIGN KEY (`transaction_no`) REFERENCES `transactions` (`transaction_no`)) in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pu...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pu...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pu...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pu...', Array, false)
+#4 C:\laragon\www\UniPET\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\UniPET\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\UniPET\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\laragon\www\UniPET\system\BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(81): CodeIgniter\BaseModel->save(Array)
+#9 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+#10 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+#11 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-11-30 05:10:20 --> Cannot add or update a child row: a foreign key constraint fails (`unipet`.`purchase_product`, CONSTRAINT `fk_purchase_product_transaction` FOREIGN KEY (`transaction_no`) REFERENCES `transactions` (`transaction_no`))
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `purchase_product` (`transaction_no`, `product_id`, `customer_id`) VALUES (:transaction_no:, :product_id:, :customer_id:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\OrderHistoryController.php(81): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-30 05:10:21 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`unipet`.`purchase_product`, CONSTRAINT `fk_purchase_product_transaction` FOREIGN KEY (`transaction_no`) REFERENCES `transactions` (`transaction_no`)) in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pu...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pu...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pu...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pu...', Array, false)
+#4 C:\laragon\www\UniPET\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\UniPET\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\UniPET\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\laragon\www\UniPET\system\BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(81): CodeIgniter\BaseModel->save(Array)
+#9 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+#10 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+#11 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-11-30 05:10:21 --> Cannot add or update a child row: a foreign key constraint fails (`unipet`.`purchase_product`, CONSTRAINT `fk_purchase_product_transaction` FOREIGN KEY (`transaction_no`) REFERENCES `transactions` (`transaction_no`))
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `purchase_product` (`transaction_no`, `product_id`, `customer_id`) VALUES (:transaction_no:, :product_id:, :customer_id:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\OrderHistoryController.php(81): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-30 05:10:24 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`unipet`.`purchase_product`, CONSTRAINT `fk_purchase_product_transaction` FOREIGN KEY (`transaction_no`) REFERENCES `transactions` (`transaction_no`)) in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pu...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pu...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pu...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pu...', Array, false)
+#4 C:\laragon\www\UniPET\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\UniPET\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\UniPET\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\laragon\www\UniPET\system\BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(81): CodeIgniter\BaseModel->save(Array)
+#9 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+#10 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+#11 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-11-30 05:10:24 --> Cannot add or update a child row: a foreign key constraint fails (`unipet`.`purchase_product`, CONSTRAINT `fk_purchase_product_transaction` FOREIGN KEY (`transaction_no`) REFERENCES `transactions` (`transaction_no`))
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `purchase_product` (`transaction_no`, `product_id`, `customer_id`) VALUES (:transaction_no:, :product_id:, :customer_id:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\OrderHistoryController.php(81): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-30 05:10:24 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`unipet`.`purchase_product`, CONSTRAINT `fk_purchase_product_transaction` FOREIGN KEY (`transaction_no`) REFERENCES `transactions` (`transaction_no`)) in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pu...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pu...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pu...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pu...', Array, false)
+#4 C:\laragon\www\UniPET\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\UniPET\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\UniPET\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\laragon\www\UniPET\system\BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(81): CodeIgniter\BaseModel->save(Array)
+#9 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+#10 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+#11 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-11-30 05:10:24 --> Cannot add or update a child row: a foreign key constraint fails (`unipet`.`purchase_product`, CONSTRAINT `fk_purchase_product_transaction` FOREIGN KEY (`transaction_no`) REFERENCES `transactions` (`transaction_no`))
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `purchase_product` (`transaction_no`, `product_id`, `customer_id`) VALUES (:transaction_no:, :product_id:, :customer_id:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\OrderHistoryController.php(81): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-30 05:10:24 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`unipet`.`purchase_product`, CONSTRAINT `fk_purchase_product_transaction` FOREIGN KEY (`transaction_no`) REFERENCES `transactions` (`transaction_no`)) in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pu...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pu...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pu...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pu...', Array, false)
+#4 C:\laragon\www\UniPET\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\UniPET\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\UniPET\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\laragon\www\UniPET\system\BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(81): CodeIgniter\BaseModel->save(Array)
+#9 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+#10 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+#11 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-11-30 05:10:24 --> Cannot add or update a child row: a foreign key constraint fails (`unipet`.`purchase_product`, CONSTRAINT `fk_purchase_product_transaction` FOREIGN KEY (`transaction_no`) REFERENCES `transactions` (`transaction_no`))
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `purchase_product` (`transaction_no`, `product_id`, `customer_id`) VALUES (:transaction_no:, :product_id:, :customer_id:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\OrderHistoryController.php(81): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-30 05:10:25 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`unipet`.`purchase_product`, CONSTRAINT `fk_purchase_product_transaction` FOREIGN KEY (`transaction_no`) REFERENCES `transactions` (`transaction_no`)) in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pu...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pu...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pu...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pu...', Array, false)
+#4 C:\laragon\www\UniPET\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\UniPET\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\UniPET\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\laragon\www\UniPET\system\BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(81): CodeIgniter\BaseModel->save(Array)
+#9 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+#10 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+#11 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-11-30 05:10:25 --> Cannot add or update a child row: a foreign key constraint fails (`unipet`.`purchase_product`, CONSTRAINT `fk_purchase_product_transaction` FOREIGN KEY (`transaction_no`) REFERENCES `transactions` (`transaction_no`))
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `purchase_product` (`transaction_no`, `product_id`, `customer_id`) VALUES (:transaction_no:, :product_id:, :customer_id:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\OrderHistoryController.php(81): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-30 05:10:25 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`unipet`.`purchase_product`, CONSTRAINT `fk_purchase_product_transaction` FOREIGN KEY (`transaction_no`) REFERENCES `transactions` (`transaction_no`)) in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pu...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pu...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pu...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pu...', Array, false)
+#4 C:\laragon\www\UniPET\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\UniPET\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\UniPET\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\laragon\www\UniPET\system\BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(81): CodeIgniter\BaseModel->save(Array)
+#9 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+#10 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+#11 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-11-30 05:10:25 --> Cannot add or update a child row: a foreign key constraint fails (`unipet`.`purchase_product`, CONSTRAINT `fk_purchase_product_transaction` FOREIGN KEY (`transaction_no`) REFERENCES `transactions` (`transaction_no`))
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `purchase_product` (`transaction_no`, `product_id`, `customer_id`) VALUES (:transaction_no:, :product_id:, :customer_id:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\OrderHistoryController.php(81): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-30 14:11:15 --> Too few arguments to function App\Controllers\OrderController::__construct(), 0 passed in C:\laragon\www\UniPET\system\CodeIgniter.php on line 891 and exactly 2 expected
+in APPPATH\Controllers\OrderController.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(891): App\Controllers\OrderController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-30 14:11:19 --> Too few arguments to function App\Controllers\OrderController::__construct(), 0 passed in C:\laragon\www\UniPET\system\CodeIgniter.php on line 891 and exactly 2 expected
+in APPPATH\Controllers\OrderController.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(891): App\Controllers\OrderController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-30 14:17:40 --> Too few arguments to function App\Controllers\OrderController::__construct(), 0 passed in C:\laragon\www\UniPET\system\CodeIgniter.php on line 891 and exactly 2 expected
+in APPPATH\Controllers\OrderController.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(891): App\Controllers\OrderController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-30 14:34:06 --> Too few arguments to function App\Controllers\OrderController::__construct(), 0 passed in C:\laragon\www\UniPET\system\CodeIgniter.php on line 891 and exactly 2 expected
+in APPPATH\Controllers\OrderController.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(891): App\Controllers\OrderController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-30 14:38:15 --> Too few arguments to function App\Controllers\OrderController::__construct(), 0 passed in C:\laragon\www\UniPET\system\CodeIgniter.php on line 891 and exactly 2 expected
+in APPPATH\Controllers\OrderController.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(891): App\Controllers\OrderController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-30 14:40:05 --> Too few arguments to function App\Controllers\OrderController::__construct(), 0 passed in C:\laragon\www\UniPET\system\CodeIgniter.php on line 891 and exactly 2 expected
+in APPPATH\Controllers\OrderController.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(891): App\Controllers\OrderController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-30 14:44:12 --> Too few arguments to function App\Controllers\OrderController::__construct(), 0 passed in C:\laragon\www\UniPET\system\CodeIgniter.php on line 891 and exactly 2 expected
+in APPPATH\Controllers\OrderController.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(891): App\Controllers\OrderController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-30 14:53:06 --> Too few arguments to function App\Controllers\OrderController::__construct(), 0 passed in C:\laragon\www\UniPET\system\CodeIgniter.php on line 891 and exactly 2 expected
+in APPPATH\Controllers\OrderController.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(891): App\Controllers\OrderController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-30 15:11:55 --> Too few arguments to function App\Controllers\OrderController::__construct(), 0 passed in C:\laragon\www\UniPET\system\CodeIgniter.php on line 891 and exactly 2 expected
+in APPPATH\Controllers\OrderController.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(891): App\Controllers\OrderController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-30 15:13:47 --> Too few arguments to function App\Controllers\OrderController::__construct(), 0 passed in C:\laragon\www\UniPET\system\CodeIgniter.php on line 891 and exactly 2 expected
+in APPPATH\Controllers\OrderController.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(891): App\Controllers\OrderController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-30 15:27:19 --> Too few arguments to function App\Controllers\OrderController::__construct(), 0 passed in C:\laragon\www\UniPET\system\CodeIgniter.php on line 891 and exactly 2 expected
+in APPPATH\Controllers\OrderController.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(891): App\Controllers\OrderController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-30 15:29:40 --> Too few arguments to function App\Controllers\OrderController::__construct(), 0 passed in C:\laragon\www\UniPET\system\CodeIgniter.php on line 891 and exactly 2 expected
+in APPPATH\Controllers\OrderController.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(891): App\Controllers\OrderController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-30 15:30:44 --> Too few arguments to function App\Controllers\OrderController::__construct(), 0 passed in C:\laragon\www\UniPET\system\CodeIgniter.php on line 891 and exactly 2 expected
+in APPPATH\Controllers\OrderController.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(891): App\Controllers\OrderController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()

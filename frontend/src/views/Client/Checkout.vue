@@ -196,10 +196,24 @@
 <input type="text" v-model="formData.payment_method" id="payment_method" name="payment_method">
 </div>
 
+
     <div class="form-holder form-holder-2 col-md-6">
       <label for="change_for_how_much">Change for how much?</label>
       <input type="number" v-model="formData.change_for_how_much" class="form-control" placeholder="0000.0" step="0.01" min="0" max="10" />
     </div>
+
+   <!-- Update the template section -->
+<div class="form-holder">
+  <label for="mobile_contact_number"></label>
+  <input type="hidden" v-model="grandTotalPrice" class="form-control error" id="total_price" name="total_price" required="" aria-required="true">
+  <label id="total_price-error" class="error" for="total_price"></label>
+</div>
+
+<!-- Replace the existing code with the updated code -->
+<div v-if="checkout.length > 0" class="form-holder form-holder-2">
+  <label for="grand-total" class="col-form-label">Grand Total Price:</label>
+  <input type="text" id="grand-total" class="form-control" v-model="formData.total_price" readonly>
+</div>
   </div>
 </div>
 </section>
@@ -208,9 +222,10 @@
 </div>
 <div class="actions clearfix">
         <ul role="menu" aria-label="Pagination">
-          <button type="button" class="btn btn-outline-info bi bi-shop">
-            <a href="/Shop" role="menuitem" class="text-info"> Buy More</a>
-          </button>
+          <button type="button" class="btn btn-outline-info bi bi-shop" @click="deleteOrder">
+    <a href="/Shop" role="menuitem" class="text-info"> Buy More</a>
+</button>
+
           <li aria-hidden="false" aria-disabled="false">
             <a href="#" role="menuitem" @click="toggleSlideAndSubmit">
               <i class="bi bi-arrow-right"></i> <!-- Use Bootstrap arrow-right icon -->
@@ -235,16 +250,16 @@
  <div class="page-content" style="background-image: url('images/wizard-v1.jpg')">
       <div class="wizard-v1-content">
   <div class="wizard-form">
-  
+    <form class="form-register" id="form-register" action="#" method="post" novalidate="novalidate">
           <div id="form-total" role="application" class="wizard clearfix">
              
-              <div class="content clearfix">
                 <div class="steps clearfix">
                   <ul role="tablist">
 
   
-                      <li role="tab" class="first current error" aria-disabled="false" aria-selected="false">
-                          <a id="form-total-t-0" href="#form-total-h-0" aria-controls="form-total-p-1">
+                    <li role="tab" class="disabled" aria-disabled="false">
+                        <a id="form-total-t-1" href="#form-total-h-1" aria-controls="form-total-p-0">
+                                <span class="current-info audible"> </span>
                               <div class="title">
                                   <span class="step-icon"><i class="bi bi-check"></i></span> <!-- Change to Bootstrap receipt icon -->
                                   <span class="step-number">Step 1</span>
@@ -252,11 +267,11 @@
                               </div>
                           </a>
                       </li>
-                      <li role="tab" class="disabled" aria-disabled="true">
-                          <a id="form-total-t-1" href="#form-total-h-1" aria-controls="form-total-p-0">
+                      <li role="tab" class="first current error" aria-disabled="true" aria-selected="true">
+                        <a id="form-total-t-0" href="#form-total-h-0" aria-controls="form-total-p-1">
                               <span class="current-info"> </span>
                               <div class="title">
-                                  <span class="step-icon"><i class="bi bi-check"></i></span> <!-- Change to Bootstrap person icon -->
+                                  <span class="step-icon"><i class="bi bi-receipt"></i></span> <!-- Change to Bootstrap person icon -->
                                   <span class="step-number">Step 2</span>
                                   <span class="step-text">Place Order</span>
                               </div>
@@ -265,6 +280,7 @@
                   </ul>
               </div>
 
+              <div class="content clearfix">
                 <section id="form-total-p-0" role="tabpanel" aria-labelledby="form-total-h-0" class="body current" aria-hidden="false">
   <div class="inner">
       <div class="form-row space-row">
@@ -303,9 +319,16 @@
           </div>
 
           <div v-if="checkout.length > 0" class="form-holder form-holder-2">
-        <label for="month-val" class="col-form-label">Total Price:</label>
-        <input type="text" id="month-val" class="form-control" v-model="checkout[0].total_price">
+        <label for="month-val" class="col-form-label">Sub Total Price:</label>
+        <input type="text" id="month-val" class="form-control" v-model="checkout[0].total_price" readonly>
       </div>
+
+       <!-- Grand Total Price -->
+    <div v-if="checkout.length > 0" class="form-holder form-holder-2">
+      <label for="grand-total" class="col-form-label">Grand Total Price:</label>
+      <input type="text" id="grand-total" class="form-control" v-model="transactions[0].total_price" readonly>
+    </div>
+
 
       <div v-if="checkout.length > 0">
         <!-- Iterate over each product in checkout -->
@@ -313,17 +336,17 @@
           <!-- Display product details -->
           <div style="flex: 0 0 calc(33.33% - 10px); margin-right: 10px; margin-bottom: 10px;">
             <label for="month-val" class="col-form-label">Item {{ index + 1 }}:</label>
-            <input type="text" id="month-val" class="form-control" v-model="product.name">
+            <input type="text" id="month-val" class="form-control" v-model="product.name" readonly>
           </div>
 
           <div style="flex: 0 0 calc(33.33% - 10px); margin-right: 10px; margin-bottom: 10px;">
             <label for="quantity-val" class="col-form-label">Quantity:</label>
-            <input type="number" id="quantity-val" class="form-control" v-model="product.quantity">
+            <input type="number" id="quantity-val" class="form-control" v-model="product.quantity" readonly>
           </div>
 
           <div style="flex: 0 0 calc(33.33% - 10px); margin-right: 0; margin-bottom: 10px;">
             <label for="unit-price-val" class="col-form-label">Unit Price:</label>
-            <input type="number" id="unit-price-val" class="form-control" v-model="product.unit_price">
+            <input type="number" id="unit-price-val" class="form-control" v-model="product.unit_price" readonly>
           </div>
 
           <input type="number" id="unit-price-val" class="form-control" v-model="product.total_price" v-show="false">
@@ -331,22 +354,22 @@
 
           <div style="flex: 0 0 calc(33.33% - 10px); margin-right: 0; margin-bottom: 10px;">
             <label for="unit-price-val" class="col-form-label">Image:</label>
-            <input type="text" id="unit-price-val" class="form-control" v-model="product.image">
+            <input type="text" id="unit-price-val" class="form-control" v-model="product.image" readonly>
           </div>
 
           <div style="flex: 0 0 calc(33.33% - 10px); margin-right: 0; margin-bottom: 10px;">
             <label for="unit-price-val" class="col-form-label">Product Group:</label>
-            <input type="text" id="unit-price-val" class="form-control" v-model="product.productgroup">
+            <input type="text" id="unit-price-val" class="form-control" v-model="product.productgroup" readonly>
           </div>
 
           <div style="flex: 0 0 calc(33.33% - 10px); margin-right: 0; margin-bottom: 10px;">
             <label for="unit-price-val" class="col-form-label">Product ID:</label>
-            <input type="number" id="unit-price-val" class="form-control" v-model="product.product_id">
+            <input type="number" id="unit-price-val" class="form-control" v-model="product.product_id" readonly>
           </div>
 
           <div style="flex: 0 0 calc(33.33% - 10px); margin-right: 0; margin-bottom: 10px;">
             <label for="unit-price-val" class="col-form-label">Customer ID:</label>
-            <input type="number" id="unit-price-val" class="form-control" v-model="product.customer_id">
+            <input type="number" id="unit-price-val" class="form-control" v-model="product.customer_id" readonly>
           </div>
 
 
@@ -355,17 +378,16 @@
 
 
 <!-- Add additional form holders for other transaction details as needed -->
-
       </div>
   </div>
 </section>
 
-
 </div>
+
 <div class="actions clearfix">
   <ul role="menu" aria-label="Pagination">
     <button type="button" class="btn btn-danger bi bi-x-circle" @click="cancelOrder">
-  Cancel Order
+      <a href="/Shop" role="menuitem" class="text-info"> Cancel Order</a>
 </button>
 <button type="button" class="btn btn-success bi bi-truck" @click="submitOrder">
     Place Order
@@ -375,6 +397,7 @@
 </div>
 
 </div>
+</form>
 </div>
 </div>
 </div>
@@ -450,6 +473,7 @@ export default {
         mobile_contact_number: localStorage.getItem('formData_mobile_contact_number') || '',
         payment_method: localStorage.getItem('formData_payment_method') || 'Pay Upon Delivery',
         change_for_how_much: localStorage.getItem('formData_change_for_how_much') || '',
+        
       },
     };
   },
@@ -457,24 +481,62 @@ export default {
     // Watch for changes in formData and save to local storage
     formData: {
       handler(newData) {
-        localStorage.setItem('formData_delivering_to', newData.delivering_to);
-        localStorage.setItem('formData_address', newData.address);
-        localStorage.setItem('formData_additional_details', newData.additional_details);
-        localStorage.setItem('formData_driver_instructions', newData.driver_instructions);
-        localStorage.setItem('formData_mobile_contact_number', newData.mobile_contact_number);
-        localStorage.setItem('formData_change_for_how_much', newData.change_for_how_much);
-        localStorage.setItem('formData_payment_method', newData.payment_method);
-      },
-      deep: true,
+      localStorage.setItem('formData_delivering_to', newData.delivering_to);
+      localStorage.setItem('formData_address', newData.address);
+      localStorage.setItem('formData_additional_details', newData.additional_details);
+      localStorage.setItem('formData_driver_instructions', newData.driver_instructions);
+      localStorage.setItem('formData_mobile_contact_number', newData.mobile_contact_number);
+      localStorage.setItem('formData_change_for_how_much', newData.change_for_how_much);
+      localStorage.setItem('formData_payment_method', newData.payment_method);
+  
     },
+    deep: true,
   },
-  computed: {},
+},
+  computed: {
+    grandTotalPrice() {
+    // Assuming total_price is a numeric value in your checkout data
+    const subTotal = this.checkout.length > 0 ? parseFloat(this.checkout[0].total_price) : 0;
+    const additionalAmount = 54;
+
+    // Calculate the Grand Total Price
+    const grandTotal = subTotal + additionalAmount;
+
+    // Save grandTotalPrice to formData.total_price
+    this.formData.total_price = grandTotal.toFixed(2);
+
+    // Return the result
+    return grandTotal.toFixed(2); // Adjust to the desired decimal places
+  },
+  },
   created() {
     this.getInfo();
     this.getProduct();
   },
   methods: {
-    async submitOrder() {
+    async deleteOrder() {
+    try {
+        if (this.checkout.length > 0) {
+            const customerIdToDelete = this.checkout[0].customer_id;
+
+            // Delete all records for the specific customer_id from the server using axios
+            await axios.delete(`/api/checkout1/delete/${customerIdToDelete}`);
+            console.log(`All records in 'checkout' deleted for customer_id: ${customerIdToDelete}`);
+
+            // Optionally, you can update the local checkout array to reflect the deletion
+            this.checkout = [];
+            
+            console.log('All orders deleted successfully.');
+        } else {
+            console.warn('No records found in checkout. Nothing to delete.');
+        }
+    } catch (error) {
+        console.error('Error deleting orders:', error);
+        // Handle error accordingly (e.g., display an error message to the user)
+    }
+},
+
+async submitOrder() {
     try {
         // Extract relevant information from transactions
         const transactionInfo = {
@@ -503,6 +565,11 @@ export default {
             console.log('Order placed successfully for product:', product.product_id);
         }
 
+        // Delete orders for the specific customer ID
+        const customerIdToDelete = this.checkout[0].customer_id;
+        await axios.delete(`/api/order-history/delete-orders/${customerIdToDelete}`);
+        console.log(`Orders deleted successfully for customer ID: ${customerIdToDelete}`);
+
         console.log('Orders placed successfully.');
 
         // Optionally, you can manually navigate to the /DeliveryStatus route
@@ -512,35 +579,35 @@ export default {
         // Handle error accordingly (e.g., display an error message to the user)
     }
 },
-    cancelOrder() {
-      // Display a confirmation prompt
-      const isConfirmed = window.confirm('Are you sure you want to cancel the order?');
+async cancelOrder() {
+    try {
+        const isConfirmed = window.confirm('Are you sure you want to cancel the order?');
 
-      if (isConfirmed) {
-        // Clear form data from local storage
-        localStorage.removeItem('formData_delivering_to');
-        localStorage.removeItem('formData_address');
-        localStorage.removeItem('formData_additional_details');
-        localStorage.removeItem('formData_driver_instructions');
-        localStorage.removeItem('formData_mobile_contact_number');
-        localStorage.removeItem('formData_change_for_how_much');
-        localStorage.removeItem('formData_delivering_to');
-        localStorage.removeItem('formData_address');
-        localStorage.removeItem('formData_additional_details');
-        localStorage.removeItem('formData_driver_instructions');
-        localStorage.removeItem('formData_mobile_contact_number');
-        localStorage.removeItem('formData_change_for_how_much');
+        if (isConfirmed && this.checkout.length > 0) {
+            const customerIdToDelete = this.checkout[0].customer_id;
 
-        // Optionally, you can clear other items from local storage if needed
+            // Delete all records for the specific customer_id from the server using axios
+            await axios.delete(`/api/checkout1/delete/${customerIdToDelete}`);
+            console.log(`All records in 'checkout' deleted for customer_id: ${customerIdToDelete}`);
 
-        console.log('Order has been cancelled. Local storage items removed.');
+            // Delete the last inserted record in 'transactions' based on customer_id
+            const responseTransaction = await axios.delete(`/api/cancel-order/${customerIdToDelete}/${transactionNoToDelete}`);
 
-        // Navigate back to the /shop route
-        this.$router.push('/shop');
-      } else {
-        console.log('Order cancellation cancelled.');
-      }
-    },
+            console.log(`Transaction deleted for customer_id: ${customerIdToDelete}`);
+
+            // Optionally, you can update the local checkout and transactions arrays to reflect the deletions
+            this.checkout = [];
+            this.transactions = [];
+
+            console.log('Order cancelled successfully.');
+        } else {
+            console.warn('Order cancellation aborted or no records found in checkout. Nothing to delete.');
+        }
+    } catch (error) {
+        console.error('Error cancelling order:', error);
+        // Handle error accordingly (e.g., display an error message to the user)
+    }
+},
     async getProduct() {
     try {
         const customerId = this.$store.state.userId;
@@ -586,48 +653,55 @@ export default {
       );
     },
     async toggleSlideAndSubmit() {
-      // Validate Section 1
-      console.log('Toggling and submitting...');
-      if (!this.validateSection1()) {
-        window.alert('Please fill in all required fields before Placing Order');
-        return;
-      }
+  // Validate Section 1
+  console.log('Toggling and submitting...');
+  if (!this.validateSection1()) {
+    window.alert('Please fill in all required fields before Placing Order');
+    return;
+  }
 
-      // Toggle the value of isSlide2Visible
-      const userConfirmed = window.confirm('Step 1 completed. Do you want to proceed to Step 2?');
+  // Toggle the value of isSlide2Visible
+  const userConfirmed = window.confirm('Step 1 completed. Do you want to proceed to Step 2?');
 
-      if (!userConfirmed) {
-        // If the user clicks "Cancel," stop the process
-        return;
-      }
+  if (!userConfirmed) {
+    // If the user clicks "Cancel," stop the process
+    return;
+  }
 
-      // Update isSlide2Visible to true
-      this.isSlide2Visible = true;
+  // Update isSlide2Visible to true
+  this.isSlide2Visible = true;
 
-      // Save the wizard state to local storage
-      localStorage.setItem('wizardState', 'slide2');
+  // Save the wizard state to local storage
+  localStorage.setItem('wizardState', 'slide2');
 
-      // Hide slide1 when isSlide2Visible is true
-      const slide1 = document.getElementById("slide1");
-      if (slide1) {
-        slide1.style.display = "none";
-      }
+  // Hide slide1 when isSlide2Visible is true
+  const slide1 = document.getElementById("slide1");
+  if (slide1) {
+    slide1.style.display = "none";
+  }
 
-      this.formData.customer_id = this.$store.state.userId; // Set the value from the store
-      console.log('Customer ID from store:', this.$store.state.userId); // Log the customer_id
-      console.log('Form Data:', this.formData);
+  this.formData.customer_id = this.$store.state.userId; // Set the value from the store
+  console.log('Customer ID from store:', this.$store.state.userId); // Log the customer_id
+  console.log('Form Data:', this.formData);
 
-      // Log the data before sending it to the server
-      console.log('Sending data to server:', this.formData);
+  // Log the data before sending it to the server
+  console.log('Sending data to server:', this.formData);
 
-      // Submit the form data
-      try {
-        await axios.post('/api/transaction/save', this.formData);
-        console.log('Data saved successfully.');
-      } catch (error) {
-        console.error('Error saving data:', error);
-      }
-    },
+  // Submit the form data
+  try {
+    await axios.post('/api/transaction/save', this.formData);
+    console.log('Data saved successfully.');
+  } catch (error) {
+    console.error('Error saving data:', error);
+  }
+
+  // Trigger the first reload
+  window.location.reload();
+
+  // Trigger the second reload
+  window.location.reload();
+}
+,
     logout() {
       sessionStorage.removeItem('token');
       this.$router.push('/login');
