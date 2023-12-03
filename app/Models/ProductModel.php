@@ -13,7 +13,7 @@ class ProductModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields = ['name', 'description', 'price', 'stock', 'image', 'productgroup','status'];
+    protected $allowedFields = ['name', 'description', 'price', 'stock', 'image', 'productgroup','status', 'upc'];
 
     public function getProductByName($productName)
     {

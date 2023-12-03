@@ -28,6 +28,22 @@
   </router-link>
 </v-list>
 
+  <!-- Dashboard Link -->
+  <v-list style="background-color: #03C9D7;">
+          <v-list-item>
+            <v-list-item-content>
+              <v-list-item-icon></v-list-item-icon>
+              <v-list-item-title> Point of Sale (POS) system </v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+  
+          <!-- Links Group 1 -->
+          <router-link v-for="(link, index) in links5" :key="index" :to="link.route" class="nav-link" style="color: #03C9D7; font-weight: bold; display: flex; align-items: center;">
+            <v-icon>{{ link.icon }}</v-icon>
+            {{ link.text }}
+          </router-link>
+        </v-list>
+
 <v-list style="background-color: #03C9D7;">
   <v-list-item>
     <v-list-item-content>
@@ -69,6 +85,11 @@
     {{ link.text }}
   </router-link>
 </v-list>
+
+<router-link to="/logout" @click.prevent="logout" class="nav-link" style="color: #03C9D7; font-weight: bold; display: flex; align-items: center;">
+            <v-icon>logout_icon</v-icon>
+            Logout
+          </router-link>
   
       </v-navigation-drawer>
   
@@ -107,7 +128,14 @@
   
             <v-col>
               <v-sheet class="pa-2 ma-2 shadow">
-                .v-col-auto
+                <iframe
+      width="600"
+      height="450"
+      frameborder="0"
+      style="border:0"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3898.724185010332!2d121.1650602!3d13.3909576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bcef2ba54d6403%3A0xe62a5612dd35e234!2sNvp%20Animal%20Clinic!5e0!3m2!1sen!2sph!4v1638443569445!5m2!1sen!2sph"
+      allowfullscreen
+    ></iframe>
               </v-sheet>
             </v-col>
           </v-row>
@@ -164,19 +192,25 @@ export default {
       links1: [
       { text: ' Key Metrics ', route: '/Dashboard', icon: 'mdi-view-dashboard' },
     ],
+    links5: [
+    { text: ' POS ', route: '/POS', icon: 'mdi-cart' },
+      { text: ' In Store Purchase ', route: '/Store', icon: 'mdi-cart' },
+    ],
     links2: [
+
       { text: ' Orders ', route: '/admin/orders', icon: 'mdi-cart' },
-      { text: ' Products ', route: '/admin/products', icon: 'mdi-cart' },
+
+      { text: ' Products ', route: '/products', icon: 'mdi-cart' },
     ],
     links3: [
-      { text: ' Appointments ', route: '/admin/Appointments', icon: 'mdi-paw' },
-      { text: ' Pets ', route: '/admin/Pets', icon: 'mdi-paw' },
-      { text: ' Customers ', route: '/admin/Customers', icon: 'mdi-paw' },
+      { text: ' Appointments ', route: '/Appointments', icon: 'mdi-paw' },
+      { text: ' Pets ', route: '/Pets', icon: 'mdi-paw' },
+      
     ],
     links4: [
-      { text: ' Customer Profiles ', route: '/admin/Profiles', icon: 'mdi-account' },
+      { text: ' Customer Accounts ', route: '/admin/Profiles', icon: 'mdi-account' },
       { text: ' Admin Accounts ', route: '/admin/Admin', icon: 'mdi-account' },
-      { text: ' Customers Payment Status ', route: '/admin/Payment', icon: 'mdi-account' },
+      
     ],
   };
   },
@@ -276,6 +310,10 @@ export default {
     };
   },
   methods: {
+    logout() {
+    sessionStorage.removeItem('token'); // Remove the token from session storage
+    this.$router.push('/login'); // Navigate to the login page
+  },
   navigate(link) {
     console.log(`Navigating to: ${link.route}`);
   },
@@ -293,38 +331,48 @@ export default {
     .then((response) => {
       console.log('Response from API:', response.data);
 
-      // Extract product_id, name, image, and total_sales for display
-      const productData = response.data.data.map((item) => ({
-        productId: item.product_id,
-        productName: item.name,
-        productImage: item.image, // Assuming the image URL is provided
-        totalSales: item.total_sales,
-      }));
+      // Check if the response has a 'data' property
+      if (response.data.hasOwnProperty('data')) {
+        // Assuming the data property is an array, you may need to adjust this accordingly
+        const responseData = Array.isArray(response.data.data) ? response.data.data : [];
 
-      // Update chart data
-      this.chartData = {
-        labels: productData.map((item) => item.productId),
-        datasets: [
-          {
-            label: 'Top 5 Best-Selling Products in the Year 2023',
-            data: productData.map((item) => item.totalSales),
-            backgroundColor: [
-              'rgba(75, 192, 192, 0.8)',
-              'rgba(255, 99, 132, 0.8)',
-              'rgba(54, 162, 235, 0.8)',
-              'rgba(153, 102, 255, 0.8)',
-            ],
-          },
-        ],
-      };
+        const productData = responseData.map((item) => ({
+          productId: item.product_id,
+          productName: item.name,
+          productImage: item.image,
+          totalSales: item.total_sales,
+        }));
 
-      // Set up additional data for display in the template
-      this.productData = productData;
+        // Update chart data
+        this.chartData = {
+          labels: productData.map((item) => item.productId),
+          datasets: [
+            {
+              label: 'Top 5 Best-Selling Products in the Year 2023',
+              data: productData.map((item) => item.totalSales),
+              backgroundColor: [
+                'rgba(75, 192, 192, 0.8)',
+                'rgba(255, 99, 132, 0.8)',
+                'rgba(54, 162, 235, 0.8)',
+                'rgba(153, 102, 255, 0.8)',
+              ],
+            },
+          ],
+        };
+
+        // Set up additional data for display in the template
+        this.productData = productData;
+      } else {
+        console.error('Invalid response format. Expected a "data" property.');
+      }
     })
     .catch((error) => {
       console.error('Error fetching best-selling products:', error);
     });
 },
+
+
+
   },
 mounted() {
   this.fetchAppointmentDistributionByArea(2023);

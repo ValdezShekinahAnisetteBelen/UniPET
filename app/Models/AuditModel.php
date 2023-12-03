@@ -4,30 +4,16 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class OrderHModel extends Model
+class AuditModel extends Model
 {
-    protected $DBGroup          = 'default';
-    protected $table            = 'purchase_product';
+    protected $table            = 'audit';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['product_id', 'customer_id', 'transaction_no', 'status', 'price', 'quantity', 'orderID'];
-    public function getBestSellingProductsByYear($Year)
-    {
-        $query = "SELECT pp.product_id, p.name, p.image, COUNT(*) as total_sales
-                  FROM purchase_product pp
-                  JOIN products p ON pp.product_id = p.id
-                  WHERE pp.status = 'Delivered' AND YEAR(pp.created_at) = ?
-                  GROUP BY pp.product_id
-                  ORDER BY total_sales DESC
-                  LIMIT 5";
-    
-        return $this->db->query($query, [$Year])->getResultArray();
-    }
-    
-    
+    protected $allowedFields    = ['product_id','oldQuantity', 'quantity', 'type'];
+
     // Dates
     protected $useTimestamps = false;
     protected $dateFormat    = 'datetime';

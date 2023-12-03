@@ -15,6 +15,14 @@ class AppointmentModel extends Model
     protected $protectFields    = true;
     protected $allowedFields = ['pet_name', 'breed', 'date_of_birth', 'weight', 'color', 'temperature','full_name', 'area', 'city', 'postal_code', 'contact_no', 'email_address','appointment_date','appointment_time', 'appointment_type', 'grooming_type', 'grooming_shampoo', 'image', 'customer_id', 'status', 'Year'];
     
+    public function getTableHeaders()
+{
+    // Assuming 'pet' is the table name
+    $fields = $this->db->getFieldNames('pet');
+
+    return $fields;
+}
+
     public function getPetDataById($petId)
     {
         return $this->where('pet_id', $petId)->first();

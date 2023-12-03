@@ -32,8 +32,8 @@
           </router-link>
         </v-list>
 
-          <!-- Dashboard Link -->
-          <v-list style="background-color: #03C9D7;">
+              <!-- Dashboard Link -->
+              <v-list style="background-color: #03C9D7;">
           <v-list-item>
             <v-list-item-content>
               <v-list-item-icon></v-list-item-icon>
@@ -104,7 +104,7 @@
         <v-card flat>
           <!-- Card title and search field -->
           <v-card-title class="d-flex align-center pe-2">
-            <v-icon icon="mdi-truck"></v-icon> &nbsp; Order Status
+            <v-icon icon="mdi-store"></v-icon> &nbsp; In-Store Purchase
             <v-spacer></v-spacer>
             <v-text-field v-model="search" prepend-inner-icon="mdi-magnify" density="compact" label="Search" single-line flat hide-details variant="solo-filled"></v-text-field>
           </v-card-title>
@@ -116,12 +116,6 @@
             <!-- Header Templates -->
             <template v-slot:header.product_id>
       <div class="text-end">Product ID</div>
-    </template>
-            <template v-slot:header.customer_id>
-      <div class="text-end">Customer ID</div>
-    </template>
-    <template v-slot:header.transaction_no>
-      <div class="text-end">Transaction Number</div>
     </template>
     <template v-slot:header.created_at>
       <div class="text-end">Created At</div>
@@ -156,8 +150,7 @@
             <template v-slot:item.actions="{ item }">
               <v-icon @click="editStatus(item)" class="mr-2">mdi-pencil</v-icon>
               <v-icon @click="openDetailsModal('product_id', item.product_id)" v-if="headers.find(header => header.value === 'product_id')" class="mr-2">mdi-help-circle</v-icon>
-              <v-icon @click="openDetailsModal('customer_id', item.customer_id)" v-if="headers.find(header => header.value === 'customer_id')" class="mr-2">mdi-help-circle</v-icon>
-              <v-icon @click="openDetailsModal('transaction_no', item.transaction_no)" v-if="headers.find(header => header.value === 'transaction_no')" class="mr-2">mdi-help-circle</v-icon>
+              
             </template>
           </v-data-table>
           
@@ -291,7 +284,7 @@ methods: {
     },
     async fetchOrders() {
       try {
-        const response = await axios.get('/api/orders');
+        const response = await axios.get('/api/orders2');
         this.items = response.data;
       } catch (error) {
         console.error('Error fetching orders:', error);
@@ -333,12 +326,12 @@ methods: {
       case 'product_id':
         details = await this.fetchProductDetails(id);
         break;
-      case 'customer_id':
-        details = await this.fetchCustomerDetails(id);
-        break;
-      case 'transaction_no':
-        details = await this.fetchTransactionDetails(id);
-        break;
+    //   case 'customer_id':
+    //     details = await this.fetchCustomerDetails(id);
+    //     break;
+    //   case 'transaction_no':
+    //     details = await this.fetchTransactionDetails(id);
+    //     break;
     }
       // Open the modal and pass the details
       this.$refs.detailsModal.openModal(details);

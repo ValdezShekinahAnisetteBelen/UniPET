@@ -6,6 +6,15 @@ use CodeIgniter\Router\RouteCollection;
  * @var RouteCollection $routes
  */
 $routes->get('/', 'Home::index');
+$routes->get('/api/sales/(:any)', 'Product::getSales/$1');
+$routes->match(['get', 'post'], 'api/isales', 'Product::isales');
+$routes->match(['get', 'post'], 'api/setsales/(:any)', 'Product::setsales/$1');
+$routes->match(['get', 'post'], 'api/getProducts', 'Product::getProducts');
+
+$routes->match(['get', 'post'], 'api/audit/(:any)', 'Product::audit/$1');
+
+$routes->match(['get', 'post'], 'api/updateQuantity', 'Product::updateQuantity');
+
 $routes->match(['post', 'get'], '/api/login', 'UserController::login');
 $routes->match(['post', 'get'], '/api/register', 'UserController::register');
 $routes->get('/getData', 'Product::getData');
@@ -15,8 +24,13 @@ $routes->delete('api/cart/delete/(:num)', 'CartController::del/$1');
 $routes->get('api/getPetIdsByCustomerId/(:num)', 'AppointmentController::getPetIdsByCustomerId/$1');
 $routes->get('api/getPetDataById/(:num)', 'AppointmentController::getPetDataById/$1');
 
+$routes->post('api/save-product', 'Product::saveProduct');
+
+$routes->post('api/edit-appointment-status', 'AppointmentController::editStatus3');
+$routes->post('/api/getTableHeaders', 'AppointmentController::getTableHeaders');
 
 $routes->get('/getData1', 'AppointmentController::getData1');
+$routes->get('api/getAll', 'AppointmentController::getAll');
 $routes->post('/save', 'AppointmentController::save');
 $routes->get('api/user', 'UserController::homepage');
 $routes->get('api/product/details/(:segment)', 'Product::getProductDetails/$1');
@@ -34,6 +48,7 @@ $routes->post('api/publish/save', 'OrderHistoryController::saveOrder');
 $routes->get('api/appointments/distribution/(:any)', 'AppointmentController::getAppointmentDistributionByArea/$1');
 $routes->get('api/best/products/(:any)', 'OrderHistoryController::getBestSellingProductsByYear/$1');
 $routes->get('api/orders', 'OrderHistoryController::getOrders');
+$routes->get('api/orders2', 'OrderHistoryController::getOrders2');
 $routes->post('api/edit-status', 'OrderHistoryController::editStatus');
 $routes->get('api/products/(:num)', 'Product::getProductDetails2/$1');
 $routes->get('api/customers/(:num)', 'UserController::getCustomerDetails/$1');
@@ -41,9 +56,11 @@ $routes->get('api/transactions/(:num)', 'TransactionController::getTransactionDe
 // app/Config/Routes.php
 
 $routes->post('api/edit-status2', 'Product::editStatus2');
+
+
 $routes->delete('api/order-history/delete-orders/(:num)', 'OrderHistoryController::deleteOrdersByCustomer/$1');
 
-$routes->delete('api/checkout1/delete/(:num)', 'PurchaseController::delete/$1');
+$routes->delete('api/checkout1/delete/(:num)', 'OrderHistoryController::delete/$1');
 // Add this route to handle the cancelOrder method
 $routes->get('api/cart/get-by-customer-id/(:num)', 'CartController::getCartByCustomerId/$1');
 

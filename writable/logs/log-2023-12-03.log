@@ -1,0 +1,1301 @@
+CRITICAL - 2023-12-03 03:13:54 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-03 03:20:48 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-03 03:29:10 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-03 03:31:29 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-03 03:44:06 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-03 03:44:09 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-03 03:51:12 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-03 04:02:43 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-03 04:02:46 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-03 04:10:27 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-03 04:11:51 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-03 04:19:39 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-03 04:25:25 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-03 04:25:29 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-03 04:25:32 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-03 04:26:06 --> Call to undefined method App\Models\OrderHModel::where()
+in APPPATH\Controllers\OrderHistoryController.php on line 105.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-03 04:26:10 --> Call to undefined method App\Models\OrderHModel::where()
+in APPPATH\Controllers\OrderHistoryController.php on line 105.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-03 04:26:12 --> Call to undefined method App\Models\OrderHModel::where()
+in APPPATH\Controllers\OrderHistoryController.php on line 105.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-03 04:26:12 --> Call to undefined method App\Models\OrderHModel::where()
+in APPPATH\Controllers\OrderHistoryController.php on line 105.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-03 04:26:12 --> Call to undefined method App\Models\OrderHModel::where()
+in APPPATH\Controllers\OrderHistoryController.php on line 105.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-03 04:27:14 --> Call to undefined method App\Models\OrderHModel::where()
+in APPPATH\Controllers\OrderHistoryController.php on line 105.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-03 04:27:15 --> Call to undefined method App\Models\OrderHModel::where()
+in APPPATH\Controllers\OrderHistoryController.php on line 105.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-03 04:27:16 --> Call to undefined method App\Models\OrderHModel::where()
+in APPPATH\Controllers\OrderHistoryController.php on line 105.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-03 04:27:16 --> Call to undefined method App\Models\OrderHModel::where()
+in APPPATH\Controllers\OrderHistoryController.php on line 105.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-03 04:27:16 --> Call to undefined method App\Models\OrderHModel::where()
+in APPPATH\Controllers\OrderHistoryController.php on line 105.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-03 04:43:35 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-03 04:43:37 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-03 04:43:39 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-03 04:46:30 --> mysqli_sql_exception: Cannot insert a record with all four columns being NULL in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pu...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pu...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pu...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pu...', Array, false)
+#4 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(172): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(112): App\Controllers\OrderHistoryController->saveOrderID('164', 'ORD82260')
+#6 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+#7 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-03 04:46:30 --> Cannot insert a record with all four columns being NULL
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `purchase_product` (`transaction_no`, `orderID`) VALUES (:transaction_no:, :orderID:)', [...], false)
+ 2 APPPATH\Controllers\OrderHistoryController.php(172): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\OrderHistoryController.php(112): App\Controllers\OrderHistoryController->saveOrderID('164', 'ORD82260')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-03 04:46:32 --> mysqli_sql_exception: Cannot insert a record with all four columns being NULL in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pu...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pu...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pu...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pu...', Array, false)
+#4 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(172): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(112): App\Controllers\OrderHistoryController->saveOrderID('164', 'ORD52674')
+#6 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+#7 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-03 04:46:32 --> Cannot insert a record with all four columns being NULL
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `purchase_product` (`transaction_no`, `orderID`) VALUES (:transaction_no:, :orderID:)', [...], false)
+ 2 APPPATH\Controllers\OrderHistoryController.php(172): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\OrderHistoryController.php(112): App\Controllers\OrderHistoryController->saveOrderID('164', 'ORD52674')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-03 04:46:32 --> mysqli_sql_exception: Cannot insert a record with all four columns being NULL in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pu...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pu...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pu...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pu...', Array, false)
+#4 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(172): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(112): App\Controllers\OrderHistoryController->saveOrderID('164', 'ORD43351')
+#6 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+#7 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-03 04:46:32 --> Cannot insert a record with all four columns being NULL
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `purchase_product` (`transaction_no`, `orderID`) VALUES (:transaction_no:, :orderID:)', [...], false)
+ 2 APPPATH\Controllers\OrderHistoryController.php(172): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\OrderHistoryController.php(112): App\Controllers\OrderHistoryController->saveOrderID('164', 'ORD43351')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-03 04:46:33 --> mysqli_sql_exception: Cannot insert a record with all four columns being NULL in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pu...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pu...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pu...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pu...', Array, false)
+#4 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(172): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(112): App\Controllers\OrderHistoryController->saveOrderID('164', 'ORD93446')
+#6 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+#7 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-03 04:46:33 --> Cannot insert a record with all four columns being NULL
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `purchase_product` (`transaction_no`, `orderID`) VALUES (:transaction_no:, :orderID:)', [...], false)
+ 2 APPPATH\Controllers\OrderHistoryController.php(172): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\OrderHistoryController.php(112): App\Controllers\OrderHistoryController->saveOrderID('164', 'ORD93446')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-03 04:46:33 --> mysqli_sql_exception: Cannot insert a record with all four columns being NULL in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pu...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pu...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pu...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pu...', Array, false)
+#4 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(172): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(112): App\Controllers\OrderHistoryController->saveOrderID('164', 'ORD13600')
+#6 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+#7 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-03 04:46:33 --> Cannot insert a record with all four columns being NULL
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `purchase_product` (`transaction_no`, `orderID`) VALUES (:transaction_no:, :orderID:)', [...], false)
+ 2 APPPATH\Controllers\OrderHistoryController.php(172): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\OrderHistoryController.php(112): App\Controllers\OrderHistoryController->saveOrderID('164', 'ORD13600')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-03 04:46:33 --> mysqli_sql_exception: Cannot insert a record with all four columns being NULL in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pu...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pu...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pu...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pu...', Array, false)
+#4 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(172): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(112): App\Controllers\OrderHistoryController->saveOrderID('164', 'ORD68060')
+#6 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+#7 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-03 04:46:33 --> Cannot insert a record with all four columns being NULL
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `purchase_product` (`transaction_no`, `orderID`) VALUES (:transaction_no:, :orderID:)', [...], false)
+ 2 APPPATH\Controllers\OrderHistoryController.php(172): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\OrderHistoryController.php(112): App\Controllers\OrderHistoryController->saveOrderID('164', 'ORD68060')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-03 04:46:33 --> mysqli_sql_exception: Cannot insert a record with all four columns being NULL in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pu...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pu...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pu...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pu...', Array, false)
+#4 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(172): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(112): App\Controllers\OrderHistoryController->saveOrderID('164', 'ORD68829')
+#6 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+#7 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-03 04:46:33 --> Cannot insert a record with all four columns being NULL
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `purchase_product` (`transaction_no`, `orderID`) VALUES (:transaction_no:, :orderID:)', [...], false)
+ 2 APPPATH\Controllers\OrderHistoryController.php(172): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\OrderHistoryController.php(112): App\Controllers\OrderHistoryController->saveOrderID('164', 'ORD68829')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-03 04:46:34 --> mysqli_sql_exception: Cannot insert a record with all four columns being NULL in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pu...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pu...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pu...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pu...', Array, false)
+#4 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(172): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(112): App\Controllers\OrderHistoryController->saveOrderID('164', 'ORD18439')
+#6 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+#7 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-03 04:46:34 --> Cannot insert a record with all four columns being NULL
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `purchase_product` (`transaction_no`, `orderID`) VALUES (:transaction_no:, :orderID:)', [...], false)
+ 2 APPPATH\Controllers\OrderHistoryController.php(172): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\OrderHistoryController.php(112): App\Controllers\OrderHistoryController->saveOrderID('164', 'ORD18439')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-03 04:46:34 --> mysqli_sql_exception: Cannot insert a record with all four columns being NULL in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pu...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pu...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pu...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pu...', Array, false)
+#4 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(172): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(112): App\Controllers\OrderHistoryController->saveOrderID('164', 'ORD86102')
+#6 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+#7 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-03 04:46:34 --> Cannot insert a record with all four columns being NULL
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `purchase_product` (`transaction_no`, `orderID`) VALUES (:transaction_no:, :orderID:)', [...], false)
+ 2 APPPATH\Controllers\OrderHistoryController.php(172): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\OrderHistoryController.php(112): App\Controllers\OrderHistoryController->saveOrderID('164', 'ORD86102')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-03 04:46:34 --> mysqli_sql_exception: Cannot insert a record with all four columns being NULL in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pu...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pu...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pu...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pu...', Array, false)
+#4 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(172): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(112): App\Controllers\OrderHistoryController->saveOrderID('164', 'ORD85387')
+#6 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+#7 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-03 04:46:34 --> Cannot insert a record with all four columns being NULL
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `purchase_product` (`transaction_no`, `orderID`) VALUES (:transaction_no:, :orderID:)', [...], false)
+ 2 APPPATH\Controllers\OrderHistoryController.php(172): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\OrderHistoryController.php(112): App\Controllers\OrderHistoryController->saveOrderID('164', 'ORD85387')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-03 04:46:35 --> mysqli_sql_exception: Cannot insert a record with all four columns being NULL in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pu...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pu...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pu...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pu...', Array, false)
+#4 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(172): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(112): App\Controllers\OrderHistoryController->saveOrderID('164', 'ORD57738')
+#6 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+#7 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-03 04:46:35 --> Cannot insert a record with all four columns being NULL
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `purchase_product` (`transaction_no`, `orderID`) VALUES (:transaction_no:, :orderID:)', [...], false)
+ 2 APPPATH\Controllers\OrderHistoryController.php(172): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\OrderHistoryController.php(112): App\Controllers\OrderHistoryController->saveOrderID('164', 'ORD57738')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-03 04:46:35 --> mysqli_sql_exception: Cannot insert a record with all four columns being NULL in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pu...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pu...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pu...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pu...', Array, false)
+#4 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(172): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(112): App\Controllers\OrderHistoryController->saveOrderID('164', 'ORD84340')
+#6 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+#7 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-03 04:46:35 --> Cannot insert a record with all four columns being NULL
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `purchase_product` (`transaction_no`, `orderID`) VALUES (:transaction_no:, :orderID:)', [...], false)
+ 2 APPPATH\Controllers\OrderHistoryController.php(172): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\OrderHistoryController.php(112): App\Controllers\OrderHistoryController->saveOrderID('164', 'ORD84340')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-03 04:46:35 --> mysqli_sql_exception: Cannot insert a record with all four columns being NULL in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pu...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pu...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pu...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pu...', Array, false)
+#4 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(172): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(112): App\Controllers\OrderHistoryController->saveOrderID('164', 'ORD07006')
+#6 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+#7 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-03 04:46:35 --> Cannot insert a record with all four columns being NULL
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `purchase_product` (`transaction_no`, `orderID`) VALUES (:transaction_no:, :orderID:)', [...], false)
+ 2 APPPATH\Controllers\OrderHistoryController.php(172): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\OrderHistoryController.php(112): App\Controllers\OrderHistoryController->saveOrderID('164', 'ORD07006')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-03 04:46:35 --> mysqli_sql_exception: Cannot insert a record with all four columns being NULL in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pu...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pu...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pu...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pu...', Array, false)
+#4 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(172): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(112): App\Controllers\OrderHistoryController->saveOrderID('164', 'ORD11180')
+#6 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+#7 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-03 04:46:35 --> Cannot insert a record with all four columns being NULL
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `purchase_product` (`transaction_no`, `orderID`) VALUES (:transaction_no:, :orderID:)', [...], false)
+ 2 APPPATH\Controllers\OrderHistoryController.php(172): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\OrderHistoryController.php(112): App\Controllers\OrderHistoryController->saveOrderID('164', 'ORD11180')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-03 04:46:37 --> mysqli_sql_exception: Cannot insert a record with all four columns being NULL in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pu...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pu...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pu...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pu...', Array, false)
+#4 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(172): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(112): App\Controllers\OrderHistoryController->saveOrderID('164', 'ORD78571')
+#6 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+#7 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-03 04:46:37 --> Cannot insert a record with all four columns being NULL
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `purchase_product` (`transaction_no`, `orderID`) VALUES (:transaction_no:, :orderID:)', [...], false)
+ 2 APPPATH\Controllers\OrderHistoryController.php(172): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\OrderHistoryController.php(112): App\Controllers\OrderHistoryController->saveOrderID('164', 'ORD78571')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-03 04:49:25 --> mysqli_sql_exception: Cannot insert a record with all four columns being NULL in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pu...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pu...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pu...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pu...', Array, false)
+#4 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(172): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(112): App\Controllers\OrderHistoryController->saveOrderID('164', 'ORD03942')
+#6 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+#7 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-03 04:49:25 --> Cannot insert a record with all four columns being NULL
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `purchase_product` (`transaction_no`, `orderID`) VALUES (:transaction_no:, :orderID:)', [...], false)
+ 2 APPPATH\Controllers\OrderHistoryController.php(172): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\OrderHistoryController.php(112): App\Controllers\OrderHistoryController->saveOrderID('164', 'ORD03942')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-03 04:49:26 --> mysqli_sql_exception: Cannot insert a record with all four columns being NULL in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pu...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pu...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pu...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pu...', Array, false)
+#4 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(172): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(112): App\Controllers\OrderHistoryController->saveOrderID('164', 'ORD25071')
+#6 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+#7 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-03 04:49:26 --> Cannot insert a record with all four columns being NULL
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `purchase_product` (`transaction_no`, `orderID`) VALUES (:transaction_no:, :orderID:)', [...], false)
+ 2 APPPATH\Controllers\OrderHistoryController.php(172): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\OrderHistoryController.php(112): App\Controllers\OrderHistoryController->saveOrderID('164', 'ORD25071')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-03 04:49:27 --> mysqli_sql_exception: Cannot insert a record with all four columns being NULL in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pu...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pu...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pu...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pu...', Array, false)
+#4 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(172): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(112): App\Controllers\OrderHistoryController->saveOrderID('164', 'ORD87530')
+#6 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+#7 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-03 04:49:27 --> Cannot insert a record with all four columns being NULL
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `purchase_product` (`transaction_no`, `orderID`) VALUES (:transaction_no:, :orderID:)', [...], false)
+ 2 APPPATH\Controllers\OrderHistoryController.php(172): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\OrderHistoryController.php(112): App\Controllers\OrderHistoryController->saveOrderID('164', 'ORD87530')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-03 04:49:27 --> mysqli_sql_exception: Cannot insert a record with all four columns being NULL in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pu...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pu...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pu...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pu...', Array, false)
+#4 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(172): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(112): App\Controllers\OrderHistoryController->saveOrderID('164', 'ORD14577')
+#6 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+#7 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-03 04:49:27 --> Cannot insert a record with all four columns being NULL
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `purchase_product` (`transaction_no`, `orderID`) VALUES (:transaction_no:, :orderID:)', [...], false)
+ 2 APPPATH\Controllers\OrderHistoryController.php(172): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\OrderHistoryController.php(112): App\Controllers\OrderHistoryController->saveOrderID('164', 'ORD14577')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-03 04:49:27 --> mysqli_sql_exception: Cannot insert a record with all four columns being NULL in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pu...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pu...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pu...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pu...', Array, false)
+#4 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(172): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(112): App\Controllers\OrderHistoryController->saveOrderID('164', 'ORD08189')
+#6 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+#7 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-03 04:49:27 --> Cannot insert a record with all four columns being NULL
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `purchase_product` (`transaction_no`, `orderID`) VALUES (:transaction_no:, :orderID:)', [...], false)
+ 2 APPPATH\Controllers\OrderHistoryController.php(172): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\OrderHistoryController.php(112): App\Controllers\OrderHistoryController->saveOrderID('164', 'ORD08189')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-03 04:49:27 --> mysqli_sql_exception: Cannot insert a record with all four columns being NULL in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pu...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pu...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pu...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pu...', Array, false)
+#4 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(172): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(112): App\Controllers\OrderHistoryController->saveOrderID('164', 'ORD85572')
+#6 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+#7 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-03 04:49:27 --> Cannot insert a record with all four columns being NULL
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `purchase_product` (`transaction_no`, `orderID`) VALUES (:transaction_no:, :orderID:)', [...], false)
+ 2 APPPATH\Controllers\OrderHistoryController.php(172): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\OrderHistoryController.php(112): App\Controllers\OrderHistoryController->saveOrderID('164', 'ORD85572')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-03 04:49:38 --> mysqli_sql_exception: Cannot insert a record with all four columns being NULL in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pu...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pu...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pu...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pu...', Array, false)
+#4 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(172): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(112): App\Controllers\OrderHistoryController->saveOrderID('165', 'ORD35852')
+#6 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+#7 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-03 04:49:38 --> Cannot insert a record with all four columns being NULL
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `purchase_product` (`transaction_no`, `orderID`) VALUES (:transaction_no:, :orderID:)', [...], false)
+ 2 APPPATH\Controllers\OrderHistoryController.php(172): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\OrderHistoryController.php(112): App\Controllers\OrderHistoryController->saveOrderID('165', 'ORD35852')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-03 04:49:39 --> mysqli_sql_exception: Cannot insert a record with all four columns being NULL in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pu...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pu...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pu...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pu...', Array, false)
+#4 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(172): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(112): App\Controllers\OrderHistoryController->saveOrderID('165', 'ORD44355')
+#6 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+#7 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-03 04:49:39 --> Cannot insert a record with all four columns being NULL
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `purchase_product` (`transaction_no`, `orderID`) VALUES (:transaction_no:, :orderID:)', [...], false)
+ 2 APPPATH\Controllers\OrderHistoryController.php(172): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\OrderHistoryController.php(112): App\Controllers\OrderHistoryController->saveOrderID('165', 'ORD44355')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-03 04:49:39 --> mysqli_sql_exception: Cannot insert a record with all four columns being NULL in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pu...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pu...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pu...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pu...', Array, false)
+#4 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(172): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(112): App\Controllers\OrderHistoryController->saveOrderID('165', 'ORD25085')
+#6 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+#7 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-03 04:49:39 --> Cannot insert a record with all four columns being NULL
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `purchase_product` (`transaction_no`, `orderID`) VALUES (:transaction_no:, :orderID:)', [...], false)
+ 2 APPPATH\Controllers\OrderHistoryController.php(172): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\OrderHistoryController.php(112): App\Controllers\OrderHistoryController->saveOrderID('165', 'ORD25085')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-03 04:49:39 --> mysqli_sql_exception: Cannot insert a record with all four columns being NULL in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pu...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pu...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pu...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pu...', Array, false)
+#4 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(172): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(112): App\Controllers\OrderHistoryController->saveOrderID('165', 'ORD42471')
+#6 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+#7 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-03 04:49:39 --> Cannot insert a record with all four columns being NULL
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `purchase_product` (`transaction_no`, `orderID`) VALUES (:transaction_no:, :orderID:)', [...], false)
+ 2 APPPATH\Controllers\OrderHistoryController.php(172): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\OrderHistoryController.php(112): App\Controllers\OrderHistoryController->saveOrderID('165', 'ORD42471')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-03 04:49:40 --> mysqli_sql_exception: Cannot insert a record with all four columns being NULL in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pu...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pu...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pu...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pu...', Array, false)
+#4 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(172): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(112): App\Controllers\OrderHistoryController->saveOrderID('165', 'ORD74035')
+#6 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+#7 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-03 04:49:40 --> Cannot insert a record with all four columns being NULL
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `purchase_product` (`transaction_no`, `orderID`) VALUES (:transaction_no:, :orderID:)', [...], false)
+ 2 APPPATH\Controllers\OrderHistoryController.php(172): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\OrderHistoryController.php(112): App\Controllers\OrderHistoryController->saveOrderID('165', 'ORD74035')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-03 04:49:40 --> mysqli_sql_exception: Cannot insert a record with all four columns being NULL in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pu...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pu...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pu...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pu...', Array, false)
+#4 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(172): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(112): App\Controllers\OrderHistoryController->saveOrderID('165', 'ORD03453')
+#6 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+#7 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-03 04:49:40 --> Cannot insert a record with all four columns being NULL
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `purchase_product` (`transaction_no`, `orderID`) VALUES (:transaction_no:, :orderID:)', [...], false)
+ 2 APPPATH\Controllers\OrderHistoryController.php(172): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\OrderHistoryController.php(112): App\Controllers\OrderHistoryController->saveOrderID('165', 'ORD03453')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-03 04:49:40 --> mysqli_sql_exception: Cannot insert a record with all four columns being NULL in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pu...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pu...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pu...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pu...', Array, false)
+#4 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(172): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(112): App\Controllers\OrderHistoryController->saveOrderID('165', 'ORD31698')
+#6 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+#7 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-03 04:49:40 --> Cannot insert a record with all four columns being NULL
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `purchase_product` (`transaction_no`, `orderID`) VALUES (:transaction_no:, :orderID:)', [...], false)
+ 2 APPPATH\Controllers\OrderHistoryController.php(172): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\OrderHistoryController.php(112): App\Controllers\OrderHistoryController->saveOrderID('165', 'ORD31698')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-03 04:49:51 --> mysqli_sql_exception: Cannot insert a record with all four columns being NULL in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pu...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pu...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pu...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pu...', Array, false)
+#4 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(172): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(112): App\Controllers\OrderHistoryController->saveOrderID('165', 'ORD81224')
+#6 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+#7 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-03 04:49:51 --> Cannot insert a record with all four columns being NULL
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `purchase_product` (`transaction_no`, `orderID`) VALUES (:transaction_no:, :orderID:)', [...], false)
+ 2 APPPATH\Controllers\OrderHistoryController.php(172): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\OrderHistoryController.php(112): App\Controllers\OrderHistoryController->saveOrderID('165', 'ORD81224')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-03 04:49:52 --> mysqli_sql_exception: Cannot insert a record with all four columns being NULL in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pu...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pu...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pu...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pu...', Array, false)
+#4 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(172): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(112): App\Controllers\OrderHistoryController->saveOrderID('165', 'ORD30872')
+#6 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+#7 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-03 04:49:52 --> Cannot insert a record with all four columns being NULL
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `purchase_product` (`transaction_no`, `orderID`) VALUES (:transaction_no:, :orderID:)', [...], false)
+ 2 APPPATH\Controllers\OrderHistoryController.php(172): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\OrderHistoryController.php(112): App\Controllers\OrderHistoryController->saveOrderID('165', 'ORD30872')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-03 04:49:52 --> mysqli_sql_exception: Cannot insert a record with all four columns being NULL in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pu...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pu...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pu...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pu...', Array, false)
+#4 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(172): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(112): App\Controllers\OrderHistoryController->saveOrderID('165', 'ORD15363')
+#6 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+#7 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-03 04:49:52 --> Cannot insert a record with all four columns being NULL
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `purchase_product` (`transaction_no`, `orderID`) VALUES (:transaction_no:, :orderID:)', [...], false)
+ 2 APPPATH\Controllers\OrderHistoryController.php(172): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\OrderHistoryController.php(112): App\Controllers\OrderHistoryController->saveOrderID('165', 'ORD15363')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-03 04:49:52 --> mysqli_sql_exception: Cannot insert a record with all four columns being NULL in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pu...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pu...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pu...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pu...', Array, false)
+#4 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(172): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(112): App\Controllers\OrderHistoryController->saveOrderID('165', 'ORD16834')
+#6 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+#7 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-03 04:49:52 --> Cannot insert a record with all four columns being NULL
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `purchase_product` (`transaction_no`, `orderID`) VALUES (:transaction_no:, :orderID:)', [...], false)
+ 2 APPPATH\Controllers\OrderHistoryController.php(172): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\OrderHistoryController.php(112): App\Controllers\OrderHistoryController->saveOrderID('165', 'ORD16834')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-03 04:49:53 --> mysqli_sql_exception: Cannot insert a record with all four columns being NULL in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pu...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pu...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pu...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pu...', Array, false)
+#4 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(172): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(112): App\Controllers\OrderHistoryController->saveOrderID('165', 'ORD16418')
+#6 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+#7 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-03 04:49:53 --> Cannot insert a record with all four columns being NULL
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `purchase_product` (`transaction_no`, `orderID`) VALUES (:transaction_no:, :orderID:)', [...], false)
+ 2 APPPATH\Controllers\OrderHistoryController.php(172): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\OrderHistoryController.php(112): App\Controllers\OrderHistoryController->saveOrderID('165', 'ORD16418')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-03 04:49:53 --> mysqli_sql_exception: Cannot insert a record with all four columns being NULL in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pu...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pu...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pu...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pu...', Array, false)
+#4 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(172): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(112): App\Controllers\OrderHistoryController->saveOrderID('165', 'ORD16067')
+#6 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+#7 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-03 04:49:53 --> Cannot insert a record with all four columns being NULL
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `purchase_product` (`transaction_no`, `orderID`) VALUES (:transaction_no:, :orderID:)', [...], false)
+ 2 APPPATH\Controllers\OrderHistoryController.php(172): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\OrderHistoryController.php(112): App\Controllers\OrderHistoryController->saveOrderID('165', 'ORD16067')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-03 04:49:53 --> mysqli_sql_exception: Cannot insert a record with all four columns being NULL in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pu...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pu...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pu...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pu...', Array, false)
+#4 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(172): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(112): App\Controllers\OrderHistoryController->saveOrderID('165', 'ORD32170')
+#6 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+#7 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-03 04:49:53 --> Cannot insert a record with all four columns being NULL
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `purchase_product` (`transaction_no`, `orderID`) VALUES (:transaction_no:, :orderID:)', [...], false)
+ 2 APPPATH\Controllers\OrderHistoryController.php(172): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\OrderHistoryController.php(112): App\Controllers\OrderHistoryController->saveOrderID('165', 'ORD32170')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-03 04:49:53 --> mysqli_sql_exception: Cannot insert a record with all four columns being NULL in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pu...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pu...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pu...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pu...', Array, false)
+#4 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(172): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(112): App\Controllers\OrderHistoryController->saveOrderID('165', 'ORD89229')
+#6 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+#7 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-03 04:49:53 --> Cannot insert a record with all four columns being NULL
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `purchase_product` (`transaction_no`, `orderID`) VALUES (:transaction_no:, :orderID:)', [...], false)
+ 2 APPPATH\Controllers\OrderHistoryController.php(172): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\OrderHistoryController.php(112): App\Controllers\OrderHistoryController->saveOrderID('165', 'ORD89229')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-03 04:49:54 --> mysqli_sql_exception: Cannot insert a record with all four columns being NULL in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pu...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pu...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pu...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pu...', Array, false)
+#4 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(172): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(112): App\Controllers\OrderHistoryController->saveOrderID('165', 'ORD77488')
+#6 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+#7 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-03 04:49:54 --> Cannot insert a record with all four columns being NULL
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `purchase_product` (`transaction_no`, `orderID`) VALUES (:transaction_no:, :orderID:)', [...], false)
+ 2 APPPATH\Controllers\OrderHistoryController.php(172): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\OrderHistoryController.php(112): App\Controllers\OrderHistoryController->saveOrderID('165', 'ORD77488')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-03 04:50:01 --> mysqli_sql_exception: Cannot insert a record with all four columns being NULL in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pu...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pu...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pu...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pu...', Array, false)
+#4 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(172): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(112): App\Controllers\OrderHistoryController->saveOrderID('165', 'ORD39530')
+#6 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+#7 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-03 04:50:01 --> Cannot insert a record with all four columns being NULL
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `purchase_product` (`transaction_no`, `orderID`) VALUES (:transaction_no:, :orderID:)', [...], false)
+ 2 APPPATH\Controllers\OrderHistoryController.php(172): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\OrderHistoryController.php(112): App\Controllers\OrderHistoryController->saveOrderID('165', 'ORD39530')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-03 04:50:02 --> mysqli_sql_exception: Cannot insert a record with all four columns being NULL in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pu...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pu...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pu...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pu...', Array, false)
+#4 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(172): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(112): App\Controllers\OrderHistoryController->saveOrderID('165', 'ORD66890')
+#6 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+#7 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-03 04:50:02 --> Cannot insert a record with all four columns being NULL
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `purchase_product` (`transaction_no`, `orderID`) VALUES (:transaction_no:, :orderID:)', [...], false)
+ 2 APPPATH\Controllers\OrderHistoryController.php(172): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\OrderHistoryController.php(112): App\Controllers\OrderHistoryController->saveOrderID('165', 'ORD66890')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-03 06:16:30 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '`IN` = ('added','transacted')
+AND `product_id` IS NOT NULL
+AND `customer_id` IS ' at line 3 in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\UniPET\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\UniPET\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(59): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\OrderHistoryController->getOrders()
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+#9 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-12-03 06:16:30 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '`IN` = ('added','transacted')
+AND `product_id` IS NOT NULL
+AND `customer_id` IS ' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `purchase_product`
+WHERE `status NOT` `IN` = :status NOT IN:
+AND `product_id` IS NOT NULL
+AND `customer_id` IS NOT NULL
+AND `transaction_no` IS NOT NULL', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\OrderHistoryController.php(59): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\OrderHistoryController->getOrders()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-03 06:16:34 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '`IN` = ('added','transacted')
+AND `product_id` IS NOT NULL
+AND `customer_id` IS ' at line 3 in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\UniPET\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\UniPET\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(59): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\OrderHistoryController->getOrders()
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+#9 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-12-03 06:16:34 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '`IN` = ('added','transacted')
+AND `product_id` IS NOT NULL
+AND `customer_id` IS ' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `purchase_product`
+WHERE `status NOT` `IN` = :status NOT IN:
+AND `product_id` IS NOT NULL
+AND `customer_id` IS NOT NULL
+AND `transaction_no` IS NOT NULL', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\OrderHistoryController.php(59): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\OrderHistoryController->getOrders()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-03 06:16:37 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '`IN` = ('added','transacted')
+AND `product_id` IS NOT NULL
+AND `customer_id` IS ' at line 3 in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\UniPET\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\UniPET\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(43): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\OrderHistoryController->getOrders2()
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+#9 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-12-03 06:16:37 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '`IN` = ('added','transacted')
+AND `product_id` IS NOT NULL
+AND `customer_id` IS ' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `purchase_product`
+WHERE `status` `IN` = :status IN:
+AND `product_id` IS NOT NULL
+AND `customer_id` IS NOT NULL
+AND `transaction_no` IS NOT NULL', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\OrderHistoryController.php(43): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\OrderHistoryController->getOrders2()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-03 06:16:40 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '`IN` = ('added','transacted')
+AND `product_id` IS NOT NULL
+AND `customer_id` IS ' at line 3 in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\UniPET\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\UniPET\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(59): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\OrderHistoryController->getOrders()
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+#9 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-12-03 06:16:40 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '`IN` = ('added','transacted')
+AND `product_id` IS NOT NULL
+AND `customer_id` IS ' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `purchase_product`
+WHERE `status NOT` `IN` = :status NOT IN:
+AND `product_id` IS NOT NULL
+AND `customer_id` IS NOT NULL
+AND `transaction_no` IS NOT NULL', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\OrderHistoryController.php(59): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\OrderHistoryController->getOrders()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-03 06:17:03 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '`IN` = ('added','transacted')
+AND `product_id` IS NOT NULL
+AND `customer_id` IS ' at line 3 in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\UniPET\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\UniPET\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(59): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\OrderHistoryController->getOrders()
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+#9 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-12-03 06:17:03 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '`IN` = ('added','transacted')
+AND `product_id` IS NOT NULL
+AND `customer_id` IS ' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `purchase_product`
+WHERE `status NOT` `IN` = :status NOT IN:
+AND `product_id` IS NOT NULL
+AND `customer_id` IS NOT NULL
+AND `transaction_no` IS NOT NULL', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\OrderHistoryController.php(59): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\OrderHistoryController->getOrders()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-03 06:18:52 --> mysqli_sql_exception: Operand should contain 1 column(s) in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\UniPET\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\UniPET\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(40): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\OrderHistoryController->getOrders2()
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+#9 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-12-03 06:18:52 --> Operand should contain 1 column(s)
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `purchase_product`
+WHERE `status` != :status:', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\OrderHistoryController.php(40): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\OrderHistoryController->getOrders2()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-03 06:18:55 --> mysqli_sql_exception: Operand should contain 1 column(s) in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\UniPET\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\UniPET\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(40): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\OrderHistoryController->getOrders2()
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+#9 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-12-03 06:18:55 --> Operand should contain 1 column(s)
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `purchase_product`
+WHERE `status` != :status:', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\OrderHistoryController.php(40): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\OrderHistoryController->getOrders2()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-03 06:19:02 --> mysqli_sql_exception: Operand should contain 1 column(s) in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\UniPET\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\UniPET\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(40): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\OrderHistoryController->getOrders2()
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+#9 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-12-03 06:19:02 --> Operand should contain 1 column(s)
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `purchase_product`
+WHERE `status` != :status:', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\OrderHistoryController.php(40): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\OrderHistoryController->getOrders2()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-03 06:20:10 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '`=` = (1)' at line 3 in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\UniPET\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\UniPET\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\UniPET\app\Controllers\OrderHistoryController.php(40): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\OrderHistoryController->getOrders2()
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+#9 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-12-03 06:20:10 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '`=` = (1)' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `purchase_product`
+WHERE `status` `=` = :status =:', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\OrderHistoryController.php(40): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\OrderHistoryController->getOrders2()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-03 06:55:57 --> Too few arguments to function App\Controllers\AppointmentController::getData1(), 0 passed in C:\laragon\www\UniPET\system\CodeIgniter.php on line 919 and exactly 1 expected
+in APPPATH\Controllers\AppointmentController.php on line 160.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AppointmentController->getData1()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AppointmentController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()

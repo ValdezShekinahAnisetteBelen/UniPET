@@ -222,9 +222,10 @@
 </div>
 <div class="actions clearfix">
         <ul role="menu" aria-label="Pagination">
-          <button type="button" class="btn btn-outline-info bi bi-shop" @click="deleteOrder">
-    <a href="/Shop" role="menuitem" class="text-info"> Buy More</a>
+    <button type="button" class="btn btn-success bi bi-truck" @click="deleteOrder">
+      Buy More
 </button>
+
 
           <li aria-hidden="false" aria-disabled="false">
             <a href="#" role="menuitem" @click="toggleSlideAndSubmit">
@@ -284,7 +285,11 @@
                 <section id="form-total-p-0" role="tabpanel" aria-labelledby="form-total-h-0" class="body current" aria-hidden="false">
   <div class="inner">
       <div class="form-row space-row">
-        <h4 v-if="transactions.length > 0" style="color: white;">Transaction Number: {{ transactions[0].transaction_no }}</h4>
+        <h4 v-if="transactions.length > 0" style="color: white;">  
+          {{ transactions[0].transaction_no }}
+          <!-- Sales Transaction Number: {{ salesTransactionNumber }} -->
+
+        </h4>
 
           <h1 v-else>No transaction data available</h1>
 
@@ -387,7 +392,7 @@
 <div class="actions clearfix">
   <ul role="menu" aria-label="Pagination">
     <button type="button" class="btn btn-danger bi bi-x-circle" @click="cancelOrder">
-      <a href="/Shop" role="menuitem" class="text-info"> Cancel Order</a>
+      Cancel Order
 </button>
 <button type="button" class="btn btn-success bi bi-truck" @click="submitOrder">
     Place Order
@@ -461,6 +466,7 @@ const $ = jQuery.noConflict();
 export default {
   data() {
     return {
+      // salesTransactionNumber: null,
       transactions: [],
       checkout: [],
       isSlide2Visible: localStorage.getItem('wizardState') === 'slide2',
@@ -510,11 +516,23 @@ export default {
   },
   },
   created() {
+    // this.salesTransactionNumber = this.generateRandomKey();
     this.getInfo();
     this.getProduct();
   },
   methods: {
+    // generateRandomKey() {
+    //     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+    //     const length = 8;
+    //     let result = '';
+    //     for (let i = 0; i < length; i++) {
+    //       const randomIndex = Math.floor(Math.random() * characters.length);
+    //       result += characters.charAt(randomIndex);
+    //     }
+    //     return result;
+    //   },
     async deleteOrder() {
+      
     try {
         if (this.checkout.length > 0) {
             const customerIdToDelete = this.checkout[0].customer_id;
@@ -530,8 +548,10 @@ export default {
         } else {
             console.warn('No records found in checkout. Nothing to delete.');
         }
+     // Optionally, you can manually navigate to the /DeliveryStatus route
+     window.location.href = '/Shop';
     } catch (error) {
-        console.error('Error deleting orders:', error);
+        console.error('Error placing orders:', error);
         // Handle error accordingly (e.g., display an error message to the user)
     }
 },
@@ -549,6 +569,9 @@ async submitOrder() {
             // Extract relevant information from the current product
             const productInfo = {
                 product_id: product.product_id,
+                price: product.unit_price,
+                quantity: product.quantity,
+                // orderID: this.salesTransactionNumber,
                 customer_id: product.customer_id,
                 // Include other relevant product data
             };
@@ -563,6 +586,8 @@ async submitOrder() {
             await axios.post('/api/publish/save', orderData);
 
             console.log('Order placed successfully for product:', product.product_id);
+            console.log('Order placed successfully for product:', product.unit_price);
+            console.log('Order placed successfully for product:', product.quantity);
         }
 
         // Delete orders for the specific customer ID
@@ -587,8 +612,9 @@ async cancelOrder() {
             const customerIdToDelete = this.checkout[0].customer_id;
 
             // Delete all records for the specific customer_id from the server using axios
-            await axios.delete(`/api/checkout1/delete/${customerIdToDelete}`);
+            await axios.delete(`/api/order-history/delete-orders/${customerIdToDelete}`);
             console.log(`All records in 'checkout' deleted for customer_id: ${customerIdToDelete}`);
+            window.location.href = '/Shop';
 
             // Delete the last inserted record in 'transactions' based on customer_id
             const responseTransaction = await axios.delete(`/api/cancel-order/${customerIdToDelete}/${transactionNoToDelete}`);
@@ -599,10 +625,12 @@ async cancelOrder() {
             this.checkout = [];
             this.transactions = [];
 
+        
             console.log('Order cancelled successfully.');
         } else {
             console.warn('Order cancellation aborted or no records found in checkout. Nothing to delete.');
         }
+     
     } catch (error) {
         console.error('Error cancelling order:', error);
         // Handle error accordingly (e.g., display an error message to the user)

@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Online_Store from '../views/Client/Online_Store.vue'
+import  HistoryPage from '../views/Admin/HistoryPage.vue'
 
 const routes = [
   {
@@ -100,9 +101,16 @@ meta:{ requiresAuth: true}
 },
 
 {
-  path: '/admin/products',
+  path: '/products',
   name: 'products',
   component: () => import(/* webpackChunkName: "signup" */ '../views/Admin/products'),
+  meta:{ requiresAuth: true}
+},
+
+{
+  path: '/products2',
+  name: 'products2',
+  component: () => import(/* webpackChunkName: "signup" */ '../views/Admin/products2'),
   meta:{ requiresAuth: true}
 },
 
@@ -118,12 +126,6 @@ meta:{ requiresAuth: true}
 //   component: () => import(/* webpackChunkName: "signup" */ '../views/Admin/Dashboard'),
 //   meta:{ requiresAuth: true}
 // },
-{
-  path: '/admin/orders',
-  name: 'orders',
-  component: () => import(/* webpackChunkName: "signup" */ '../views/Admin/Orders'),
-  meta:{ requiresAuth: true}
-},
 
 {
   path: '/admin/orders',
@@ -132,13 +134,29 @@ meta:{ requiresAuth: true}
   meta:{ requiresAuth: true}
 },
 {
-  path: '/admin/Appointments',
+  path: '/POS',
+  name: 'POS',
+  component: () => import(/* webpackChunkName: "signup" */ '../views/Admin/POS'),
+  meta:{ requiresAuth: true}
+},
+{
+   path: '/history/:upc', component: HistoryPage 
+},
+
+{
+  path: '/Appointments',
   name: 'Appointments',
   component: () => import(/* webpackChunkName: "signup" */ '../views/Admin/Appointments'),
   meta:{ requiresAuth: true}
 },
 {
-  path: '/admin/Pets',
+  path: '/Store',
+  name: 'Store',
+  component: () => import(/* webpackChunkName: "signup" */ '../views/Admin/Store'),
+  meta:{ requiresAuth: true}
+},
+{
+  path: '/Pets',
   name: 'Pets',
   component: () => import(/* webpackChunkName: "signup" */ '../views/Admin/Pets'),
   meta:{ requiresAuth: true}

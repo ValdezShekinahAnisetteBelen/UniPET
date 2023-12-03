@@ -12,21 +12,22 @@ class PurchaseController extends BaseController
         //
     }
 
-    public function delete($customer_id)
-    {
-        try {
-            $purchaseModel = new PurchaseModel();
+    // public function delete($customer_id)
+    // {
+        
+    //     try {
+    //         $purchaseModel = new PurchaseModel();
 
-            // Delete all records for the specific customer_id
-            $purchaseModel->where('customer_id', $customer_id)->delete();
+    //         // Delete all records for the specific customer_id
+    //         $purchaseModel->where('customer_id', $customer_id)->delete();
 
-            // Optionally, you can return a response to indicate success
-            return $this->response->setJSON(['message' => 'Records deleted successfully']);
-        } catch (\Exception $e) {
-            // Handle any exceptions that might occur during deletion
-            return $this->response->setJSON(['error' => $e->getMessage()])->setStatusCode(500);
-        }
-    }
+    //         // Optionally, you can return a response to indicate success
+    //         return $this->response->setJSON(['message' => 'Records deleted successfully']);
+    //     } catch (\Exception $e) {
+    //         // Handle any exceptions that might occur during deletion
+    //         return $this->response->setJSON(['error' => $e->getMessage()])->setStatusCode(500);
+    //     }
+    // }
    public function getData3($customer_id)
 {
     $main = new PurchaseModel();
