@@ -114,6 +114,7 @@
           <div v-if="salesTransactionNumber">
                 Sales Transaction Number: {{ salesTransactionNumber }}
           </div>
+          <p>Total Price: {{ calculateTotalPrice() }}</p>
           <v-simple-table style="margin-top: 20px; border-collapse: separate; border-spacing: 0 8px; width: 100%; margin: 0 auto;">
     <template v-slot:default class="d-flex align-center pe-2" >
       <thead>
@@ -151,7 +152,10 @@
   @keydown.enter="handleEnterKey"
 ></v-text-field>
 
-<p>PRESS Fn+F5 to set status to transacted</p>
+<!-- Add this button inside the template -->
+<v-btn @click="markAsTransacted" color="success">Mark as Transacted</v-btn>
+
+
             </v-col>
           </v-row>
         </v-container>
@@ -187,6 +191,7 @@
       { text: ' Orders ', route: '/admin/orders', icon: 'mdi-cart' },
 
       { text: ' Products ', route: '/products', icon: 'mdi-cart' },
+      { text: ' Audit History ', route: '/products2', icon: 'mdi-cart' },
     ],
   links3: [
     { text: ' Appointments ', route: '/Appointments', icon: 'mdi-paw' }, //done
@@ -204,6 +209,35 @@
       this.salesTransactionNumber = this.generateRandomKey();
     },
     methods: {
+      async markAsTransacted() {
+  try {
+    // Send a request to your server to update the status
+    const response = await axios.put(`/api/markAsTransacted/${this.salesTransactionNumber}`);
+
+    // Check if the response indicates a successful update
+    if (response.data.success) {
+      // Fetch the updated sales data
+      this.getSales();
+
+      // Reload the page after a successful update
+      window.location.reload();
+    } else {
+      console.error('Failed to mark as transacted.');
+    }
+  } catch (error) {
+    console.error('Error in markAsTransacted:', error);
+  }
+},
+
+      calculateTotalPrice() {
+      // Calculate the total price by summing up the subtotals in tableData
+      const total = this.tableData.reduce((acc, item) => {
+        return acc + item.quantity * item.price;
+      }, 0);
+
+      // Format the total as currency
+      return this.formatCurrency(total);
+    },
   formatCurrency(value) {
       // Ensure that value is a number before using toFixed
       const numericValue = Number(value);

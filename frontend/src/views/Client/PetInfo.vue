@@ -697,6 +697,14 @@
           this.selectedGroomingType = [];
           this.selectedGroomingShampoo = [];
   
+           // Show a confirmation prompt
+    const isConfirmed = window.confirm('Appointment saved successfully!');
+
+if (isConfirmed) {
+  this.$router.push('/AppointmentHistory');
+} else {
+  this.$router.push('/PetInfo');
+}
           this.$emit('data-saved');
           this.getInfo();
           localStorage.removeItem('form_data');

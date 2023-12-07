@@ -167,6 +167,7 @@
       { text: ' Orders ', route: '/admin/orders', icon: 'mdi-cart' },
 
       { text: ' Products ', route: '/products', icon: 'mdi-cart' },
+      { text: ' Audit History ', route: '/products2', icon: 'mdi-cart' },
     ],
       links3: [
         { text: ' Appointments ', route: '/Appointments', icon: 'mdi-paw' }, //done

@@ -22,6 +22,9 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
+.form-group .v-input__icon--append {
+	cursor: pointer;
+  }
 
 .ti-wand:before {
 	content: "\e600";

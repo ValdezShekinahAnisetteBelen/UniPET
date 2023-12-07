@@ -1,0 +1,50 @@
+ERROR - 2023-12-07 02:42:07 --> updateUserRole - Exception: Call to undefined method App\Models\UserModel::updateUserRole
+ERROR - 2023-12-07 02:42:07 --> updateUserRole - File: C:\laragon\www\UniPET\system\Model.php, Line: 873
+ERROR - 2023-12-07 02:47:58 --> updateUserRole - Exception: Call to undefined method App\Models\UserModel::updateUserRole
+ERROR - 2023-12-07 02:47:58 --> updateUserRole - File: C:\laragon\www\UniPET\system\Model.php, Line: 873
+ERROR - 2023-12-07 02:49:52 --> updateUserRole - Exception: Call to undefined method App\Models\UserModel::updateUserRole
+ERROR - 2023-12-07 02:49:52 --> updateUserRole - File: C:\laragon\www\UniPET\system\Model.php, Line: 873
+ERROR - 2023-12-07 02:53:39 --> updateUserRole - Exception: There is no data to update.
+ERROR - 2023-12-07 02:53:39 --> updateUserRole - File: C:\laragon\www\UniPET\system\BaseModel.php, Line: 1724
+ERROR - 2023-12-07 02:53:56 --> updateUserRole - Exception: There is no data to update.
+ERROR - 2023-12-07 02:53:56 --> updateUserRole - File: C:\laragon\www\UniPET\system\BaseModel.php, Line: 1724
+ERROR - 2023-12-07 02:54:12 --> updateUserRole - Exception: There is no data to update.
+ERROR - 2023-12-07 02:54:12 --> updateUserRole - File: C:\laragon\www\UniPET\system\BaseModel.php, Line: 1724
+ERROR - 2023-12-07 02:54:20 --> updateUserRole - Exception: There is no data to update.
+ERROR - 2023-12-07 02:54:20 --> updateUserRole - File: C:\laragon\www\UniPET\system\BaseModel.php, Line: 1724
+ERROR - 2023-12-07 02:55:27 --> updateUserRole - Exception: There is no data to update.
+ERROR - 2023-12-07 02:55:27 --> updateUserRole - File: C:\laragon\www\UniPET\system\BaseModel.php, Line: 1724
+ERROR - 2023-12-07 02:58:48 --> updateUserRole - Exception: There is no data to update.
+ERROR - 2023-12-07 02:58:48 --> updateUserRole - File: C:\laragon\www\UniPET\system\BaseModel.php, Line: 1724
+ERROR - 2023-12-07 02:58:58 --> updateUserRole - Exception: There is no data to update.
+ERROR - 2023-12-07 02:58:58 --> updateUserRole - File: C:\laragon\www\UniPET\system\BaseModel.php, Line: 1724
+ERROR - 2023-12-07 02:59:20 --> updateUserRole - Exception: There is no data to update.
+ERROR - 2023-12-07 02:59:20 --> updateUserRole - File: C:\laragon\www\UniPET\system\BaseModel.php, Line: 1724
+ERROR - 2023-12-07 03:02:45 --> updateUserRole - Exception: There is no data to update.
+ERROR - 2023-12-07 03:02:45 --> updateUserRole - File: C:\laragon\www\UniPET\system\BaseModel.php, Line: 1724
+ERROR - 2023-12-07 03:04:35 --> updateUserRole - Exception: Undefined property: App\Controllers\UserController::$input
+ERROR - 2023-12-07 03:04:35 --> updateUserRole - File: C:\laragon\www\UniPET\app\Controllers\UserController.php, Line: 77
+ERROR - 2023-12-07 03:08:02 --> updateUserRole - Exception: There is no data to update.
+ERROR - 2023-12-07 03:08:02 --> updateUserRole - File: C:\laragon\www\UniPET\system\BaseModel.php, Line: 1724
+ERROR - 2023-12-07 03:13:13 --> updateUserRole - Exception: There is no data to update.
+ERROR - 2023-12-07 03:13:13 --> updateUserRole - File: C:\laragon\www\UniPET\system\BaseModel.php, Line: 1724
+ERROR - 2023-12-07 03:22:33 --> updateUserRole - Exception: There is no data to update.
+ERROR - 2023-12-07 03:22:33 --> updateUserRole - File: C:\laragon\www\UniPET\system\BaseModel.php, Line: 1724
+ERROR - 2023-12-07 03:39:42 --> updateUserRole - Exception: There is no data to update.
+ERROR - 2023-12-07 03:39:42 --> updateUserRole - File: C:\laragon\www\UniPET\system\BaseModel.php, Line: 1724
+ERROR - 2023-12-07 03:46:43 --> updateUserRole - Exception: There is no data to update.
+ERROR - 2023-12-07 03:46:43 --> updateUserRole - File: C:\laragon\www\UniPET\system\BaseModel.php, Line: 1724
+ERROR - 2023-12-07 03:46:57 --> updateUserRole - Exception: There is no data to update.
+ERROR - 2023-12-07 03:46:57 --> updateUserRole - File: C:\laragon\www\UniPET\system\BaseModel.php, Line: 1724
+ERROR - 2023-12-07 03:50:20 --> updateUserRole - Exception: There is no data to update.
+ERROR - 2023-12-07 03:50:20 --> updateUserRole - File: C:\laragon\www\UniPET\system\BaseModel.php, Line: 1724
+ERROR - 2023-12-07 03:52:33 --> updateUserRole - Exception: There is no data to update.
+ERROR - 2023-12-07 03:52:33 --> updateUserRole - File: C:\laragon\www\UniPET\system\BaseModel.php, Line: 1724
+ERROR - 2023-12-07 03:52:46 --> updateUserRole - Exception: There is no data to update.
+ERROR - 2023-12-07 03:52:46 --> updateUserRole - File: C:\laragon\www\UniPET\system\BaseModel.php, Line: 1724
+CRITICAL - 2023-12-07 04:06:29 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()

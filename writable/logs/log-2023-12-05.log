@@ -1,0 +1,271 @@
+CRITICAL - 2023-12-05 04:57:01 --> Attempt to assign property "quantity" on array
+in APPPATH\Controllers\CartController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\CartController->addToCart()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CartController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-05 13:03:06 --> Undefined array key "quantity"
+in APPPATH\Controllers\Product.php on line 83.
+ 1 APPPATH\Controllers\Product.php(83): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "quantity"', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\Product.php', 83)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Product->updateQuantity()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-05 13:16:41 --> mysqli_sql_exception: Unknown column 'audit.quantity' in 'field list' in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `product...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `product...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `product...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `product...', Array, false)
+#4 C:\laragon\www\UniPET\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\UniPET\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\UniPET\app\Controllers\Product.php(67): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\Product->audit('10002')
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#9 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-12-05 13:16:41 --> Unknown column 'audit.quantity' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `products`.`upc` as `upc`, `products`.`name` as `name`, `products`.`description` as `description`, `audit`.`oldQuantity` as `oldQuantity`, `audit`.`quantity` as `quantity`, `audit`.`type` as `type`
+FROM `audit`
+JOIN `products` ON `audit`.`product_id`=`products`.`id`
+WHERE `products`.`upc` = :products.upc:', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Product.php(67): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Product->audit('10002')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-05 13:51:25 --> mysqli_sql_exception: Unknown column 'audit.productID' in 'on clause' in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `product...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `product...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `product...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `product...', Array, false)
+#4 C:\laragon\www\UniPET\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\UniPET\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\UniPET\app\Controllers\Product.php(67): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\Product->audit('10002')
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#9 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-12-05 13:51:25 --> Unknown column 'audit.productID' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `products`.`upc` as `upc`, `products`.`name` as `name`, `products`.`description` as `description`, `audit`.`oldQuantity` as `oldQuantity`, `audit`.`stock` as `stock`, `audit`.`type` as `type`
+FROM `audit`
+JOIN `products` ON `audit`.`productID`=`products`.`id`
+WHERE `products`.`upc` = :products.upc:', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Product.php(67): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Product->audit('10002')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-05 13:51:28 --> mysqli_sql_exception: Unknown column 'audit.productID' in 'on clause' in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `product...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `product...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `product...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `product...', Array, false)
+#4 C:\laragon\www\UniPET\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\UniPET\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\UniPET\app\Controllers\Product.php(67): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\Product->audit('10002')
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#9 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-12-05 13:51:28 --> Unknown column 'audit.productID' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `products`.`upc` as `upc`, `products`.`name` as `name`, `products`.`description` as `description`, `audit`.`oldQuantity` as `oldQuantity`, `audit`.`stock` as `stock`, `audit`.`type` as `type`
+FROM `audit`
+JOIN `products` ON `audit`.`productID`=`products`.`id`
+WHERE `products`.`upc` = :products.upc:', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Product.php(67): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Product->audit('10002')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-05 13:51:57 --> mysqli_sql_exception: Unknown column 'audit.productID' in 'on clause' in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `product...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `product...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `product...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `product...', Array, false)
+#4 C:\laragon\www\UniPET\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\UniPET\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\UniPET\app\Controllers\Product.php(67): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\Product->audit('10002')
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#9 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-12-05 13:51:57 --> Unknown column 'audit.productID' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `products`.`upc` as `upc`, `products`.`name` as `name`, `products`.`description` as `description`, `audit`.`oldQuantity` as `oldQuantity`, `audit`.`stock` as `stock`, `audit`.`type` as `type`
+FROM `audit`
+JOIN `products` ON `audit`.`productID`=`products`.`id`
+WHERE `products`.`upc` = :products.upc:', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Product.php(67): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Product->audit('10002')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-05 13:52:06 --> mysqli_sql_exception: Unknown column 'audit.productID' in 'on clause' in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `product...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `product...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `product...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `product...', Array, false)
+#4 C:\laragon\www\UniPET\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\UniPET\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\UniPET\app\Controllers\Product.php(67): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\Product->audit('10002')
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#9 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-12-05 13:52:06 --> Unknown column 'audit.productID' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `products`.`upc` as `upc`, `products`.`name` as `name`, `products`.`description` as `description`, `audit`.`oldQuantity` as `oldQuantity`, `audit`.`stock` as `stock`, `audit`.`type` as `type`
+FROM `audit`
+JOIN `products` ON `audit`.`productID`=`products`.`id`
+WHERE `products`.`upc` = :products.upc:', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Product.php(67): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Product->audit('10002')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-05 13:52:17 --> mysqli_sql_exception: Unknown column 'audit.productID' in 'on clause' in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `product...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `product...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `product...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `product...', Array, false)
+#4 C:\laragon\www\UniPET\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\UniPET\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\UniPET\app\Controllers\Product.php(67): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\Product->audit('10002')
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#9 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-12-05 13:52:17 --> Unknown column 'audit.productID' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `products`.`upc` as `upc`, `products`.`name` as `name`, `products`.`description` as `description`, `audit`.`oldQuantity` as `oldQuantity`, `audit`.`stock` as `stock`, `audit`.`type` as `type`
+FROM `audit`
+JOIN `products` ON `audit`.`productID`=`products`.`id`
+WHERE `products`.`upc` = :products.upc:', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Product.php(67): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Product->audit('10002')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-05 13:52:55 --> mysqli_sql_exception: Unknown column 'audit.productID' in 'on clause' in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `product...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `product...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `product...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `product...', Array, false)
+#4 C:\laragon\www\UniPET\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\UniPET\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\UniPET\app\Controllers\Product.php(67): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\Product->audit('10002')
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#9 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-12-05 13:52:55 --> Unknown column 'audit.productID' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `products`.`upc` as `upc`, `products`.`name` as `name`, `products`.`description` as `description`, `audit`.`oldQuantity` as `oldQuantity`, `audit`.`stock` as `stock`, `audit`.`type` as `type`
+FROM `audit`
+JOIN `products` ON `audit`.`productID`=`products`.`id`
+WHERE `products`.`upc` = :products.upc:', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Product.php(67): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Product->audit('10002')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-05 17:46:02 --> Undefined property: stdClass::$productID
+in APPPATH\Controllers\OrderHistoryController.php on line 143.
+ 1 APPPATH\Controllers\OrderHistoryController.php(143): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$productID', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\OrderHistoryController.php', 143)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-05 17:46:11 --> Undefined property: stdClass::$productID
+in APPPATH\Controllers\OrderHistoryController.php on line 143.
+ 1 APPPATH\Controllers\OrderHistoryController.php(143): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$productID', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\OrderHistoryController.php', 143)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-05 17:49:57 --> Undefined property: stdClass::$productID
+in APPPATH\Controllers\OrderHistoryController.php on line 143.
+ 1 APPPATH\Controllers\OrderHistoryController.php(143): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$productID', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\OrderHistoryController.php', 143)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-05 17:50:18 --> Undefined property: stdClass::$productID
+in APPPATH\Controllers\OrderHistoryController.php on line 143.
+ 1 APPPATH\Controllers\OrderHistoryController.php(143): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$productID', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\OrderHistoryController.php', 143)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-05 17:50:19 --> Undefined property: stdClass::$productID
+in APPPATH\Controllers\OrderHistoryController.php on line 143.
+ 1 APPPATH\Controllers\OrderHistoryController.php(143): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$productID', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\OrderHistoryController.php', 143)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-05 17:50:20 --> Undefined property: stdClass::$productID
+in APPPATH\Controllers\OrderHistoryController.php on line 143.
+ 1 APPPATH\Controllers\OrderHistoryController.php(143): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$productID', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\OrderHistoryController.php', 143)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-05 17:50:32 --> Undefined property: stdClass::$productID
+in APPPATH\Controllers\OrderHistoryController.php on line 143.
+ 1 APPPATH\Controllers\OrderHistoryController.php(143): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$productID', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\OrderHistoryController.php', 143)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-05 17:53:54 --> Undefined property: stdClass::$productID
+in APPPATH\Controllers\OrderHistoryController.php on line 143.
+ 1 APPPATH\Controllers\OrderHistoryController.php(143): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$productID', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\OrderHistoryController.php', 143)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-05 17:56:53 --> Undefined property: stdClass::$productID
+in APPPATH\Controllers\OrderHistoryController.php on line 143.
+ 1 APPPATH\Controllers\OrderHistoryController.php(143): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$productID', 'C:\\laragon\\www\\UniPET\\app\\Controllers\\OrderHistoryController.php', 143)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\OrderHistoryController->saveOrder()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderHistoryController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-05 18:35:18 --> Too few arguments to function App\Controllers\AppointmentController::getData1(), 0 passed in C:\laragon\www\UniPET\system\CodeIgniter.php on line 919 and exactly 1 expected
+in APPPATH\Controllers\AppointmentController.php on line 160.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\AppointmentController->getData1()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AppointmentController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()

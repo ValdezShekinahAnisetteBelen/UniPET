@@ -1,0 +1,156 @@
+ERROR - 2023-12-06 15:27:22 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`unipet`.`pet`, CONSTRAINT `fk_customer2` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`)) in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('DELETE FROM `cu...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `cu...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `cu...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `cu...', Array, false)
+#4 C:\laragon\www\UniPET\system\Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\laragon\www\UniPET\system\BaseModel.php(1080): CodeIgniter\Model->doDelete(Array, false)
+#6 C:\laragon\www\UniPET\app\Controllers\UserController.php(32): CodeIgniter\BaseModel->delete(Array)
+#7 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\UserController->delete2('20')
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#9 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-12-06 15:27:22 --> Cannot delete or update a parent row: a foreign key constraint fails (`unipet`.`pet`, CONSTRAINT `fk_customer2` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`))
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `customer`
+WHERE `customer_id` IN :customer_id:', [...], false)
+ 2 SYSTEMPATH\Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH\BaseModel.php(1080): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH\Controllers\UserController.php(32): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->delete2('20')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-06 15:27:31 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`unipet`.`pet`, CONSTRAINT `fk_customer2` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`)) in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('DELETE FROM `cu...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `cu...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `cu...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `cu...', Array, false)
+#4 C:\laragon\www\UniPET\system\Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\laragon\www\UniPET\system\BaseModel.php(1080): CodeIgniter\Model->doDelete(Array, false)
+#6 C:\laragon\www\UniPET\app\Controllers\UserController.php(32): CodeIgniter\BaseModel->delete(Array)
+#7 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\UserController->delete2('20')
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#9 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-12-06 15:27:31 --> Cannot delete or update a parent row: a foreign key constraint fails (`unipet`.`pet`, CONSTRAINT `fk_customer2` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`))
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `customer`
+WHERE `customer_id` IN :customer_id:', [...], false)
+ 2 SYSTEMPATH\Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH\BaseModel.php(1080): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH\Controllers\UserController.php(32): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->delete2('20')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-06 15:27:57 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`unipet`.`pet`, CONSTRAINT `fk_customer2` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`)) in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('DELETE FROM `cu...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `cu...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `cu...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `cu...', Array, false)
+#4 C:\laragon\www\UniPET\system\Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\laragon\www\UniPET\system\BaseModel.php(1080): CodeIgniter\Model->doDelete(Array, false)
+#6 C:\laragon\www\UniPET\app\Controllers\UserController.php(32): CodeIgniter\BaseModel->delete(Array)
+#7 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\UserController->delete2('20')
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#9 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-12-06 15:27:57 --> Cannot delete or update a parent row: a foreign key constraint fails (`unipet`.`pet`, CONSTRAINT `fk_customer2` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`))
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `customer`
+WHERE `customer_id` IN :customer_id:', [...], false)
+ 2 SYSTEMPATH\Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH\BaseModel.php(1080): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH\Controllers\UserController.php(32): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->delete2('20')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-06 15:36:27 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`unipet`.`cart`, CONSTRAINT `cart_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`)) in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('DELETE FROM `cu...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `cu...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `cu...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `cu...', Array, false)
+#4 C:\laragon\www\UniPET\system\Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\laragon\www\UniPET\system\BaseModel.php(1080): CodeIgniter\Model->doDelete(Array, false)
+#6 C:\laragon\www\UniPET\app\Controllers\UserController.php(32): CodeIgniter\BaseModel->delete(Array)
+#7 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\UserController->delete2('21')
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#9 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-12-06 15:36:27 --> Cannot delete or update a parent row: a foreign key constraint fails (`unipet`.`cart`, CONSTRAINT `cart_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`))
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `customer`
+WHERE `customer_id` IN :customer_id:', [...], false)
+ 2 SYSTEMPATH\Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH\BaseModel.php(1080): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH\Controllers\UserController.php(32): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->delete2('21')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-06 15:36:54 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`unipet`.`pet`, CONSTRAINT `fk_customer2` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`)) in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('DELETE FROM `cu...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `cu...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `cu...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `cu...', Array, false)
+#4 C:\laragon\www\UniPET\system\Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\laragon\www\UniPET\system\BaseModel.php(1080): CodeIgniter\Model->doDelete(Array, false)
+#6 C:\laragon\www\UniPET\app\Controllers\UserController.php(32): CodeIgniter\BaseModel->delete(Array)
+#7 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\UserController->delete2('20')
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#9 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-12-06 15:36:54 --> Cannot delete or update a parent row: a foreign key constraint fails (`unipet`.`pet`, CONSTRAINT `fk_customer2` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`))
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `customer`
+WHERE `customer_id` IN :customer_id:', [...], false)
+ 2 SYSTEMPATH\Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH\BaseModel.php(1080): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH\Controllers\UserController.php(32): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->delete2('20')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-06 15:36:59 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`unipet`.`cart`, CONSTRAINT `cart_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`)) in C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\UniPET\system\Database\MySQLi\Connection.php(306): mysqli->query('DELETE FROM `cu...', 0)
+#1 C:\laragon\www\UniPET\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `cu...')
+#2 C:\laragon\www\UniPET\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `cu...')
+#3 C:\laragon\www\UniPET\system\Database\BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `cu...', Array, false)
+#4 C:\laragon\www\UniPET\system\Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\laragon\www\UniPET\system\BaseModel.php(1080): CodeIgniter\Model->doDelete(Array, false)
+#6 C:\laragon\www\UniPET\app\Controllers\UserController.php(32): CodeIgniter\BaseModel->delete(Array)
+#7 C:\laragon\www\UniPET\system\CodeIgniter.php(919): App\Controllers\UserController->delete2('21')
+#8 C:\laragon\www\UniPET\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#9 C:\laragon\www\UniPET\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\UniPET\public\index.php(88): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-12-06 15:36:59 --> Cannot delete or update a parent row: a foreign key constraint fails (`unipet`.`cart`, CONSTRAINT `cart_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`))
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `customer`
+WHERE `customer_id` IN :customer_id:', [...], false)
+ 2 SYSTEMPATH\Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH\BaseModel.php(1080): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH\Controllers\UserController.php(32): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->delete2('21')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(88): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-06 22:10:34 --> Exception: Call to undefined method App\Models\UserModel::updateUserRole
+ERROR - 2023-12-06 22:12:01 --> updateUserRole - Exception: Call to undefined method App\Models\UserModel::updateUserRole
+ERROR - 2023-12-06 22:13:22 --> updateUserRole - Exception: Call to undefined method App\Models\UserModel::updateUserRole
+ERROR - 2023-12-06 22:13:22 --> updateUserRole - File: C:\laragon\www\UniPET\system\Model.php, Line: 873
+ERROR - 2023-12-06 22:16:57 --> updateUserRole - Exception: Call to undefined method App\Models\UserModel::updateUserRole
+ERROR - 2023-12-06 22:16:57 --> updateUserRole - File: C:\laragon\www\UniPET\system\Model.php, Line: 873

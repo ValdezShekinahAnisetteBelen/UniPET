@@ -88,27 +88,64 @@
         <v-main class="d-flex align-center justify-center" style="min-height: 300px;">
     <v-container style="background-color: #ECECEC;">
       <v-card-title class="d-flex align-center pe-2">
-        <v-icon>mdi-paw</v-icon> &nbsp; Pet Profiles
+        <v-icon>mdi-paw</v-icon> &nbsp; Customer Accounts
         <v-spacer></v-spacer>
         <v-text-field v-model="search" prepend-inner-icon="mdi-magnify" density="compact" label="Search" single-line flat hide-details variant="solo-filled"></v-text-field>
       </v-card-title>
       <!-- Data Rows -->
       <v-row>
-        <v-col v-for="(item, rowIndex) in filteredItems" :key="rowIndex" :cols="12 / itemsPerRow">
-          <v-sheet class="pa-2 ma-2">
-            <v-col v-for="(header, headerIndex) in headers" :key="headerIndex">
-              <div v-if="header.value === 'image'" :style="{ borderRadius: '50%', overflow: 'hidden' }">
-                <!-- Display image based on the 'image' column -->
-                <v-img :src="item[header.value]" aspect-ratio="1"></v-img>
-              </div>
-              <div v-else>
-                <strong>{{ header.text }}:</strong> {{ item[header.value] }}
-              </div>
-              <v-divider v-if="headerIndex < headers.length - 1" class="mx-2"></v-divider>
-            </v-col>
-          </v-sheet>
-        </v-col>
-      </v-row>
+  <v-col v-for="(item, rowIndex) in filteredItems" :key="rowIndex" :cols="12 / itemsPerRow">
+    <v-sheet class="pa-2 ma-2">
+      <v-col v-for="(header, headerIndex) in headers" :key="headerIndex">
+        <div v-if="header.value === 'image'" :style="{ borderRadius: '50%', overflow: 'hidden' }">
+          <!-- Display image based on the 'image' column -->
+          <v-img :src="item[header.value]" aspect-ratio="1"></v-img>
+        </div>
+        <div v-else>
+          <strong>{{ header.text }}:</strong>
+          <span v-if="header.value === 'status'" :style="getStatusStyle(item[header.value])">{{ item[header.value] }}</span>
+          <span v-else>{{ item[header.value] }}</span>
+        </div>
+        <v-divider v-if="headerIndex < headers.length - 1" class="mx-2"></v-divider>
+      </v-col>
+
+      <!-- Edit button for logged-in customer_id -->
+     <v-btn v-if="isEditableCustomer(item.customer_id)" @click="editCustomer(item.customer_id)" style="background-color: #03C9D7; color: white;">
+  Edit
+</v-btn>
+
+
+<v-btn @click="deleteCustomer(item.customer_id)" style="background-color: #FF5722; color: white;">
+        Delete
+      </v-btn>
+
+      <v-dialog v-model="isEditingRole" max-width="600">
+    <v-card>
+      <v-card-title>
+        Edit Role
+        <v-spacer></v-spacer>
+        <v-btn icon @click="closeEditRoleModal">
+          <v-icon>mdi-close</v-icon>
+        </v-btn>
+      </v-card-title>
+      <v-card-text>
+        <v-form ref="editRoleForm" @submit.prevent="saveEditedRole">
+          <v-text-field v-model="editedRoleData.role" label="role"></v-text-field>
+          <v-btn type="submit" color="primary">Save Role</v-btn>
+        </v-form>
+      </v-card-text>
+    </v-card>
+  </v-dialog>
+
+
+  <!-- Include EditCustomerModal component -->
+  <EditCustomerModal :dialog="isEditing" :editedCustomer="editedCustomer" @save="saveEditedCustomer" @close="closeEditModal" />
+  <v-btn @click="editRole(item.customer_id)" style="background-color: #03C9D7; color: white;">
+        Edit Role
+      </v-btn>
+    </v-sheet>
+  </v-col>
+</v-row>
     </v-container>
   </v-main>
 
@@ -118,6 +155,7 @@
   
   
   <script>
+  import EditCustomerModal from './EditCustomerModal.vue';
   import axios from 'axios';
   // import DetailsModal from './DetailsModal.vue'
   
@@ -127,10 +165,17 @@
   // },
   components: {
     // DetailsModal,
+    EditCustomerModal,
   },
   data() {
     return {
-  
+      isEditingRole: false,
+    editedRoleData: {
+        customerId: null,
+        role: '',
+    },
+      isEditing: false,
+      editedCustomer: {},
     //   editedpetId: null,
     search: '',
     //   editModal: false,
@@ -140,23 +185,29 @@
       headers: [],
   
       links1: [
-        { text: ' Key Metrics ', route: '/Dashboard', icon: 'mdi-view-dashboard' }, //done
-      ],
-      links2: [
-      { text: ' POS ', route: '/POS', icon: 'mdi-cart' },
-        { text: ' Orders ', route: '/admin/orders', icon: 'mdi-cart' }, //done
-        { text: ' Products ', route: '/products', icon: 'mdi-cart' }, //done
-      ],
-      links3: [
-        { text: ' Appointments ', route: '/Appointments', icon: 'mdi-paw' }, //done
-        { text: ' Pets ', route: '/Pets', icon: 'mdi-paw' }, //done
-         //done
-      ],
-      links4: [
-        { text: ' Customer Accounts ', route: '/admin/Profiles', icon: 'mdi-account' }, //done
-        { text: ' Admin Accounts ', route: '/admin/Admin', icon: 'mdi-account' }, //done
-         //done
-      ],
+      { text: ' Key Metrics ', route: '/Dashboard', icon: 'mdi-view-dashboard' }, //done
+    ],
+    links5: [
+    { text: ' POS ', route: '/POS', icon: 'mdi-cart' },
+      { text: ' In Store Purchase ', route: '/Store', icon: 'mdi-cart' },
+    ],
+    links2: [
+
+      { text: ' Orders ', route: '/admin/orders', icon: 'mdi-cart' },
+
+      { text: ' Products ', route: '/products', icon: 'mdi-cart' },
+      { text: ' Audit History ', route: '/products2', icon: 'mdi-cart' },
+    ],
+    links3: [
+      { text: ' Appointments ', route: '/Appointments', icon: 'mdi-paw' }, //done
+      { text: ' Pets ', route: '/admin/Pets', icon: 'mdi-paw' }, //done
+       //done
+    ],
+    links4: [
+      { text: ' Customer Accounts ', route: '/admin/Profiles', icon: 'mdi-account' }, //done
+      { text: ' Admin Accounts ', route: '/admin/Admin', icon: 'mdi-account' }, //done
+       //done
+    ],
     };
   },
   computed: {
@@ -181,15 +232,15 @@
     // //   icon: 'mdi-help-circle',
     // //   tooltip: 'View Transaction Details',
     // },  { text: 'Status', value: 'status' },
-    { text: 'Image', value: 'image' }, 
-    { text: 'Pet ID', value: 'pet_id' },
-    { text: 'Pet Name', value: 'pet_name' },
-        { text: 'Breed', value: 'breed' },
-        { text: 'Date of Birth', value: 'date_of_birth' },
-        { text: 'Weight', value: 'weight' },
-        { text: 'Color', value: 'color' },
-        { text: 'Temperature', value: 'temperature' },
-  
+    { text: 'Customer ID', value: 'customer_id' }, 
+    { text: 'First Name', value: 'first_name' },
+    { text: 'Last Name', value: 'last_name' },
+        { text: 'email', value: 'email' },
+        { text: 'Phone Number', value: 'phone_number' },
+        { text: 'username', value: 'username' },
+        { text: 'password', value: 'password' },
+        { text: 'status', value: 'status' },
+        { text: 'role', value: 'role' },
       ];
     },
     filteredItems() {
@@ -200,14 +251,132 @@
     },
   },
   methods: {
+    async deleteCustomer(customerId) {
+  try {
+    // Send a DELETE request to the server
+    await axios.delete(`/api/customer/delete/${customerId}`);
+
+    // Optionally, you can fetch the updated customer list
+    this.fetchProducts();
+
+    // Display success message
+    window.alert('Deleted Customer Account Successfully');
+  } catch (error) {
+    console.error('Error deleting customer:', error);
+
+    // Display appropriate error message
+    if (error.response && error.response.status === 400) {
+      window.alert('Cannot delete account. The account is active.');
+    } else {
+      window.alert('Cannot delete account. The account is active.');
+    }
+  }
+},
     handleImageError(item) {
       // Handle the error when the image fails to load
       console.error('Error loading image:', item);
       // You can perform any necessary error handling here,
       // such as displaying a placeholder image or showing an error message.
     },
-  
-    
+    getStatusStyle(status) {
+    // Customize this method based on your status values
+    if (status === 'active') {
+      return { backgroundColor: 'green', color: 'white' };
+    } else {
+      // Adjust the colors for other statuses as needed
+      return { backgroundColor: '', color: '' };
+    }
+  },
+
+  isEditableCustomer(customerId) {
+    // Check if the logged-in customer_id matches the provided customerId
+    return customerId === this.$store.state.userId;
+  },
+
+  async editCustomer(customerId) {
+      try {
+        // Fetch the customer details using the API
+        const response = await axios.get(`/api/customer/edit/${customerId}`);
+        
+        // Set the edited customer data
+        this.editedCustomer = response.data;
+
+        // Show the modal
+        this.isEditing = true;
+      } catch (error) {
+        console.error('Error fetching customer details:', error);
+        // Handle the error (show an error message, etc.)
+      }
+    },
+
+    async editRole(customerId) {
+      try {
+        const response = await axios.get(`/api/customer/edit/${customerId}`);
+        this.editedRoleData = {
+          customerId: customerId,
+          role: response.data.role,
+        };
+        this.isEditingRole = true;
+      } catch (error) {
+        console.error('Error fetching role details:', error);
+      }
+    },
+
+    async saveEditedRole() {
+  try {
+    const response = await axios.put(
+      `/api/updateUserRole/${this.editedRoleData.customerId}`,
+      JSON.stringify({ role: this.editedRoleData.role }), // Stringify the data
+      { headers: { 'Content-Type': 'application/json' } }
+    );
+
+    console.log('API Response:', response);
+
+    // Assuming this method fetches the updated user list
+    await this.fetchProducts();
+    window.alert('Role updated successfully');
+  } catch (error) {
+    console.error('Error updating role:', error);
+
+    if (error.response) {
+      console.error('Error status:', error.response.status);
+      console.error('Error data:', error.response.data);
+    } else if (error.request) {
+      console.error('Error request:', error.request);
+    } else {
+      console.error('Error message:', error.message);
+    }
+
+    window.alert('Failed to update role');
+  } finally {
+    this.isEditingRole = false;
+  }
+},
+    async saveEditedCustomer() {
+  try {
+    // Update the customer details using the API
+    await axios.put(`/api/customer/update/${this.editedCustomer.customer_id}`, this.editedCustomer);
+
+    // Optionally, you can fetch the updated customer list
+    await this.fetchProducts();
+
+    // Show a prompt indicating successful edit
+    window.alert('Edited Successfully');
+  } catch (error) {
+    console.error('Error updating customer details:', error);
+    // Handle the error (show an error message, etc.)
+    window.alert('Edit Failed'); // You can customize this message based on your needs
+  } finally {
+    // Close the modal
+    this.isEditing = false;
+  }
+},
+
+
+    closeEditModal() {
+      // Close the modal without saving changes
+      this.isEditing = false;
+    },
   logout() {
     sessionStorage.removeItem('token'); // Remove the token from session storage
     this.$router.push('/login'); // Navigate to the login page
@@ -215,7 +384,7 @@
   
   async fetchHeaders() {
       try {
-        const response = await axios.get('/api/getTableHeaders'); // Replace with the correct API endpoint
+        const response = await axios.get('/api/getTableHeaders2'); // Replace with the correct API endpoint
         this.headers = response.data.headers.map(header => ({ text: header, value: header }));
       } catch (error) {
         console.error('Error fetching table headers:', error);
@@ -228,7 +397,7 @@
 
     async fetchProducts() {
       try {
-        const response = await axios.get('/api/getAll'); // Replace with the correct endpoint
+        const response = await axios.get('/api/getAll2'); // Replace with the correct endpoint
         this.items = response.data;
       } catch (error) {
         console.error('Error fetching products:', error);

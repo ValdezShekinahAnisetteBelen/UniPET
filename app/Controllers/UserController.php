@@ -6,7 +6,9 @@ use App\Controllers\BaseController;
 use CodeIgniter\RESTful\ResourceController;
 use CodeIgniter\API\ResponseTrait;
 use App\Models\UserModel;
+use CodeIgniter\HTTP\ResponseInterface;
 use Firebase\JWT\JWT;
+use Exception;
 
 class UserController extends ResourceController
 {
@@ -22,6 +24,185 @@ class UserController extends ResourceController
 
         return null;
     }
+    public function createUser($role = 'user')
+    {
+        // Extract user data from the request
+        $username = $this->request->getVar('username');
+        $email = $this->request->getVar('email');
+    
+        // Additional validation if needed
+        // Example: Check if required fields are present
+        if (empty($username) || empty($email) || empty($this->request->getVar('password'))) {
+            return $this->respond(['msg' => 'Missing required fields'], 400); // 400 Bad Request
+        }
+    
+        // Hash the password securely
+        $hashedPassword = password_hash($this->request->getVar('password'), PASSWORD_DEFAULT);
+    
+        // Create a new user record or update an existing user
+        $userModel = new UserModel(); // Make sure to adjust the model class based on your implementation
+    
+        // Check if the user already exists by email
+        $existingUser = $userModel->where('email', $email)->first();
+    
+        if ($existingUser) {
+            // Update the existing user's role to the specified role
+            $result = $userModel->update($existingUser['customer_id'], [
+                'role' => $role,
+                // You can update other fields as needed
+            ]);
+        } else {
+            // Save user data for a new user
+            $result = $userModel->save([
+                'username' => $username,
+                'email' => $email,
+                'password' => $hashedPassword,
+                'status' => 'active', // Set default status or adjust as needed
+                'role' => $role, // Set the role based on the parameter (default is 'user')
+            ]);
+        }
+    
+        if ($result) {
+            // Registration or update successful
+            return $this->respond(['msg' => 'User created/updated successfully'], 200);
+        } else {
+            // Log the error details for debugging
+            log_message('error', 'Failed to create/update user. ' . $userModel->errors());
+            return $this->respond(['msg' => 'Failed to create/update user'], 500); // 500 Internal Server Error
+        }
+    }
+    public function updateUserRoleController($customerId)
+    {
+        try {
+            // Assuming you have dependency injection for the request object
+            $input = json_decode($this->request->getBody(), true);
+    
+            // Retrieve role from input
+            $role = $input['role'];
+    
+            log_message('debug', 'updateUserRoleController - Received request. Customer ID: ' . $customerId . ', Role: ' . $role);
+    
+            // Assuming updateUserRole returns a boolean indicating success
+            $model = new UserModel(); // Replace with dependency injection if possible
+            $success = $model->updateUserRole($customerId, $role);
+    
+            if ($success) {
+                // Respond with JSON 200 status
+                return $this->respond(['status' => 200, 'msg' => 'Role updated successfully']);
+            } else {
+                // Respond with JSON 500 status in case of failure
+                return $this->respond(['status' => 500, 'msg' => 'Failed to update role'], 500);
+            }
+        } catch (\Exception $e) {
+            // Log the exception for debugging
+            log_message('error', 'updateUserRoleController - Exception: ' . $e->getMessage());
+            log_message('error', 'updateUserRoleController - File: ' . $e->getFile() . ', Line: ' . $e->getLine());
+    
+            // Respond with JSON 500 status in case of exception
+            return $this->respond(['status' => 500, 'msg' => 'Internal Server Error: ' . $e->getMessage()], 500);
+        }
+    }    
+    
+    public function registerAdmin()
+    {
+        // Assuming $this->createUser is accessible in this controller
+        $this->createUser('admin');
+        
+        // Additional logic or response handling as needed
+    }
+
+    public function registerUser()
+    {
+        // Assuming $this->createUser is accessible in this controller
+        $this->createUser('user');
+        
+        // Additional logic or response handling as needed
+    }
+    public function delete2($customerId)
+    {
+        $model = new UserModel(); // Adjust the model class based on your implementation
+
+        // Perform deletion
+        try {
+            $model->delete($customerId);
+            return $this->response->setStatusCode(200)->setJSON(['success' => 'Customer deleted successfully']);
+        } catch (\Exception $e) {
+            return $this->response->setStatusCode(500)->setJSON(['error' => 'Error deleting customer']);
+        }
+    }
+
+    public function editCustomer($customerId)
+    {
+        // You can perform validation and additional logic here
+        
+        $model = new UserModel();
+
+        // Fetch the customer data by customer_id
+        $customer = $model->find($customerId);
+
+        if (!$customer) {
+            // Customer not found
+            return $this->failNotFound('Customer not found');
+        }
+
+        // Return the customer data as JSON response
+        return $this->respond($customer);
+    }
+
+    public function updateCustomer($customerId)
+    {
+        // You can perform validation and additional logic here
+        
+        $model = new UserModel();
+
+        // Fetch the customer data by customer_id
+        $customer = $model->find($customerId);
+
+        if (!$customer) {
+            // Customer not found
+            return $this->failNotFound('Customer not found');
+        }
+
+        // Get the updated data from the request
+        $updatedData = $this->request->getJSON(true);
+
+        // Update the customer data
+        $model->update($customerId, $updatedData);
+
+        // Return a success message as JSON response
+        return $this->respond(['message' => 'Customer updated successfully']);
+    }
+
+    public function getAll2()
+    {
+        $main = new UserModel();
+        
+        // Adjust the following line to filter based on the 'role' column
+        $data = $main->where('role', 'user')->findAll();
+    
+        return $this->respond($data, 200);
+    }
+    public function getAll3()
+    {
+        $main = new UserModel();
+        
+        // Adjust the following line to filter based on the 'role' column
+        $data = $main->where('role', 'admin')->findAll();
+    
+        return $this->respond($data, 200);
+    }
+    
+    public function getTableHeaders2()
+{
+    try {
+        $model = new UserModel();
+        $headers = $model->getTableHeaders();
+
+        return $this->respond(['headers' => $headers]);
+    } catch (\Exception $e) {
+        return $this->failServerError('Error fetching table headers: ' . $e->getMessage());
+    }
+}
     public function getCustomerDetails($customerId)
     {
         $customerModel = new UserModel();

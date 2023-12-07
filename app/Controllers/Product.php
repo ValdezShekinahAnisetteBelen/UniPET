@@ -34,54 +34,69 @@ class Product extends ResourceController
       return   $this->respond($data, 200);
     }
 
-    public function setsales($id)
-    {
-      $purchase_product =new OrderHModel();
-      $product  = new ProductModel();
-      $audit = new AuditModel();
-    //   $purchase_product->set('status', 'transacted')->where('orderID', $id)->update();
-      $d = $purchase_product->where('orderID', $id)->findAll();
+    public function setsales($orderID)
+{
+    $orderModel = new OrderHModel();
+    $productModel = new ProductModel();
+    $auditModel = new AuditModel();
 
-      foreach ($d as $v) {
-        $pid = $v['product_id'];
-        $quantity = $v['quantity'];
-        $h = $product->where('id', $pid)->first();
-        $sets = [
-          'quantity' => $h['quantity'] - $quantity
+    // Fetch products associated with the order
+    $orderDetails = $orderModel->where('orderID', $orderID)->findAll();
+
+    foreach ($orderDetails as $orderDetail) {
+        $productID = $orderDetail['product_id'];
+        $quantity = $orderDetail['quantity'];
+
+        // Fetch product details
+        $product = $productModel->where('id', $productID)->first();
+
+        // Ensure stock is not negative
+        $updatedQuantity = max(0, $product['stock'] - $quantity);
+
+        // Update product quantity
+        $productModel->set('stock', $updatedQuantity)->where('id', $productID)->update();
+
+        // Log the transaction in the audit table
+        $auditData = [
+            'product_id' => $productID,
+            'oldQuantity' => $product['stock'],
+            'stock' => $quantity,
+            'type' => 'sales'
         ];
-        $data = [
-          'product_id' => $pid,
-          'oldQuantity' => $h['quantity'],
-          'quantity' => $quantity,
-          'type' =>'purchase_product'
-        ];
-        $product->set($sets)->where('id', $pid)->update();
-        $audit->save($data);
-      }
-      $purchase_product->set('status', 'transacted')->where('orderID', $id)->update();
+        $auditModel->save($auditData);
     }
 
-    public function audit($id)
+    // Update order status to 'transacted'
+    $orderModel->set('status', 'sales')->where('orderID', $orderID)->update();
+}
+
+    public function audit($upc)
     {
-      $audit = new AuditModel();
-      $data = $audit->select('products.upc as upc, products.name as name, products.description as description, audit.oldQuantity as oldQuantity, audit.quantity as quantity, audit.type as type')->join('products', 'audit.product_id=products.id')->where('products.upc', $id)->findAll();
-      return $this->respond($data,200);
+        $audit = new AuditModel();
+        $data = $audit
+            ->select('products.upc as upc, products.name as name, products.description as description, audit.oldQuantity as oldQuantity, audit.stock as stock, audit.type as type')
+            ->join('products', 'audit.product_id = products.id', 'left')
+            ->where('products.upc', $upc)
+            ->findAll();
+    
+        return $this->respond($data, 200);
     }
+    
 
     public function updateQuantity()
     {
       $upc = $this->request->getVar('upc');
-      $quantity = $this->request->getVar('quantity');
+      $stock = $this->request->getVar('stock');
       $product = new ProductModel();
       $audit = new AuditModel();
       $pr = $product->where('upc', $upc)->first();
       if($pr){
-        $nq = $pr['quantity'] + $quantity;
-        $product->set('quantity', $nq)->where('upc', $upc)->update();
+        $nq = $pr['stock'] + $stock;
+        $product->set('stock', $nq)->where('upc', $upc)->update();
         $data = [
-          'productID' =>$pr['id'],
-          'oldQuantity' =>$pr['quantity'],
-          'quantity' => $quantity,
+          'product_id' =>$pr['id'],
+          'oldQuantity' =>$pr['stock'],
+          'stock' => $stock,
           'type' => 'inbound'
         ];
         $audit->save($data);
@@ -89,52 +104,107 @@ class Product extends ResourceController
 
     }
 
+    // Inside your controller, add a method to mark the order as transacted
+    public function markAsTransacted($orderID)
+    {
+        $purchase_product = new OrderHModel();
+    
+        // Update the status to 'transacted' for all 'added' entries with the given orderID
+        $purchase_product->set('status', 'transacted')->where('orderID', $orderID)->where('status', 'added')->update();
+    
+        // Return a success response
+        return $this->respond(['success' => true, 'orderID' => $orderID], 200);
+    }
+    
+    
+
     public function isales()
-{
-    $upc = $this->request->getVar('upc');
-    $qty = $this->request->getVar('quantity');
-    $orderID = $this->request->getVar('orderID');
-    $product = new ProductModel();
-    $purchase_product = new OrderHModel();
-
-    // Check if orderID is received
-    if (!$orderID) {
-        // If not received, generate a new orderID
-        $orderID = 'ORD' . str_pad(mt_rand(1, 99999), 5, '0', STR_PAD_LEFT);
-    }
-
-    // Find product by UPC
-    $pr = $product->where('upc', $upc)->first();
-
-    if ($pr) {
-        // Prepare data for insertion
-        $data = [
-            'orderID' => $orderID,
-            'product_id' => $pr['id'],
-            'price' => $pr['price'],
-            'quantity' => $qty,
-            'status' => 'added'
-        ];
-
-        // Insert data into the database
-        $d = $purchase_product->insert($data);
-
-        if ($d) {
-            // Insertion successful
-            $message = "added";
-
-            // Update the status to "transacted" after successful sales transaction
-            $purchase_product->set('status', 'transacted')->where('orderID', $orderID)->update();
-        } else {
-            // Insertion failed
-            $message = "Failed to add";
+    {
+        try {
+            $upc = $this->request->getVar('upc');
+            $qty = $this->request->getVar('quantity');
+            $orderID = $this->request->getVar('orderID');
+            $product = new ProductModel();
+            $purchase_product = new OrderHModel();
+            $auditModel = new AuditModel();
+    
+            // Check if orderID is received
+            if (!$orderID) {
+                // If not received, generate a new orderID
+                $orderID = 'ORD' . str_pad(mt_rand(1, 99999), 5, '0', STR_PAD_LEFT);
+            }
+    
+            // Find product by UPC
+            $pr = $product->where('upc', $upc)->first();
+    
+            if ($pr) {
+                // Check if the order with the given orderID is already transacted
+                $lastOrder = $purchase_product->where('orderID', $orderID)->orderBy('id', 'desc')->first();
+    
+                if ($lastOrder && $lastOrder['status'] === 'transacted') {
+                    // If the last order is transacted, generate a new orderID
+                    $orderID = 'ORD' . str_pad(mt_rand(1, 99999), 5, '0', STR_PAD_LEFT);
+                }
+    
+                // Ensure there's enough stock for the sale
+                if ($pr['stock'] >= $qty) {
+                    // Start a transaction
+                    $db = \Config\Database::connect();
+                    $db->transStart();
+    
+                    // Prepare data for insertion into purchase_product table
+                    $data = [
+                        'orderID' => $orderID,
+                        'product_id' => $pr['id'],
+                        'price' => $pr['price'],
+                        'quantity' => $qty,
+                        'status' => 'added'
+                    ];
+    
+                    // Insert data into the purchase_product table
+                    $purchase_product->insert($data);
+    
+                    // Subtract sold quantity from the current stock
+                    $updatedStock = max(0, $pr['stock'] - $qty);
+    
+                    // Update product stock
+                    $product->set('stock', $updatedStock)->where('id', $pr['id'])->update();
+    
+                    // Prepare data for insertion into audit table
+                    $auditData = [
+                        'product_id' => $pr['id'],
+                        'oldQuantity' => $pr['stock'],
+                        'stock' => $qty,
+                        'type' => 'sales'
+                    ];
+    
+                    // Insert data into the audit table
+                    $auditModel->save($auditData);
+    
+                    // Commit the transaction
+                    $db->transComplete();
+    
+                    // Check if the transaction was successful
+                    if ($db->transStatus() === false) {
+                        // If not, throw an exception
+                        throw new \Exception('Transaction failed.');
+                    }
+    
+                    // Return the response
+                    return $this->respond(['success' => true, 'message' => 'added'], 200);
+                } else {
+                    // Not enough stock for the sale
+                    $message = "Not enough stock for the sale";
+    
+                    // Return the response
+                    return $this->respond(['success' => false, 'message' => $message], 200);
+                }
+            }
+        } catch (\Exception $e) {
+            // Handle exceptions
+            return $this->respond(['success' => false, 'message' => $e->getMessage()], 500);
         }
-
-        // Return the response
-        return $this->respond($message, 200);
     }
-}
-
     
     public function saveProduct()
     {

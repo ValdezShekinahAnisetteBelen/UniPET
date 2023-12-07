@@ -688,6 +688,12 @@ async cancelOrder() {
     return;
   }
 
+  // Check if change_for_how_much is less than grandTotalPrice
+  if (parseFloat(this.formData.change_for_how_much) < parseFloat(this.grandTotalPrice)) {
+    window.alert('Change amount must be greater than or equal to the Grand Total Price.');
+    return;
+  }
+
   // Toggle the value of isSlide2Visible
   const userConfirmed = window.confirm('Step 1 completed. Do you want to proceed to Step 2?');
 
@@ -728,8 +734,7 @@ async cancelOrder() {
 
   // Trigger the second reload
   window.location.reload();
-}
-,
+},
     logout() {
       sessionStorage.removeItem('token');
       this.$router.push('/login');

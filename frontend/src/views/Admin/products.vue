@@ -117,6 +117,11 @@
 <!-- Add a button with color="info" -->
 <v-btn @click="addProduct" color="#03C9D7">+ ADD PRODUCT</v-btn>
 </v-card-title>
+<v-card-title class="d-flex align-center pe-2 text-end">
+<router-link :to="{ path: '/products2' }">
+  <v-btn color="#03C9D7">+ ADD Quantity</v-btn>
+</router-link>
+</v-card-title>
 
 <!-- Add Product Modal -->
 <v-dialog v-model="isAddProductModalOpen" max-width="600px">
@@ -155,6 +160,9 @@
           
 
           <!-- Header Templates -->
+          <template v-slot:header.upc>
+    <div class="text-end">UPC</div>
+  </template>
           <template v-slot:header.id>
     <div class="text-end">Product ID</div>
   </template>
@@ -168,7 +176,7 @@
     <div class="text-end">Price</div>
   </template>
   <template v-slot:header.stock>
-    <div class="text-end">Stock</div>
+    <div class="text-end">Current Stock</div>
   </template>
   <template v-slot:header.image>
     <div class="text-end">Image</div>
@@ -297,6 +305,7 @@ data() {
       { text: ' Orders ', route: '/admin/orders', icon: 'mdi-cart' },
 
       { text: ' Products ', route: '/products', icon: 'mdi-cart' },
+      { text: ' Audit History ', route: '/products2', icon: 'mdi-cart' },
     ],
     links3: [
       { text: ' Appointments ', route: '/Appointments', icon: 'mdi-paw' }, //done
@@ -332,6 +341,7 @@ return [
   // //   icon: 'mdi-help-circle',
   // //   tooltip: 'View Transaction Details',
   // },  { text: 'Status', value: 'status' },
+  { text: 'upc', value: 'upc' },
   { text: 'id', value: 'id' },
   { text: 'name', value: 'name' },
   { text: 'description', value: 'description' },

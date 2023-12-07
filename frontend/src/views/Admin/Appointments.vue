@@ -195,8 +195,10 @@
 
 <template v-slot:item.image="{ item }">
   <v-card class="my-2" elevation="2" rounded>
-    <!-- Add "User/images/" to the image source URL -->
-    <img :src="`${item.image.replace(/\\/g, '/')}`" :title="item.pet_name" :alt="item.pet_name" @error="handleImageError(item)">
+    <!-- Check if item.image is not null before accessing its value -->
+    <img v-if="item.image" :src="`${item.image.replace(/\\/g, '/')}`" :title="item.pet_name" :alt="item.pet_name" @error="handleImageError(item)">
+    <!-- Add a placeholder or default image if item.image is null -->
+    <img v-else src="path/to/placeholder-image.jpg" :title="item.pet_name" :alt="item.pet_name" @error="handleImageError(item)">
   </v-card>
 </template>
 
@@ -279,6 +281,7 @@ data() {
       { text: ' Orders ', route: '/admin/orders', icon: 'mdi-cart' },
 
       { text: ' Products ', route: '/products', icon: 'mdi-cart' },
+      { text: ' Audit History ', route: '/products2', icon: 'mdi-cart' },
     ],
     links3: [
       { text: ' Appointments ', route: '/Appointments', icon: 'mdi-paw' }, //done

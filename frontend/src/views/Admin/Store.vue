@@ -207,7 +207,7 @@ export default {
       drawer: false,
       
       links1: [
-      { text: ' Key Metrics ', route: '/Dashboard', icon: 'mdi-view-dashboard' },
+      { text: ' Key Metrics ', route: '/Dashboard', icon: 'mdi-view-dashboard' }, //done
     ],
     links5: [
     { text: ' POS ', route: '/POS', icon: 'mdi-cart' },
@@ -218,16 +218,17 @@ export default {
       { text: ' Orders ', route: '/admin/orders', icon: 'mdi-cart' },
 
       { text: ' Products ', route: '/products', icon: 'mdi-cart' },
+      { text: ' Audit History ', route: '/products2', icon: 'mdi-cart' },
     ],
     links3: [
-      { text: ' Appointments ', route: '/Appointments', icon: 'mdi-paw' },
-      { text: ' Pets ', route: '/Pets', icon: 'mdi-paw' },
-      
+      { text: ' Appointments ', route: '/Appointments', icon: 'mdi-paw' }, //done
+      { text: ' Pets ', route: '/admin/Pets', icon: 'mdi-paw' }, //done
+       //done
     ],
     links4: [
-      { text: ' Customer Accounts ', route: '/admin/Profiles', icon: 'mdi-account' },
-      { text: ' Admin Accounts ', route: '/admin/Admin', icon: 'mdi-account' },
-      
+      { text: ' Customer Accounts ', route: '/admin/Profiles', icon: 'mdi-account' }, //done
+      { text: ' Admin Accounts ', route: '/admin/Admin', icon: 'mdi-account' }, //done
+       //done
     ],
   };
   },

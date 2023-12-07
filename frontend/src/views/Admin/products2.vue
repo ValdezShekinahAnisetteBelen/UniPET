@@ -1,17 +1,115 @@
 <template>
-    <!-- ... existing code ... -->
-    <v-data-table
-      :headers="headers"
-      :items="desserts"
-      :search="search"
+  <v-app>
+    <!-- App Bar -->
+    <v-app-bar app color="#03C9D7">
+      <v-app-bar-nav-icon @click.stop="drawer = !drawer" color="#FFFF"></v-app-bar-nav-icon>
+      <v-app-bar-title class="d-inline align-center" style="color: #FFFFFF;">
+        UniPET
+        <v-icon color="#FFFF">mdi-paw</v-icon>
+      </v-app-bar-title>
+    </v-app-bar>
+
+    <!-- Navigation Drawer -->
+    <v-navigation-drawer
+      app
+      v-model="drawer"
+      style="color: #FB9678; overflow-y: auto;"
+      class="custom-scrollbar"
     >
+      <!-- Dashboard Link -->
+      <v-list style="background-color: #03C9D7;">
+        <v-list-item>
+          <v-list-item-content>
+            <v-list-item-icon></v-list-item-icon>
+            <v-list-item-title>DASHBOARD</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+
+        <!-- Links Group 1 -->
+        <router-link v-for="(link, index) in links1" :key="index" :to="link.route" class="nav-link" style="color: #03C9D7; font-weight: bold; display: flex; align-items: center;">
+          <v-icon>{{ link.icon }}</v-icon>
+          {{ link.text }}
+        </router-link>
+      </v-list>
+
+        <!-- Dashboard Link -->
+        <v-list style="background-color: #03C9D7;">
+          <v-list-item>
+            <v-list-item-content>
+              <v-list-item-icon></v-list-item-icon>
+              <v-list-item-title> Point of Sale (POS) system </v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+  
+          <!-- Links Group 1 -->
+          <router-link v-for="(link, index) in links5" :key="index" :to="link.route" class="nav-link" style="color: #03C9D7; font-weight: bold; display: flex; align-items: center;">
+            <v-icon>{{ link.icon }}</v-icon>
+            {{ link.text }}
+          </router-link>
+        </v-list>
+
+      <!-- Links Group 2 (E-COMMERCE) -->
+      <v-list style="background-color: #03C9D7;">
+        <v-list-item>
+          <v-list-item-content>
+            <v-list-item-icon></v-list-item-icon>
+            <v-list-item-title>E-COMMERCE</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+
+        <router-link v-for="(link, index) in links2" :key="index" :to="link.route" class="nav-link" style="color: #03C9D7; font-weight: bold; display: flex; align-items: center;">
+          <v-icon>{{ link.icon }}</v-icon>
+          {{ link.text }}
+        </router-link>
+      </v-list>
+
+      <!-- Links Group 3 (PETS APPOINTMENT) -->
+      <v-list style="background-color: #03C9D7;">
+        <v-list-item>
+          <v-list-item-content>
+            <v-list-item-icon></v-list-item-icon>
+            <v-list-item-title>PETS APPOINTMENT</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+
+        <router-link v-for="(link, index) in links3" :key="index" :to="link.route" class="nav-link" style="color: #03C9D7; font-weight: bold; display: flex; align-items: center;">
+          <v-icon>{{ link.icon }}</v-icon>
+          {{ link.text }}
+        </router-link>
+      </v-list>
+
+      <!-- Links Group 4 (ACCOUNTS) -->
+      <v-list style="background-color: #03C9D7;">
+        <v-list-item>
+          <v-list-item-content>
+            <v-list-item-icon></v-list-item-icon>
+            <v-list-item-title>ACCOUNTS</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+
+        <router-link v-for="(link, index) in links4" :key="index" :to="link.route" class="nav-link" style="color: #03C9D7; font-weight: bold; display: flex; align-items: center;">
+          <v-icon>{{ link.icon }}</v-icon>
+          {{ link.text }}
+        </router-link>
+
+        <router-link to="/logout" @click.prevent="logout" class="nav-link" style="color: #03C9D7; font-weight: bold; display: flex; align-items: center;">
+          <v-icon>logout_icon</v-icon>
+          Logout
+        </router-link>
+
+
+      </v-list>
+    </v-navigation-drawer>
+    <v-main class="d-flex align-center justify-center" style="min-height: 300px; background-color: #ECECEC;">
+      <v-data-table v-model:search="search" :headers="headers" :items="desserts">
+
       <template v-slot:item="{ item }">
         <tr>
           <td>{{ item.upc }}</td>
           <td>{{ item.name }}</td>
           <td>{{ item.description }}</td>
           <td>{{ item.stock }}</td>
-          <td>{{ item.unit_price }}</td>
+          <td>{{ item.price }}</td>
           <td>{{ item.productgroup }}</td>
           <td>
             <v-btn @click="openQuantityModal(item)">
@@ -38,6 +136,8 @@
         </v-card-actions>
       </v-card>
     </v-dialog>
+  </v-main>
+    </v-app>
   </template>
   
     <script>
@@ -49,6 +149,32 @@
         selectedProduct: null,
         quantityToAdd: 0,
             search: '',
+            drawer: false,
+            links1: [
+      { text: ' Key Metrics ', route: '/Dashboard', icon: 'mdi-view-dashboard' }, //done
+    ],
+    links5: [
+    { text: ' POS ', route: '/POS', icon: 'mdi-cart' },
+      { text: ' In Store Purchase ', route: '/Store', icon: 'mdi-cart' },
+    ],
+    links2: [
+
+      { text: ' Orders ', route: '/admin/orders', icon: 'mdi-cart' },
+
+      { text: ' Products ', route: '/products', icon: 'mdi-cart' },
+      { text: ' Audit History ', route: '/products2', icon: 'mdi-cart' },
+    ],
+    links3: [
+      { text: ' Appointments ', route: '/Appointments', icon: 'mdi-paw' }, //done
+      { text: ' Pets ', route: '/admin/Pets', icon: 'mdi-paw' }, //done
+       //done
+    ],
+    links4: [
+      { text: ' Customer Accounts ', route: '/admin/Profiles', icon: 'mdi-account' }, //done
+      { text: ' Admin Accounts ', route: '/admin/Admin', icon: 'mdi-account' }, //done
+       //done
+    ],
+  
             headers: [
               {
                 align: 'start',
@@ -59,7 +185,7 @@
               { key: 'name', title: 'Name' },
               { key: 'description', title: 'Description' },
               { key: 'stock', title: 'Current Stocks' },
-              { key: 'unit_price', title: 'unit_price' },
+              { key: 'price', title: 'price' },
               { key: 'cateogry', title: 'productgroup' },
             ],
             desserts: [],
