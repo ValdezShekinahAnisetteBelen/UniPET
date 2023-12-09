@@ -93,6 +93,9 @@
         <v-text-field v-model="search" prepend-inner-icon="mdi-magnify" density="compact" label="Search" single-line flat hide-details variant="solo-filled"></v-text-field>
       </v-card-title>
       <!-- Data Rows -->
+      <v-btn @click="openAddUserModal" style="background-color: #03C9D7; color: white;">
+      Add Customer
+    </v-btn>
       <v-row>
   <v-col v-for="(item, rowIndex) in filteredItems" :key="rowIndex" :cols="12 / itemsPerRow">
     <v-sheet class="pa-2 ma-2">
@@ -119,34 +122,42 @@
         Delete
       </v-btn>
 
-      <v-dialog v-model="isEditingRole" max-width="600">
-    <v-card>
-      <v-card-title>
-        Edit Role
-        <v-spacer></v-spacer>
-        <v-btn icon @click="closeEditRoleModal">
-          <v-icon>mdi-close</v-icon>
-        </v-btn>
-      </v-card-title>
-      <v-card-text>
-        <v-form ref="editRoleForm" @submit.prevent="saveEditedRole">
-          <v-text-field v-model="editedRoleData.role" label="role"></v-text-field>
-          <v-btn type="submit" color="primary">Save Role</v-btn>
-        </v-form>
-      </v-card-text>
-    </v-card>
-  </v-dialog>
+    
 
 
   <!-- Include EditCustomerModal component -->
-  <EditCustomerModal :dialog="isEditing" :editedCustomer="editedCustomer" @save="saveEditedCustomer" @close="closeEditModal" />
-  <v-btn @click="editRole(item.customer_id)" style="background-color: #03C9D7; color: white;">
-        Edit Role
-      </v-btn>
+ 
+ 
     </v-sheet>
   </v-col>
 </v-row>
     </v-container>
+
+    <v-dialog v-model="isAddingUser" max-width="600">
+    <v-card>
+      <v-card-title>
+        Add User
+        <v-spacer></v-spacer>
+        <v-btn icon @click="closeAddUserModal">
+          <v-icon>mdi-close</v-icon>
+        </v-btn>
+      </v-card-title>
+      <v-card-text>
+        <v-form ref="newUserForm" @submit.prevent="saveNewUser">
+  <v-text-field v-model="newUserData.username" label="Username" :rules="usernameRules"></v-text-field>
+  <v-text-field v-model="newUserData.email" label="Email" :rules="emailRules"></v-text-field>
+  <v-text-field v-model="newUserData.password" label="Password" type="password" :rules="passwordRules"></v-text-field>
+  <v-text-field v-model="newUserData.role" label="role"></v-text-field>
+  <!-- ... other form fields for additional user data -->
+ 
+</v-form>
+      </v-card-text>
+      <v-card-actions>
+        <v-btn @click="saveNewUser" color="primary">Add User</v-btn>
+        <v-btn @click="closeAddUserModal" color="error">Cancel</v-btn>
+      </v-card-actions>
+    </v-card>
+  </v-dialog>
   </v-main>
 
  
@@ -169,6 +180,12 @@
   },
   data() {
     return {
+      isAddingUser: false,
+      newUserData: {
+        username: '',
+        email: '',
+        password: '',
+      },
       isEditingRole: false,
     editedRoleData: {
         customerId: null,
@@ -197,6 +214,7 @@
 
       { text: ' Products ', route: '/products', icon: 'mdi-cart' },
       { text: ' Audit History ', route: '/products2', icon: 'mdi-cart' },
+      { text: ' Reports ', route: '/Reports', icon: 'mdi-cart' },
     ],
     links3: [
       { text: ' Appointments ', route: '/Appointments', icon: 'mdi-paw' }, //done
@@ -251,6 +269,72 @@
     },
   },
   methods: {
+    openAddUserModal() {
+      // Set isAddingUser to true to show the modal
+      this.isAddingUser = true;
+
+    },
+    closeAddUserModal() {
+      this.isAddingUser = false;
+    },
+    async saveNewUser() {
+  try {
+    // Perform form validation before making the request
+    if (this.$refs.newUserForm.validate()) {
+      // Make an HTTP request to save the new user data
+      const response = await axios.post('/api/register', {
+        username: this.newUserData.username,
+        email: this.newUserData.email,
+        password: this.newUserData.password,
+        role: this.newUserData.role, // Add role here
+      });
+
+      // Log the entire response for debugging
+      console.log('Response:', response);
+
+      // Check if the response indicates success (you might need to adjust this condition)
+      if (response.status >= 200 && response.status < 300) {
+        // User created successfully
+        console.log('User saved successfully:', response.data);
+
+        // Optionally, you may want to fetch the updated user list or perform other actions
+
+        // Close the modal
+        this.isAddingUser = false;
+        this.fetchProducts();
+        window.alert('User created successfully');
+      } else {
+        // Log the error details for debugging
+        console.error('Failed to create user. Server returned:', response.status, response.data);
+        window.alert('Failed to create user');
+      }
+    }
+  } catch (error) {
+    // Handle the error (display an error message, log it, etc.)
+    console.error('Error saving new user:', error);
+    // Display an error message in the UI if needed
+    window.alert('Failed to create user');
+  }
+},
+async addUser() {
+    try {
+      // Open the modal
+      this.isAddingUser = true;
+
+      // Clear existing form data
+      this.newUserData = {
+        username: '',
+        email: '',
+        role: '',
+        password: '',
+        // ... other fields
+      };
+    } catch (error) {
+      console.error('Error opening the add user modal:', error);
+      // Handle the error (show an error message, etc.)
+    }
+  },
+  
     async deleteCustomer(customerId) {
   try {
     // Send a DELETE request to the server

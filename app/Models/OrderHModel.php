@@ -19,7 +19,7 @@ class OrderHModel extends Model
         $query = "SELECT pp.product_id, p.name, p.image, COUNT(*) as total_sales
                   FROM purchase_product pp
                   JOIN products p ON pp.product_id = p.id
-                  WHERE pp.status = 'Delivered' AND YEAR(pp.created_at) = ?
+                  WHERE pp.status IN ('Delivered', 'transacted') AND YEAR(pp.created_at) = ?
                   GROUP BY pp.product_id
                   ORDER BY total_sales DESC
                   LIMIT 5";

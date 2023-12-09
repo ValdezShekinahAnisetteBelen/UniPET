@@ -108,6 +108,20 @@ meta:{ requiresAuth: true}
 },
 
 {
+  path: '/UserProfile',
+  name: 'UserProfile',
+  component: () => import(/* webpackChunkName: "signup" */ '../views/Client/UserProfile'),
+  meta:{ requiresAuth: true}
+},
+
+{
+  path: '/Reports',
+  name: 'Reports',
+  component: () => import(/* webpackChunkName: "signup" */ '../views/Admin/Reports'),
+  meta:{ requiresAuth: true}
+},
+
+{
   path: '/products2',
   name: 'products2',
   component: () => import(/* webpackChunkName: "signup" */ '../views/Admin/products2'),
@@ -115,9 +129,9 @@ meta:{ requiresAuth: true}
 },
 
 {
-  path: '/Sidebar',
-  name: 'Sidebar',
-  component: () => import(/* webpackChunkName: "signup" */ '../components/Sidebar'),
+  path: '/NavigationBar',
+  name: 'NavigationBar',
+  component: () => import(/* webpackChunkName: "signup" */ '../views/Client/NavigationBar'),
   meta:{ requiresAuth: true}
 },
 // {
@@ -126,7 +140,12 @@ meta:{ requiresAuth: true}
 //   component: () => import(/* webpackChunkName: "signup" */ '../views/Admin/Dashboard'),
 //   meta:{ requiresAuth: true}
 // },
-
+{
+  path: '/Chat',
+  name: 'Chat',
+  component: () => import(/* webpackChunkName: "signup" */ '../views/Admin/Chat'),
+  meta:{ requiresAuth: true}
+},
 {
   path: '/admin/orders',
   name: 'orders',

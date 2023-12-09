@@ -95,7 +95,7 @@
       </v-card-title>
       <!-- Data Rows -->
       <v-btn @click="openAddUserModal" style="background-color: #03C9D7; color: white;">
-  Add User
+  Add Admin
 </v-btn>
       <v-row>
   <v-col v-for="(item, rowIndex) in filteredItems" :key="rowIndex" :cols="12 / itemsPerRow">
@@ -119,39 +119,19 @@
 </v-btn>
 
    <!-- Edit button for logged-in customer_id -->
-   <v-btn @click="editRole(item.customer_id)" style="background-color: #03C9D7; color: white;">
-      Edit Role
-    </v-btn>
+
 <v-btn @click="deleteCustomer(item.customer_id)" style="background-color: #FF5722; color: white;">
         Delete
       </v-btn>
 
-      <v-dialog v-model="isEditingRole" max-width="600">
-    <v-card>
-      <v-card-title>
-        Edit Role
-        <v-spacer></v-spacer>
-        <v-btn icon @click="closeEditRoleModal">
-          <v-icon>mdi-close</v-icon>
-        </v-btn>
-      </v-card-title>
-      <v-card-text>
-        <v-form ref="editRoleForm" @submit.prevent="saveEditedRole">
-          <v-text-field v-model="editedRoleData.role" label="Role"></v-text-field>
-          <v-btn type="submit" color="primary">Save Role</v-btn>
-        </v-form>
-      </v-card-text>
-    </v-card>
-  </v-dialog>
+     
 
   <!-- Include EditCustomerModal component -->
   <EditCustomerModal :dialog="isEditing" :editedCustomer="editedCustomer" @save="saveEditedCustomer" @close="closeEditModal" />
     </v-sheet>
   </v-col>
 </v-row>
-<v-btn @click="openAddUserModal" style="background-color: #03C9D7; color: white;">
-    Add User
-  </v-btn>
+
     </v-container>
 
 
@@ -171,7 +151,7 @@
   <v-text-field v-model="newUserData.password" label="Password" type="password" :rules="passwordRules"></v-text-field>
   <v-text-field v-model="newUserData.role" label="role"></v-text-field>
   <!-- ... other form fields for additional user data -->
-  <v-btn type="submit" color="primary">Add User</v-btn>
+ 
 </v-form>
       </v-card-text>
       <v-card-actions>
@@ -248,6 +228,7 @@
 
       { text: ' Products ', route: '/products', icon: 'mdi-cart' },
       { text: ' Audit History ', route: '/products2', icon: 'mdi-cart' },
+      { text: ' Reports ', route: '/Reports', icon: 'mdi-cart' },
     ],
     links3: [
       { text: ' Appointments ', route: '/Appointments', icon: 'mdi-paw' }, //done
@@ -310,7 +291,7 @@
     // Perform form validation before making the request
     if (this.$refs.newUserForm.validate()) {
       // Make an HTTP request to save the new user data
-      const response = await axios.post('/api/register', {
+      const response = await axios.post('/api/register2', {
         username: this.newUserData.username,
         email: this.newUserData.email,
         password: this.newUserData.password,
@@ -329,6 +310,7 @@
 
         // Close the modal
         this.isAddingUser = false;
+        this.fetchProducts();
         window.alert('User created successfully');
       } else {
         // Log the error details for debugging

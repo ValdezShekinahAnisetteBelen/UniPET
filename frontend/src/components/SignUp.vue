@@ -23,14 +23,14 @@
                 class="form-group"
               ></v-text-field>
               <v-text-field
-            v-model="password"
-            label="password"
-            outlined
-            class="form-group"
-            :append-icon="showPassword ? 'mdi-eye' : 'mdi-eye-off'"
-            :type="showPassword ? 'text' : 'password'"
-            @click:append="togglePasswordVisibility"
-          ></v-text-field>
+    v-model="password"
+    label="password"
+    outlined
+    class="form-group"
+    :append-icon="showPassword ? 'mdi-eye' : 'mdi-eye-off'"
+    :type="showPassword ? 'text' : 'password'"
+    @click:append="togglePasswordVisibility"
+  ></v-text-field>
 
 
               <v-btn
@@ -49,14 +49,12 @@
                 ></v-checkbox>
               </div>
 
-              <v-btn
-                block
-                color="facebook"
-                class="btn-lg auth-form-btn"
-                @click="connectWithFacebook"
-              >
-                <v-icon left>mdi-facebook</v-icon> Connect using Facebook
-              </v-btn>
+
+              <!-- <vue-facebook-login appId="1804515923317910" @succss="handleFacebookLogin" @error="handleFacebookLoginError">
+                <v-icon left>mdi-facebook</v-icon>Login With Facebook
+              </vue-facebook-login> -->
+
+
               <div class="text-center mt-4 font-weight-light">
                 Don't have an account? <router-link to="/register" class="text-primary">Register</router-link>
               </div>
@@ -71,6 +69,7 @@
 <script>
 import { jwtDecode as jwt_decode } from "jwt-decode";
 import axios from 'axios';
+
 import router from '@/router';
 
 export default {

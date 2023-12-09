@@ -175,7 +175,7 @@ class Product extends ResourceController
                         'product_id' => $pr['id'],
                         'oldQuantity' => $pr['stock'],
                         'stock' => $qty,
-                        'type' => 'sales'
+                        'type' => 'walk_in_sales'
                     ];
     
                     // Insert data into the audit table

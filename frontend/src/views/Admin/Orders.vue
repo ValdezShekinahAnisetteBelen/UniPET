@@ -1,5 +1,7 @@
 <template>
+  
     <v-app>
+
       <!-- App Bar -->
       <v-app-bar app color="#03C9D7">
         <v-app-bar-nav-icon @click.stop="drawer = !drawer" color="#FFFF"></v-app-bar-nav-icon>
@@ -123,6 +125,9 @@
     <template v-slot:header.transaction_no>
       <div class="text-end">Transaction Number</div>
     </template>
+     <template v-slot:header.orderID>
+      <div class="text-end">Order ID</div>
+    </template>
     <template v-slot:header.created_at>
       <div class="text-end">Created At</div>
     </template>
@@ -158,6 +163,9 @@
               <v-icon @click="openDetailsModal('product_id', item.product_id)" v-if="headers.find(header => header.value === 'product_id')" class="mr-2">mdi-help-circle</v-icon>
               <v-icon @click="openDetailsModal('customer_id', item.customer_id)" v-if="headers.find(header => header.value === 'customer_id')" class="mr-2">mdi-help-circle</v-icon>
               <v-icon @click="openDetailsModal('transaction_no', item.transaction_no)" v-if="headers.find(header => header.value === 'transaction_no')" class="mr-2">mdi-help-circle</v-icon>
+              <v-icon @click="openDetailsModal('orderID', item.orderID)" v-if="headers.find(header => header.value === 'orderID')" class="mr-2">mdi-help-circle</v-icon>
+
+             
             </template>
           </v-data-table>
           
@@ -181,8 +189,12 @@
             </v-card>
           </v-dialog>
         </v-card>
+        
       </v-main>
+      
     </v-app>
+
+   
   </template>
   
   
@@ -226,6 +238,7 @@ export default {
 
       { text: ' Products ', route: '/products', icon: 'mdi-cart' },
       { text: ' Audit History ', route: '/products2', icon: 'mdi-cart' },
+      { text: ' Reports ', route: '/Reports', icon: 'mdi-cart' },
     ],
     links3: [
       { text: ' Appointments ', route: '/Appointments', icon: 'mdi-paw' },
@@ -261,6 +274,7 @@ export default {
       icon: 'mdi-help-circle',
       tooltip: 'View Transaction Details',
     },
+    { text: 'orderID', value: 'orderID' },
         { text: 'Status', value: 'status' },
         { text: 'Created At', value: 'created_at' },
         { text: 'Year', value: 'Year' },
@@ -270,6 +284,7 @@ export default {
     },
 },
 methods: {
+
   logout() {
     sessionStorage.removeItem('token'); // Remove the token from session storage
     this.$router.push('/login'); // Navigate to the login page
@@ -316,6 +331,15 @@ methods: {
       return null;
     }
   },
+  async fetchDeliverDetails(orderID) {
+    try {
+      const response = await axios.get(`/api/orders/details2/${orderID}`);
+      return response.data;
+    } catch (error) {
+      console.error('Error fetching customer details:', error);
+      return null;
+    }
+  },
   async fetchTransactionDetails(transactionNo) {
     try {
       const response = await axios.get(`/api/transactions/${transactionNo}`);
@@ -340,10 +364,13 @@ methods: {
       case 'transaction_no':
         details = await this.fetchTransactionDetails(id);
         break;
+      case 'orderID':
+        details = await this.fetchDeliverDetails(id);
+        break;
     }
       // Open the modal and pass the details
       this.$refs.detailsModal.openModal(details);
-      
+    
   },
     editStatus(item) {
       // Open the edit modal and set the initial values
@@ -371,8 +398,29 @@ methods: {
 },
 
   },
-  mounted() {
-    this.fetchOrders();
-  },
+
+mounted() {
+  this.fetchOrders();
+  // Your Chat Plugin code
+  // var chatbox = document.getElementById('fb-customer-chat');
+  // chatbox.setAttribute("page_id", "135374673003890");
+  // chatbox.setAttribute("attribution", "biz_inbox");
+
+  // // Your SDK code
+  // window.fbAsyncInit = function() {
+  //   FB.init({
+  //     xfbml: true,
+  //     version: 'v18.0'
+  //   });
+  // };
+
+  // (function(d, s, id) {
+  //   var js, fjs = d.getElementsByTagName(s)[0];
+  //   if (d.getElementById(id)) return;
+  //   js = d.createElement(s); js.id = id;
+  //   js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+  //   fjs.parentNode.insertBefore(js, fjs);
+  // }(document, 'script', 'facebook-jssdk'));
+}
 };
 </script>

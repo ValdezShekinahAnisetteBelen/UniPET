@@ -116,175 +116,157 @@
       </header>  
            <!-- Add a div to display the animal picture -->
              <!-- Add a div to display the animal picture -->
- <div class="page-content" style="background-image: url('images/wizard-v1.jpg')">
-        <div class="wizard-v1-content">
-    <div class="wizard-form">
-<section class="container-fluid p-4">
-    <!-- row -->
-    <div class="row justify-content-center">
-      <div class="col-lg-8 col-12">
-        <!-- card -->
-        <div class="new">
-             <!-- card body -->
-          <div class="card-body">
-            
-            <div class="mb-6">
-        </div>
-        </div>
-        </div>
-        <div class="card">
-            
-          <!-- card body -->
-          <div class="card-body">
-            
-            <div class="mb-6">
-              <!-- heading -->
-                      <!-- Page header -->
-        <div class="border-bottom pb-3 mb-3">
-            <div class="mb-2 mb-lg-0">
-          <h1><img src="User/gallery/completed-task.png" alt="Veterinary Icon" style="width: 1cm; height: cm;">My Purchases</h1>
-    <!-- Breadcrumb -->
-</div>
+             <div class="page-content" style="background-image: url('images/wizard-v1.jpg')">
+    <div class="wizard-v1-content">
+      <div class="wizard-form">
+        <section class="container-fluid p-4">
+          <!-- row -->
+          <div class="row justify-content-center">
+            <div class="col-lg-8 col-12">
+              <!-- card -->
+              <div class="new">
+                <!-- card body -->
+                <div class="card-body">
+                  <div>
+                    <label for="orderId">Select Transaction Number:</label>
+                    <select v-model="selectedOrderId" id="orderId" @change="fetchOrderDetails">
+                      <option value="" selected disabled>Select a Transaction Number:</option>
+                      <option v-for="order in orderIds" :key="order.orderID" :value="order.orderID">
+                        {{ order.orderID }}
+                      </option>
+                    </select>
+
+                    <div class="border-bottom pb-3 mb-3">
+                      <div class="mb-2 mb-lg-0">
+                        <h1>
+                          <img src="User/gallery/completed-task.png" alt="Veterinary Icon"
+                            style="width: 1cm; height: 1cm;">My Purchases
+                        </h1>
+                        <!-- Breadcrumb -->
+                      </div>
+                    </div>
+                    <h2 class="mb-0">Thank you for your order</h2>
+                    <p class="mb-0">Your Order has been {{ selectedOrderDetails && selectedOrderDetails.items && selectedOrderDetails.items[0].status ? selectedOrderDetails.items[0].status : 'Processed' }}. Thank you for choosing us!</p>
 
 
-        </div>
-              <h2 class="mb-0">Thank you for your order</h2>
-          <p class="mb-0">Your Order has been Submitted. We will notify you once it's ready for delivery. Thank you for choosing us!</p>
-            </div>
-            <div>
-
-              <!-- row -->
-              <div class="row justify-content-between">
-                <!-- col -->
-                <div class="col-lg-8 col-12">
-                  <div class="d-md-flex">
-                    <!-- img -->
                     <div>
-                      <img src="User/assets/images/ecommerce/ecommerce-img-1.png" alt="" class="img-4by3-xl rounded">
-                    </div>
-                    <!-- text -->
-                    <div class="ms-md-4 mt-2">
-                      <h5 class="mb-1">
-                        lori soap amitraz
-                      </h5>
-                      <span>Category: <span class="text-dark">SOAP</span>, Number of items:<span class="text-dark"> 1</span>
-                      </span>
+                      <!-- Display order details -->
+                      <div v-if="selectedOrderDetails">
+                        <!-- Display items -->
+                        <div v-if="selectedOrderDetails.items">
+                          <div v-for="(item, key) in selectedOrderDetails.items" :key="key">
+                            <!-- Check if 'price' is defined before accessing it -->
+                            <div v-if="item.price !== undefined">
+                              <div class="row justify-content-between">
+                                <!-- col -->
+                                <div class="col-lg-8 col-12">
+                                  <div class="d-md-flex">
+                                    <!-- img -->
+                                    <div>
+                                      <img :src="item.image" alt="" class="img-4by3-xl rounded">
+                                    </div>
+                                    <!-- text -->
+                                    <div class="ms-md-4 mt-2">
+                                      <h5 class="mb-1">{{ item.name }}</h5>
+                                      <span>
+                                        Category: <span class="text-dark">{{ item.productgroup }}</span>,
+                                        Number of items:<span class="text-dark">{{ item.quantity }}</span>
+                                      </span>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- price -->
+                                <div class="col-lg-4 col-12">
+                                  <div class="d-flex justify-content-end mt-2">
+                                    <!-- Check if 'price' is defined before accessing it -->
+                                    <h5 v-if="item.price !== undefined">{{ item.price }}</h5>
+                                  </div>
+                                </div>
+                              </div>
+                              <hr class="my-3">
+                              <!-- Display subtotal for each item -->
+                              <div class="row justify-content-between">
+                                <!-- col -->
+                                <div class="col-lg-8 col-12">
+                                  <!-- Display subtotal for the current item -->
+                                  <span>Subtotal: </span>
+                                  <span class="text-dark fw-medium">{{ calculateSubtotal(item) }}</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <hr class="my-3">
+
+                        <div class="row justify-content-between">
+                          <!-- col -->
+                        </div>
+                        <!-- hr -->
+                        <hr class="my-3">
+
+                        <div>
+                          <!-- list -->
+                          <ul class="list-unstyled mb-0">
+                            <li class="d-flex justify-content-between mb-2">
+                              <!-- <span>Total Subtotal</span>
+<span class="text-dark fw-medium">{{ calculateTotalSubtotal(selectedOrderDetails.items) }}</span> -->
+                            </li>
+                            <li class="d-flex justify-content-between mb-2">
+                              <span>Delivery Fee</span>
+                              <span class="text-dark fw-medium">₱54.00</span>
+                            </li>
+                            <li class="border-top my-2"></li>
+                            <li class="d-flex justify-content-between mb-2">
+                              <span class="fw-medium text-dark">Grand Total</span>
+                              <span class="fw-medium text-dark">{{ selectedOrderDetails.total_price }}</span>
+                            </li>
+                          </ul>
+                        </div>
+
+                        <!-- Additional details -->
+                        <div class="card mt-4">
+                          <!-- card body -->
+                          <div class="card-body">
+                            <div class="mb-4">
+                              <!-- heading -->
+                              <h2 class="mb-0">Your Order will be delivered to</h2>
+                            </div>
+                            <div class="row" v-if="selectedOrderDetails && selectedOrderDetails.address !== undefined">
+                              <div class="col-md-6 col-12">
+                                <!-- address -->
+                                <h4>Delivery Address</h4>
+                                <p>
+                                  {{ selectedOrderDetails.address }} <br>
+                                  <h4>Additional Details</h4>
+                                  {{ selectedOrderDetails.additional_details }} <br>
+                                </p>
+                                <!-- phone -->
+                                <p class="mb-0">Phone: {{ selectedOrderDetails.mobile_contact_number }}</p>
+                              </div>
+                              <div class="col-md-6 col-12">
+                                <!-- text -->
+                                <h4 class="mb-3">Payment Method</h4>
+                                <p class="mb-0 text-dark">
+                                  {{ selectedOrderDetails.payment_method }}
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <!-- price -->
-                <div class="col-lg-4 col-12">
-                  <div class="d-flex justify-content-end mt-2">
-                    <h5>₱49.00</h5>
-                  </div>
-                </div>
-              </div>
-              <hr class="my-3">
-              <div class="row justify-content-between">
-                <!-- col -->
-                <div class="col-lg-8 col-12">
-                  <div class="d-md-flex">
-                    <!-- img -->
-                    <div>
-                      <img src="User/assets/images/ecommerce/ecommerce-img-9.png" alt="" class="img-4by3-xl rounded">
-                    </div>
-                    <div class="ms-md-4 mt-2">
-                      <!-- heading -->
-                      <h5 class="mb-1">
-                        zert cheese gelato148g.
-                      </h5>
-                      <!-- text -->
-                      <span>Category: <span class="text-dark">Treats</span>, Number of items:<span class="text-dark"> 1</span>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-4 col-12">
-                  <!-- price -->
-                  <div class="d-flex justify-content-end mt-2">
-                    <h5>₱79.00</h5>
-                  </div>
-                </div>
-              </div>
-              <!-- hr -->
-              <hr class="my-3">
-              <div>
-                <!-- list -->
-                <ul class="list-unstyled mb-0">
-                  <li class="d-flex justify-content-between mb-2">
-                    <span>Subtotal</span>
-                    <span class="text-dark fw-medium">₱128.00</span>
-                  </li>
-                  <li class="d-flex justify-content-between mb-2">
-                    <span>Delivery Fee</span>
-                    <span class="text-dark fw-medium">₱54.00</span>
-                  </li>
-                  <li class="border-top my-2"></li>
-                  <li class="d-flex justify-content-between mb-2">
-                    <span class="fw-medium text-dark">Grand Total</span>
-                    <span class="fw-medium text-dark">₱182.00</span>
-                  </li>
-                </ul>
               </div>
             </div>
           </div>
-        </div>
-        <!-- card -->
-        <div class="card mt-4">
-          <!-- card body -->
-          <div class="card-body">
-            <div class="mb-4">
-              <!-- heading -->
-              <h2 class="mb-0">Your Order will be delivered to</h2>
-            </div>
-            <div class="row">
-          <div class="col-md-6 col-12">
-            <!-- address -->
-            <h4>Delivery Address</h4>
-            <p>
-              F. Del Rosario St. <br>
-              Camilmil, <br>
-              Calapan Oriental Mindoro, <br>
-              Philippines
-            </p>
-            <!-- phone -->
-            <p class="mb-0">Phone: +63 9151537833</p>
-          </div>
-          <div class="col-md-6 col-12">
-            <!-- text -->
-            <h4 class="mb-3">Payment Method</h4>
-            <p class="mb-0 text-dark">
-             Cash on Delivery
-            </p>
-              </div>
-            </div>
-          </div>
-        </div>
+        </section>
       </div>
     </div>
-    <div class="card mt-4">
-          <!-- card body -->
-          <div class="card-body">
-    <div class="mb-2 mb-lg-0">
-          <h1><img src="User/gallery/completed-task.png" alt="Veterinary Icon" style="width: 1cm; height: cm;">Order History</h1>
+  </div>
 
-    <div class="input-group">
-        <select class="form-select" id="selectedDate">
-            <option value="" selected>Select a Date</option>
-            <option value="2023-11-01">November 1, 2023</option>
-            <option value="2023-11-02">November 2, 2023</option>
-            <option value="2023-11-03">November 3, 2023</option>
-            <!-- Add more date options as needed -->
-        </select>
-    </div>
-  </div>
-          </div>
-    <!-- Breadcrumb -->
-</div>
-  </section>
-  </div>
-</div>
-</div>
+
   
     <div class="btSiteFooter">
     
@@ -327,31 +309,72 @@
     </div><!-- /btSiteFooter -->
     
     </div><!-- /pageWrap -->
+    
     </body>
     
-    
+  
         </template>
 
 <script>
-    import axios from 'axios';
-    import jQuery from 'jquery';
-    import 'jquery-ui';
-    
-    const $ = jQuery.noConflict();
-    
-    export default {
-      data() {
-        return {
-          // Your data properties go here
-        };
-      },
-      computed: {
-        // Your computed properties go here
-      },
-      created() {
-        // Your created lifecycle hook logic goes here
-      },
-      methods: {
+import axios from 'axios';
+import jQuery from 'jquery';
+import 'jquery-ui';
+
+const $ = jQuery.noConflict();
+
+export default {
+  data() {
+    return {
+      orderIds: [], // Array to store order IDs
+      selectedOrderId: null, // Variable to store the selected order ID
+      selectedOrderDetails: null, // Variable to store details of the selected order
+    };
+  },
+  computed: {
+    // Your computed properties go here
+  },
+  created() {
+    // Your created lifecycle hook logic goes here
+  },
+  methods: {
+    calculateSubtotal(item) {
+  if (item.price !== undefined && item.quantity !== undefined) {
+    return parseFloat((item.price * item.quantity).toFixed(2));
+  } else {
+    return 0.00;
+  }
+},
+
+// calculateTotalSubtotal(items) {
+//   if (!Array.isArray(items) || items.length === 0) {
+//     return 0.00;
+//   }
+
+//   return items.reduce((total, item) => {
+//     const calculateSubtotal = parseFloat(this.calculateSubtotal(item));
+//     console.log(`Item: ${item.name}, Subtotal: ${calculateSubtotal}`);
+//     return total + calculateSubtotal;
+//   }, 0).toFixed(2);
+// },
+        async fetchOrderDetails() {
+      try {
+        const response = await axios.get(`/api/orders/details/${this.selectedOrderId}`);
+        this.selectedOrderDetails = response.data;
+        
+      } catch (error) {
+        console.error('Error fetching order details', error);
+      }
+      this.fetchOrderIds();
+    },
+    async fetchOrderIds() {
+      try {
+        const response = await axios.get(`/api/orders/${this.$store.state.userId}`);
+        this.orderIds = response.data.order_ids;
+      } catch (error) {
+        console.error('Error fetching order IDs', error);
+      }
+      this.fetchOrderIds();
+    },
         // Your methods go here
         logout() {
           sessionStorage.removeItem('token');
@@ -434,6 +457,7 @@
   },
 },
 mounted() {
+  this.fetchOrderIds();
     window.onload = () => {
       console.log('Window onload event triggered');
       this.loadScripts();

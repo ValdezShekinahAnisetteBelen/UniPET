@@ -140,25 +140,6 @@
             </v-col>
           </v-row>
   
-          <v-row no-gutters>
-            <v-col>
-              <v-sheet class="pa-2 ma-2 shadow">
-                .v-col-auto
-              </v-sheet>
-            </v-col>
-  
-            <v-col cols="2">
-              <v-sheet class="pa-2 ma-2 shadow">
-                .v-col-2
-              </v-sheet>
-            </v-col>
-  
-            <v-col>
-              <v-sheet class="pa-2 ma-2 shadow">
-                .v-col-auto
-              </v-sheet>
-            </v-col>
-          </v-row>
         </v-container>
   
       </v-main>
@@ -202,6 +183,7 @@ export default {
 
       { text: ' Products ', route: '/products', icon: 'mdi-cart' },
       { text: ' Audit History ', route: '/products2', icon: 'mdi-cart' },
+      { text: ' Reports ', route: '/Reports', icon: 'mdi-cart' },
     ],
     links3: [
       { text: ' Appointments ', route: '/Appointments', icon: 'mdi-paw' },

@@ -71,6 +71,66 @@ class UserController extends ResourceController
             return $this->respond(['msg' => 'Failed to create/update user'], 500); // 500 Internal Server Error
         }
     }
+
+    public function getUserProfile($userId)
+    {
+        $this->model = new \App\Models\UserModel(); 
+        // Fetch user profile data based on $userId
+        $user = $this->model->find($userId);
+
+        return $this->respond($user);
+    }
+
+  // UserController.php
+
+public function saveUserProfile($userId)
+{
+    try {
+        $json = $this->request->getJSON();
+        log_message('debug', 'Received JSON data: ' . json_encode($json));
+
+        // Example validation: Check if 'customer_id' is provided
+        $customerID = $json->customer_id;
+
+        if (empty($customerID)) {
+            return $this->respond(['status' => 400, 'message' => 'Invalid request. User ID not provided.']);
+        }
+
+        // Assuming you have a UserModel or a database table named 'customer'
+        $userModel = new \App\Models\UserModel();
+        $existingUser = $userModel->find($userId);
+
+        if ($existingUser) {
+            // Combine user data for update
+            $userData = [
+                'first_name' => $json->first_name,
+                'last_name' => $json->last_name,
+                'email' => $json->email,
+                'phone_number' => $json->phone_number,
+                'username' => $json->username,
+                'image' => $json->image,
+                // Add other fields as needed
+            ];
+
+            // Update existing user profile
+            $result = $userModel->update($userId, $userData);
+
+            if ($result) {
+                return $this->respond(['status' => 200, 'message' => 'Profile updated successfully']);
+            } else {
+                return $this->respond(['status' => 500, 'message' => 'Error updating user profile']);
+            }
+        } else {
+            return $this->respond(['status' => 404, 'message' => 'User not found']);
+        }
+    } catch (\Exception $e) {
+        // Handle exceptions and log the error message
+        log_message('error', 'Error updating user profile: ' . $e->getMessage());
+
+        return $this->respond(['status' => 500, 'message' => 'Internal Server Error']);
+    }
+}
+
     public function updateUserRoleController($customerId)
     {
         try {
@@ -270,6 +330,88 @@ class UserController extends ResourceController
             'token' => $token,
             'status' => 'active',
             'role' => 'user',
+        ];
+
+        // Save the data
+        $u = $user->save($data);
+
+        // Check for validation errors after save
+        if ($user->errors()) {
+            // Set flash message for validation errors after save
+            session()->setFlashdata('error', 'Validation errors. Please check your input.');
+            return $this->respond(['msg' => 'validationError', 'errors' => $user->errors()], 400);
+        }
+
+        if ($u) {
+            // Set flash message for successful registration
+            session()->setFlashdata('success', 'Registration successful');
+            return $this->respond(['msg' => 'okay', 'token' => $token]);
+        } else {
+            // Set flash message for registration failure
+            session()->setFlashdata('error', 'Registration failed. Please try again later.');
+            return $this->respond(['msg' => 'failed'], 500);
+        }
+    }
+
+    public function register2()
+    {
+        $user = new UserModel();
+        $token = $this->verification(50);
+
+        // Get form input
+        $username = $this->request->getVar('username');
+        $email = $this->request->getVar('email');
+        $password = $this->request->getVar('password');
+
+        // Set validation rules
+        $validationRules = [
+            'username' => 'required|min_length[5]|max_length[255]',
+            'email' => 'required|valid_email',
+            'password' => 'required|min_length[8]',
+        ];
+
+        if (!$this->validate($validationRules)) {
+            // Set flash message for validation errors
+            session()->setFlashdata('error', 'Validation errors. Please check your input.');
+    
+            // Check if there is a specific error for the username field
+            if ($this->validator->hasError('username')) {
+                // Customize the flash message for the username validation error
+                session()->setFlashdata('username_error', 'Username must be between 5 and 255 characters.');
+            }
+    
+            // Check if there is a specific error for the email field
+            if ($this->validator->hasError('email')) {
+                // Customize the flash message for the email validation error
+                session()->setFlashdata('email_error', 'Invalid email format.');
+            }
+    
+            // Check if there is a specific error for the password field
+            if ($this->validator->hasError('password')) {
+                // Customize the flash message for the password validation error
+                session()->setFlashdata('password_error', 'Password must be at least 8 characters.');
+            }
+    
+            return $this->respond([
+                'msg' => 'validationError',
+                'errors' => $this->validator->getErrors(),
+                'flash' => [
+                    'username_error' => session()->getFlashdata('username_error'),
+                    'email_error' => session()->getFlashdata('email_error'),
+                    'password_error' => session()->getFlashdata('password_error'),
+                    'success' => session()->getFlashdata('success'),
+                    'error' => session()->getFlashdata('error'),
+                ],
+            ], 400);
+        }
+        // Prepare data for saving
+        $data = [
+            'username' => $username,
+            'email' => $email,
+            'password' => password_hash($password, PASSWORD_DEFAULT),
+            'token' => $token,
+            'status' => 'active',
+            'role' => 'admin',
         ];
 
         // Save the data

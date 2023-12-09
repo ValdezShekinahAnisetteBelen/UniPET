@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Your App Title</title>
+
+    <!-- Add other head elements as needed -->
+
+    <!-- Facebook SDK Initialization Script -->
+    <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId: '1804515923317910',
+                xfbml: true,
+                version: 'v18.0'
+            });
+            FB.AppEvents.logPageView();
+        };
+
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) { return; }
+            js = d.createElement(s); js.id = id;
+            js.src = "https://connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+</head>
+<body>
+    <!-- Your app content goes here -->
+
+    <!-- Facebook Like Button -->
+    <div class="fb-like" data-share="true" data-width="450" data-show-faces="true"></div>
+
+    <!-- Other body elements as needed -->
+
+    <!-- Include your Vue app script and other scripts here -->
+</body>
+</html>

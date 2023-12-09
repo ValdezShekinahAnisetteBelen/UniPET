@@ -93,10 +93,10 @@
             {{ link.text }}
           </router-link>
   
-          <router-link to="/logout" @click.prevent="logout" class="nav-link" style="color: #03C9D7; font-weight: bold; display: flex; align-items: center;">
+          <!-- <router-link to="/logout" @click.prevent="logout" class="nav-link" style="color: #03C9D7; font-weight: bold; display: flex; align-items: center;">
             <v-icon>logout_icon</v-icon>
             Logout
-          </router-link>
+          </router-link> -->
   
   
         </v-list>
@@ -192,6 +192,7 @@
 
       { text: ' Products ', route: '/products', icon: 'mdi-cart' },
       { text: ' Audit History ', route: '/products2', icon: 'mdi-cart' },
+      { text: ' Reports ', route: '/Reports', icon: 'mdi-cart' },
     ],
   links3: [
     { text: ' Appointments ', route: '/Appointments', icon: 'mdi-paw' }, //done

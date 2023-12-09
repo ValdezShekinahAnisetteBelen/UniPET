@@ -413,67 +413,73 @@ export default {
   methods: {
   
     async PurchaseRecord() {
-      // Calculate the total price of selected items in the cart
-      const totalSelectedPrice = this.calculateSelectedTotalPrice();
+  // Calculate the total price of selected items in the cart
+  const totalSelectedPrice = this.calculateSelectedTotalPrice();
 
-      // Filter selected items in the cart
-      const selectedItems = this.cart.filter(cartItem => cartItem.selected);
+  // Filter selected items in the cart
+  const selectedItems = this.cart.filter(cartItem => cartItem.selected);
 
-      // Check if there are selected items in the cart
-      if (selectedItems.length === 0) {
-        // Display a user-friendly alert if no items are selected
-        window.alert("You cannot proceed to checkout. Please select items in your cart before proceeding.");
-        // Do not proceed to checkout if no items are selected
-        return;
-      }
+  // Flag to check if the alert was shown
+  let alertShown = false;
 
-      // Process each selected item
-      for (const cartItem of selectedItems) {
-        console.log('Name:', cartItem.name);
-        console.log(cartItem.id);
-        try {
-          const response = await axios.post('api/cart/purchase', {
+  // Check if there are selected items in the cart
+  if (selectedItems.length === 0) {
+    // Display a user-friendly alert if no items are selected
+    window.alert("You cannot proceed to checkout. Please select items in your cart before proceeding.");
+    // Set the flag to true
+    alertShown = true;
+
+    this.$router.push('/Shop');
+  }
+
+  // Process each selected item only if the alert was not shown
+  if (!alertShown) {
+    for (const cartItem of selectedItems) {
+      console.log('Name:', cartItem.name);
+      console.log(cartItem.id);
+      try {
+        const response = await axios.post('api/cart/purchase', {
+          customer_id: this.$store.state.userId,
+          product_id: cartItem.product_id,
+          name: cartItem.name,
+          total_price: totalSelectedPrice,
+          image: cartItem.image,
+          productgroup: cartItem.productgroup,
+          quantity: cartItem.quantity,
+          unit_price: cartItem.price,
+        });
+
+        if (response.status === 200) {
+          // Assuming you receive an 'id' from the server
+          const purchaseRecord = {
+            // Map the relevant fields from the response or modify as needed
             customer_id: this.$store.state.userId,
             product_id: cartItem.product_id,
-            name: cartItem.name,
-            total_price: totalSelectedPrice,
-            image: cartItem.image,
-            productgroup: cartItem.productgroup,
-            quantity: cartItem.quantity,
+            name: response.data.name,
+            total_price: response.data.total_price,
+            image: response.data.image,
+            productgroup: response.data.productgroup,
+            quantity: response.data.quantity,
             unit_price: cartItem.price,
-          });
+          };
 
-          if (response.status === 200) {
-            // Assuming you receive an 'id' from the server
-            const purchaseRecord = {
-              // Map the relevant fields from the response or modify as needed
-              customer_id: this.$store.state.userId,
-              product_id: cartItem.product_id,
-              name: response.data.name,
-              total_price: response.data.total_price,
-              image: response.data.image,
-              productgroup: response.data.productgroup,
-              quantity: response.data.quantity,
-              unit_price: cartItem.price,
-            };
+          // You can use this purchaseRecord as needed, for example, log it or display a confirmation message
+          console.log('Purchase Record:', purchaseRecord);
 
-            // You can use this purchaseRecord as needed, for example, log it or display a confirmation message
-            console.log('Purchase Record:', purchaseRecord);
-
-            // Optionally, you can clear the cart or perform other actions after the purchase
-
-            // Redirect to the Checkout page
-        
-          } else {
-            console.error('Failed to insert the purchase record into the database');
-          }
-        } catch (error) {
-          console.error('Error:', error);
-          window.alert('Failed to complete the purchase. Please try again.');
+          // Optionally, you can clear the cart or perform other actions after the purchase
+        } else {
+          console.error('Failed to insert the purchase record into the database');
         }
+      } catch (error) {
+        console.error('Error:', error);
+        window.alert('Failed to complete the purchase. Please try again.');
       }
-      this.$router.push('/Checkout');
-    },
+    }
+
+    // Redirect to the Checkout page after processing all selected items
+    this.$router.push('/Checkout');
+  }
+},
 
     calculateSelectedTotalPrice() {
       return this.cart.reduce((total, cartItem) => {

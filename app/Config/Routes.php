@@ -20,7 +20,10 @@ $routes->match(['get', 'post'], 'api/audit/(:any)', 'Product::audit/$1');
 $routes->match(['get', 'post'], 'api/updateQuantity', 'Product::updateQuantity');
 
 $routes->match(['post', 'get'], '/api/login', 'UserController::login');
+$routes->post('api/login-with-facebook', 'UserController::loginWithFacebook');
+
 $routes->match(['post', 'get'], '/api/register', 'UserController::register');
+$routes->match(['post', 'get'], 'api/register2', 'UserController::register2');
 $routes->get('/getData', 'Product::getData');
 $routes->post('api/products', 'Product::create');
 $routes->post('api/cart/add-to-cart', 'CartController::addToCart');
@@ -28,8 +31,14 @@ $routes->delete('api/cart/delete/(:num)', 'CartController::del/$1');
 $routes->get('api/getPetIdsByCustomerId/(:num)', 'AppointmentController::getPetIdsByCustomerId/$1');
 $routes->get('api/getPetDataById/(:num)', 'AppointmentController::getPetDataById/$1');
 
+$routes->get('api/audit', 'AuditController::audit1');
+$routes->get('generate-report', 'AuditController::generateReport');
+
 $routes->post('api/save-product', 'Product::saveProduct');
 
+$routes->get('api/orders/(:num)', 'OrderHistoryController::getOrderIds/$1');
+$routes->get('/api/orders/details/(:segment)', 'OrderHistoryController::getOrderDetails/$1');
+$routes->get('/api/orders/details2/(:segment)', 'OrderHistoryController::getOrderDetails2/$1');
 $routes->post('api/edit-appointment-status', 'AppointmentController::editStatus3');
 $routes->post('/api/getTableHeaders', 'AppointmentController::getTableHeaders');
 $routes->post('/api/getTableHeaders2', 'UserController::getTableHeaders2');
@@ -69,10 +78,14 @@ $routes->get('api/orders2', 'OrderHistoryController::getOrders2');
 $routes->post('api/edit-status', 'OrderHistoryController::editStatus');
 $routes->get('api/products/(:num)', 'Product::getProductDetails2/$1');
 $routes->get('api/customers/(:num)', 'UserController::getCustomerDetails/$1');
+$routes->get('api/delivery/(:num)', 'OrderHistoryController::getDeliverDetails/$1');
 $routes->get('api/transactions/(:num)', 'TransactionController::getTransactionDetails/$1');
 // app/Config/Routes.php
+ // Route for fetching user data
 
-$routes->post('api/edit-status2', 'Product::editStatus2');
+ $routes->get('api/user-profile/(:num)', 'UserController::getUserProfile/$1');
+ $routes->put('api/save-profile/(:num)', 'UserController::saveUserProfile/$1');
+
 
 
 $routes->delete('api/order-history/delete-orders/(:num)', 'OrderHistoryController::deleteOrdersByCustomer/$1');

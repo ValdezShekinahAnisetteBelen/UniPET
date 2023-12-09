@@ -1,7 +1,7 @@
 <template>
     <v-dialog v-model="modalOpen" max-width="800px">
       <v-card>
-        <v-card-title>{{ modalTitle }}</v-card-title>
+        <v-card-title>Details</v-card-title>
         <v-card-text>
           <!-- Display details in a styled table with separate columns for fields and values -->
           <v-simple-table>
@@ -14,6 +14,7 @@
               </tbody>
             </template>
           </v-simple-table>
+          <button @click="copyToClipboard(modalDetails)">Copy to Clipboard</button>
         </v-card-text>
         <v-card-actions>
           <v-btn @click="closeModal">Close</v-btn>
@@ -32,6 +33,55 @@
       };
     },
     methods: {
+      async copyToClipboard() {
+  try {
+    // Create an array to store details
+    const detailsArray = [];
+
+    // Iterate over modalDetails and add each property to the array
+    for (const key in this.modalDetails) {
+      if (key === 'items') {
+        // Special handling for items array
+        detailsArray.push('Items:');
+        for (const itemKey in this.modalDetails[key]) {
+          const item = this.modalDetails[key][itemKey];
+          detailsArray.push(`  Quantity: ${item.quantity}, Name: ${item.name}`);
+        }
+      } else {
+        const value = this.modalDetails[key];
+
+        // Check if the value is an object, stringify it without brackets
+        const formattedValue = this.isObject(value) ? this.formatObject(value) : value;
+
+        detailsArray.push(`${key.charAt(0).toUpperCase() + key.slice(1)}: ${formattedValue}`);
+      }
+    }
+
+    // Create a string by joining the array elements with newline characters
+    const detailsString = detailsArray.join('\n');
+
+    // Use the Clipboard API to write text to the clipboard
+    await navigator.clipboard.writeText(detailsString);
+
+    // Use window.prompt to notify the user
+    window.prompt('Details copied to clipboard. Press Ctrl+C to copy.', detailsString);
+  } catch (error) {
+    console.error('Error copying to clipboard:', error);
+    alert('Error copying to clipboard. Please try again.');
+  }
+},
+
+
+formatObject(obj) {
+  // Convert object to string without brackets
+  return JSON.stringify(obj).slice(1, -1);
+},
+
+
+
+capitalizeFirstLetter(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+  },
         flattenDetails(details) {
       const flattenedDetails = {};
 
@@ -50,7 +100,10 @@
 
       return flattenedDetails;
     },
-
+    closeModal() {
+      // Your logic for closing the modal
+      this.$emit('update:modalOpen', false);
+    },
     closeDetailsModal() {
       this.$refs.detailsModal.closeModal();
     },

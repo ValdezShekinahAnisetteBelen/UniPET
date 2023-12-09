@@ -23,20 +23,20 @@ class OrderController extends Controller
     public function cancelOrder($customer_id, $transaction_no)
     {
         try {
-            // Create an instance of PurchaseController
-            $purchaseController = new PurchaseController();
-
-            // Call the delete method in PurchaseController to delete records for the specific customer_id
-            $response = $purchaseController->delete($customer_id);
-
+            // Assuming you have a PurchaseModel that handles purchase-related operations
+            $purchaseModel = new PurchaseModel();
+    
+            // Call the method in PurchaseModel to delete records for the specific customer_id
+            $response = $purchaseModel->deletePurchaseRecords($customer_id);
+    
             // Delete the last inserted record in 'transactions' based on customer_id
             $lastTransaction = $this->transactionModel
                 ->where('customer_id', $customer_id)
                 ->orderBy('transaction_no', 'DESC')
                 ->first();
-
+    
             $deletedTransaction = false;
-
+    
             if ($lastTransaction) {
                 // Delete the transaction based on customer_id and transaction_no
                 $deletedTransaction = $this->transactionModel
@@ -44,7 +44,7 @@ class OrderController extends Controller
                     ->where('transaction_no', $lastTransaction['transaction_no'])
                     ->delete();
             }
-
+    
             // Optionally, you can return a response to indicate success
             return $this->respond([
                 'message' => 'Order cancelled successfully',
