@@ -105,6 +105,10 @@
         </li>
     </ul>
   </li>
+
+  <li id="menu-item-44" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-42">
+          <a href="#" @click.prevent="logout" class="logout-link">Logout</a>
+        </li>
       </ul>
   </nav>
   

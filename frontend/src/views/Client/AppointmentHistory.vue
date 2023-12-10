@@ -1,14 +1,10 @@
 <template>
   <head>
     <meta charset="UTF-8">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name='robots' content='max-image-preview:large' />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+WyylPEfQKTb1URg9dF7bT3EVM9gbyQ8tdf" crossorigin="anonymous">
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   
@@ -118,6 +114,8 @@
         </div>
       </div>
       </header>  
+      
+      
       <div class="animal-picture">
     <section id="bt_bb_section653e182cbf96f" data-parallax="0.7" data-parallax-offset="0" class="bt_bb_section bt_bb_color_scheme_1 bt_bb_layout_boxed_1200 bt_bb_vertical_align_top bt_bb_parallax bt_bb_background_image bt_bb_top_spacing_large bt_bb_bottom_spacing_large bt_bb_section_with_bottom_coverage_image" style="background-color: #96E6F7; background-image: url(&quot;https_/pawsitive.bold-themes.com/buddy/wp-content/uploads/sites/2/2019/08/background_05.html&quot;); --section-primary-color: #ffffff; --section-secondary-color: #EDCCCD; background-position-y: 0px;" data-bt-override-class="null"><div class="bt_bb_port"><div class="bt_bb_cell"><div class="bt_bb_cell_inner"><div class="bt_bb_row_wrapper"><div class="bt_bb_row" data-bt-override-class="{}" data-structure="6-6">
       <div class="bt_bb_column col-xxl-6 col-xl-6 bt_bb_vertical_align_top bt_bb_align_left bt_bb_padding_normal bt_bb_shape_inherit" data-width="6" data-bt-override-class="{}">
@@ -515,7 +513,7 @@ saveData() {
       alert('An error occurred while trying to save the changes. Please try again.');
     });
 },
-  loadScripts() {
+loadScripts() {
     if (this.myObject && this.myObject.content) {
       console.log(this.myObject.content);
 
@@ -561,9 +559,6 @@ saveData() {
                           'https://code.jquery.com/jquery-3.5.1.slim.min.js',
               'https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js',
               'https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js',
-              'https://code.jquery.com/jquery-3.2.1.slim.min.js',
-              'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js',
-              'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js',
             
             ];
       // Load jQuery first
@@ -601,10 +596,8 @@ mounted() {
     this.loadScripts();
   };
 },
-
 };
 </script>
-  
   
   
   

@@ -35,6 +35,9 @@ $routes->get('api/audit', 'AuditController::audit1');
 $routes->get('generate-report', 'AuditController::generateReport');
 
 $routes->post('api/save-product', 'Product::saveProduct');
+// In app/Config/Routes.php
+$routes->get('verify-account/(:segment)', 'UserController::verifyAccount/$1');
+
 
 $routes->get('api/orders/(:num)', 'OrderHistoryController::getOrderIds/$1');
 $routes->get('/api/orders/details/(:segment)', 'OrderHistoryController::getOrderDetails/$1');

@@ -13,7 +13,7 @@ class UserModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields = ['first_name', 'last_name', 'email', 'phone_number', 'username', 'password', 'token', 'status', 'role', 'image'];
+    protected $allowedFields = ['first_name', 'last_name', 'email', 'phone_number', 'username', 'password', 'token', 'status', 'role', 'image', 'verification_status', 'verification_code'];
     public function updateUserRole($customerId, $newRole)
     {
         try {

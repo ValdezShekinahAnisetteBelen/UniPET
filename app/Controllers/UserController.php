@@ -275,165 +275,182 @@ public function saveUserProfile($userId)
     {
         $user = new UserModel();
         $token = $this->verification(50);
-
+    
         // Get form input
         $username = $this->request->getVar('username');
         $email = $this->request->getVar('email');
         $password = $this->request->getVar('password');
-
+    
         // Set validation rules
         $validationRules = [
             'username' => 'required|min_length[5]|max_length[255]',
             'email' => 'required|valid_email',
             'password' => 'required|min_length[8]',
         ];
-
+    
         if (!$this->validate($validationRules)) {
-            // Set flash message for validation errors
-            session()->setFlashdata('error', 'Validation errors. Please check your input.');
-    
-            // Check if there is a specific error for the username field
-            if ($this->validator->hasError('username')) {
-                // Customize the flash message for the username validation error
-                session()->setFlashdata('username_error', 'Username must be between 5 and 255 characters.');
-            }
-    
-            // Check if there is a specific error for the email field
-            if ($this->validator->hasError('email')) {
-                // Customize the flash message for the email validation error
-                session()->setFlashdata('email_error', 'Invalid email format.');
-            }
-    
-            // Check if there is a specific error for the password field
-            if ($this->validator->hasError('password')) {
-                // Customize the flash message for the password validation error
-                session()->setFlashdata('password_error', 'Password must be at least 8 characters.');
-            }
-    
-            return $this->respond([
-                'msg' => 'validationError',
-                'errors' => $this->validator->getErrors(),
-                'flash' => [
-                    'username_error' => session()->getFlashdata('username_error'),
-                    'email_error' => session()->getFlashdata('email_error'),
-                    'password_error' => session()->getFlashdata('password_error'),
-                    'success' => session()->getFlashdata('success'),
-                    'error' => session()->getFlashdata('error'),
-                ],
-            ], 400);
+            // Handle validation errors
+            // (similar to your existing validation error handling)
+            return $this->respond(['msg' => 'validationError', 'errors' => $this->validator->getErrors()], 400);
         }
+    
         // Prepare data for saving
+        $verificationCode = bin2hex(random_bytes(5)); // Generate a random verification code
         $data = [
             'username' => $username,
             'email' => $email,
             'password' => password_hash($password, PASSWORD_DEFAULT),
             'token' => $token,
-            'status' => 'active',
+            'status' => 'verified', // Set user status to 'unverified'
+            'verification_status' => 'verified', // Set user status to 'unverified'
             'role' => 'user',
+            'verification_code' => $verificationCode, // Save the verification code
         ];
-
+    
         // Save the data
         $u = $user->save($data);
-
+    
         // Check for validation errors after save
         if ($user->errors()) {
-            // Set flash message for validation errors after save
-            session()->setFlashdata('error', 'Validation errors. Please check your input.');
+            // Handle validation errors after save
             return $this->respond(['msg' => 'validationError', 'errors' => $user->errors()], 400);
         }
-
+    
         if ($u) {
-            // Set flash message for successful registration
-            session()->setFlashdata('success', 'Registration successful');
-            return $this->respond(['msg' => 'okay', 'token' => $token]);
+            // Send verification email
+            $mail = new \PHPMailer\PHPMailer\PHPMailer(true);
+    
+            try {
+                // SMTP server settings (replace placeholders with your actual SMTP details)
+                $mail->isSMTP();
+                $mail->Host       = 'smtp.gmail.com';
+                $mail->SMTPAuth   = true;
+                $mail->Username   = 'shekinahvaldez063003@gmail.com';
+                $mail->Password   = 'dnslruvvpnxzezzk';
+                $mail->SMTPSecure = 'ssl';
+                $mail->Port       = 465;
+    
+                // Sender details
+                $mail->setFrom('shekinahvaldez063003@gmail.com');
+    
+                // Recipient details
+                $mail->addAddress($email);
+    
+                // Email content
+                $mail->isHTML(true);
+                $mail->Subject = 'Account Verification';
+                $mail->Body    = 'Your verification code is: ' . $verificationCode;
+    
+                // Send email
+                $mail->send();
+    
+                // Set flash message for successful registration
+                session()->setFlashdata('success', 'Registration successful. Check your email for verification.');
+                return $this->respond(['msg' => 'okay', 'token' => $token]);
+            } catch (\PHPMailer\PHPMailer\Exception $e) {
+                // Handle exceptions, log errors, etc.
+                // Set flash message for email sending failure
+                session()->setFlashdata('error', 'Registration failed. Email sending error.');
+                return $this->respond(['msg' => 'failed'], 500);
+            }
         } else {
             // Set flash message for registration failure
             session()->setFlashdata('error', 'Registration failed. Please try again later.');
             return $this->respond(['msg' => 'failed'], 500);
         }
     }
+    
+    
 
     public function register2()
     {
         $user = new UserModel();
         $token = $this->verification(50);
-
+    
         // Get form input
         $username = $this->request->getVar('username');
         $email = $this->request->getVar('email');
         $password = $this->request->getVar('password');
-
+    
         // Set validation rules
         $validationRules = [
             'username' => 'required|min_length[5]|max_length[255]',
             'email' => 'required|valid_email',
             'password' => 'required|min_length[8]',
         ];
-
+    
         if (!$this->validate($validationRules)) {
-            // Set flash message for validation errors
-            session()->setFlashdata('error', 'Validation errors. Please check your input.');
-    
-            // Check if there is a specific error for the username field
-            if ($this->validator->hasError('username')) {
-                // Customize the flash message for the username validation error
-                session()->setFlashdata('username_error', 'Username must be between 5 and 255 characters.');
-            }
-    
-            // Check if there is a specific error for the email field
-            if ($this->validator->hasError('email')) {
-                // Customize the flash message for the email validation error
-                session()->setFlashdata('email_error', 'Invalid email format.');
-            }
-    
-            // Check if there is a specific error for the password field
-            if ($this->validator->hasError('password')) {
-                // Customize the flash message for the password validation error
-                session()->setFlashdata('password_error', 'Password must be at least 8 characters.');
-            }
-    
-            return $this->respond([
-                'msg' => 'validationError',
-                'errors' => $this->validator->getErrors(),
-                'flash' => [
-                    'username_error' => session()->getFlashdata('username_error'),
-                    'email_error' => session()->getFlashdata('email_error'),
-                    'password_error' => session()->getFlashdata('password_error'),
-                    'success' => session()->getFlashdata('success'),
-                    'error' => session()->getFlashdata('error'),
-                ],
-            ], 400);
+            // Handle validation errors
+            // (similar to your existing validation error handling)
+            return $this->respond(['msg' => 'validationError', 'errors' => $this->validator->getErrors()], 400);
         }
+    
         // Prepare data for saving
+        $verificationCode = bin2hex(random_bytes(5)); // Generate a random verification code
         $data = [
             'username' => $username,
             'email' => $email,
             'password' => password_hash($password, PASSWORD_DEFAULT),
             'token' => $token,
-            'status' => 'active',
-            'role' => 'admin',
+            'status' => 'verified', // Set user status to 'unverified'
+            'verification_status' => 'verified', // Set user status to 'unverified'
+            'role' => 'user',
+            'verification_code' => $verificationCode, // Save the verification code
         ];
-
+    
         // Save the data
         $u = $user->save($data);
-
+    
         // Check for validation errors after save
         if ($user->errors()) {
-            // Set flash message for validation errors after save
-            session()->setFlashdata('error', 'Validation errors. Please check your input.');
+            // Handle validation errors after save
             return $this->respond(['msg' => 'validationError', 'errors' => $user->errors()], 400);
         }
-
+    
         if ($u) {
-            // Set flash message for successful registration
-            session()->setFlashdata('success', 'Registration successful');
-            return $this->respond(['msg' => 'okay', 'token' => $token]);
+            // Send verification email
+            $mail = new \PHPMailer\PHPMailer\PHPMailer(true);
+    
+            try {
+                // SMTP server settings (replace placeholders with your actual SMTP details)
+                $mail->isSMTP();
+                $mail->Host       = 'smtp.gmail.com';
+                $mail->SMTPAuth   = true;
+                $mail->Username   = 'shekinahvaldez063003@gmail.com';
+                $mail->Password   = 'dnslruvvpnxzezzk';
+                $mail->SMTPSecure = 'ssl';
+                $mail->Port       = 465;
+    
+                // Sender details
+                $mail->setFrom('shekinahvaldez063003@gmail.com');
+    
+                // Recipient details
+                $mail->addAddress($email);
+    
+                // Email content
+                $mail->isHTML(true);
+                $mail->Subject = 'Account Verification';
+                $mail->Body    = 'Your verification code is: ' . $verificationCode;
+    
+                // Send email
+                $mail->send();
+    
+                // Set flash message for successful registration
+                session()->setFlashdata('success', 'Registration successful. Check your email for verification.');
+                return $this->respond(['msg' => 'okay', 'token' => $token]);
+            } catch (\PHPMailer\PHPMailer\Exception $e) {
+                // Handle exceptions, log errors, etc.
+                // Set flash message for email sending failure
+                session()->setFlashdata('error', 'Registration failed. Email sending error.');
+                return $this->respond(['msg' => 'failed'], 500);
+            }
         } else {
             // Set flash message for registration failure
             session()->setFlashdata('error', 'Registration failed. Please try again later.');
             return $this->respond(['msg' => 'failed'], 500);
         }
     }
+    
     public function verification($length)
     {
         $str_result = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';

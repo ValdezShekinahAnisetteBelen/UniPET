@@ -41,29 +41,29 @@ export default {
   },
   methods: {
     async register() {
-      if (this.password === this.passwordConfirm) {
-        try {
-          const response = await axios.post('api/register', {
-            username: this.username,
-            email: this.email,
-            password: this.password,
-          });
+  // ... (your existing code)
 
-          if (response.data.msg === 'okay') {
-            alert('Registered successfully');
-            router.push('/login');
-          } else {
-            this.message = 'error';
-          }
-        } catch (error) {
-          console.error('Error during registration:', error);
-          this.message = 'error';
-        }
-      } else {
-        this.message = 'passwordMismatch';
-      }
-    },
-  },
+  if (response.data.msg === 'okay') {
+    // Display a modal or alert with the verification code
+    const enteredVerificationCode = prompt('Registered successfully. Enter here your Verification Code');
+    
+    // Retrieve the verification code from the response
+    const verificationCodeFromServer = response.data.verification_code;
+
+    // Compare the entered code with the one from the server
+    if (enteredVerificationCode === verificationCodeFromServer) {
+      // Codes match, redirect to login or perform other actions
+      router.push('/login');
+    } else {
+      // Codes do not match, handle the error (display an alert, etc.)
+      alert('Wrong verification code. Please try again.');
+    }
+  } else {
+    this.message = 'error';
+  }
+},
+
+},
 };
 </script>
 

@@ -91,6 +91,12 @@
         </li>
     </ul>
   </li>
+
+  
+  <li id="menu-item-40" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-40">
+              <div class="subToggler"></div>
+              <a href="/AppointmentHistory">Appointment History</a>
+          </li>
   
           <li id="menu-item-40" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-40">
               <div class="subToggler"></div>
@@ -115,13 +121,16 @@
       </div>
       </header>  
           <div class="page-content" style="background-image: url('images/wizard-v1.jpg')">
+            
               <div class="wizard-v1-content">
           <div class="wizard-form">
       <section class="container-fluid p-4">
           <!-- row -->
+          
           <div class="row justify-content-center">
             <div class="col-lg-8 col-12">
               <!-- card -->
+             
               <div class="new">
                    <!-- card body -->
                 <div class="card-body">
@@ -130,12 +139,13 @@
                      
               </div>
               <div class="mb-6">
-                     
+               
                     </div>
                     <div class="mb-10">
                      
                     </div>
               <div class="mb-6">
+
                      <h3>Appointment and Pet Information Form</h3>
               <p>
                 To schedule an appointment and enter pet details, please fill out
@@ -427,6 +437,9 @@
         </tbody>
       </table>
     </div> -->
+
+           
+       
   </body>  
     </div>
               <!-- card -->
