@@ -41,36 +41,37 @@ export default {
   },
   methods: {
     async register() {
-  // ... (your existing code)
+      if (this.password === this.passwordConfirm) {
+        try {
+          const response = await axios.post('api/register', {
+            username: this.username,
+            email: this.email,
+            password: this.password,
+          });
 
-  if (response.data.msg === 'okay') {
-    // Display a modal or alert with the verification code
-    const enteredVerificationCode = prompt('Registered successfully. Enter here your Verification Code');
-    
-    // Retrieve the verification code from the response
-    const verificationCodeFromServer = response.data.verification_code;
-
-    // Compare the entered code with the one from the server
-    if (enteredVerificationCode === verificationCodeFromServer) {
-      // Codes match, redirect to login or perform other actions
-      router.push('/login');
-    } else {
-      // Codes do not match, handle the error (display an alert, etc.)
-      alert('Wrong verification code. Please try again.');
-    }
-  } else {
-    this.message = 'error';
-  }
-},
-
-},
+          if (response.data.msg === 'okay') {
+            alert('Congratulations! You have successfully registered. Check your email for the Verification Code.');
+            alert('You May now Login.');
+            router.push('/login');
+          } else {
+            this.message = 'error';
+          }
+        } catch (error) {
+          console.error('Error during registration:', error);
+          this.message = 'error';
+        }
+      } else {
+        this.message = 'passwordMismatch';
+      }
+    },
+  },
 };
 </script>
 
 <style scoped>
 @import '../../src/assets/User/css/themify-icons.css';
-@import '../../src/assets/User/css/feather.css';
-@import '~vuetify/dist/vuetify.min.css';
+
+
 /* Additional styling from your existing CSS */
 @import '../../src/assets/User/css/vendor.bundle.base.css';
 @import '../../src/assets/User/css/stylel.css';

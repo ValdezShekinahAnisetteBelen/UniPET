@@ -145,7 +145,7 @@ export default {
 <style scoped>
 @import '../../src/assets/User/css/themify-icons.css';
 @import '../../src/assets/User/css/feather.css';
-@import '~vuetify/dist/vuetify.min.css';
+
 @import 'https://cdn.jsdelivr.net/npm/@mdi/font/css/materialdesignicons.min.css';
 
 /* Additional styling from your existing CSS */
